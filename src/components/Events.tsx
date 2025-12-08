@@ -33,45 +33,45 @@ export const Events = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white">
             Upcoming Events
           </h2>
-          <p className="text-lg text-muted-foreground mt-2">
+          <p className="text-foreground/60 mt-3">
             Join us to learn, connect, and grow.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {events.map((event, index) => (
             <Card 
               key={index}
-              className={`border border-primary/30 bg-card/50 hover:border-primary/50 transition-all hover:-translate-y-1 flex flex-col ${
-                event.isPast ? 'opacity-70' : ''
+              className={`border border-primary/30 bg-card/40 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 flex flex-col backdrop-blur-sm ${
+                event.isPast ? 'opacity-60' : ''
               }`}
             >
-              <CardHeader>
+              <CardHeader className="pb-3">
                 <p className="text-sm font-semibold text-primary">
                   {event.date}
                 </p>
-                <CardTitle className="text-xl text-white mt-2">
+                <CardTitle className="text-lg text-white mt-2">
                   {event.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow">
-                <CardDescription className="text-muted-foreground">
+              <CardContent className="flex-grow pt-0">
+                <CardDescription className="text-foreground/60 text-sm">
                   {event.description}
                 </CardDescription>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="pt-0">
                 {event.isPast ? (
-                  <span className="text-muted-foreground font-semibold cursor-not-allowed">
+                  <span className="text-foreground/50 font-medium text-sm">
                     See you next time
                   </span>
                 ) : event.registrationUrl ? (
-                  <Button variant="link" className="text-primary hover:text-primary/80 p-0" asChild>
+                  <Button variant="link" className="text-primary hover:text-primary/80 p-0 h-auto text-sm" asChild>
                     <a href={event.registrationUrl} target="_blank" rel="noopener noreferrer">
                       Register Now →
                     </a>
                   </Button>
                 ) : (
-                  <Button variant="link" className="text-primary hover:text-primary/80 p-0">
+                  <Button variant="link" className="text-primary hover:text-primary/80 p-0 h-auto text-sm">
                     Register Now →
                   </Button>
                 )}
