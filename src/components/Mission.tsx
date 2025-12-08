@@ -8,7 +8,7 @@ export const Mission = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Mission is Simple
           </h2>
-          <p className="text-lg text-foreground/80 mb-12">
+          <p className="text-lg text-foreground/70 leading-relaxed">
             To empower the next generation by creating a vibrant ecosystem where collaboration, creativity, and action meet.
           </p>
         </div>
@@ -17,13 +17,13 @@ export const Mission = () => {
           <img 
             src={workshopImage} 
             alt="JAT Hub workshop" 
-            className="rounded-2xl w-full h-auto object-cover shadow-2xl shadow-blue-500/20"
+            className="rounded-2xl w-full h-auto object-cover"
           />
           <div className="absolute inset-0 bg-primary/20 rounded-2xl mix-blend-hard-light"></div>
-          <div className="absolute inset-0 rounded-2xl border border-primary/20"></div>
+          <div className="absolute inset-0 rounded-2xl border border-primary/30"></div>
         </div>
         
-        <p className="text-center text-lg text-muted-foreground mt-12">
+        <p className="text-center text-foreground/60 leading-relaxed">
           Whether you're building your first startup team, expanding your professional network, or just discovering your purpose — JAT Hub is where it all begins.
         </p>
       </div>
