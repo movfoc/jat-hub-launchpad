@@ -33,11 +33,11 @@ export const News = () => {
               key={index}
               className="group cursor-pointer overflow-hidden rounded-xl border border-border/30 hover:border-primary/40 transition-all duration-300"
             >
-              <div className="aspect-[16/10] overflow-hidden">
+              <div className="overflow-hidden">
                 <img 
                   src={item.image} 
                   alt={item.alt}
-                  className="w-full h-full object-cover transition-all duration-300 group-hover:opacity-80 group-hover:scale-105"
+                  className="w-full h-auto transition-all duration-300 group-hover:opacity-80 group-hover:scale-105"
                 />
               </div>
             </div>
