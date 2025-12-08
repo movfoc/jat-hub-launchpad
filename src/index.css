@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 220 9% 90%;
+
+    --card: 0 0% 4%;
+    --card-foreground: 220 9% 90%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 220 9% 90%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 220 9% 90%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 220 9% 55%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom JAT Hub tokens */
+    --jat-blue: 217 91% 60%;
+    --jat-blue-dark: 217 91% 48%;
+    --jat-blue-light: 217 91% 70%;
+    --jat-gray-dark: 0 0% 4%;
+    --jat-gray-lighter: 220 9% 46%;
+    
+    /* Gradients */
+    --gradient-radial: radial-gradient(rgba(29, 78, 216, 0.15) 1px, transparent 1px);
+    --gradient-glow: radial-gradient(circle, rgba(29, 78, 216, 0.2) 0%, rgba(29, 78, 216, 0) 70%);
+    --gradient-overlay: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 50%);
+    
+    /* Shadows */
+    --shadow-blue: 0 10px 40px -10px rgba(59, 130, 246, 0.3);
+    --shadow-blue-lg: 0 20px 60px -15px rgba(59, 130, 246, 0.4);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s ease;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image: radial-gradient(rgba(29, 78, 216, 0.15) 1px, transparent 1px);
+    background-size: 30px 30px;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .section-glow::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 200px;
+    background: radial-gradient(circle, rgba(29, 78, 216, 0.2) 0%, rgba(29, 78, 216, 0) 70%);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .hero-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    mix-blend-mode: multiply;
+    z-index: 1;
+  }
+
+  .hero-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 50%);
+    z-index: 1;
+  }
+}
