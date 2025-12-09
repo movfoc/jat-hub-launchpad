@@ -21,8 +21,15 @@ export const Events = () => {
       date: "NOV 14, 2025",
       title: "Visit Microsoft London- From Student to Tech Professional",
       description: "10 AM - 1 PM at Microsoft London office.",
-      isPast: false,
+      isPast: true,
       registrationUrl: "https://luma.com/8axm43mw",
+    },
+    {
+      date: "NOV 25, 2025",
+      title: "JatHub: Visit OVHcloud London",
+      description: "10:30 AM - 12:30 PM at OVHcloud London office.",
+      isPast: false,
+      registrationUrl: undefined,
     },
   ];
 
