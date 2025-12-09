@@ -31,6 +31,13 @@ export const Events = () => {
       isPast: false,
       registrationUrl: undefined,
     },
+    {
+      date: "DEC 18, 2025",
+      title: "UK House of Lords Roundtable: Decentralised Digital Economies and UK Growth",
+      description: "10 AM - 12 Noon at House of Lords.",
+      isPast: false,
+      registrationUrl: undefined,
+    },
   ];
 
   return (
