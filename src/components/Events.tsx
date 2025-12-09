@@ -32,6 +32,13 @@ export const Events = () => {
       registrationUrl: undefined,
     },
     {
+      date: "NOV 29 - DEC 7, 2025",
+      title: "UK AI Agent Hackathon EP3 by ASI (Artificial Superintelligence Alliance)",
+      description: "10 AM - 12 AM at Imperial College London. The Largest Web3 × AI Hackathon in Europe.",
+      isPast: true,
+      registrationUrl: undefined,
+    },
+    {
       date: "DEC 18, 2025",
       title: "UK House of Lords Roundtable: Decentralised Digital Economies and UK Growth",
       description: "10 AM - 12 Noon at House of Lords.",
