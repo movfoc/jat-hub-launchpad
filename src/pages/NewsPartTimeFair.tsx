@@ -1,5 +1,4 @@
 import { NewsArticle } from "@/components/NewsArticle";
-import partTimePic1 from "@/assets/news/parttime/Part_time_pics_1.jpeg";
 import partTimePic2 from "@/assets/news/parttime/Part_time_pics_2.jpeg";
 import partTimePic3 from "@/assets/news/parttime/Part_time_pics_3.jpeg";
 import partTimePic4 from "@/assets/news/parttime/Part_time_pics_4.jpeg";
@@ -20,9 +19,10 @@ const NewsPartTimeFair = () => {
         empowering the next generation.
       </p>
 
+      {/* Image 7 - Full width */}
       <img 
-        src={partTimePic2} 
-        alt="Part-Time Job Fair - Overview of the Event Hall" 
+        src={partTimePic7} 
+        alt="Part-Time Job Fair - Photo 7" 
         className="w-full rounded-xl mb-8"
       />
 
@@ -34,15 +34,16 @@ const NewsPartTimeFair = () => {
         seeking flexible opportunities to support their studies and apply their advanced skills.
       </p>
 
+      {/* Images 2 and 3 in grid */}
       <div className="grid md:grid-cols-2 gap-4 mb-8">
         <img 
-          src={partTimePic3} 
-          alt="JAT Hub Booth with Team Members" 
+          src={partTimePic2} 
+          alt="Part-Time Job Fair - Photo 2" 
           className="w-full rounded-xl"
         />
         <img 
-          src={partTimePic4} 
-          alt="JAT Hub Team Engaging with Students" 
+          src={partTimePic3} 
+          alt="Part-Time Job Fair - Photo 3" 
           className="w-full rounded-xl"
         />
       </div>
@@ -54,29 +55,12 @@ const NewsPartTimeFair = () => {
         crucial skills, and expand their professional networks long before graduation.
       </p>
 
+      {/* Image 4 - Full width */}
       <img 
-        src={partTimePic5} 
-        alt="Busy Crowd at the Part-Time Job Fair" 
+        src={partTimePic4} 
+        alt="Part-Time Job Fair - Photo 4" 
         className="w-full rounded-xl mb-8"
       />
-
-      <div className="grid md:grid-cols-3 gap-4 mb-8">
-        <img 
-          src={partTimePic1} 
-          alt="JAT Hub Representatives Speaking with Students" 
-          className="w-full rounded-xl"
-        />
-        <img 
-          src={partTimePic6} 
-          alt="Registration and Check-in Area" 
-          className="w-full rounded-xl"
-        />
-        <img 
-          src={partTimePic7} 
-          alt="Students Networking at the Fair" 
-          className="w-full rounded-xl"
-        />
-      </div>
 
       <p className="text-muted-foreground leading-relaxed mb-8">
         This fair perfectly aligns with JAT Hub's core mission: to create a vibrant ecosystem that 
@@ -84,6 +68,20 @@ const NewsPartTimeFair = () => {
         and action. By facilitating these connections, we continue to empower young individuals to find 
         their purpose and turn their ideas into impact.
       </p>
+
+      {/* Images 5 and 6 in grid */}
+      <div className="grid md:grid-cols-2 gap-4 mb-8">
+        <img 
+          src={partTimePic5} 
+          alt="Part-Time Job Fair - Photo 5" 
+          className="w-full rounded-xl"
+        />
+        <img 
+          src={partTimePic6} 
+          alt="Part-Time Job Fair - Photo 6" 
+          className="w-full rounded-xl"
+        />
+      </div>
 
       <p className="text-muted-foreground leading-relaxed">
         We extend our sincere thanks to the University of Surrey for hosting a truly valuable event and 

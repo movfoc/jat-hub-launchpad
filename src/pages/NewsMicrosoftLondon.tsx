@@ -24,9 +24,10 @@ const NewsMicrosoftLondon = () => {
         future of the technology industry.
       </p>
 
+      {/* Image 1 - Full width */}
       <img 
         src={microsoftVisit1} 
-        alt="Microsoft London Visit - Group Photo" 
+        alt="Microsoft London Visit - Photo 1" 
         className="w-full rounded-xl mb-8"
       />
 
@@ -35,6 +36,20 @@ const NewsMicrosoftLondon = () => {
         distinguished panel of professionals and current interns who shared their personal journeys 
         and expertise.
       </p>
+
+      {/* Images 2 and 3 in grid */}
+      <div className="grid md:grid-cols-2 gap-4 mb-8">
+        <img 
+          src={microsoftVisit2} 
+          alt="Microsoft London Visit - Photo 2" 
+          className="w-full rounded-xl"
+        />
+        <img 
+          src={microsoftVisit3} 
+          alt="Microsoft London Visit - Photo 3" 
+          className="w-full rounded-xl"
+        />
+      </div>
 
       <p className="text-muted-foreground leading-relaxed mb-8">
         We extended our sincere gratitude to the entire Microsoft team for generously hosting us.
@@ -74,16 +89,16 @@ const NewsMicrosoftLondon = () => {
         </div>
       </div>
 
-      {/* Image Grid */}
+      {/* Images 10 and 11 in grid */}
       <div className="grid md:grid-cols-2 gap-4 mb-8">
         <img 
-          src={microsoftVisit2} 
-          alt="Microsoft London Visit - Presentation" 
+          src={microsoftVisit10} 
+          alt="Microsoft London Visit - Photo 10" 
           className="w-full rounded-xl"
         />
         <img 
-          src={microsoftVisit3} 
-          alt="Microsoft London Visit - Speaker" 
+          src={microsoftVisit11} 
+          alt="Microsoft London Visit - Photo 11" 
           className="w-full rounded-xl"
         />
       </div>
@@ -102,9 +117,10 @@ const NewsMicrosoftLondon = () => {
         <li><strong className="text-foreground">Ali Abdullah Shahram Shafiq:</strong> Head of Strategy at the Surrey Economics and Finance Society</li>
       </ul>
 
+      {/* Image 6 - Full width */}
       <img 
-        src={microsoftVisit4} 
-        alt="Microsoft London Visit - Networking" 
+        src={microsoftVisit6} 
+        alt="Microsoft London Visit - Photo 6" 
         className="w-full rounded-xl mb-8"
       />
 
@@ -113,57 +129,44 @@ const NewsMicrosoftLondon = () => {
         tech industry's various sectors and offered priceless, targeted career guidance.
       </p>
 
-      {/* More Images */}
+      {/* Images 7, 8, 9 in 3-column grid */}
       <div className="grid md:grid-cols-3 gap-4 mb-8">
         <img 
-          src={microsoftVisit5} 
-          alt="Microsoft London Visit - Session" 
-          className="w-full rounded-xl"
-        />
-        <img 
-          src={microsoftVisit6} 
-          alt="Microsoft London Visit - Discussion" 
-          className="w-full rounded-xl"
-        />
-        <img 
           src={microsoftVisit7} 
-          alt="Microsoft London Visit - Team" 
+          alt="Microsoft London Visit - Photo 7" 
           className="w-full rounded-xl"
         />
-      </div>
-
-      {/* Group Photo */}
-      <img 
-        src={microsoftVisit8} 
-        alt="Microsoft London Visit - Group Photo with JAT Hub Banner" 
-        className="w-full rounded-xl mb-8"
-      />
-
-      {/* Attendee Photos */}
-      <div className="grid md:grid-cols-2 gap-4 mb-8">
+        <img 
+          src={microsoftVisit8} 
+          alt="Microsoft London Visit - Photo 8" 
+          className="w-full rounded-xl"
+        />
         <img 
           src={microsoftVisit9} 
-          alt="Microsoft London Visit - Attendees Listening" 
-          className="w-full rounded-xl"
-        />
-        <img 
-          src={microsoftVisit10} 
-          alt="Microsoft London Visit - Engaged Audience" 
+          alt="Microsoft London Visit - Photo 9" 
           className="w-full rounded-xl"
         />
       </div>
 
-      <img 
-        src={microsoftVisit11} 
-        alt="Microsoft London Visit - Student Participation" 
-        className="w-full rounded-xl mb-8"
-      />
-
-      <p className="text-muted-foreground leading-relaxed">
+      <p className="text-muted-foreground leading-relaxed mb-8">
         This visit served as a powerful motivator, reaffirming JAT Hub's commitment to forging essential 
         connections between ambitious students and leading global companies. The future is bright, and we 
         are incredibly excited for the pathways this experience has opened for our members.
       </p>
+
+      {/* Images 4 and 5 in grid */}
+      <div className="grid md:grid-cols-2 gap-4">
+        <img 
+          src={microsoftVisit4} 
+          alt="Microsoft London Visit - Photo 4" 
+          className="w-full rounded-xl"
+        />
+        <img 
+          src={microsoftVisit5} 
+          alt="Microsoft London Visit - Photo 5" 
+          className="w-full rounded-xl"
+        />
+      </div>
     </NewsArticle>
   );
 };
