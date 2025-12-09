@@ -45,6 +45,13 @@ export const Events = () => {
       isPast: false,
       registrationUrl: "https://luma.com/ehnn7zwv?tk=sKbwCJ",
     },
+    {
+      date: "JAN 17, 2026",
+      title: "JatHub: Visit College of Esports",
+      description: "12:30 PM - 3:30 PM at Queen Elizabeth Olympic Park, Velodrome, Lee Valley VeloPark, Abercrombie Rd, London E20 3AB.",
+      isPast: false,
+      registrationUrl: "https://luma.com/i3n8n33d",
+    },
   ];
 
   return (
