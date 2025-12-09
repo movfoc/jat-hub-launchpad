@@ -28,7 +28,7 @@ export const Events = () => {
       date: "NOV 25, 2025",
       title: "JatHub: Visit OVHcloud London",
       description: "10:30 AM - 12:30 PM at OVHcloud London office.",
-      isPast: false,
+      isPast: true,
       registrationUrl: undefined,
     },
     {
@@ -36,7 +36,7 @@ export const Events = () => {
       title: "UK House of Lords Roundtable: Decentralised Digital Economies and UK Growth",
       description: "10 AM - 12 Noon at House of Lords.",
       isPast: false,
-      registrationUrl: undefined,
+      registrationUrl: "https://luma.com/ehnn7zwv?tk=sKbwCJ",
     },
   ];
 
