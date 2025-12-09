@@ -18,7 +18,7 @@ export const Footer = () => {
             <Twitter className="w-5 h-5" />
           </a>
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/company/jathub" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-foreground/50 hover:text-primary transition-colors"
@@ -27,7 +27,7 @@ export const Footer = () => {
             <Linkedin className="w-5 h-5" />
           </a>
           <a 
-            href="https://instagram.com" 
+            href="https://www.instagram.com/jathub_uk/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-foreground/50 hover:text-primary transition-colors"
