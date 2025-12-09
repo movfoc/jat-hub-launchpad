@@ -23,9 +23,10 @@ const NewsAIMarketing = () => {
         intersection of Artificial Intelligence and creative media.
       </p>
 
+      {/* Image 1 - Full width */}
       <img 
-        src={odosImg9} 
-        alt="JAT Hub AI Marketing and Media Workshop Setup" 
+        src={odosImg1} 
+        alt="AI for Marketing & Media - Photo 1" 
         className="w-full rounded-xl mb-8"
       />
 
@@ -37,15 +38,16 @@ const NewsAIMarketing = () => {
         immediately see the potential of AI in their own future projects.
       </p>
 
+      {/* Images 2 and 3 in grid */}
       <div className="grid md:grid-cols-2 gap-4 mb-8">
         <img 
-          src={odosImg5} 
-          alt="Presenter Explaining Bridging the Gap" 
+          src={odosImg2} 
+          alt="AI for Marketing & Media - Photo 2" 
           className="w-full rounded-xl"
         />
         <img 
-          src={odosImg8} 
-          alt="Workshop Presentation on AI Tools" 
+          src={odosImg3} 
+          alt="AI for Marketing & Media - Photo 3" 
           className="w-full rounded-xl"
         />
       </div>
@@ -57,21 +59,23 @@ const NewsAIMarketing = () => {
         transforming marketing strategies and media production workflows.
       </p>
 
+      {/* Image 4 - Full width */}
       <img 
-        src={odosImg6} 
-        alt="Students Engaged in Workshop Session" 
+        src={odosImg4} 
+        alt="AI for Marketing & Media - Photo 4" 
         className="w-full rounded-xl mb-8"
       />
 
+      {/* Images 5 and 6 featured grid */}
       <div className="grid md:grid-cols-2 gap-4 mb-8">
         <img 
-          src={odosImg4} 
-          alt="Student Using AI Tools on iPad" 
+          src={odosImg5} 
+          alt="AI for Marketing & Media - Photo 5" 
           className="w-full rounded-xl"
         />
         <img 
-          src={odosImg7} 
-          alt="Attendees Taking Selfie at Workshop" 
+          src={odosImg6} 
+          alt="AI for Marketing & Media - Photo 6" 
           className="w-full rounded-xl"
         />
       </div>
@@ -82,9 +86,10 @@ const NewsAIMarketing = () => {
         offering these forward-looking educational opportunities.
       </p>
 
+      {/* Image 8 in full width */}
       <img 
-        src={odosImg3} 
-        alt="Team Members with JAT Hub Cards" 
+        src={odosImg8} 
+        alt="AI for Marketing & Media - Photo 8" 
         className="w-full rounded-xl mb-8"
       />
 
@@ -93,16 +98,16 @@ const NewsAIMarketing = () => {
         generation with the skills and knowledge necessary to thrive in an increasingly digital world.
       </p>
 
-      {/* Group Photos */}
-      <div className="grid md:grid-cols-2 gap-4 mb-8">
+      {/* Images 7 and 9 in row */}
+      <div className="grid md:grid-cols-2 gap-4">
         <img 
-          src={odosImg1} 
-          alt="Group Photo - JAT Hub Together We Make It Happen" 
+          src={odosImg7} 
+          alt="AI for Marketing & Media - Photo 7" 
           className="w-full rounded-xl"
         />
         <img 
-          src={odosImg2} 
-          alt="Group Photo - AI Marketing and Media Workshop" 
+          src={odosImg9} 
+          alt="AI for Marketing & Media - Photo 9" 
           className="w-full rounded-xl"
         />
       </div>
