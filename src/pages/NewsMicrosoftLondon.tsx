@@ -6,6 +6,10 @@ import microsoftVisit4 from "@/assets/news/microsoft/Microsoft_Visit_4.jpeg";
 import microsoftVisit5 from "@/assets/news/microsoft/Microsoft_Visit_5.jpeg";
 import microsoftVisit6 from "@/assets/news/microsoft/Microsoft_Visit_6.jpeg";
 import microsoftVisit7 from "@/assets/news/microsoft/Microsoft_Visit_7.jpeg";
+import microsoftVisit8 from "@/assets/news/microsoft/Microsoft_Visit_8.jpeg";
+import microsoftVisit9 from "@/assets/news/microsoft/Microsoft_Visit_9.jpg";
+import microsoftVisit10 from "@/assets/news/microsoft/Microsoft_Visit_10.jpg";
+import microsoftVisit11 from "@/assets/news/microsoft/Microsoft_Visit_11.jpg";
 
 const NewsMicrosoftLondon = () => {
   return (
@@ -127,6 +131,33 @@ const NewsMicrosoftLondon = () => {
           className="w-full rounded-xl"
         />
       </div>
+
+      {/* Group Photo */}
+      <img 
+        src={microsoftVisit8} 
+        alt="Microsoft London Visit - Group Photo with JAT Hub Banner" 
+        className="w-full rounded-xl mb-8"
+      />
+
+      {/* Attendee Photos */}
+      <div className="grid md:grid-cols-2 gap-4 mb-8">
+        <img 
+          src={microsoftVisit9} 
+          alt="Microsoft London Visit - Attendees Listening" 
+          className="w-full rounded-xl"
+        />
+        <img 
+          src={microsoftVisit10} 
+          alt="Microsoft London Visit - Engaged Audience" 
+          className="w-full rounded-xl"
+        />
+      </div>
+
+      <img 
+        src={microsoftVisit11} 
+        alt="Microsoft London Visit - Student Participation" 
+        className="w-full rounded-xl mb-8"
+      />
 
       <p className="text-muted-foreground leading-relaxed">
         This visit served as a powerful motivator, reaffirming JAT Hub's commitment to forging essential 
