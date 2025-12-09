@@ -5,6 +5,7 @@ import partTimePic3 from "@/assets/news/parttime/Part_time_pics_3.jpeg";
 import partTimePic4 from "@/assets/news/parttime/Part_time_pics_4.jpeg";
 import partTimePic5 from "@/assets/news/parttime/Part_time_pics_5.jpeg";
 import partTimePic6 from "@/assets/news/parttime/Part_time_pics_6.jpeg";
+import partTimePic7 from "@/assets/news/parttime/Part_time_pics_7.jpeg";
 
 const NewsPartTimeFair = () => {
   return (
@@ -59,7 +60,7 @@ const NewsPartTimeFair = () => {
         className="w-full rounded-xl mb-8"
       />
 
-      <div className="grid md:grid-cols-2 gap-4 mb-8">
+      <div className="grid md:grid-cols-3 gap-4 mb-8">
         <img 
           src={partTimePic1} 
           alt="JAT Hub Representatives Speaking with Students" 
@@ -68,6 +69,11 @@ const NewsPartTimeFair = () => {
         <img 
           src={partTimePic6} 
           alt="Registration and Check-in Area" 
+          className="w-full rounded-xl"
+        />
+        <img 
+          src={partTimePic7} 
+          alt="Students Networking at the Fair" 
           className="w-full rounded-xl"
         />
       </div>
