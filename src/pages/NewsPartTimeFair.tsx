@@ -1,4 +1,10 @@
 import { NewsArticle } from "@/components/NewsArticle";
+import partTimePic1 from "@/assets/news/parttime/Part_time_pics_1.jpeg";
+import partTimePic2 from "@/assets/news/parttime/Part_time_pics_2.jpeg";
+import partTimePic3 from "@/assets/news/parttime/Part_time_pics_3.jpeg";
+import partTimePic4 from "@/assets/news/parttime/Part_time_pics_4.jpeg";
+import partTimePic5 from "@/assets/news/parttime/Part_time_pics_5.jpeg";
+import partTimePic6 from "@/assets/news/parttime/Part_time_pics_6.jpeg";
 
 const NewsPartTimeFair = () => {
   return (
@@ -13,10 +19,11 @@ const NewsPartTimeFair = () => {
         empowering the next generation.
       </p>
 
-      {/* Placeholder for images - will be added when uploaded */}
-      <div className="w-full aspect-video rounded-xl bg-card border border-border flex items-center justify-center mb-8">
-        <p className="text-muted-foreground">Image coming soon</p>
-      </div>
+      <img 
+        src={partTimePic2} 
+        alt="Part-Time Job Fair - Overview of the Event Hall" 
+        className="w-full rounded-xl mb-8"
+      />
 
       <p className="text-muted-foreground leading-relaxed mb-8">
         As a community dedicated to empowering the next generation of dreamers and innovators, JAT Hub 
@@ -26,6 +33,19 @@ const NewsPartTimeFair = () => {
         seeking flexible opportunities to support their studies and apply their advanced skills.
       </p>
 
+      <div className="grid md:grid-cols-2 gap-4 mb-8">
+        <img 
+          src={partTimePic3} 
+          alt="JAT Hub Booth with Team Members" 
+          className="w-full rounded-xl"
+        />
+        <img 
+          src={partTimePic4} 
+          alt="JAT Hub Team Engaging with Students" 
+          className="w-full rounded-xl"
+        />
+      </div>
+
       <p className="text-muted-foreground leading-relaxed mb-8">
         The energy and enthusiasm displayed by the students underscore a clear demand for practical 
         engagement and professional networking opportunities. Our team engaged in meaningful discussions, 
@@ -33,14 +53,23 @@ const NewsPartTimeFair = () => {
         crucial skills, and expand their professional networks long before graduation.
       </p>
 
-      {/* Placeholder grid for images */}
+      <img 
+        src={partTimePic5} 
+        alt="Busy Crowd at the Part-Time Job Fair" 
+        className="w-full rounded-xl mb-8"
+      />
+
       <div className="grid md:grid-cols-2 gap-4 mb-8">
-        <div className="aspect-video rounded-xl bg-card border border-border flex items-center justify-center">
-          <p className="text-muted-foreground">Image coming soon</p>
-        </div>
-        <div className="aspect-video rounded-xl bg-card border border-border flex items-center justify-center">
-          <p className="text-muted-foreground">Image coming soon</p>
-        </div>
+        <img 
+          src={partTimePic1} 
+          alt="JAT Hub Representatives Speaking with Students" 
+          className="w-full rounded-xl"
+        />
+        <img 
+          src={partTimePic6} 
+          alt="Registration and Check-in Area" 
+          className="w-full rounded-xl"
+        />
       </div>
 
       <p className="text-muted-foreground leading-relaxed mb-8">
