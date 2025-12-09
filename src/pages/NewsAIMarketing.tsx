@@ -1,4 +1,13 @@
 import { NewsArticle } from "@/components/NewsArticle";
+import odosImg1 from "@/assets/news/ai-marketing/ODOS_Thaicamp_1.jpeg";
+import odosImg2 from "@/assets/news/ai-marketing/ODOS_Thaicamp_2.jpeg";
+import odosImg3 from "@/assets/news/ai-marketing/ODOS_Thaicamp_3.jpeg";
+import odosImg4 from "@/assets/news/ai-marketing/ODOS_Thaicamp_4.jpeg";
+import odosImg5 from "@/assets/news/ai-marketing/ODOS_Thaicamp_5.jpeg";
+import odosImg6 from "@/assets/news/ai-marketing/ODOS_Thaicamp_6.jpeg";
+import odosImg7 from "@/assets/news/ai-marketing/ODOS_Thaicamp_7.jpeg";
+import odosImg8 from "@/assets/news/ai-marketing/ODOS_Thaicamp_8.jpeg";
+import odosImg9 from "@/assets/news/ai-marketing/ODOS_Thaicamp_9.jpeg";
 
 const NewsAIMarketing = () => {
   return (
@@ -14,10 +23,11 @@ const NewsAIMarketing = () => {
         intersection of Artificial Intelligence and creative media.
       </p>
 
-      {/* Placeholder for main image */}
-      <div className="w-full aspect-video rounded-xl bg-card border border-border flex items-center justify-center mb-8">
-        <p className="text-muted-foreground">Image coming soon</p>
-      </div>
+      <img 
+        src={odosImg9} 
+        alt="JAT Hub AI Marketing and Media Workshop Setup" 
+        className="w-full rounded-xl mb-8"
+      />
 
       <p className="text-muted-foreground leading-relaxed mb-8">
         A central theme of the workshop was demystifying the process of creating AI-generated video 
@@ -27,14 +37,17 @@ const NewsAIMarketing = () => {
         immediately see the potential of AI in their own future projects.
       </p>
 
-      {/* Placeholder grid for images */}
       <div className="grid md:grid-cols-2 gap-4 mb-8">
-        <div className="aspect-video rounded-xl bg-card border border-border flex items-center justify-center">
-          <p className="text-muted-foreground">Image coming soon</p>
-        </div>
-        <div className="aspect-video rounded-xl bg-card border border-border flex items-center justify-center">
-          <p className="text-muted-foreground">Image coming soon</p>
-        </div>
+        <img 
+          src={odosImg5} 
+          alt="Presenter Explaining Bridging the Gap" 
+          className="w-full rounded-xl"
+        />
+        <img 
+          src={odosImg8} 
+          alt="Workshop Presentation on AI Tools" 
+          className="w-full rounded-xl"
+        />
       </div>
 
       <p className="text-muted-foreground leading-relaxed mb-8">
@@ -44,9 +57,23 @@ const NewsAIMarketing = () => {
         transforming marketing strategies and media production workflows.
       </p>
 
-      {/* Placeholder for additional image */}
-      <div className="w-full aspect-video rounded-xl bg-card border border-border flex items-center justify-center mb-8">
-        <p className="text-muted-foreground">Image coming soon</p>
+      <img 
+        src={odosImg6} 
+        alt="Students Engaged in Workshop Session" 
+        className="w-full rounded-xl mb-8"
+      />
+
+      <div className="grid md:grid-cols-2 gap-4 mb-8">
+        <img 
+          src={odosImg4} 
+          alt="Student Using AI Tools on iPad" 
+          className="w-full rounded-xl"
+        />
+        <img 
+          src={odosImg7} 
+          alt="Attendees Taking Selfie at Workshop" 
+          className="w-full rounded-xl"
+        />
       </div>
 
       <p className="text-muted-foreground leading-relaxed mb-8">
@@ -55,10 +82,30 @@ const NewsAIMarketing = () => {
         offering these forward-looking educational opportunities.
       </p>
 
-      <p className="text-muted-foreground leading-relaxed">
+      <img 
+        src={odosImg3} 
+        alt="Team Members with JAT Hub Cards" 
+        className="w-full rounded-xl mb-8"
+      />
+
+      <p className="text-muted-foreground leading-relaxed mb-8">
         The event served as another successful example of JAT Hub's mission to empower the next 
         generation with the skills and knowledge necessary to thrive in an increasingly digital world.
       </p>
+
+      {/* Group Photos */}
+      <div className="grid md:grid-cols-2 gap-4 mb-8">
+        <img 
+          src={odosImg1} 
+          alt="Group Photo - JAT Hub Together We Make It Happen" 
+          className="w-full rounded-xl"
+        />
+        <img 
+          src={odosImg2} 
+          alt="Group Photo - AI Marketing and Media Workshop" 
+          className="w-full rounded-xl"
+        />
+      </div>
     </NewsArticle>
   );
 };
