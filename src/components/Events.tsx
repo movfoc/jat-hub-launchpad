@@ -43,7 +43,8 @@ export const Events = () => {
       title: "UK House of Lords Roundtable: Decentralised Digital Economies and UK Growth",
       description: "10 AM - 12 Noon at House of Lords.",
       isPast: false,
-      registrationUrl: "https://luma.com/ehnn7zwv?tk=sKbwCJ",
+      isInviteOnly: true,
+      registrationUrl: undefined,
     },
     {
       date: "JAN 17, 2026",
@@ -71,7 +72,7 @@ export const Events = () => {
             <Card 
               key={index}
               className={`border border-primary/30 bg-card/40 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 flex flex-col backdrop-blur-sm ${
-                event.isPast ? 'opacity-60' : ''
+                event.isPast || event.isInviteOnly ? 'opacity-60' : ''
               }`}
             >
               <CardHeader className="pb-3">
@@ -91,6 +92,10 @@ export const Events = () => {
                 {event.isPast ? (
                   <span className="text-foreground/50 font-medium text-sm">
                     See you next time
+                  </span>
+                ) : event.isInviteOnly ? (
+                  <span className="text-foreground/50 font-medium text-sm">
+                    By Invitation Only
                   </span>
                 ) : event.registrationUrl ? (
                   <Button variant="link" className="text-primary hover:text-primary/80 p-0 h-auto text-sm" asChild>
