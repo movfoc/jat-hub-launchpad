@@ -47,11 +47,18 @@ export const Events = () => {
       registrationUrl: undefined,
     },
     {
-      date: "JAN 17, 2026",
+      date: "JAN 10, 2026",
       title: "JatHub: Visit College of Esports",
       description: "12:30 PM - 3:30 PM at Queen Elizabeth Olympic Park, Velodrome, Lee Valley VeloPark, Abercrombie Rd, London E20 3AB.",
       isPast: false,
       registrationUrl: "https://luma.com/i3n8n33d",
+    },
+    {
+      date: "FEB 17, 2026",
+      title: "Digital Marketing & Gamified Economy Summit",
+      description: "10 AM - 5 PM at UCL School of Management, Canada One, Canary Wharf, E14 5AB.",
+      isPast: false,
+      registrationUrl: "https://luma.com/md1xg4iq",
     },
   ];
 
