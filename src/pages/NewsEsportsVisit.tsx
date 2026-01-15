@@ -1,0 +1,56 @@
+import { NewsArticle } from "@/components/NewsArticle";
+
+const NewsEsportsVisit = () => {
+  return (
+    <NewsArticle
+      date="NOV 22, 2025"
+      title="Jathub Explores the College of Esports at Queen Elizabeth Olympic Park"
+      subtitle="London, United Kingdom"
+    >
+      <p className="text-lg text-muted-foreground leading-relaxed">
+        Jathub continues its mission to connect with the forefront of digital innovation. On November 22, 2025, our team had the privilege of attending the College of Esports (CoEs) Open Day, located at the iconic Lee Valley VeloPark in Queen Elizabeth Olympic Park.
+      </p>
+
+      <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">A World-First Campus</h3>
+
+      <p className="text-lg text-muted-foreground leading-relaxed">
+        As the world's first university-level institution dedicated to the business of esports, the College of Esports offers a unique blend of academic rigour and industry-standard practical experience. The energy at the campus was electric, with students and visitors exploring how gaming is evolving from a pastime into a global economic powerhouse.
+      </p>
+
+      {/* Placeholder for images - will be added later */}
+      <div className="my-8 bg-muted/20 border border-border rounded-lg p-8 text-center">
+        <p className="text-muted-foreground italic">Images coming soon</p>
+      </div>
+
+      <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Hands-On Innovation</h3>
+
+      <p className="text-lg text-muted-foreground leading-relaxed">
+        Our visit was packed with interactive experiences that showcased the college's state-of-the-art facilities:
+      </p>
+
+      <p className="text-lg text-muted-foreground leading-relaxed">
+        <strong className="text-foreground">Sim Racing Excellence:</strong> We tested our skills on professional-grade racing simulators. These rigs are not just for fun; they represent the intersection of high-performance engineering and competitive gaming.
+      </p>
+
+      <p className="text-lg text-muted-foreground leading-relaxed">
+        <strong className="text-foreground">Broadcast Technology:</strong> Jathub representatives stepped into the green screen studios, getting a behind-the-scenes look at the production technology that powers modern esports broadcasting and content creation.
+      </p>
+
+      <p className="text-lg text-muted-foreground leading-relaxed">
+        <strong className="text-foreground">Gaming Hubs:</strong> The open day highlighted the college's high-spec gaming labs, where students learn the intricacies of game design, event management, and digital marketing.
+      </p>
+
+      <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Aligning Visions</h3>
+
+      <p className="text-lg text-muted-foreground leading-relaxed">
+        This visit reinforced Jathub's commitment to the digital economy. Just as the College of Esports is professionalizing the industry through its unique "Tri-Curriculum" approach, Jathub is dedicated to empowering the next generation of creators and leaders.
+      </p>
+
+      <p className="text-lg text-muted-foreground leading-relaxed">
+        We left inspired by the passion of the students and faculty. The College of Esports is proving that the future of education is immersive, digital, and incredibly exciting.
+      </p>
+    </NewsArticle>
+  );
+};
+
+export default NewsEsportsVisit;
