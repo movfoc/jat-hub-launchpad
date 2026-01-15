@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
@@ -12,10 +12,23 @@ interface NewsArticleProps {
 }
 
 export const NewsArticle = ({ date, title, subtitle, children }: NewsArticleProps) => {
+  const navigate = useNavigate();
+
   // Scroll to top when the component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleBackToNews = () => {
+    navigate("/");
+    // Small delay to ensure navigation completes before scrolling
+    setTimeout(() => {
+      const newsSection = document.getElementById("news");
+      if (newsSection) {
+        newsSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -24,13 +37,13 @@ export const NewsArticle = ({ date, title, subtitle, children }: NewsArticleProp
       <main className="pt-24 pb-20">
         <div className="container mx-auto max-w-4xl px-6">
           {/* Back Button */}
-          <Link 
-            to="/#news" 
+          <button 
+            onClick={handleBackToNews}
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to News
-          </Link>
+          </button>
           
           {/* Article Header */}
           <header className="mb-12">
