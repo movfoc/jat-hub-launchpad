@@ -17,6 +17,11 @@ const NewsOVHcloud = () => {
         Jathub is dedicated to bridging the gap between academic potential and industrial innovation. On November 17, we were thrilled to host the Jathub x OVHcloud Insight Day, bringing together a cohort of talented students and emerging innovators from four of the UK's leading institutions: University of Surrey, Brunel University London, Imperial College London, and UCL.
       </p>
 
+      {/* Image 1 - Full width */}
+      <div className="my-8 rounded-lg overflow-hidden">
+        <img src={ovhcloudImg1} alt="Group photo at OVHcloud London" className="w-full h-auto" />
+      </div>
+
       <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">A Day of Curiosity and Connection</h3>
 
       <p className="text-lg text-muted-foreground leading-relaxed">
@@ -54,10 +59,6 @@ const NewsOVHcloud = () => {
         <img src={ovhcloudImg7} alt="Group photo at OVHcloud London" className="w-full h-auto" />
       </div>
 
-      {/* Image 1 - Full width */}
-      <div className="my-8 rounded-lg overflow-hidden">
-        <img src={ovhcloudImg1} alt="Group photo at OVHcloud London" className="w-full h-auto" />
-      </div>
 
       <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Building Bridges and Memories</h3>
 
