@@ -22,10 +22,10 @@ const NewsEsportsVisit = () => {
         As the world's first university-level institution dedicated to the business of esports, the College of Esports offers a unique blend of academic rigour and industry-standard practical experience. The energy at the campus was electric, with students and visitors exploring how gaming is evolving from a pastime into a global economic powerhouse.
       </p>
 
-      {/* Images - Campus tour and gaming labs */}
+      {/* Images 1 and 2 in grid */}
       <div className="my-8 grid md:grid-cols-2 gap-4">
-        <img src={esportImg1} alt="Campus tour at College of Esports" className="rounded-lg w-full h-auto" />
-        <img src={esportImg2} alt="High-spec gaming labs at CoEs" className="rounded-lg w-full h-auto" />
+        <img src={esportImg1} alt="College of Esports campus" className="rounded-lg w-full h-auto" />
+        <img src={esportImg2} alt="Esports facilities" className="rounded-lg w-full h-auto" />
       </div>
 
       <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Hands-On Innovation</h3>
@@ -38,28 +38,24 @@ const NewsEsportsVisit = () => {
         <strong className="text-foreground">Sim Racing Excellence:</strong> We tested our skills on professional-grade racing simulators. These rigs are not just for fun; they represent the intersection of high-performance engineering and competitive gaming.
       </p>
 
-      {/* Image - Sim racing */}
+      {/* Image 3 - Full width - Sim racing */}
       <div className="my-8 rounded-lg overflow-hidden">
-        <img src={esportImg5} alt="Testing sim racing equipment" className="w-full h-auto" />
+        <img src={esportImg3} alt="Sim racing simulators at College of Esports" className="w-full h-auto" />
       </div>
 
       <p className="text-lg text-muted-foreground leading-relaxed">
         <strong className="text-foreground">Broadcast Technology:</strong> Jathub representatives stepped into the green screen studios, getting a behind-the-scenes look at the production technology that powers modern esports broadcasting and content creation.
       </p>
 
-      {/* Image - Green screen studio */}
-      <div className="my-8 rounded-lg overflow-hidden">
-        <img src={esportImg3} alt="Exploring the green screen broadcast studio" className="w-full h-auto" />
+      {/* Images 4 and 5 in grid */}
+      <div className="my-8 grid md:grid-cols-2 gap-4">
+        <img src={esportImg4} alt="Broadcasting studio" className="rounded-lg w-full h-auto" />
+        <img src={esportImg5} alt="Green screen production" className="rounded-lg w-full h-auto" />
       </div>
 
       <p className="text-lg text-muted-foreground leading-relaxed">
         <strong className="text-foreground">Gaming Hubs:</strong> The open day highlighted the college's high-spec gaming labs, where students learn the intricacies of game design, event management, and digital marketing.
       </p>
-
-      {/* Image - Gaming and interaction */}
-      <div className="my-8 rounded-lg overflow-hidden">
-        <img src={esportImg4} alt="Students interacting in the gaming hub" className="w-full h-auto" />
-      </div>
 
       <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Aligning Visions</h3>
 
