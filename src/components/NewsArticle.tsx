@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Header } from "./Header";
@@ -11,6 +12,11 @@ interface NewsArticleProps {
 }
 
 export const NewsArticle = ({ date, title, subtitle, children }: NewsArticleProps) => {
+  // Scroll to top when the component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
