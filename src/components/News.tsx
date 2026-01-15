@@ -2,9 +2,27 @@ import { Link } from "react-router-dom";
 import aiMarketingThumbnail from "@/assets/ai-marketing-thumbnail.png";
 import microsoftVisitThumbnail from "@/assets/microsoft-visit-thumbnail.png";
 import partTimeThumbnail from "@/assets/part-time-thumbnail.png";
+import esportsNewscard from "@/assets/esports-newscard.png";
+import ovhcloudNewscard from "@/assets/ovhcloud-newscard.png";
+import roundtableNewscard from "@/assets/roundtable-newscard.png";
 
 export const News = () => {
   const newsItems = [
+    {
+      image: roundtableNewscard,
+      alt: "Jathub at House of Lords: Defining the UK's Digital Future",
+      link: "/news/house-of-lords",
+    },
+    {
+      image: esportsNewscard,
+      alt: "College of Esports Visit",
+      link: "/news/esports-visit",
+    },
+    {
+      image: ovhcloudNewscard,
+      alt: "OVHcloud London Office Visit",
+      link: "/news/ovhcloud-london",
+    },
     {
       image: aiMarketingThumbnail,
       alt: "AI for Marketing & Media event",
