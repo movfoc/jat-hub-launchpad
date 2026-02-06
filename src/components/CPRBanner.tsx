@@ -19,7 +19,7 @@ export const CPRBanner = () => {
             <div className="flex-1 text-center lg:text-left">
               {/* Icon cluster */}
               <div className="flex items-center justify-center lg:justify-start mb-6">
-                <img src={bhfLogo} alt="British Heart Foundation" className="w-16 h-16 rounded-xl object-cover" />
+                <img src={bhfLogo} alt="British Heart Foundation" className="h-14 rounded-xl object-contain" />
               </div>
 
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-tight leading-[1.1] mb-4">
@@ -53,14 +53,6 @@ export const CPRBanner = () => {
               </div>
             </div>
 
-            {/* Right: Abstract visual */}
-            <div className="flex-shrink-0 hidden md:flex items-center justify-center">
-              <div className="relative w-48 h-48 lg:w-56 lg:h-56 flex items-center justify-center">
-                <div className="absolute inset-0 rounded-full border-2 border-cpr/20 animate-pulse" />
-                <div className="absolute inset-4 rounded-full border border-cpr/15" />
-                <img src={bhfLogo} alt="British Heart Foundation" className="w-24 h-24 lg:w-28 lg:h-28 rounded-2xl object-cover relative z-10" />
-              </div>
-            </div>
           </div>
         </div>
       </div>
