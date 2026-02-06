@@ -5,6 +5,7 @@ import { About } from "@/components/About";
 import { Events } from "@/components/Events";
 import { News } from "@/components/News";
 import { Mission } from "@/components/Mission";
+import { CPRBanner } from "@/components/CPRBanner";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 
@@ -17,6 +18,7 @@ const Index = () => {
         <Features />
         <About />
         <Events />
+        <CPRBanner />
         <News />
         <Mission />
         <CTA />

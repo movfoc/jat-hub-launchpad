@@ -57,6 +57,10 @@ export default {
           "gray-dark": "hsl(var(--jat-gray-dark))",
           "gray-lighter": "hsl(var(--jat-gray-lighter))",
         },
+        cpr: {
+          DEFAULT: "hsl(var(--cpr-accent))",
+          foreground: "hsl(var(--cpr-accent-foreground))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
