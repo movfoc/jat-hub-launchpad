@@ -43,19 +43,19 @@ const BHFTraining = () => {
               Learn CPR. <span className="text-cpr">Save a Life.</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-justify mb-8">
               <strong className="text-foreground">RevivR</strong> is a free, interactive, online CPR training tool provided by the British Heart Foundation, making it easy for you to learn how to save a life in 30 minutes and request a personalised CPR certificate.
             </p>
 
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-justify mb-8">
               It couldn't be simpler – you just need your mobile phone or tablet and a cushion to practise on.
             </p>
 
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-justify mb-8">
               <strong className="text-foreground">Jat Hub</strong> is the community partner of the British Heart Foundation. We invite you to participate in the training and get yourself a CPR certificate.
             </p>
 
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-justify mb-8">
               You can claim <strong className="text-primary">JATSCORE</strong> on{" "}
               <a
                 href="https://jatpoint.com"
@@ -67,10 +67,10 @@ const BHFTraining = () => {
               </a>{" "}
               upon showing us the evidence of your completion of the training. Please send the evidence to{" "}
               <a
-                href="mailto:cs@jatpoint.com"
+                href="mailto:jat@jatpoint.com"
                 className="text-primary hover:underline"
               >
-                cs@jatpoint.com
+                jat@jatpoint.com
               </a>.
             </p>
 
@@ -82,7 +82,7 @@ const BHFTraining = () => {
                 asChild
               >
                 <a
-                  href="https://www.bhf.org.uk/how-you-can-help/how-to-save-a-life/how-to-do-cpr"
+                  href="https://www.bhf.org.uk/how-you-can-help/how-to-save-a-life/how-to-do-cpr/learn-cpr-in-15-minutes"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
