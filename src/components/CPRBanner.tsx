@@ -1,4 +1,4 @@
-import { ExternalLink } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import bhfLogo from "@/assets/bhf-logo.jpg";
 
@@ -37,13 +37,8 @@ export const CPRBanner = () => {
                   className="bg-cpr text-cpr-foreground hover:bg-cpr/90 transition-all hover:scale-105 text-base px-8 py-6 font-semibold"
                   asChild
                 >
-                  <a
-                    href="https://www.bhf.org.uk/how-you-can-help/how-to-save-a-life/how-to-do-cpr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href="/bhf-training">
                     Learn CPR Now
-                    <ExternalLink className="w-4 h-4 ml-2" />
                   </a>
                 </Button>
 
