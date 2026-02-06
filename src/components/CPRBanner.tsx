@@ -1,5 +1,6 @@
-import { Heart, ExternalLink, Activity } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import bhfLogo from "@/assets/bhf-logo.jpg";
 
 export const CPRBanner = () => {
   return (
@@ -17,13 +18,8 @@ export const CPRBanner = () => {
             {/* Left: Content */}
             <div className="flex-1 text-center lg:text-left">
               {/* Icon cluster */}
-              <div className="flex items-center justify-center lg:justify-start gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-cpr/10 border border-cpr/20 flex items-center justify-center">
-                  <Heart className="w-6 h-6 text-cpr" />
-                </div>
-                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-                  <Activity className="w-6 h-6 text-primary" />
-                </div>
+              <div className="flex items-center justify-center lg:justify-start mb-6">
+                <img src={bhfLogo} alt="British Heart Foundation" className="w-16 h-16 rounded-xl object-cover" />
               </div>
 
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-tight leading-[1.1] mb-4">
@@ -59,30 +55,10 @@ export const CPRBanner = () => {
 
             {/* Right: Abstract visual */}
             <div className="flex-shrink-0 hidden md:flex items-center justify-center">
-              <div className="relative w-48 h-48 lg:w-56 lg:h-56">
-                {/* Outer ring */}
+              <div className="relative w-48 h-48 lg:w-56 lg:h-56 flex items-center justify-center">
                 <div className="absolute inset-0 rounded-full border-2 border-cpr/20 animate-pulse" />
-                {/* Middle ring */}
                 <div className="absolute inset-4 rounded-full border border-cpr/15" />
-                {/* Inner glow */}
-                <div className="absolute inset-8 rounded-full bg-cpr/10 flex items-center justify-center">
-                  <Heart className="w-16 h-16 lg:w-20 lg:h-20 text-cpr/80" />
-                </div>
-                {/* Pulse lines */}
-                <svg
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-12 text-cpr/30"
-                  viewBox="0 0 200 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <polyline
-                    points="0,20 40,20 55,5 65,35 80,10 90,30 105,20 200,20"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <img src={bhfLogo} alt="British Heart Foundation" className="w-24 h-24 lg:w-28 lg:h-28 rounded-2xl object-cover relative z-10" />
               </div>
             </div>
           </div>
