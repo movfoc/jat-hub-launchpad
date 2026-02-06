@@ -11,6 +11,7 @@ import NewsAIMarketing from "./pages/NewsAIMarketing";
 import NewsEsportsVisit from "./pages/NewsEsportsVisit";
 import NewsOVHcloud from "./pages/NewsOVHcloud";
 import NewsHouseOfLords from "./pages/NewsHouseOfLords";
+import BHFTraining from "./pages/BHFTraining";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/bhf-training" element={<BHFTraining />} />
           <Route path="/news/microsoft-london" element={<NewsMicrosoftLondon />} />
           <Route path="/news/parttime-fair" element={<NewsPartTimeFair />} />
           <Route path="/news/ai-marketing" element={<NewsAIMarketing />} />
