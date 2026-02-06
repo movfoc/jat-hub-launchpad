@@ -14,7 +14,7 @@ export const Events = () => {
       date: "JAN 27 - 29, 2026",
       title: "Global Game Jam 2026",
       description: "10 AM - 12 Noon at 01IFH02, Stag Hill, University Campus, Site, Guildford GU2 7XH.",
-      isPast: false,
+      isPast: true,
       registrationUrl: "https://luma.com/4j4bqbkx",
     },
     {
