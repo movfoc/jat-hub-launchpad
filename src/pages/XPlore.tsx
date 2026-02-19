@@ -192,7 +192,7 @@ const XPlore = () => {
                 Stop Guessing What Gen Z Wants. <br /><span className="text-[#8B5CF6]">Let Them Build It.</span>
               </h2>
               <p className="text-gray-400 text-lg mb-8 leading-relaxed">Traditional agencies are expensive and detached. Gen Z ignores corporate messaging. We offer active collaboration to solve the relevance crisis.</p>
-              <a href="mailto:partner@jathub-xplore.com" className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#8B5CF6] hover:text-white transition-all hover:scale-105">Request Partner Deck</a>
+              <a href="mailto:Jat@jathub.com" className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#8B5CF6] hover:text-white transition-all hover:scale-105">Request Partner Deck</a>
             </div>
             <div className="relative reveal-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: "200ms" }}>
               <div className="absolute -inset-2 bg-gradient-to-r from-[#8B5CF6] to-blue-600 rounded-2xl blur-lg opacity-30" />
@@ -329,8 +329,8 @@ const XPlore = () => {
             Ready to co-create <br /> the future?
           </h2>
           <div className="flex flex-col md:flex-row justify-center gap-6 mb-20">
-            <a href="mailto:partner@jathub-xplore.com" className="bg-[#D4FF00] text-black px-12 py-6 rounded-full font-bold text-xl hover:bg-white hover:scale-105 transition-all shadow-[0_0_30px_rgba(212,255,0,0.3)]">Partner With Us</a>
-            <a href="mailto:student@jathub-xplore.com" className="border border-white/20 text-white px-12 py-6 rounded-full font-bold text-xl hover:bg-white/10 hover:border-white transition-all">Apply as Student</a>
+            <a href="mailto:Jat@jathub.com" className="bg-[#D4FF00] text-black px-12 py-6 rounded-full font-bold text-xl hover:bg-white hover:scale-105 transition-all shadow-[0_0_30px_rgba(212,255,0,0.3)]">Partner With Us</a>
+            <a href="mailto:Jat@jathub.com" className="border border-white/20 text-white px-12 py-6 rounded-full font-bold text-xl hover:bg-white/10 hover:border-white transition-all">Apply as Student</a>
           </div>
         </div>
       </section>
