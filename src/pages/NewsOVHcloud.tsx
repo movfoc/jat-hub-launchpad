@@ -69,6 +69,30 @@ const NewsOVHcloud = () => {
       <p className="text-lg text-muted-foreground leading-relaxed">
         At Jathub, we believe in connecting universities, industry, and young talent. The Jathub x OVHcloud Insight Day was a perfect example of community in action.
       </p>
+
+      {/* YouTube Video */}
+      <div className="my-12">
+        <h3 className="text-2xl font-bold text-foreground mb-4">Watch the Highlight Reel</h3>
+        <div className="relative w-full rounded-lg overflow-hidden" style={{ paddingBottom: '56.25%' }}>
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/o4lohuiuBq8"
+            title="Jathub x OVHcloud Insight Day"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+        <a
+          href="https://www.youtube.com/watch?v=o4lohuiuBq8"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-4 text-primary hover:underline font-medium"
+        >
+          Watch on YouTube →
+        </a>
+      </div>
     </NewsArticle>
   );
 };
