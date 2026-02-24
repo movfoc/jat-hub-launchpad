@@ -69,31 +69,6 @@ const NewsOVHcloud = () => {
       <p className="text-lg text-muted-foreground leading-relaxed">
         At Jathub, we believe in connecting universities, industry, and young talent. The Jathub x OVHcloud Insight Day was a perfect example of community in action.
       </p>
-
-      {/* YouTube Video */}
-      <div className="my-12">
-        <div className="relative w-full overflow-hidden rounded-lg" style={{ paddingBottom: '56.25%' }}>
-          <iframe
-            className="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/embed/ubXGtEEkYZk"
-            title="Surrey Global Gam Jam 2026 | Yes, We made it. From Zero to Playable in 48 Hours! 🚀"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
-        </div>
-        <p className="text-center mt-4">
-          <a
-            href="https://www.youtube.com/watch?v=ubXGtEEkYZk"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline font-medium"
-          >
-            Watch on YouTube →
-          </a>
-        </p>
-      </div>
     </NewsArticle>
   );
 };
