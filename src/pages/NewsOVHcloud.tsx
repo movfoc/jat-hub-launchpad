@@ -94,6 +94,31 @@ const NewsOVHcloud = () => {
           </a>
         </p>
       </div>
+
+      {/* YouTube Video 2 - OVHcloud Insight Day */}
+      <div className="my-12">
+        <div className="relative w-full overflow-hidden rounded-lg" style={{ paddingBottom: '56.25%' }}>
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/o4lohuiuBq8"
+            title="Jathub x OVHcloud Insight Day"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+        <p className="text-center mt-4">
+          <a
+            href="https://www.youtube.com/watch?v=o4lohuiuBq8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline font-medium"
+          >
+            Watch on YouTube →
+          </a>
+        </p>
+      </div>
     </NewsArticle>
   );
 };
