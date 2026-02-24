@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { NewsArticle } from "@/components/NewsArticle";
 import microsoftVisit1 from "@/assets/news/microsoft/Microsoft_Visit_1.jpeg";
 import microsoftVisit2 from "@/assets/news/microsoft/Microsoft_Visit_2.jpg";
@@ -12,6 +13,14 @@ import microsoftVisit10 from "@/assets/news/microsoft/Microsoft_Visit_10.jpg";
 import microsoftVisit11 from "@/assets/news/microsoft/Microsoft_Visit_11.jpg";
 
 const NewsMicrosoftLondon = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "//www.instagram.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => { document.body.removeChild(script); };
+  }, []);
+
   return (
     <NewsArticle
       date="NOV 14, 2025"
@@ -155,7 +164,7 @@ const NewsMicrosoftLondon = () => {
       </p>
 
       {/* Images 4 and 5 in grid */}
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 gap-4 mb-8">
         <img 
           src={microsoftVisit4} 
           alt="Microsoft London Visit - Photo 4" 
@@ -166,6 +175,32 @@ const NewsMicrosoftLondon = () => {
           alt="Microsoft London Visit - Photo 5" 
           className="w-full rounded-xl"
         />
+      </div>
+
+      {/* Instagram Post */}
+      <div className="my-12">
+        <h3 className="text-2xl font-bold text-foreground mb-4">Watch on Instagram</h3>
+        <div className="flex justify-center">
+          <blockquote
+            className="instagram-media"
+            data-instgrm-captioned
+            data-instgrm-permalink="https://www.instagram.com/reel/jathub_uk/"
+            data-instgrm-version="14"
+            style={{ maxWidth: 540, width: "100%" }}
+          >
+            <a href="https://www.instagram.com/jathub_uk/" target="_blank" rel="noopener noreferrer">
+              View this post on Instagram — A post shared by Jat Hub (@jathub_uk)
+            </a>
+          </blockquote>
+        </div>
+        <a
+          href="https://www.instagram.com/jathub_uk/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-4 text-primary hover:underline font-medium"
+        >
+          Follow us on Instagram →
+        </a>
       </div>
     </NewsArticle>
   );
