@@ -155,7 +155,7 @@ const NewsMicrosoftLondon = () => {
       </p>
 
       {/* Images 4 and 5 in grid */}
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-2 gap-4 mb-8">
         <img 
           src={microsoftVisit4} 
           alt="Microsoft London Visit - Photo 4" 
@@ -166,6 +166,30 @@ const NewsMicrosoftLondon = () => {
           alt="Microsoft London Visit - Photo 5" 
           className="w-full rounded-xl"
         />
+      </div>
+
+      {/* YouTube Video */}
+      <div className="my-12">
+        <h3 className="text-2xl font-bold text-foreground mb-4">Watch the Highlight Reel</h3>
+        <div className="relative w-full rounded-lg overflow-hidden" style={{ paddingBottom: '56.25%' }}>
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/44JsLBUiVkQ"
+            title="A day of profound inspiration at the Microsoft London Office!"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+        <a
+          href="https://www.youtube.com/watch?v=44JsLBUiVkQ"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-4 text-primary hover:underline font-medium"
+        >
+          Watch on YouTube →
+        </a>
       </div>
     </NewsArticle>
   );
