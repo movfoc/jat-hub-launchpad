@@ -81,13 +81,13 @@ export const EventGallery = () => {
             <button
               key={event.id}
               onClick={() => navigate(`/events#${event.id}`)}
-              className="group min-w-[260px] max-w-[300px] shrink-0 snap-start rounded-xl overflow-hidden border border-primary/20 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 text-left focus:outline-none focus:ring-2 focus:ring-ring"
+              className="group min-w-[240px] max-w-[280px] shrink-0 snap-start rounded-xl overflow-hidden border border-primary/20 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 text-left focus:outline-none focus:ring-2 focus:ring-ring"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="overflow-hidden">
                 <img
                   src={event.poster}
                   alt={event.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
               </div>

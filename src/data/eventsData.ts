@@ -77,25 +77,27 @@ import roundtablePoster from "@/assets/roundtable-newscard.png";
 import aiMarketingPoster from "@/assets/ai-marketing-thumbnail.png";
 import partTimePoster from "@/assets/part-time-thumbnail.png";
 
+// Full event posters
+import digitalMarketingPoster from "@/assets/posters/digital-marketing-summit.png";
+import gameJamPoster from "@/assets/posters/global-game-jam.png";
+import ovhcloudEventPoster from "@/assets/posters/ovhcloud.png";
+import esportsEventPoster from "@/assets/posters/esports.png";
+
 export const historicalEvents: HistoricalEvent[] = [
   {
     id: "digital-marketing-summit",
     title: "Digital Marketing & Gamified Economy Summit",
     date: "FEB 17, 2026",
     description: "A full-day summit at UCL School of Management exploring the intersection of digital marketing, gamified economies, and emerging technologies.",
-    poster: "/placeholder.svg",  // Replace with actual poster
-    media: [
-      // Add photos and videos here
-      // { type: "image", src: "/path/to/image.jpg", alt: "Summit photo" },
-      // { type: "video", src: "https://www.youtube.com/embed/VIDEO_ID" },
-    ],
+    poster: digitalMarketingPoster,
+    media: [],
   },
   {
     id: "global-game-jam",
     title: "Global Game Jam 2026",
     date: "JAN 27 - 29, 2026",
     description: "Three-day game development marathon at the University of Surrey, bringing together developers, artists, and designers.",
-    poster: "/placeholder.svg",  // Replace with actual poster
+    poster: gameJamPoster,
     media: [],
   },
   {
@@ -103,7 +105,7 @@ export const historicalEvents: HistoricalEvent[] = [
     title: "JatHub: Visit College of Esports",
     date: "JAN 10, 2026",
     description: "An exclusive visit to the College of Esports at Queen Elizabeth Olympic Park.",
-    poster: esportsPoster,
+    poster: esportsEventPoster,
     media: [
       { type: "image", src: Esport1, alt: "Esports visit 1" },
       { type: "image", src: Esport2, alt: "Esports visit 2" },
@@ -133,7 +135,7 @@ export const historicalEvents: HistoricalEvent[] = [
     title: "Jathub x OVHcloud Insight Day: Igniting Future Tech Leaders",
     date: "NOV 25, 2025",
     description: "A visit to OVHcloud's London office exploring cloud infrastructure and emerging technologies.",
-    poster: ovhcloudPoster,
+    poster: ovhcloudEventPoster,
     media: [
       { type: "image", src: OVH1, alt: "OVHcloud visit 1" },
       { type: "image", src: OVH2, alt: "OVHcloud visit 2" },
