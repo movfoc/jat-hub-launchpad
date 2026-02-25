@@ -13,6 +13,7 @@ import NewsOVHcloud from "./pages/NewsOVHcloud";
 import NewsHouseOfLords from "./pages/NewsHouseOfLords";
 import BHFTraining from "./pages/BHFTraining";
 import XPlore from "./pages/XPlore";
+import EventsPage from "./pages/Events";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/news/ovhcloud-london" element={<NewsOVHcloud />} />
           <Route path="/news/house-of-lords" element={<NewsHouseOfLords />} />
           <Route path="/xplore" element={<XPlore />} />
+          <Route path="/events" element={<EventsPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
