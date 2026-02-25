@@ -11,8 +11,16 @@ import aiMarketingImg from "@/assets/news/ai-marketing/ODOS_Thaicamp_1.jpeg";
 import microsoftImg from "@/assets/news/microsoft/Microsoft_Visit_1.jpeg";
 import partTimeImg from "@/assets/news/parttime/Part_time_pics_1.jpeg";
 import gameJamImg from "@/assets/news/game-jam/GGJ_Group_Banner.jpeg";
+import uclSummitImg from "@/assets/news/ucl-summit/Summit_Group.png";
 
 const newsItems = [
+  {
+    image: uclSummitImg,
+    category: "Summit",
+    title: "JatHub x UCL Summit: Digital Marketing & Gamified Economies",
+    date: "2026-02-17",
+    link: "/news/ucl-summit",
+  },
   {
     image: gameJamImg,
     category: "Game Jam",

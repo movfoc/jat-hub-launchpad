@@ -12,6 +12,7 @@ import NewsEsportsVisit from "./pages/NewsEsportsVisit";
 import NewsOVHcloud from "./pages/NewsOVHcloud";
 import NewsHouseOfLords from "./pages/NewsHouseOfLords";
 import NewsGameJam from "./pages/NewsGameJam";
+import NewsUCLSummit from "./pages/NewsUCLSummit";
 import BHFTraining from "./pages/BHFTraining";
 import XPlore from "./pages/XPlore";
 import EventHistory from "./pages/EventHistory";
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/news/ovhcloud-london" element={<NewsOVHcloud />} />
           <Route path="/news/house-of-lords" element={<NewsHouseOfLords />} />
           <Route path="/news/game-jam" element={<NewsGameJam />} />
+          <Route path="/news/ucl-summit" element={<NewsUCLSummit />} />
           <Route path="/xplore" element={<XPlore />} />
           <Route path="/events" element={<EventHistory />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
