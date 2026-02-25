@@ -99,6 +99,29 @@ import GGJTeamMaskedWarrior from "@/assets/news/game-jam/GGJ_Team_MaskedWarrior.
 import GGJTeamTrenches from "@/assets/news/game-jam/GGJ_Team_Trenches.jpg";
 import GGJDay2Screen from "@/assets/news/game-jam/GGJ_Day2_Screen.jpeg";
 import GGJSpeakers from "@/assets/news/game-jam/GGJ_Speakers.jpg";
+import GGJGroupBanner from "@/assets/news/game-jam/GGJ_Group_Banner.jpeg";
+import GGJOrganisers from "@/assets/news/game-jam/GGJ_Organisers.jpeg";
+import GGJClassroom from "@/assets/news/game-jam/GGJ_Classroom.jpg";
+import GGJDay2Group from "@/assets/news/game-jam/GGJ_Day2_Group.jpg";
+import GGJSnacks from "@/assets/news/game-jam/GGJ_Snacks.jpeg";
+import GGJStudentsChat from "@/assets/news/game-jam/GGJ_Students_Chat.jpeg";
+import GGJCoding1 from "@/assets/news/game-jam/GGJ_Coding_1.jpg";
+import GGJCoding2 from "@/assets/news/game-jam/GGJ_Coding_2.jpg";
+
+import SummitGroup from "@/assets/news/ucl-summit/Summit_Group.png";
+import SummitVenue from "@/assets/news/ucl-summit/Summit_Venue.jpg";
+import SummitPanel from "@/assets/news/ucl-summit/Summit_Panel.jpg";
+import SummitSpeakers from "@/assets/news/ucl-summit/Summit_Speakers.jpg";
+import SummitCertificates from "@/assets/news/ucl-summit/Summit_Certificates.jpg";
+import SummitNetworking from "@/assets/news/ucl-summit/Summit_Networking.jpg";
+import SummitOrganisers from "@/assets/news/ucl-summit/Summit_Organisers.jpg";
+import SummitTeam from "@/assets/news/ucl-summit/Summit_Team.jpg";
+import SummitAudience from "@/assets/news/ucl-summit/Summit_Audience.jpg";
+import SummitMorning1 from "@/assets/news/ucl-summit/Summit_Morning_1.jpg";
+import SummitMorning2 from "@/assets/news/ucl-summit/Summit_Morning_2.jpg";
+import SummitMorning3 from "@/assets/news/ucl-summit/Summit_Morning_3.jpg";
+import SummitAfternoon1 from "@/assets/news/ucl-summit/Summit_Afternoon_1.jpg";
+import SummitAfternoon2 from "@/assets/news/ucl-summit/Summit_Afternoon_2.jpg";
 
 import digitalMarketingPoster from "@/assets/posters/digital-marketing-summit.png";
 import gameJamPoster from "@/assets/posters/global-game-jam.png";
@@ -115,7 +138,22 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "FEB 17, 2026",
     description: "A full-day summit at UCL School of Management exploring the intersection of digital marketing, gamified economies, and emerging technologies.",
     poster: digitalMarketingPoster,
-    media: [],
+    media: [
+      { type: "image", src: SummitGroup, alt: "Summit group photo" },
+      { type: "image", src: SummitVenue, alt: "Summit venue at UCL" },
+      { type: "image", src: SummitPanel, alt: "Panel discussion" },
+      { type: "image", src: SummitSpeakers, alt: "Summit speakers" },
+      { type: "image", src: SummitAudience, alt: "Summit audience" },
+      { type: "image", src: SummitMorning1, alt: "Morning session 1" },
+      { type: "image", src: SummitMorning2, alt: "Morning session 2" },
+      { type: "image", src: SummitMorning3, alt: "Morning session 3" },
+      { type: "image", src: SummitAfternoon1, alt: "Afternoon session 1" },
+      { type: "image", src: SummitAfternoon2, alt: "Afternoon session 2" },
+      { type: "image", src: SummitCertificates, alt: "Certificate ceremony" },
+      { type: "image", src: SummitNetworking, alt: "Networking session" },
+      { type: "image", src: SummitOrganisers, alt: "Summit organisers" },
+      { type: "image", src: SummitTeam, alt: "Summit team" },
+    ],
   },
   {
     id: "global-game-jam",
@@ -124,9 +162,17 @@ export const historicalEvents: HistoricalEvent[] = [
     description: "Three-day game development marathon at the University of Surrey, bringing together developers, artists, and designers.",
     poster: gameJamPoster,
     media: [
+      { type: "image", src: GGJGroupBanner, alt: "Group photo with JatHub banner" },
+      { type: "image", src: GGJOrganisers, alt: "Game Jam organisers" },
       { type: "image", src: GGJVenue, alt: "Game Jam venue setup" },
+      { type: "image", src: GGJClassroom, alt: "Classroom presentation" },
       { type: "image", src: GGJPresentation, alt: "Opening presentation" },
       { type: "image", src: GGJGroupPhoto, alt: "Group photo with snacks" },
+      { type: "image", src: GGJSnacks, alt: "Participants enjoying snacks" },
+      { type: "image", src: GGJStudentsChat, alt: "Students discussing" },
+      { type: "image", src: GGJCoding1, alt: "Participant coding" },
+      { type: "image", src: GGJCoding2, alt: "Developer working on game" },
+      { type: "image", src: GGJDay2Group, alt: "Day 2 group photo" },
       { type: "image", src: GGJ1, alt: "Global Game Jam group photo" },
       { type: "image", src: GGJ2, alt: "Global Game Jam organisers" },
       { type: "image", src: GGJPanel, alt: "Global Game Jam panel discussion" },
