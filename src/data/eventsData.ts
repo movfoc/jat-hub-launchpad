@@ -78,6 +78,12 @@ import aiMarketingPoster from "@/assets/ai-marketing-thumbnail.png";
 import partTimePoster from "@/assets/part-time-thumbnail.png";
 
 // Full event posters
+import GGJ1 from "@/assets/news/game-jam/GGJ_1.jpeg";
+import GGJ2 from "@/assets/news/game-jam/GGJ_2.jpeg";
+import GGJPanel from "@/assets/news/game-jam/GGJ_Panel.jpeg";
+import GGJStudents3 from "@/assets/news/game-jam/GGJ_Students_3.jpeg";
+import GGJStudents4 from "@/assets/news/game-jam/GGJ_Students_4.jpeg";
+
 import digitalMarketingPoster from "@/assets/posters/digital-marketing-summit.png";
 import gameJamPoster from "@/assets/posters/global-game-jam.png";
 import ovhcloudEventPoster from "@/assets/posters/ovhcloud.png";
@@ -101,7 +107,15 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "JAN 27 - 29, 2026",
     description: "Three-day game development marathon at the University of Surrey, bringing together developers, artists, and designers.",
     poster: gameJamPoster,
-    media: [],
+    media: [
+      { type: "image", src: GGJ1, alt: "Global Game Jam group photo" },
+      { type: "image", src: GGJ2, alt: "Global Game Jam organisers" },
+      { type: "image", src: GGJPanel, alt: "Global Game Jam panel discussion" },
+      { type: "image", src: GGJStudents3, alt: "Students collaborating" },
+      { type: "image", src: GGJStudents4, alt: "Student developing game" },
+      { type: "video", src: "https://www.youtube.com/embed/ubXGtEEkYZk" },
+      { type: "video", src: "https://www.youtube.com/embed/HYIOBKydFt0" },
+    ],
   },
   {
     id: "esports-visit",
