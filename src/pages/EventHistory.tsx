@@ -131,7 +131,7 @@ const EventHistory = () => {
       <main className="pt-24 pb-20">
         <div className="container mx-auto max-w-4xl px-6">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Event History
+            Event Gallery
           </h1>
           <p className="text-muted-foreground mb-8 max-w-2xl">
             A look back at Jathub's journey — the events, workshops, and visits that shaped our community.
