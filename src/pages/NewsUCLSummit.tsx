@@ -10,6 +10,9 @@ import summitTeam from "@/assets/news/ucl-summit/Summit_Team.jpg";
 import summitAudience from "@/assets/news/ucl-summit/Summit_Audience.jpg";
 import summitAfternoon1 from "@/assets/news/ucl-summit/Summit_Afternoon_1.jpg";
 import summitAfternoon2 from "@/assets/news/ucl-summit/Summit_Afternoon_2.jpg";
+import summitMorning1 from "@/assets/news/ucl-summit/Summit_Morning_1.jpg";
+import summitMorning2 from "@/assets/news/ucl-summit/Summit_Morning_2.jpg";
+import summitMorning3 from "@/assets/news/ucl-summit/Summit_Morning_3.jpg";
 
 const NewsUCLSummit = () => {
   return (
@@ -53,6 +56,13 @@ const NewsUCLSummit = () => {
       <p className="text-lg text-muted-foreground leading-relaxed mt-4">
         The morning concluded with a dynamic panel on Web3 Digital Marketing Playbooks, moderated by Doro Unger-Lee (Ava Labs). Experts including Omar Abi Issa (OVHcloud), Tanguy Dewavrin (StarPAL.AI), and Melanie Dow (Foundation Ventures Group) unpacked community-led growth, on-chain reputation, and how brands are building sustainable Metaverse engagement models beyond the initial hype.
       </p>
+
+      {/* Morning session photos */}
+      <div className="my-8 grid md:grid-cols-3 gap-4">
+        <img src={summitMorning1} alt="Certificate presentation at morning session" className="rounded-lg w-full h-auto" />
+        <img src={summitMorning2} alt="Speaker presenting at morning session" className="rounded-lg w-full h-auto" />
+        <img src={summitMorning3} alt="Certificate presentation with panellists" className="rounded-lg w-full h-auto" />
+      </div>
 
       {/* Panel + Speakers */}
       <div className="my-8 grid md:grid-cols-2 gap-4">
