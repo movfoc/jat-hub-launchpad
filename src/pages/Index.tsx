@@ -22,12 +22,12 @@ const Index = () => {
         <EventGallery />
         <CPRBanner />
         <News />
-        <Mission />
+        <Mission className="border-primary border-none rounded-none" />
         <CTA />
       </main>
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
