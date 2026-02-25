@@ -84,7 +84,7 @@ const NewsUCLSummit = () => {
 
       {/* Afternoon certificate photos */}
       <div className="my-8 grid md:grid-cols-2 gap-4">
-        <img src={summitAfternoon1} alt="Certificate presentation at the afternoon session" className="rounded-lg w-full h-auto" />
+        <img src={summitAfternoon1} alt="Certificate presentation at the afternoon session" className="rounded-lg w-full h-auto opacity-80 object-fill" />
         <img src={summitAfternoon2} alt="Certificate presentation with speaker" className="rounded-lg w-full h-auto" />
       </div>
 
