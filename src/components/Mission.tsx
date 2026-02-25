@@ -13,15 +13,6 @@ export const Mission = () => {
           </p>
         </div>
         
-        <div className="relative my-12 md:my-16">
-          <img 
-            src={workshopImage} 
-            alt="JAT Hub workshop" 
-            className="rounded-2xl w-full h-auto object-cover"
-          />
-          <div className="absolute inset-0 bg-primary/20 rounded-2xl mix-blend-hard-light"></div>
-          <div className="absolute inset-0 rounded-2xl border border-primary/30"></div>
-        </div>
         
         <p className="text-center text-foreground/60 leading-relaxed">
           Whether you're building your first startup team, expanding your professional network, or just discovering your purpose — JAT Hub is where it all begins.
