@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 
-import roundtableImg from "@/assets/news/house-of-lords/Roundtable_1.jpeg";
+import roundtableImg from "@/assets/news/house-of-lords/Roundtable_cover.jfif";
 import esportsImg from "@/assets/news/esports/Esport_1.jpeg";
 import ovhcloudImg from "@/assets/news/ovhcloud/OVHcloud_1.jpeg";
 import aiMarketingImg from "@/assets/news/ai-marketing/ODOS_Thaicamp_1.jpeg";

@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // Use actual event photos as covers
-import roundtableImg from "@/assets/news/house-of-lords/Roundtable_1.jpeg";
+import roundtableImg from "@/assets/news/house-of-lords/Roundtable_cover.jfif";
 import esportsImg from "@/assets/news/esports/Esport_1.jpeg";
 import ovhcloudImg from "@/assets/news/ovhcloud/OVHcloud_1.jpeg";
 import aiMarketingImg from "@/assets/news/ai-marketing/ODOS_Thaicamp_1.jpeg";
