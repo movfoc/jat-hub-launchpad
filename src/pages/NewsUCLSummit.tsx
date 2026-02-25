@@ -82,7 +82,7 @@ const NewsUCLSummit = () => {
 
       {/* Networking full width */}
       <div className="my-8 rounded-lg overflow-hidden">
-        <img src={summitNetworking} alt="Networking at the summit" className="w-full h-auto rounded-lg" />
+        <img alt="Networking at the summit" className="w-full h-auto rounded-lg" src="/lovable-uploads/9952fccc-ef82-43d4-8fcf-66126885f49e.jpg" />
       </div>
 
       <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Empowering the Next Generation of Builders</h3>
@@ -104,8 +104,8 @@ const NewsUCLSummit = () => {
 
       {/* Certificates + Team */}
       <div className="my-8 grid md:grid-cols-2 gap-4">
-        <img src={summitCertificates} alt="Certificate presentation at the summit" className="rounded-lg w-full h-auto" />
-        <img src={summitTeam} alt="Summit team photo" className="rounded-lg w-full h-auto" />
+        <img alt="Certificate presentation at the summit" className="rounded-lg w-full h-auto" src="/lovable-uploads/9eeeb1f7-2e1e-46c7-9d01-f67d308a7dc7.jpg" />
+        <img alt="Summit team photo" className="rounded-lg w-full h-auto" src="/lovable-uploads/20c7ecb4-10c2-4fdd-9362-84f99dd4e3e3.jpg" />
       </div>
 
       <p className="text-lg text-muted-foreground leading-relaxed">
