@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState, useCallback } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 import { historicalEvents, type EventMedia } from "@/data/eventsData";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -99,6 +100,7 @@ const Lightbox = ({
 
 const EventHistory = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const eventRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   // Lightbox state
@@ -131,9 +133,17 @@ const EventHistory = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Event History
           </h1>
-          <p className="text-muted-foreground mb-16 max-w-2xl">
+          <p className="text-muted-foreground mb-8 max-w-2xl">
             A look back at Jathub's journey — the events, workshops, and visits that shaped our community.
           </p>
+          <Button
+            variant="outline"
+            className="mb-16 border-primary/30 hover:bg-primary/10"
+            onClick={() => navigate("/")}
+          >
+            <ChevronLeft className="w-4 h-4 mr-1" />
+            Back to Homepage
+          </Button>
 
           {/* Timeline */}
           <div className="relative">
