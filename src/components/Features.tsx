@@ -8,7 +8,7 @@ export const Features = () => {
     },
     {
       icon: Users,
-      title: "Mentorship and networking opportunities with industry leaders",
+      title: "Mentorship and networking opportunities",
     },
     {
       icon: Lightbulb,
