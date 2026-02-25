@@ -1,25 +1,10 @@
-import { useRef } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export const Events = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
   const events = [
     {
-      date: "APR - JUN, 2026",
-      rawDate: new Date("2026-04-01"),
-      title: "Jathub X-plore Marketing Ideathon",
-      description: "Hybrid event — Click to learn more.",
-      isPast: false,
-      isXplore: true,
-      registrationUrl: undefined,
-    },
-    {
       date: "FEB 17, 2026",
-      rawDate: new Date("2026-02-17"),
       title: "Digital Marketing & Gamified Economy Summit",
       description: "10 AM - 5 PM at UCL School of Management, Canada One, Canary Wharf, E14 5AB.",
       isPast: false,
@@ -27,7 +12,6 @@ export const Events = () => {
     },
     {
       date: "JAN 27 - 29, 2026",
-      rawDate: new Date("2026-01-29"),
       title: "Global Game Jam 2026",
       description: "10 AM - 12 Noon at 01IFH02, Stag Hill, University Campus, Site, Guildford GU2 7XH.",
       isPast: true,
@@ -35,7 +19,6 @@ export const Events = () => {
     },
     {
       date: "JAN 10, 2026",
-      rawDate: new Date("2026-01-10"),
       title: "JatHub: Visit College of Esports",
       description: "12:30 PM - 3:30 PM at Queen Elizabeth Olympic Park, Velodrome, Lee Valley VeloPark, Abercrombie Rd, London E20 3AB.",
       isPast: true,
@@ -43,16 +26,14 @@ export const Events = () => {
     },
     {
       date: "DEC 18, 2025",
-      rawDate: new Date("2025-12-18"),
       title: "UK House of Lords Roundtable: Decentralised Digital Economies and UK Growth",
       description: "10 AM - 12 Noon at House of Lords.",
-      isPast: true,
+      isPast: false,
       isInviteOnly: true,
       registrationUrl: undefined,
     },
     {
       date: "NOV 29 - DEC 7, 2025",
-      rawDate: new Date("2025-12-07"),
       title: "UK AI Agent Hackathon EP3 by ASI (Artificial Superintelligence Alliance)",
       description: "10 AM - 12 AM at Imperial College London. The Largest Web3 × AI Hackathon in Europe.",
       isPast: true,
@@ -60,7 +41,6 @@ export const Events = () => {
     },
     {
       date: "NOV 25, 2025",
-      rawDate: new Date("2025-11-25"),
       title: "JatHub: Visit OVHcloud London",
       description: "10:30 AM - 12:30 PM at OVHcloud London office.",
       isPast: true,
@@ -68,7 +48,6 @@ export const Events = () => {
     },
     {
       date: "NOV 14, 2025",
-      rawDate: new Date("2025-11-14"),
       title: "Visit Microsoft London- From Student to Tech Professional",
       description: "10 AM - 1 PM at Microsoft London office.",
       isPast: true,
@@ -76,7 +55,6 @@ export const Events = () => {
     },
     {
       date: "OCT 29, 2025",
-      rawDate: new Date("2025-10-29"),
       title: "AI for Marketing & Media",
       description: "2 PM - 4 PM at University of Surrey APLab1",
       isPast: true,
@@ -84,7 +62,6 @@ export const Events = () => {
     },
     {
       date: "OCT 1, 2025",
-      rawDate: new Date("2025-10-01"),
       title: "Part time Fair",
       description: "10 AM - 2 PM at University of Surrey Student Hall.",
       isPast: true,
@@ -92,81 +69,30 @@ export const Events = () => {
     },
   ];
 
-  // Sort: upcoming first (nearest date first), then past (most recent first)
-  const sorted = [...events].sort((a, b) => {
-    if (!a.isPast && !b.isPast) return a.rawDate.getTime() - b.rawDate.getTime();
-    if (!a.isPast && b.isPast) return -1;
-    if (a.isPast && !b.isPast) return 1;
-    return b.rawDate.getTime() - a.rawDate.getTime();
-  });
-
-  const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      const amount = 360;
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -amount : amount,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <section id="events" className="py-20 md:py-32 px-6 bg-background">
       <div className="container mx-auto max-w-6xl">
-        <div className="flex items-end justify-between mb-10">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
-              Jathub Events
-            </h2>
-            <p className="text-foreground/60 mt-3">
-              Join us to learn, connect, and grow. Scroll to see past events →
-            </p>
-          </div>
-          <div className="hidden md:flex gap-2">
-            <Button
-              variant="outline"
-              size="icon"
-              className="border-primary/30 text-primary hover:bg-primary/10"
-              onClick={() => scroll("left")}
-              aria-label="Scroll left"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              className="border-primary/30 text-primary hover:bg-primary/10"
-              onClick={() => scroll("right")}
-              aria-label="Scroll right"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </Button>
-          </div>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
+            Upcoming Events
+          </h2>
+          <p className="text-foreground/60 mt-3">
+            Join us to learn, connect, and grow.
+          </p>
         </div>
-
-        <div
-          ref={scrollRef}
-          className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          {sorted.map((event, index) => (
-            <Card
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {events.map((event, index) => (
+            <Card 
               key={index}
-              className={`min-w-[300px] max-w-[340px] flex-shrink-0 snap-start border border-primary/30 bg-card/40 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 flex flex-col backdrop-blur-sm ${
-                event.isPast ? "opacity-50" : ""
+              className={`border border-primary/30 bg-card/40 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 flex flex-col backdrop-blur-sm ${
+                event.isPast || event.isInviteOnly ? 'opacity-60' : ''
               }`}
             >
               <CardHeader className="pb-3">
-                <div className="flex items-center justify-between">
-                  <p className="text-sm font-semibold text-primary">
-                    {event.date}
-                  </p>
-                  {event.isPast && (
-                    <Badge variant="secondary" className="text-[10px] px-2 py-0.5 bg-muted text-muted-foreground">
-                      Past Event
-                    </Badge>
-                  )}
-                </div>
+                <p className="text-sm font-semibold text-primary">
+                  {event.date}
+                </p>
                 <CardTitle className="text-lg text-white mt-2">
                   {event.title}
                 </CardTitle>
@@ -177,13 +103,7 @@ export const Events = () => {
                 </CardDescription>
               </CardContent>
               <CardFooter className="pt-0">
-                {event.isXplore ? (
-                  <Button variant="link" className="text-primary hover:text-primary/80 p-0 h-auto text-sm" asChild>
-                    <a href="/xplore" target="_blank" rel="noopener noreferrer">
-                      Click to learn more →
-                    </a>
-                  </Button>
-                ) : event.isPast ? (
+                {event.isPast ? (
                   <span className="text-foreground/50 font-medium text-sm">
                     See you next time
                   </span>
