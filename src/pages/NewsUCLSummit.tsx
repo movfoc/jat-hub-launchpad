@@ -10,9 +10,6 @@ import summitTeam from "@/assets/news/ucl-summit/Summit_Team.jpg";
 import summitAudience from "@/assets/news/ucl-summit/Summit_Audience.jpg";
 import summitAfternoon1 from "@/assets/news/ucl-summit/Summit_Afternoon_1.jpg";
 import summitAfternoon2 from "@/assets/news/ucl-summit/Summit_Afternoon_2.jpg";
-import summitMorning1 from "@/assets/news/ucl-summit/Summit_Morning_1.jpg";
-import summitMorning2 from "@/assets/news/ucl-summit/Summit_Morning_2.jpg";
-import summitMorning3 from "@/assets/news/ucl-summit/Summit_Morning_3.jpg";
 
 const NewsUCLSummit = () => {
   return (
@@ -57,13 +54,6 @@ const NewsUCLSummit = () => {
         The morning concluded with a dynamic panel on Web3 Digital Marketing Playbooks, moderated by Doro Unger-Lee (Ava Labs). Experts including Omar Abi Issa (OVHcloud), Tanguy Dewavrin (StarPAL.AI), and Melanie Dow (Foundation Ventures Group) unpacked community-led growth, on-chain reputation, and how brands are building sustainable Metaverse engagement models beyond the initial hype.
       </p>
 
-      {/* Morning session photos */}
-      <div className="my-8 grid md:grid-cols-3 gap-4">
-        <img src={summitMorning1} alt="Certificate presentation at morning session" className="rounded-lg w-full h-auto" />
-        <img src={summitMorning2} alt="Speaker presenting at morning session" className="rounded-lg w-full h-auto" />
-        <img src={summitMorning3} alt="Certificate presentation with panellists" className="rounded-lg w-full h-auto" />
-      </div>
-
       {/* Panel + Speakers */}
       <div className="my-8 grid md:grid-cols-2 gap-4">
         <img src={summitPanel} alt="Panel discussion at Digital Marketing Summit" className="rounded-lg w-full h-auto" />
@@ -77,9 +67,9 @@ const NewsUCLSummit = () => {
       </p>
 
       <ul className="list-none text-lg text-muted-foreground leading-relaxed space-y-4">
-        <li>
-          <strong className="text-foreground">Jason Purvor (Google)</strong> captivated the room with a live AI demo. In mere minutes, he showcased how tools like AI Studio can move an idea from concept to execution—generating cinematic video, extracting text from receipts, and building functional apps.
-        </li>
+        
+
+
         <li>
           <strong className="text-foreground">Robby Yung (Animoca Brands)</strong> provided a macro perspective on digital advertising, predicting the decline of the traditional web model and positioning mobile games as the ultimate proving ground for a tokenized global economy.
         </li>
