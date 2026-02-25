@@ -83,6 +83,16 @@ import GGJ2 from "@/assets/news/game-jam/GGJ_2.jpeg";
 import GGJPanel from "@/assets/news/game-jam/GGJ_Panel.jpeg";
 import GGJStudents3 from "@/assets/news/game-jam/GGJ_Students_3.jpeg";
 import GGJStudents4 from "@/assets/news/game-jam/GGJ_Students_4.jpeg";
+import GGJVenue from "@/assets/news/game-jam/GGJ_Venue.jpg";
+import GGJNetworking1 from "@/assets/news/game-jam/GGJ_Networking_1.jpg";
+import GGJStudent5 from "@/assets/news/game-jam/GGJ_Student_5.jpg";
+import GGJStudent6 from "@/assets/news/game-jam/GGJ_Student_6.jpg";
+import GGJTeam1 from "@/assets/news/game-jam/GGJ_Team_1.jpg";
+import GGJNetworking2 from "@/assets/news/game-jam/GGJ_Networking_2.jpg";
+import GGJGroupDiscussion from "@/assets/news/game-jam/GGJ_Group_Discussion.jpg";
+import GGJPresentation from "@/assets/news/game-jam/GGJ_Presentation.jpg";
+import GGJGroupPhoto from "@/assets/news/game-jam/GGJ_Group_Photo.jpeg";
+import GGJParticipant from "@/assets/news/game-jam/GGJ_Participant.jpg";
 
 import digitalMarketingPoster from "@/assets/posters/digital-marketing-summit.png";
 import gameJamPoster from "@/assets/posters/global-game-jam.png";
@@ -108,11 +118,21 @@ export const historicalEvents: HistoricalEvent[] = [
     description: "Three-day game development marathon at the University of Surrey, bringing together developers, artists, and designers.",
     poster: gameJamPoster,
     media: [
+      { type: "image", src: GGJVenue, alt: "Game Jam venue setup" },
+      { type: "image", src: GGJPresentation, alt: "Opening presentation" },
+      { type: "image", src: GGJGroupPhoto, alt: "Group photo with snacks" },
       { type: "image", src: GGJ1, alt: "Global Game Jam group photo" },
       { type: "image", src: GGJ2, alt: "Global Game Jam organisers" },
       { type: "image", src: GGJPanel, alt: "Global Game Jam panel discussion" },
+      { type: "image", src: GGJNetworking1, alt: "Networking at Game Jam" },
+      { type: "image", src: GGJNetworking2, alt: "Mentors chatting with participants" },
+      { type: "image", src: GGJGroupDiscussion, alt: "Group discussion" },
+      { type: "image", src: GGJTeam1, alt: "Team collaborating" },
       { type: "image", src: GGJStudents3, alt: "Students collaborating" },
       { type: "image", src: GGJStudents4, alt: "Student developing game" },
+      { type: "image", src: GGJStudent5, alt: "Participant at workstation" },
+      { type: "image", src: GGJStudent6, alt: "Students working together" },
+      { type: "image", src: GGJParticipant, alt: "Game Jam participant" },
       { type: "video", src: "https://www.youtube.com/embed/ubXGtEEkYZk" },
       { type: "video", src: "https://www.youtube.com/embed/HYIOBKydFt0" },
     ],
