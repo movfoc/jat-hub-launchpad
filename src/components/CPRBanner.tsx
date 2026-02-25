@@ -24,7 +24,8 @@ export const CPRBanner = () => {
 
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-tight leading-[1.1] mb-4">
                 Learn CPR in 15 Minutes.{" "}
-                <span className="text-cpr">Save a Life.</span>
+                <span className="text-cpr">
+Save a Life.</span>
               </h2>
 
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">
@@ -32,11 +33,10 @@ export const CPRBanner = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                <Button
-                  size="lg"
-                  className="bg-cpr text-cpr-foreground hover:bg-cpr/90 transition-all hover:scale-105 text-base px-8 py-6 font-semibold"
-                  asChild
-                >
+                <Button size="lg"
+                className="bg-cpr text-cpr-foreground hover:bg-cpr/90 transition-all hover:scale-105 text-base px-8 py-6 font-semibold"
+                asChild>
+
                   <a href="/bhf-training">
                     Learn CPR Now
                   </a>
@@ -51,6 +51,6 @@ export const CPRBanner = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
