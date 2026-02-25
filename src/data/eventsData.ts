@@ -70,7 +70,7 @@ import PT6 from "@/assets/news/parttime/Part_time_pics_6.jpeg";
 import PT7 from "@/assets/news/parttime/Part_time_pics_7.jpeg";
 
 // Poster thumbnails (reuse existing newscard thumbnails)
-import microsoftPoster from "@/assets/microsoft-visit-thumbnail.png";
+import microsoftPoster from "@/assets/posters/microsoft-london.jpg";
 import ovhcloudPoster from "@/assets/ovhcloud-newscard.png";
 import esportsPoster from "@/assets/esports-newscard.png";
 import roundtablePoster from "@/assets/roundtable-newscard.png";
