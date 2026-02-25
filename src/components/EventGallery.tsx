@@ -101,9 +101,19 @@ export const EventGallery = () => {
           ))}
         </div>
 
-        <p className="text-muted-foreground text-xs mt-3 md:hidden text-center">
-          ← Swipe to browse events →
-        </p>
+        <div className="flex items-center justify-between mt-6">
+          <p className="text-muted-foreground text-xs md:hidden">
+            ← Swipe to browse events →
+          </p>
+          <Button
+            variant="outline"
+            className="ml-auto border-primary/30 hover:bg-primary/10"
+            onClick={() => navigate("/events")}
+          >
+            View all
+            <ChevronRight className="w-4 h-4 ml-1" />
+          </Button>
+        </div>
       </div>
     </section>
   );
