@@ -69,13 +69,15 @@ import PT5 from "@/assets/news/parttime/Part_time_pics_5.jpeg";
 import PT6 from "@/assets/news/parttime/Part_time_pics_6.jpeg";
 import PT7 from "@/assets/news/parttime/Part_time_pics_7.jpeg";
 
-// Poster thumbnails (reuse existing newscard thumbnails)
+// Poster thumbnails
 import microsoftPoster from "@/assets/microsoft-visit-thumbnail.png";
-import ovhcloudPoster from "@/assets/ovhcloud-newscard.png";
-import esportsPoster from "@/assets/esports-newscard.png";
+import ovhcloudPoster from "@/assets/posters/ovhcloud-london.png";
+import esportsPoster from "@/assets/posters/esports-visit.png";
 import roundtablePoster from "@/assets/roundtable-newscard.png";
 import aiMarketingPoster from "@/assets/ai-marketing-thumbnail.png";
 import partTimePoster from "@/assets/part-time-thumbnail.png";
+import digitalMarketingPoster from "@/assets/posters/digital-marketing-summit.png";
+import gameJamPoster from "@/assets/posters/global-game-jam.png";
 
 export const historicalEvents: HistoricalEvent[] = [
   {
@@ -83,7 +85,7 @@ export const historicalEvents: HistoricalEvent[] = [
     title: "Digital Marketing & Gamified Economy Summit",
     date: "FEB 17, 2026",
     description: "A full-day summit at UCL School of Management exploring the intersection of digital marketing, gamified economies, and emerging technologies.",
-    poster: "/placeholder.svg",  // Replace with actual poster
+    poster: digitalMarketingPoster,
     media: [
       // Add photos and videos here
       // { type: "image", src: "/path/to/image.jpg", alt: "Summit photo" },
@@ -95,7 +97,7 @@ export const historicalEvents: HistoricalEvent[] = [
     title: "Global Game Jam 2026",
     date: "JAN 27 - 29, 2026",
     description: "Three-day game development marathon at the University of Surrey, bringing together developers, artists, and designers.",
-    poster: "/placeholder.svg",  // Replace with actual poster
+    poster: gameJamPoster,
     media: [],
   },
   {
