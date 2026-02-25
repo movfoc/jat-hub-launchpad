@@ -82,6 +82,9 @@ import digitalMarketingPoster from "@/assets/posters/digital-marketing-summit.pn
 import gameJamPoster from "@/assets/posters/global-game-jam.png";
 import ovhcloudEventPoster from "@/assets/posters/ovhcloud.png";
 import esportsEventPoster from "@/assets/posters/esports.png";
+import aiMarketingWorkshopPoster from "@/assets/posters/ai-marketing-workshop.jpeg";
+import houseOfLordsPoster from "@/assets/posters/house-of-lords.jpeg";
+import partTimeFairPoster from "@/assets/posters/part-time-fair.jpeg";
 
 export const historicalEvents: HistoricalEvent[] = [
   {
@@ -119,7 +122,7 @@ export const historicalEvents: HistoricalEvent[] = [
     title: "UK House of Lords Roundtable: Decentralised Digital Economies and UK Growth",
     date: "DEC 18, 2025",
     description: "An exclusive roundtable discussion at the House of Lords exploring decentralised digital economies.",
-    poster: roundtablePoster,
+    poster: houseOfLordsPoster,
     media: [
       { type: "image", src: HoL1, alt: "Roundtable 1" },
       { type: "image", src: HoL2, alt: "Roundtable 2" },
@@ -173,7 +176,7 @@ export const historicalEvents: HistoricalEvent[] = [
     title: "AI for Marketing & Media Workshop",
     date: "OCT 29, 2025",
     description: "A hands-on workshop at the University of Surrey exploring AI applications in marketing and media.",
-    poster: aiMarketingPoster,
+    poster: aiMarketingWorkshopPoster,
     media: [
       { type: "image", src: AI1, alt: "AI Marketing 1" },
       { type: "image", src: AI2, alt: "AI Marketing 2" },
@@ -191,7 +194,7 @@ export const historicalEvents: HistoricalEvent[] = [
     title: "Part-Time Job Fair",
     date: "OCT 1, 2025",
     description: "A career fair at the University of Surrey connecting students with part-time employment opportunities.",
-    poster: partTimePoster,
+    poster: partTimeFairPoster,
     media: [
       { type: "image", src: PT1, alt: "Part-time fair 1" },
       { type: "image", src: PT2, alt: "Part-time fair 2" },
