@@ -22,7 +22,7 @@ const Index = () => {
         <EventGallery />
         <CPRBanner />
         <News />
-        <Mission className="border-primary border-none rounded-none" />
+        <Mission />
         <CTA />
       </main>
       <Footer />
