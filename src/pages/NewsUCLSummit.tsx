@@ -8,9 +8,6 @@ import summitNetworking from "@/assets/news/ucl-summit/Summit_Networking.jpg";
 import summitOrganisers from "@/assets/news/ucl-summit/Summit_Organisers.jpg";
 import summitTeam from "@/assets/news/ucl-summit/Summit_Team.jpg";
 import summitAudience from "@/assets/news/ucl-summit/Summit_Audience.jpg";
-import summitCertRobby from "@/assets/news/ucl-summit/Summit_Certificate_Robby.jpg";
-import summitCertBenjamin from "@/assets/news/ucl-summit/Summit_Certificate_Benjamin.jpg";
-import summitCertArham from "@/assets/news/ucl-summit/Summit_Certificate_Arham.jpg";
 
 const NewsUCLSummit = () => {
   return (
@@ -109,13 +106,6 @@ const NewsUCLSummit = () => {
       <div className="my-8 grid md:grid-cols-2 gap-4">
         <img alt="Certificate presentation at the summit" className="rounded-lg w-full h-auto" src="/lovable-uploads/9eeeb1f7-2e1e-46c7-9d01-f67d308a7dc7.jpg" />
         <img alt="Summit team photo" className="rounded-lg w-full h-auto" src="/lovable-uploads/20c7ecb4-10c2-4fdd-9362-84f99dd4e3e3.jpg" />
-      </div>
-
-      {/* Additional certificate photos */}
-      <div className="my-8 grid md:grid-cols-3 gap-4">
-        <img src={summitCertRobby} alt="Certificate presentation to Robby Yung" className="rounded-lg w-full h-auto" />
-        <img src={summitCertBenjamin} alt="Certificate presentation to Benjamin Storey" className="rounded-lg w-full h-auto" />
-        <img src={summitCertArham} alt="Certificate presentation to Arham Khan and Narinder Patti" className="rounded-lg w-full h-auto" />
       </div>
 
       <p className="text-lg text-muted-foreground leading-relaxed">
