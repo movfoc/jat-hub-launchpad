@@ -8,6 +8,8 @@ import summitNetworking from "@/assets/news/ucl-summit/Summit_Networking.jpg";
 import summitOrganisers from "@/assets/news/ucl-summit/Summit_Organisers.jpg";
 import summitTeam from "@/assets/news/ucl-summit/Summit_Team.jpg";
 import summitAudience from "@/assets/news/ucl-summit/Summit_Audience.jpg";
+import summitAfternoon1 from "@/assets/news/ucl-summit/Summit_Afternoon_1.jpg";
+import summitAfternoon2 from "@/assets/news/ucl-summit/Summit_Afternoon_2.jpg";
 
 const NewsUCLSummit = () => {
   return (
@@ -80,7 +82,12 @@ const NewsUCLSummit = () => {
         The afternoon panel on Building Tomorrow's Game Ecosystems brought grounded, practical advice to emerging talent. Panellists like Malika Omarova (Wargaming) and Jack Anderson (nDreams) encouraged attendees to step out of their comfort zones, keep experimenting with AI, and communicate across disciplines to thrive in the modern gaming industry.
       </p>
 
-      {/* Networking full width */}
+      {/* Afternoon certificate photos */}
+      <div className="my-8 grid md:grid-cols-2 gap-4">
+        <img src={summitAfternoon1} alt="Certificate presentation at the afternoon session" className="rounded-lg w-full h-auto" />
+        <img src={summitAfternoon2} alt="Certificate presentation with speaker" className="rounded-lg w-full h-auto" />
+      </div>
+
       <div className="my-8 rounded-lg overflow-hidden">
         <img alt="Networking at the summit" className="w-full h-auto rounded-lg" src="/lovable-uploads/9952fccc-ef82-43d4-8fcf-66126885f49e.jpg" />
       </div>
