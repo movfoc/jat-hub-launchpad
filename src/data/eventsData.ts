@@ -122,6 +122,16 @@ import SummitMorning2 from "@/assets/news/ucl-summit/Summit_Morning_2.jpg";
 import SummitMorning3 from "@/assets/news/ucl-summit/Summit_Morning_3.jpg";
 import SummitAfternoon1 from "@/assets/news/ucl-summit/Summit_Afternoon_1.jpg";
 import SummitAfternoon2 from "@/assets/news/ucl-summit/Summit_Afternoon_2.jpg";
+import SummitBooth from "@/assets/news/ucl-summit/Summit_Booth.jpg";
+import SummitTeamGroup from "@/assets/news/ucl-summit/Summit_Team_Group.jpg";
+import SummitPanelistsCerts from "@/assets/news/ucl-summit/Summit_Panelists_Certs.jpg";
+import SummitAudienceWide from "@/assets/news/ucl-summit/Summit_Audience_Wide.jpg";
+import SummitGoogleSpeaker from "@/assets/news/ucl-summit/Summit_Google_Speaker.jpg";
+import SummitThumbsUp from "@/assets/news/ucl-summit/Summit_Thumbs_Up.jpg";
+import SummitUCLSpeaker from "@/assets/news/ucl-summit/Summit_UCL_Speaker.jpg";
+import SummitKeynote from "@/assets/news/ucl-summit/Summit_Keynote.jpg";
+import SummitSpeakerStanding from "@/assets/news/ucl-summit/Summit_Speaker_Standing.jpg";
+import SummitAudienceCityview from "@/assets/news/ucl-summit/Summit_Audience_Cityview.jpg";
 
 import digitalMarketingPoster from "@/assets/posters/digital-marketing-summit.png";
 import gameJamPoster from "@/assets/posters/global-game-jam.png";
