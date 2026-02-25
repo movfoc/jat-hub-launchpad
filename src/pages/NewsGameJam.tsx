@@ -93,18 +93,6 @@ const NewsGameJam = () => {
         Massive congratulations to all the 2026 jammers. As the local gaming ecosystem in Guildford continues to thrive, JatHub is excited to see where these emerging creators take their talents next.
       </p>
 
-      {/* Video */}
-      <div className="my-8">
-        <h3 className="text-2xl font-bold text-foreground mb-4">Event Recap</h3>
-        <video
-          controls
-          className="w-full rounded-lg"
-          poster={ggjGroupBanner}
-        >
-          <source src="/videos/game-jam-recap.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
     </NewsArticle>
   );
 };
