@@ -8,9 +8,10 @@ export const Mission = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Mission is Simple
           </h2>
-          <p className="text-lg text-foreground/70 leading-relaxed text-left">To empower the next generation by creating a vibrant ecosystem where collaboration, creativity, and action meet.Whether you're building your first startup team, expanding your professional network, or just discovering your purpose — JAT Hub is where it all begins.
+          <p className="text-lg text-foreground/70 leading-relaxed text-justify">To empower the next generation by creating a vibrant ecosystem where collaboration, creativity, and action meet.
 
-          </p>
+
+Whether you're building your first startup team, expanding your professional network, or just discovering your purpose — JAT Hub is where it all begins.</p>
         </div>
         
         
@@ -19,5 +20,4 @@ export const Mission = () => {
         </p>
       </div>
     </section>);
-
 };
