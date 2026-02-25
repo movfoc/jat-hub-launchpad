@@ -10,12 +10,12 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 const Lightbox = ({
   media,
   initialIndex,
-  onClose
-
-
-
-
-}: {media: EventMedia[];initialIndex: number;onClose: () => void;}) => {
+  onClose,
+}: {
+  media: EventMedia[];
+  initialIndex: number;
+  onClose: () => void;
+}) => {
   const [index, setIndex] = useState(initialIndex);
   const images = media.filter((m) => m.type === "image");
   const current = images[index];
@@ -43,59 +43,59 @@ const Lightbox = ({
   return (
     <div
       className="fixed inset-0 z-[100] bg-background/95 backdrop-blur-md flex items-center justify-center"
-      onClick={onClose}>
-
+      onClick={onClose}
+    >
       <button
         onClick={onClose}
-        className="absolute top-6 right-6 text-foreground/70 hover:text-foreground transition-colors z-10">
-
+        className="absolute top-6 right-6 text-foreground/70 hover:text-foreground transition-colors z-10"
+      >
         <X className="w-8 h-8" />
       </button>
 
       {/* Prev */}
-      {index > 0 &&
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          setIndex(index - 1);
-        }}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-2 rounded-full bg-card/60 border border-primary/30 text-foreground hover:bg-primary/20 transition-colors z-10">
-
+      {index > 0 && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            setIndex(index - 1);
+          }}
+          className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-2 rounded-full bg-card/60 border border-primary/30 text-foreground hover:bg-primary/20 transition-colors z-10"
+        >
           <ChevronLeft className="w-6 h-6" />
         </button>
-      }
+      )}
 
       {/* Image */}
       <div
         className="max-w-[90vw] max-h-[85vh] flex items-center justify-center"
-        onClick={(e) => e.stopPropagation()}>
-
+        onClick={(e) => e.stopPropagation()}
+      >
         <img
           src={current.src}
           alt={current.alt || ""}
-          className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl" />
-
+          className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+        />
       </div>
 
       {/* Next */}
-      {index < images.length - 1 &&
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          setIndex(index + 1);
-        }}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-2 rounded-full bg-card/60 border border-primary/30 text-foreground hover:bg-primary/20 transition-colors z-10">
-
+      {index < images.length - 1 && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            setIndex(index + 1);
+          }}
+          className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-2 rounded-full bg-card/60 border border-primary/30 text-foreground hover:bg-primary/20 transition-colors z-10"
+        >
           <ChevronRight className="w-6 h-6" />
         </button>
-      }
+      )}
 
       {/* Counter */}
       <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-muted-foreground text-sm">
         {index + 1} / {images.length}
       </p>
-    </div>);
-
+    </div>
+  );
 };
 
 const EventHistory = () => {
@@ -139,8 +139,8 @@ const EventHistory = () => {
           <Button
             variant="outline"
             className="mb-16 border-primary/30 hover:bg-primary/10"
-            onClick={() => navigate("/")}>
-
+            onClick={() => navigate("/")}
+          >
             <ChevronLeft className="w-4 h-4 mr-1" />
             Back to Homepage
           </Button>
@@ -150,12 +150,12 @@ const EventHistory = () => {
             {/* Vertical line */}
             <div className="absolute left-[18px] md:left-[34px] top-0 bottom-0 w-px bg-primary/20" />
 
-            {historicalEvents.map((event, idx) =>
-            <div key={event.id}>
+            {historicalEvents.map((event, idx) => (
+              <div key={event.id}>
                 <div
-                ref={(el) => {eventRefs.current[event.id] = el;}}
-                className="relative pl-12 md:pl-20 pb-16 scroll-mt-28">
-
+                  ref={(el) => { eventRefs.current[event.id] = el; }}
+                  className="relative pl-12 md:pl-20 pb-16 scroll-mt-28"
+                >
                   {/* Timeline dot */}
                   <div className="absolute left-[13px] md:left-[29px] top-1 w-3 h-3 rounded-full bg-primary border-2 border-background ring-4 ring-primary/20" />
 
@@ -168,77 +168,77 @@ const EventHistory = () => {
                   </h2>
 
                   {/* Description */}
-                  {event.description &&
-                <p className="text-muted-foreground mb-6 max-w-xl">{event.description}</p>
-                }
+                  {event.description && (
+                    <p className="text-muted-foreground mb-6 max-w-xl">{event.description}</p>
+                  )}
 
                   {/* Media gallery — horizontal scroll */}
-                  {event.media.length > 0 &&
-                <div
-                  className="flex gap-4 overflow-x-auto pb-3 scrollbar-hide"
-                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
-
+                  {event.media.length > 0 && (
+                    <div
+                      className="flex gap-4 overflow-x-auto pb-3 scrollbar-hide"
+                      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                    >
                       {event.media.map((item, mIdx) =>
-                  item.type === "image" ?
-                  <button
-                    key={mIdx}
-                    onClick={() => openLightbox(event.media, item.src)}
-                    className="shrink-0 rounded-lg overflow-hidden border border-primary/10 hover:border-primary/40 transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-ring">
-
-                            
-
-
-
-
-
-                          </button> :
-
-                  <div
-                    key={mIdx}
-                    className="shrink-0 rounded-lg overflow-hidden border border-primary/10 w-[280px] md:w-[360px] h-40 md:h-52">
-
+                        item.type === "image" ? (
+                          <button
+                            key={mIdx}
+                            onClick={() => openLightbox(event.media, item.src)}
+                            className="shrink-0 rounded-lg overflow-hidden border border-primary/10 hover:border-primary/40 transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-ring"
+                          >
+                            <img
+                              src={item.src}
+                              alt={item.alt || event.title}
+                              className="h-40 md:h-52 w-auto object-cover"
+                              loading="lazy"
+                            />
+                          </button>
+                        ) : (
+                          <div
+                            key={mIdx}
+                            className="shrink-0 rounded-lg overflow-hidden border border-primary/10 w-[280px] md:w-[360px] h-40 md:h-52"
+                          >
                             <iframe
-                      src={item.src}
-                      title={event.title}
-                      className="w-full h-full"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen />
-
+                              src={item.src}
+                              title={event.title}
+                              className="w-full h-full"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              referrerPolicy="strict-origin-when-cross-origin"
+                              allowFullScreen
+                            />
                           </div>
-
-                  )}
+                        )
+                      )}
                     </div>
-                }
+                  )}
 
-                  {event.media.length === 0 &&
-                <p className="text-muted-foreground/50 italic text-sm">Photos coming soon…</p>
-                }
+                  {event.media.length === 0 && (
+                    <p className="text-muted-foreground/50 italic text-sm">Photos coming soon…</p>
+                  )}
                 </div>
 
                 {/* Divider between events */}
-                {idx < historicalEvents.length - 1 &&
-              <div className="ml-12 md:ml-20 mb-8">
+                {idx < historicalEvents.length - 1 && (
+                  <div className="ml-12 md:ml-20 mb-8">
                     <div className="h-px bg-border" />
                   </div>
-              }
+                )}
               </div>
-            )}
+            ))}
           </div>
         </div>
       </main>
       <Footer />
 
       {/* Lightbox */}
-      {lightbox &&
-      <Lightbox
-        media={lightbox.media}
-        initialIndex={lightbox.imageIndex}
-        onClose={() => setLightbox(null)} />
-
-      }
-    </div>);
-
+      {lightbox && (
+        <Lightbox
+          media={lightbox.media}
+          initialIndex={lightbox.imageIndex}
+          onClose={() => setLightbox(null)}
+        />
+      )}
+    </div>
+  );
 };
 
 export default EventHistory;
