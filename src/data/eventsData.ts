@@ -193,8 +193,6 @@ export const historicalEvents: HistoricalEvent[] = [
       { type: "image", src: GGJCoding1, alt: "Participant coding" },
       { type: "image", src: GGJCoding2, alt: "Developer working on game" },
       { type: "image", src: GGJDay2Group, alt: "Day 2 group photo" },
-      { type: "image", src: GGJ1, alt: "Global Game Jam group photo" },
-      { type: "image", src: GGJ2, alt: "Global Game Jam organisers" },
       { type: "image", src: GGJPanel, alt: "Global Game Jam panel discussion" },
       { type: "image", src: GGJNetworking1, alt: "Networking at Game Jam" },
       { type: "image", src: GGJNetworking2, alt: "Mentors chatting with participants" },
