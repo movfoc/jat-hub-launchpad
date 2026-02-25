@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { historicalEvents } from "@/data/eventsData";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -7,27 +7,8 @@ import { Button } from "@/components/ui/button";
 export const EventGallery = () => {
   const navigate = useNavigate();
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [isPaused, setIsPaused] = useState(false);
-
   // Filter events that have media or a poster
   const events = historicalEvents.filter(e => e.media.length > 0 || e.poster !== "/placeholder.svg");
-
-  // Auto-play scroll
-  useEffect(() => {
-    const container = scrollRef.current;
-    if (!container || isPaused) return;
-
-    const interval = setInterval(() => {
-      const maxScroll = container.scrollWidth - container.clientWidth;
-      if (container.scrollLeft >= maxScroll - 10) {
-        container.scrollTo({ left: 0, behavior: "smooth" });
-      } else {
-        container.scrollBy({ left: 320, behavior: "smooth" });
-      }
-    }, 3500);
-
-    return () => clearInterval(interval);
-  }, [isPaused]);
 
   const scroll = (dir: "left" | "right") => {
     if (scrollRef.current) {
@@ -74,8 +55,6 @@ export const EventGallery = () => {
           ref={scrollRef}
           className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
         >
           {events.map((event) => (
             <button
