@@ -148,7 +148,7 @@ const EventHistory = () => {
           {/* Timeline */}
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-primary/20" />
+            <div className="absolute left-[18px] md:left-[34px] top-0 bottom-0 w-px bg-primary/20" />
 
             {historicalEvents.map((event, idx) => (
               <div key={event.id}>
@@ -157,7 +157,7 @@ const EventHistory = () => {
                   className="relative pl-12 md:pl-20 pb-16 scroll-mt-28"
                 >
                   {/* Timeline dot */}
-                  <div className="absolute left-2.5 md:left-6.5 top-1 w-3 h-3 rounded-full bg-primary border-2 border-background ring-4 ring-primary/20" />
+                  <div className="absolute left-[13px] md:left-[29px] top-1 w-3 h-3 rounded-full bg-primary border-2 border-background ring-4 ring-primary/20" />
 
                   {/* Date */}
                   <p className="text-sm font-semibold text-primary mb-2">{event.date}</p>
