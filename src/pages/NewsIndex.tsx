@@ -24,7 +24,7 @@ const allNews = [
     image: gameJamImg,
     category: "Game Jam",
     title: "Surrey Global Game Jam 2026",
-    date: "2026-01-30",
+    date: "2026-01-27",
     link: "/news/game-jam",
   },
   {
