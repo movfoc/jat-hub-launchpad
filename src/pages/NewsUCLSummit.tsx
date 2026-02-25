@@ -14,8 +14,8 @@ const NewsUCLSummit = () => {
     <NewsArticle
       date="FEB 17, 2026"
       title="JatHub x UCL Summit: Shaping the Future of Digital Marketing & Gamified Economies"
-      subtitle="London, United Kingdom"
-    >
+      subtitle="London, United Kingdom">
+
       <p className="text-lg text-muted-foreground leading-relaxed">
         High above Canary Wharf on Level 50 of One Canada Square, JatHub partnered with the UCL School of Management to host the highly anticipated Digital Marketing & Gamified Economy Summit.
       </p>
@@ -118,15 +118,15 @@ const NewsUCLSummit = () => {
 
       {/* Organisers */}
       <div className="my-8 grid md:grid-cols-2 gap-4">
-        <img src={summitOrganisers} alt="Summit organisers" className="rounded-lg w-full h-auto" />
+        
       </div>
 
       {/* Group photo full width */}
       <div className="my-8 rounded-lg overflow-hidden">
         <img src={summitGroup} alt="Full group photo at the Digital Marketing & Gamified Economy Summit" className="w-full h-auto rounded-lg" />
       </div>
-    </NewsArticle>
-  );
+    </NewsArticle>);
+
 };
 
 export default NewsUCLSummit;
