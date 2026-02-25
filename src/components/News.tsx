@@ -10,8 +10,16 @@ import ovhcloudImg from "@/assets/news/ovhcloud/OVHcloud_1.jpeg";
 import aiMarketingImg from "@/assets/news/ai-marketing/ODOS_Thaicamp_1.jpeg";
 import microsoftImg from "@/assets/news/microsoft/Microsoft_Visit_1.jpeg";
 import partTimeImg from "@/assets/news/parttime/Part_time_pics_1.jpeg";
+import gameJamImg from "@/assets/news/game-jam/GGJ_Group_Banner.jpeg";
 
 const newsItems = [
+  {
+    image: gameJamImg,
+    category: "Game Jam",
+    title: "Surrey Global Game Jam 2026",
+    date: "2026-01-30",
+    link: "/news/game-jam",
+  },
   {
     image: roundtableImg,
     category: "Policy & Innovation",
