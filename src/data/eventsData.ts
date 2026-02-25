@@ -93,6 +93,12 @@ import GGJGroupDiscussion from "@/assets/news/game-jam/GGJ_Group_Discussion.jpg"
 import GGJPresentation from "@/assets/news/game-jam/GGJ_Presentation.jpg";
 import GGJGroupPhoto from "@/assets/news/game-jam/GGJ_Group_Photo.jpeg";
 import GGJParticipant from "@/assets/news/game-jam/GGJ_Participant.jpg";
+import GGJFinalGroup from "@/assets/news/game-jam/GGJ_Final_Group.jpg";
+import GGJTeamUnderMask from "@/assets/news/game-jam/GGJ_Team_UnderMask.jpg";
+import GGJTeamMaskedWarrior from "@/assets/news/game-jam/GGJ_Team_MaskedWarrior.jpg";
+import GGJTeamTrenches from "@/assets/news/game-jam/GGJ_Team_Trenches.jpg";
+import GGJDay2Screen from "@/assets/news/game-jam/GGJ_Day2_Screen.jpeg";
+import GGJSpeakers from "@/assets/news/game-jam/GGJ_Speakers.jpg";
 
 import digitalMarketingPoster from "@/assets/posters/digital-marketing-summit.png";
 import gameJamPoster from "@/assets/posters/global-game-jam.png";
@@ -133,6 +139,12 @@ export const historicalEvents: HistoricalEvent[] = [
       { type: "image", src: GGJStudent5, alt: "Participant at workstation" },
       { type: "image", src: GGJStudent6, alt: "Students working together" },
       { type: "image", src: GGJParticipant, alt: "Game Jam participant" },
+      { type: "image", src: GGJSpeakers, alt: "Speakers at the venue" },
+      { type: "image", src: GGJDay2Screen, alt: "Day 2 online presentation" },
+      { type: "image", src: GGJFinalGroup, alt: "Final group photo with banners" },
+      { type: "image", src: GGJTeamUnderMask, alt: "Team Under the Mask with their game" },
+      { type: "image", src: GGJTeamMaskedWarrior, alt: "Team Masked Warrior with their game" },
+      { type: "image", src: GGJTeamTrenches, alt: "Team The Trenches with their game" },
       { type: "video", src: "https://www.youtube.com/embed/ubXGtEEkYZk" },
       { type: "video", src: "https://www.youtube.com/embed/HYIOBKydFt0" },
     ],
