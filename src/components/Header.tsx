@@ -80,9 +80,8 @@ export const Header = () => {
           </button>
           <a
             href="/xplore"
-            target="_blank"
-            rel="noopener noreferrer"
             className="mt-2 w-full inline-flex items-center justify-center gap-1.5 bg-[#D4FF00] text-black px-4 py-2 rounded-full text-sm font-bold hover:bg-[#e6ff4d] transition-all shadow-[0_0_10px_rgba(212,255,0,0.3)]"
+            onClick={() => setMobileMenuOpen(false)}
           >
             <Briefcase className="w-4 h-4" /> X-plore
           </a>
