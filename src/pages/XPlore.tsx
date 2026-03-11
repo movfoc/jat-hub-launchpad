@@ -107,6 +107,38 @@ const XPlore = () => {
         </div>
       </section>
 
+      {/* 2026 Ideathon Banner */}
+      <section className="py-16 md:py-24 px-6">
+        <div className="max-w-5xl mx-auto reveal-on-scroll opacity-0 translate-y-8">
+          <div className="bg-[#c8ef50] rounded-3xl px-8 py-12 md:px-16 md:py-16 text-black relative overflow-hidden">
+            <div className="relative z-10 flex flex-col items-center text-center gap-6">
+              <span className="inline-block text-xs font-semibold tracking-widest uppercase bg-black/10 text-black/80 px-4 py-1.5 rounded-full">
+                Upcoming 2026
+              </span>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+                2026 Marketing Ideathon
+              </h2>
+              <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-black/70">
+                <span className="flex items-center gap-1.5">
+                  <Calendar className="w-4 h-4" />
+                  April – June
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <MapPin className="w-4 h-4" />
+                  Hybrid Mode
+                </span>
+              </div>
+              <a
+                href="#philosophy"
+                className="mt-2 inline-flex items-center gap-2 bg-black text-[#c8ef50] px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 hover:scale-105 hover:bg-[#c8ef50] hover:text-black hover:shadow-[0_0_0_2px_black]"
+              >
+                Click to Explore
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Philosophy */}
       <section id="philosophy" className="py-24 bg-[#0F0F0F] border-y border-white/5 relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
