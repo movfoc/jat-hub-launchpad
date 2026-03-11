@@ -162,35 +162,35 @@ const XPlore = () => {
       </section>
 
       {/* 2026 Marketing Ideathon CTA */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-[#c8ef50] rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden relative shadow-2xl">
+      <section className="py-8 md:py-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="bg-[#c8ef50] rounded-2xl md:rounded-[2.5rem] p-6 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 overflow-hidden relative shadow-2xl">
             <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
             
             <div className="relative z-10 text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
+              <div className="flex items-center justify-center md:justify-start gap-2 mb-3 md:mb-4">
                 <span className="bg-black/10 backdrop-blur-md text-black px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase">
                   Upcoming 2026
                 </span>
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-3 tracking-tight">
+              <h2 className="text-2xl md:text-5xl font-extrabold text-black mb-2 md:mb-3 tracking-tight">
                 2026 Marketing Ideathon
               </h2>
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-black/70 font-medium">
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-4 text-black/70 font-medium text-sm">
                 <span className="flex items-center gap-1.5">
-                  <Calendar className="w-5 h-5" />
+                  <Calendar className="w-4 h-4 md:w-5 md:h-5" />
                   April-June
                 </span>
                 <span className="w-1 h-1 bg-black/30 rounded-full hidden md:block" />
                 <span className="flex items-center gap-1.5">
-                  <MapPin className="w-5 h-5" />
+                  <MapPin className="w-4 h-4 md:w-5 md:h-5" />
                   Hybrid Mode
                 </span>
               </div>
             </div>
 
-            <div className="relative z-10">
-              <a href="/xplore/tracks" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-black text-white px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:bg-white hover:text-black shadow-xl">
+            <div className="relative z-10 w-full md:w-auto">
+              <a href="/xplore/tracks" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center justify-center gap-2 md:gap-3 bg-black text-white w-full md:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg transition-all duration-300 hover:scale-105 hover:bg-white hover:text-black shadow-xl">
                 Click to Explore
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
