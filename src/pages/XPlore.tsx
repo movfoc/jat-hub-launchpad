@@ -65,6 +65,10 @@ const XPlore = () => {
 
   return (
     <div className="min-h-screen bg-[#050505] text-white antialiased selection:bg-[#D4FF00] selection:text-black overflow-x-hidden">
+      {/* Cursor light trail */}
+      <div ref={dotRef} className="pointer-events-none fixed top-0 left-0 w-3 h-3 -ml-1.5 -mt-1.5 bg-[#D4FF00] rounded-full z-[100] mix-blend-screen shadow-[0_0_15px_#D4FF00] opacity-0 transition-opacity duration-500 hidden md:block" />
+      <div ref={glowRef} className="pointer-events-none fixed top-0 left-0 w-[500px] h-[500px] -ml-[250px] -mt-[250px] rounded-full z-[90] mix-blend-screen opacity-0 transition-opacity duration-500 hidden md:block" style={{ background: "radial-gradient(circle, rgba(212,255,0,0.12) 0%, rgba(212,255,0,0) 60%)" }} />
+
       <style>{`
         .glass-panel {
           background: rgba(255,255,255,0.03);
