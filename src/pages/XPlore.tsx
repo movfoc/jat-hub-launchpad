@@ -4,7 +4,7 @@ import {
   Telescope, FlaskConical, Rocket, Briefcase, GraduationCap,
   Check, FileCheck2, Search, Users2, Megaphone,
   Gamepad2, Bot, Glasses, BarChart2, PenTool, Palette,
-  CheckCircle
+  CheckCircle, Calendar, MapPin, ArrowRight
 } from "lucide-react";
 
 const XPlore = () => {
@@ -103,6 +103,44 @@ const XPlore = () => {
             <a href="#students" className="group px-8 py-4 rounded-full font-medium text-white glass-panel hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
               <GraduationCap className="w-5 h-5" /> For Students
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 2026 Marketing Ideathon CTA */}
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="bg-[#c8ef50] rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden relative shadow-2xl">
+            <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
+            
+            <div className="relative z-10 text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
+                <span className="bg-black/10 backdrop-blur-md text-black px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase">
+                  Upcoming 2026
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-3 tracking-tight">
+                2026 Marketing Ideathon
+              </h2>
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-black/70 font-medium">
+                <span className="flex items-center gap-1.5">
+                  <Calendar className="w-5 h-5" />
+                  April-June
+                </span>
+                <span className="w-1 h-1 bg-black/30 rounded-full hidden md:block" />
+                <span className="flex items-center gap-1.5">
+                  <MapPin className="w-5 h-5" />
+                  Hybrid Mode
+                </span>
+              </div>
+            </div>
+
+            <div className="relative z-10">
+              <a href="#philosophy" className="group inline-flex items-center gap-3 bg-black text-white px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:bg-white hover:text-black shadow-xl">
+                Click to Explore
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
