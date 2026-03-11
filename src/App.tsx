@@ -15,6 +15,7 @@ import NewsGameJam from "./pages/NewsGameJam";
 import NewsUCLSummit from "./pages/NewsUCLSummit";
 import BHFTraining from "./pages/BHFTraining";
 import XPlore from "./pages/XPlore";
+import XPloreTracks from "./pages/XPloreTracks";
 import EventHistory from "./pages/EventHistory";
 import NewsIndex from "./pages/NewsIndex";
 
