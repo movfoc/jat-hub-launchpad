@@ -136,7 +136,7 @@ const XPlore = () => {
             </div>
 
             <div className="relative z-10">
-              <a href="#philosophy" className="group inline-flex items-center gap-3 bg-black text-white px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:bg-white hover:text-black shadow-xl">
+              <a href="/xplore/tracks" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-3 bg-black text-white px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:bg-white hover:text-black shadow-xl">
                 Click to Explore
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
