@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 
 const XPlore = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const revealRefs = useRef<HTMLElement[]>([]);
   const dotRef = useRef<HTMLDivElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
