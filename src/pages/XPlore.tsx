@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Menu, X } from "lucide-react";
 import {
   Lightbulb, Sparkles, Zap, Brain, Target, Layers,
   Telescope, FlaskConical, Rocket, Briefcase, GraduationCap,
