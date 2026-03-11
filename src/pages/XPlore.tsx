@@ -9,6 +9,41 @@ import {
 
 const XPlore = () => {
   const revealRefs = useRef<HTMLElement[]>([]);
+  const dotRef = useRef<HTMLDivElement>(null);
+  const glowRef = useRef<HTMLDivElement>(null);
+
+  // Cursor light trail effect
+  useEffect(() => {
+    const dot = dotRef.current;
+    const glow = glowRef.current;
+    if (!dot || !glow || !window.matchMedia("(min-width: 768px)").matches) return;
+
+    let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+    let dotX = mouseX, dotY = mouseY, glowX = mouseX, glowY = mouseY;
+    let active = false;
+
+    const onMove = (e: MouseEvent) => {
+      if (!active) { dot.classList.remove("opacity-0"); glow.classList.remove("opacity-0"); active = true; }
+      mouseX = e.clientX; mouseY = e.clientY;
+    };
+    const onOut = (e: MouseEvent) => {
+      if (!e.relatedTarget) { dot.classList.add("opacity-0"); glow.classList.add("opacity-0"); active = false; }
+    };
+    document.addEventListener("mousemove", onMove);
+    document.addEventListener("mouseout", onOut);
+
+    let raf: number;
+    const animate = () => {
+      dotX += (mouseX - dotX) * 0.2; dotY += (mouseY - dotY) * 0.2;
+      glowX += (mouseX - glowX) * 0.05; glowY += (mouseY - glowY) * 0.05;
+      dot.style.transform = `translate(${dotX}px, ${dotY}px)`;
+      glow.style.transform = `translate(${glowX}px, ${glowY}px)`;
+      raf = requestAnimationFrame(animate);
+    };
+    raf = requestAnimationFrame(animate);
+
+    return () => { document.removeEventListener("mousemove", onMove); document.removeEventListener("mouseout", onOut); cancelAnimationFrame(raf); };
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
