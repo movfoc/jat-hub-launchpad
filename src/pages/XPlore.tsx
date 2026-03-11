@@ -96,22 +96,35 @@ const XPlore = () => {
 
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="font-mono text-xl font-bold tracking-tighter flex items-center gap-2">
+        <div className="max-w-7xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
+          <a href="/" className="font-mono text-lg md:text-xl font-bold tracking-tighter flex items-center gap-2">
             <div className="w-3 h-3 bg-[#D4FF00] rounded-sm shadow-[0_0_10px_#D4FF00]" />
             JatHub <span className="text-[#D4FF00]">X-PLORE</span>
-          </div>
+          </a>
           <div className="hidden lg:flex gap-8 text-sm font-medium text-gray-400">
             <a href="#philosophy" className="hover:text-[#D4FF00] transition-colors">Philosophy</a>
             <a href="#partners" className="hover:text-white transition-colors">For Partners</a>
             <a href="#students" className="hover:text-white transition-colors">For Students</a>
             <a href="#process" className="hover:text-white transition-colors">The Process</a>
           </div>
-          <div className="flex gap-4">
-            <a href="#students" className="hidden md:block px-4 py-2 text-sm font-bold text-white hover:text-[#D4FF00] transition-colors">Join as Student</a>
-            <a href="#partners" className="hidden md:block bg-[#D4FF00] text-black px-6 py-2 rounded-full text-sm font-bold hover:bg-white transition-all shadow-[0_0_15px_rgba(212,255,0,0.3)]">Partner With Us</a>
+          <div className="hidden md:flex gap-4">
+            <a href="#students" className="px-4 py-2 text-sm font-bold text-white hover:text-[#D4FF00] transition-colors">Join as Student</a>
+            <a href="#partners" className="bg-[#D4FF00] text-black px-6 py-2 rounded-full text-sm font-bold hover:bg-white transition-all shadow-[0_0_15px_rgba(212,255,0,0.3)]">Partner With Us</a>
           </div>
+          <button className="md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+        {mobileMenuOpen && (
+          <div className="md:hidden px-6 pb-4 bg-[#050505]/95 backdrop-blur-xl border-t border-white/5 flex flex-col gap-3">
+            <a href="#philosophy" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-[#D4FF00] transition-colors text-sm">Philosophy</a>
+            <a href="#partners" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-white transition-colors text-sm">For Partners</a>
+            <a href="#students" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-white transition-colors text-sm">For Students</a>
+            <a href="#process" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-white transition-colors text-sm">The Process</a>
+            <a href="#students" onClick={() => setMobileMenuOpen(false)} className="mt-2 text-center py-3 text-sm font-bold text-white border border-white/20 rounded-full hover:text-[#D4FF00]">Join as Student</a>
+            <a href="#partners" onClick={() => setMobileMenuOpen(false)} className="text-center py-3 bg-[#D4FF00] text-black rounded-full text-sm font-bold hover:bg-white transition-all">Partner With Us</a>
+          </div>
+        )}
       </nav>
 
       {/* Hero */}
