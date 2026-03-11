@@ -4,7 +4,7 @@ import {
   Telescope, FlaskConical, Rocket, Briefcase, GraduationCap,
   Check, FileCheck2, Search, Users2, Megaphone,
   Gamepad2, Bot, Glasses, BarChart2, PenTool, Palette,
-  CheckCircle
+  CheckCircle, Calendar, MapPin
 } from "lucide-react";
 
 const XPlore = () => {
