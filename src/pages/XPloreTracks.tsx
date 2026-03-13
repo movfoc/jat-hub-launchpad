@@ -258,7 +258,7 @@ const XPloreTracks = () => {
       {/* Main grid */}
       <section className={`w-full h-screen grid grid-cols-1 md:grid-cols-3 bg-black absolute inset-0 z-10 transition-opacity duration-700 ${activeTrack ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
         {panels.map((p) => (
-          <div key={p.key} className="relative w-full h-full group overflow-hidden flex flex-col items-center justify-center cursor-pointer border-r border-white/5" onClick={() => openTrack(p.key)}>
+          <div key={p.key} className={`relative w-full h-full group overflow-hidden flex flex-col items-center justify-center border-r border-white/5 ${p.key === "april" ? "cursor-pointer" : "cursor-default"}`} onClick={() => p.key === "april" ? openTrack(p.key) : null}>
             <img src={p.bg} className="absolute inset-0 w-full h-full object-cover transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 z-0" alt={p.label} />
             <div className="absolute inset-0 bg-black/60 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:bg-white/80 group-hover:backdrop-blur-md z-0" />
             <div className="relative z-10 text-white transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:text-black flex flex-col items-center text-center px-6">
