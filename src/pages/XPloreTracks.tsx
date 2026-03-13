@@ -324,7 +324,7 @@ const XPloreTracks = () => {
                 <div className="p-4 sm:p-6 md:p-8 rounded-3xl" style={{ background: "rgba(255,255,255,0.04)", backdropFilter: "blur(24px)", border: "1px solid rgba(255,255,255,0.08)" }}>
                   <div className="relative flex flex-col md:flex-row justify-between w-full gap-6 md:gap-0">
                     {/* Horizontal line for desktop */}
-                    <div className="hidden md:block absolute top-[15px] left-10 right-10 h-px bg-white/10 z-0" />
+                    <div className="hidden md:block absolute top-[15px] left-[calc(12.5%)] right-[calc(12.5%)] h-px bg-white/10 z-0" />
                     {/* Vertical line for mobile */}
                     <div className="md:hidden absolute top-4 bottom-4 left-[15px] w-px bg-white/10 z-0" />
                     {[
@@ -337,10 +337,10 @@ const XPloreTracks = () => {
                         <div className="w-8 h-8 rounded-full bg-black border-2 border-white/20 group-hover/node:border-[#c8ef50] transition-colors flex items-center justify-center shrink-0 md:mb-3">
                           <div className="w-2 h-2 rounded-full bg-white/50 group-hover/node:bg-[#c8ef50] transition-colors" />
                         </div>
-                        <div className="flex flex-col">
+                        <div className="flex flex-col md:items-center">
                           <h5 className="font-bold text-white text-sm mb-0.5 md:mb-1">{node.label}</h5>
                           <p className="text-xs text-white/60">{node.desc}</p>
-                          <span className={`mt-2 md:mt-3 text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md border w-fit ${node.tagClass}`}>{node.tag}</span>
+                          <span className={`mt-2 md:mt-3 text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md border w-fit md:mx-auto ${node.tagClass}`}>{node.tag}</span>
                         </div>
                       </div>
                     ))}
