@@ -256,16 +256,25 @@ const XPloreTracks = () => {
       </nav>
 
       {/* Main grid */}
-      <section className={`w-full h-screen grid grid-cols-1 md:grid-cols-3 bg-black absolute inset-0 z-10 transition-opacity duration-700 ${activeTrack ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
+      <section className={`w-full min-h-screen grid grid-cols-1 md:grid-cols-3 bg-black pt-16 md:pt-0 md:absolute md:inset-0 z-10 transition-opacity duration-700 ${activeTrack ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
         {panels.map((p) => (
-          <div key={p.key} className={`relative w-full h-full group overflow-hidden flex flex-col items-center justify-center border-r border-white/5 ${p.key === "april" ? "cursor-pointer" : "cursor-default"}`} onClick={() => p.key === "april" ? openTrack(p.key) : null}>
+          <div key={p.key} className={`relative w-full h-[calc(33.33vh-1px)] md:h-full group overflow-hidden flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-white/5 ${p.key === "april" ? "cursor-pointer" : "cursor-default"}`} onClick={() => p.key === "april" ? openTrack(p.key) : null}>
             <img src={p.bg} className="absolute inset-0 w-full h-full object-cover transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 z-0" alt={p.label} />
-            <div className="absolute inset-0 bg-black/60 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:bg-white/80 group-hover:backdrop-blur-md z-0" />
-            <div className="relative z-10 text-white transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:text-black flex flex-col items-center text-center px-6">
-              <span className="text-[10px] font-medium tracking-[0.2em] uppercase border border-current px-4 py-1.5 rounded-full mb-6 opacity-80">{p.label}</span>
-              <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight mb-3">{p.title}</h2>
-              <p className="text-base lg:text-lg font-light opacity-80">{p.sub}</p>
-              <div className="overflow-hidden mt-0 h-0 opacity-0 group-hover:mt-8 group-hover:h-10 group-hover:opacity-100 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
+            <div className="absolute inset-0 bg-black/60 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] md:group-hover:bg-white/80 md:group-hover:backdrop-blur-md z-0" />
+            <div className="relative z-10 text-white transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] md:group-hover:text-black flex flex-col items-center text-center px-6">
+              <span className="text-[10px] font-medium tracking-[0.2em] uppercase border border-current px-3 py-1 rounded-full mb-3 md:mb-6 opacity-80">{p.label}</span>
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-1.5 md:mb-3">{p.title}</h2>
+              <p className="text-sm md:text-base lg:text-lg font-light opacity-80">{p.sub}</p>
+              {p.key === "april" ? (
+                <span className="mt-4 md:hidden text-xs font-medium flex items-center gap-1.5 bg-white/10 text-white px-4 py-2 rounded-full">
+                  Explore <ArrowRight className="w-3 h-3" />
+                </span>
+              ) : (
+                <span className="mt-4 md:hidden text-xs font-medium flex items-center gap-1.5 bg-white/10 text-white/50 px-4 py-2 rounded-full">
+                  Coming soon
+                </span>
+              )}
+              <div className="hidden md:block overflow-hidden mt-0 h-0 opacity-0 group-hover:mt-8 group-hover:h-10 group-hover:opacity-100 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
                 {p.key === "april" ? (
                   <span className="text-sm font-medium flex items-center gap-1.5 bg-black text-white px-5 py-2.5 rounded-full">
                     Explore <ArrowRight className="w-3.5 h-3.5" />
@@ -312,22 +321,27 @@ const XPloreTracks = () => {
                   <CalendarClock className="w-5 h-5 text-[#c8ef50]" />
                   <h3 className="text-xl font-semibold tracking-tight">Sprint Timeline</h3>
                 </div>
-                <div className="p-6 md:p-8 rounded-3xl" style={{ background: "rgba(255,255,255,0.04)", backdropFilter: "blur(24px)", border: "1px solid rgba(255,255,255,0.08)" }}>
-                  <div className="relative flex flex-col md:flex-row justify-between w-full gap-8 md:gap-0">
+                <div className="p-4 sm:p-6 md:p-8 rounded-3xl" style={{ background: "rgba(255,255,255,0.04)", backdropFilter: "blur(24px)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                  <div className="relative flex flex-col md:flex-row justify-between w-full gap-6 md:gap-0">
+                    {/* Horizontal line for desktop */}
                     <div className="hidden md:block absolute top-[15px] left-10 right-10 h-px bg-white/10 z-0" />
+                    {/* Vertical line for mobile */}
+                    <div className="md:hidden absolute top-4 bottom-4 left-[15px] w-px bg-white/10 z-0" />
                     {[
-                      { label: "Pre-Sprint", desc: "Global Team Formation\n& Registration", tag: "Online", tagClass: "bg-white/5 text-white/60 border-white/10" },
-                      { label: "Week 1", desc: "Challenge Reveal &\nHybrid Workshops", tag: "Hybrid", tagClass: "bg-purple-500/10 text-purple-400 border-purple-500/20" },
-                      { label: "Week 2-3", desc: "Intensive Prototype\nDevelopment Sprint", tag: "Online", tagClass: "bg-white/5 text-white/60 border-white/10" },
-                      { label: "Week 4", desc: "Screening Feedback &\nLive Final Pitch", tag: "On-site", tagClass: "bg-[#c8ef50]/10 text-[#c8ef50] border-[#c8ef50]/20" },
+                      { label: "Pre-Sprint", desc: "Global Team Formation & Registration", tag: "Online", tagClass: "bg-white/5 text-white/60 border-white/10" },
+                      { label: "Week 1", desc: "Challenge Reveal & Hybrid Workshops", tag: "Hybrid", tagClass: "bg-purple-500/10 text-purple-400 border-purple-500/20" },
+                      { label: "Week 2-3", desc: "Intensive Prototype Development Sprint", tag: "Online", tagClass: "bg-white/5 text-white/60 border-white/10" },
+                      { label: "Week 4", desc: "Screening Feedback & Live Final Pitch", tag: "On-site", tagClass: "bg-[#c8ef50]/10 text-[#c8ef50] border-[#c8ef50]/20" },
                     ].map((node, i) => (
-                      <div key={i} className="relative z-10 flex flex-col items-start md:items-center text-left md:text-center w-full md:w-1/4 group/node">
-                        <div className="w-8 h-8 rounded-full bg-black border-2 border-white/20 group-hover/node:border-[#c8ef50] transition-colors flex items-center justify-center mb-3">
+                      <div key={i} className="relative z-10 flex flex-row md:flex-col items-start md:items-center text-left md:text-center w-full md:w-1/4 group/node gap-4 md:gap-0">
+                        <div className="w-8 h-8 rounded-full bg-black border-2 border-white/20 group-hover/node:border-[#c8ef50] transition-colors flex items-center justify-center shrink-0 md:mb-3">
                           <div className="w-2 h-2 rounded-full bg-white/50 group-hover/node:bg-[#c8ef50] transition-colors" />
                         </div>
-                        <h5 className="font-bold text-white text-sm mb-1">{node.label}</h5>
-                        <p className="text-xs text-white/60 whitespace-pre-line">{node.desc}</p>
-                        <span className={`mt-3 text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md border ${node.tagClass}`}>{node.tag}</span>
+                        <div className="flex flex-col">
+                          <h5 className="font-bold text-white text-sm mb-0.5 md:mb-1">{node.label}</h5>
+                          <p className="text-xs text-white/60">{node.desc}</p>
+                          <span className={`mt-2 md:mt-3 text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md border w-fit ${node.tagClass}`}>{node.tag}</span>
+                        </div>
                       </div>
                     ))}
                   </div>
