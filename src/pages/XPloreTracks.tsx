@@ -321,22 +321,27 @@ const XPloreTracks = () => {
                   <CalendarClock className="w-5 h-5 text-[#c8ef50]" />
                   <h3 className="text-xl font-semibold tracking-tight">Sprint Timeline</h3>
                 </div>
-                <div className="p-6 md:p-8 rounded-3xl" style={{ background: "rgba(255,255,255,0.04)", backdropFilter: "blur(24px)", border: "1px solid rgba(255,255,255,0.08)" }}>
-                  <div className="relative flex flex-col md:flex-row justify-between w-full gap-8 md:gap-0">
+                <div className="p-4 sm:p-6 md:p-8 rounded-3xl" style={{ background: "rgba(255,255,255,0.04)", backdropFilter: "blur(24px)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                  <div className="relative flex flex-col md:flex-row justify-between w-full gap-6 md:gap-0">
+                    {/* Horizontal line for desktop */}
                     <div className="hidden md:block absolute top-[15px] left-10 right-10 h-px bg-white/10 z-0" />
+                    {/* Vertical line for mobile */}
+                    <div className="md:hidden absolute top-4 bottom-4 left-[15px] w-px bg-white/10 z-0" />
                     {[
-                      { label: "Pre-Sprint", desc: "Global Team Formation\n& Registration", tag: "Online", tagClass: "bg-white/5 text-white/60 border-white/10" },
-                      { label: "Week 1", desc: "Challenge Reveal &\nHybrid Workshops", tag: "Hybrid", tagClass: "bg-purple-500/10 text-purple-400 border-purple-500/20" },
-                      { label: "Week 2-3", desc: "Intensive Prototype\nDevelopment Sprint", tag: "Online", tagClass: "bg-white/5 text-white/60 border-white/10" },
-                      { label: "Week 4", desc: "Screening Feedback &\nLive Final Pitch", tag: "On-site", tagClass: "bg-[#c8ef50]/10 text-[#c8ef50] border-[#c8ef50]/20" },
+                      { label: "Pre-Sprint", desc: "Global Team Formation & Registration", tag: "Online", tagClass: "bg-white/5 text-white/60 border-white/10" },
+                      { label: "Week 1", desc: "Challenge Reveal & Hybrid Workshops", tag: "Hybrid", tagClass: "bg-purple-500/10 text-purple-400 border-purple-500/20" },
+                      { label: "Week 2-3", desc: "Intensive Prototype Development Sprint", tag: "Online", tagClass: "bg-white/5 text-white/60 border-white/10" },
+                      { label: "Week 4", desc: "Screening Feedback & Live Final Pitch", tag: "On-site", tagClass: "bg-[#c8ef50]/10 text-[#c8ef50] border-[#c8ef50]/20" },
                     ].map((node, i) => (
-                      <div key={i} className="relative z-10 flex flex-col items-start md:items-center text-left md:text-center w-full md:w-1/4 group/node">
-                        <div className="w-8 h-8 rounded-full bg-black border-2 border-white/20 group-hover/node:border-[#c8ef50] transition-colors flex items-center justify-center mb-3">
+                      <div key={i} className="relative z-10 flex flex-row md:flex-col items-start md:items-center text-left md:text-center w-full md:w-1/4 group/node gap-4 md:gap-0">
+                        <div className="w-8 h-8 rounded-full bg-black border-2 border-white/20 group-hover/node:border-[#c8ef50] transition-colors flex items-center justify-center shrink-0 md:mb-3">
                           <div className="w-2 h-2 rounded-full bg-white/50 group-hover/node:bg-[#c8ef50] transition-colors" />
                         </div>
-                        <h5 className="font-bold text-white text-sm mb-1">{node.label}</h5>
-                        <p className="text-xs text-white/60 whitespace-pre-line">{node.desc}</p>
-                        <span className={`mt-3 text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md border ${node.tagClass}`}>{node.tag}</span>
+                        <div className="flex flex-col">
+                          <h5 className="font-bold text-white text-sm mb-0.5 md:mb-1">{node.label}</h5>
+                          <p className="text-xs text-white/60">{node.desc}</p>
+                          <span className={`mt-2 md:mt-3 text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md border w-fit ${node.tagClass}`}>{node.tag}</span>
+                        </div>
                       </div>
                     ))}
                   </div>
