@@ -52,13 +52,22 @@ export const Header = () => {
           </Button>
         </nav>
         
-        <button 
-          className="md:hidden text-foreground" 
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-        >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        {/* Mobile: Show X-plore + Menu button */}
+        <div className="md:hidden flex items-center gap-2">
+          <a
+            href="/xplore"
+            className="inline-flex items-center gap-1 bg-[#D4FF00] text-black px-3 py-1.5 rounded-full text-xs font-bold hover:bg-[#e6ff4d] transition-all shadow-[0_0_8px_rgba(212,255,0,0.3)]"
+          >
+            <Briefcase className="w-3 h-3" /> X-plore
+          </a>
+          <button 
+            className="text-foreground" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
       
       {mobileMenuOpen && (
