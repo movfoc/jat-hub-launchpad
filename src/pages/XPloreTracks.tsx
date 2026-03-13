@@ -332,15 +332,27 @@ const XPloreTracks = () => {
               <div className="mb-24 max-w-4xl mx-auto">
                 <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-8">
                   <h3 className="text-2xl font-semibold tracking-tight">Track Challenges</h3>
-                  <button className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium transition-colors text-xs sm:text-sm">
-                    <Users className="w-4 h-4" /> Form a Team
-                  </button>
+                  {data.month === "April Track" ? (
+                    <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/60 font-medium text-xs sm:text-sm cursor-not-allowed">
+                      <Users className="w-4 h-4" /> Coming Soon...
+                    </span>
+                  ) : (
+                    <button className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium transition-colors text-xs sm:text-sm">
+                      <Users className="w-4 h-4" /> Form a Team
+                    </button>
+                  )}
                 </div>
-                <div className="flex flex-col gap-4">
-                  {data.challenges.map((c, i) => (
-                    <ChallengeAccordion key={i} challenge={c} index={i} teamCount={data.status[i]?.count ?? 0} />
-                  ))}
-                </div>
+                {data.month === "April Track" ? (
+                  <div className="text-center py-16 text-white/50">
+                    <p className="text-lg">Coming Soon...</p>
+                  </div>
+                ) : (
+                  <div className="flex flex-col gap-4">
+                    {data.challenges.map((c, i) => (
+                      <ChallengeAccordion key={i} challenge={c} index={i} teamCount={data.status[i]?.count ?? 0} />
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* Scoring Criteria */}
