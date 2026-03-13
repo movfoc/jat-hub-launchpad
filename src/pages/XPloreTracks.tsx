@@ -258,7 +258,7 @@ const XPloreTracks = () => {
       {/* Main grid */}
       <section className={`w-full h-screen grid grid-cols-1 md:grid-cols-3 bg-black absolute inset-0 z-10 transition-opacity duration-700 ${activeTrack ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
         {panels.map((p) => (
-          <div key={p.key} className="relative w-full h-full group overflow-hidden flex flex-col items-center justify-center cursor-pointer border-r border-white/5" onClick={() => openTrack(p.key)}>
+          <div key={p.key} className={`relative w-full h-full group overflow-hidden flex flex-col items-center justify-center border-r border-white/5 ${p.key === "april" ? "cursor-pointer" : "cursor-default"}`} onClick={() => p.key === "april" ? openTrack(p.key) : null}>
             <img src={p.bg} className="absolute inset-0 w-full h-full object-cover transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 z-0" alt={p.label} />
             <div className="absolute inset-0 bg-black/60 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:bg-white/80 group-hover:backdrop-blur-md z-0" />
             <div className="relative z-10 text-white transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:text-black flex flex-col items-center text-center px-6">
@@ -266,9 +266,15 @@ const XPloreTracks = () => {
               <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight mb-3">{p.title}</h2>
               <p className="text-base lg:text-lg font-light opacity-80">{p.sub}</p>
               <div className="overflow-hidden mt-0 h-0 opacity-0 group-hover:mt-8 group-hover:h-10 group-hover:opacity-100 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
-                <span className="text-sm font-medium flex items-center gap-1.5 bg-black text-white px-5 py-2.5 rounded-full">
-                  Explore <ArrowRight className="w-3.5 h-3.5" />
-                </span>
+                {p.key === "april" ? (
+                  <span className="text-sm font-medium flex items-center gap-1.5 bg-black text-white px-5 py-2.5 rounded-full">
+                    Explore <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                ) : (
+                  <span className="text-sm font-medium flex items-center gap-1.5 bg-white/20 text-white/70 px-5 py-2.5 rounded-full cursor-default">
+                    Coming soon
+                  </span>
+                )}
               </div>
             </div>
           </div>
@@ -332,15 +338,27 @@ const XPloreTracks = () => {
               <div className="mb-24 max-w-4xl mx-auto">
                 <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-8">
                   <h3 className="text-2xl font-semibold tracking-tight">Track Challenges</h3>
-                  <button className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium transition-colors text-xs sm:text-sm">
-                    <Users className="w-4 h-4" /> Form a Team
-                  </button>
+                  {data.month === "April Track" ? (
+                    <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/60 font-medium text-xs sm:text-sm cursor-not-allowed">
+                      <Users className="w-4 h-4" /> Coming Soon...
+                    </span>
+                  ) : (
+                    <button className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium transition-colors text-xs sm:text-sm">
+                      <Users className="w-4 h-4" /> Form a Team
+                    </button>
+                  )}
                 </div>
-                <div className="flex flex-col gap-4">
-                  {data.challenges.map((c, i) => (
-                    <ChallengeAccordion key={i} challenge={c} index={i} teamCount={data.status[i]?.count ?? 0} />
-                  ))}
-                </div>
+                {data.month === "April Track" ? (
+                  <div className="text-center py-16 text-white/50">
+                    <p className="text-lg">Coming Soon...</p>
+                  </div>
+                ) : (
+                  <div className="flex flex-col gap-4">
+                    {data.challenges.map((c, i) => (
+                      <ChallengeAccordion key={i} challenge={c} index={i} teamCount={data.status[i]?.count ?? 0} />
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* Scoring Criteria */}
