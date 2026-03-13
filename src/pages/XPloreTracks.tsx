@@ -266,9 +266,15 @@ const XPloreTracks = () => {
               <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight mb-3">{p.title}</h2>
               <p className="text-base lg:text-lg font-light opacity-80">{p.sub}</p>
               <div className="overflow-hidden mt-0 h-0 opacity-0 group-hover:mt-8 group-hover:h-10 group-hover:opacity-100 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
-                <span className="text-sm font-medium flex items-center gap-1.5 bg-black text-white px-5 py-2.5 rounded-full">
-                  Explore <ArrowRight className="w-3.5 h-3.5" />
-                </span>
+                {p.key === "april" ? (
+                  <span className="text-sm font-medium flex items-center gap-1.5 bg-black text-white px-5 py-2.5 rounded-full">
+                    Explore <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                ) : (
+                  <span className="text-sm font-medium flex items-center gap-1.5 bg-white/20 text-white/70 px-5 py-2.5 rounded-full cursor-default">
+                    Coming soon
+                  </span>
+                )}
               </div>
             </div>
           </div>
