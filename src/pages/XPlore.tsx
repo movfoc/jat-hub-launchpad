@@ -161,6 +161,22 @@ const XPlore = () => {
         </div>
       </section>
 
+      {/* YouTube Video */}
+      <section className="py-8 md:py-12 bg-[#050505]">
+        <div className="max-w-5xl mx-auto px-4 md:px-6">
+          <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl" style={{ paddingBottom: '56.25%' }}>
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/Qe8HaLXdu0o"
+              title="X-PLORE Marketing Ideathon"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              frameBorder="0"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* 2026 Marketing Ideathon CTA */}
       <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
