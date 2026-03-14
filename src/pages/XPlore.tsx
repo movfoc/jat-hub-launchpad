@@ -161,6 +161,24 @@ const XPlore = () => {
         </div>
       </section>
 
+      {/* Instagram Reel Video */}
+      <section className="py-8 md:py-12 bg-[#050505]">
+        <div className="max-w-3xl mx-auto px-4 md:px-6">
+          <div className="rounded-2xl md:rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
+            <iframe
+              src="https://www.instagram.com/reel/DV4crSNiv6m/embed/"
+              className="w-full"
+              style={{ minHeight: '500px', height: '680px', maxHeight: '80vh' }}
+              frameBorder="0"
+              scrolling="no"
+              allowTransparency
+              allow="encrypted-media"
+              title="X-plore Instagram Reel"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* 2026 Marketing Ideathon CTA */}
       <section className="py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
