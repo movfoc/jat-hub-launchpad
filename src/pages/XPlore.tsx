@@ -128,7 +128,7 @@ const XPlore = () => {
       </nav>
 
       {/* Hero */}
-      <section className="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 overflow-hidden bg-[#050505]">
+      <section className="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 bg-[#050505] overflow-x-hidden">
         <div className="absolute inset-0 z-0 opacity-50">
           <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2670&auto=format&fit=crop" className="w-full h-full object-cover grayscale mix-blend-screen" alt="" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#050505]/90 to-[#050505]" />
