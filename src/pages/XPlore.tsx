@@ -144,11 +144,9 @@ const XPlore = () => {
 
         <div className="relative z-10 text-center max-w-6xl mx-auto reveal-on-scroll opacity-0 translate-y-8">
           <h1 className="text-5xl md:text-7xl lg:text-9xl font-extrabold tracking-tight mb-8 leading-none text-white">
-            X-PLORE
+            X-PLORE <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500 text-3xl md:text-5xl lg:text-6xl block mt-2 tracking-normal">Marketing Ideathon</span>
           </h1>
-          <p className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-normal mb-8">
-            Marketing Ideathon
-          </p>
           <h2 className="text-xl md:text-3xl font-normal mb-12 tracking-tight text-[#D4FF00] text-glow">
             Beyond the Brief. Build the Experience.
           </h2>
@@ -159,22 +157,6 @@ const XPlore = () => {
             <a href="#students" className="group px-8 py-4 rounded-full font-medium text-white glass-panel hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
               <GraduationCap className="w-5 h-5" /> For Students
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Instagram Video */}
-      <section className="py-8 md:py-12">
-        <div className="max-w-3xl mx-auto px-4 md:px-6">
-          <div className="rounded-2xl md:rounded-[2rem] overflow-hidden bg-black/50 border border-white/10 shadow-2xl">
-            <iframe
-              src="https://www.instagram.com/reel/DV4crSNiv6m/embed/"
-              className="w-full aspect-[9/16] sm:aspect-video"
-              frameBorder="0"
-              scrolling="no"
-              allowFullScreen
-              title="X-PLORE Instagram Reel"
-            />
           </div>
         </div>
       </section>
