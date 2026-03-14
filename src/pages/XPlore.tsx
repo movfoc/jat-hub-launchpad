@@ -144,9 +144,11 @@ const XPlore = () => {
 
         <div className="relative z-10 text-center max-w-6xl mx-auto reveal-on-scroll opacity-0 translate-y-8">
           <h1 className="text-5xl md:text-7xl lg:text-9xl font-extrabold tracking-tight mb-8 leading-none text-white">
-            X-PLORE <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500 text-3xl md:text-5xl lg:text-6xl block mt-2 tracking-normal">Marketing Ideathon</span>
+            X-PLORE
           </h1>
+          <p className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-normal mb-8">
+            Marketing Ideathon
+          </p>
           <h2 className="text-xl md:text-3xl font-normal mb-12 tracking-tight text-[#D4FF00] text-glow">
             Beyond the Brief. Build the Experience.
           </h2>
