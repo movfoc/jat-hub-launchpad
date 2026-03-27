@@ -16,6 +16,7 @@ import NewsUCLSummit from "./pages/NewsUCLSummit";
 import BHFTraining from "./pages/BHFTraining";
 import XPlore from "./pages/XPlore";
 import XPloreTracks from "./pages/XPloreTracks";
+import XPloreChallenge from "./pages/XPloreChallenge";
 import EventHistory from "./pages/EventHistory";
 import NewsIndex from "./pages/NewsIndex";
 
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/news/ucl-summit" element={<NewsUCLSummit />} />
           <Route path="/xplore" element={<XPlore />} />
           <Route path="/xplore/tracks" element={<XPloreTracks />} />
+          <Route path="/xplore/challenge" element={<XPloreChallenge />} />
           <Route path="/events" element={<EventHistory />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
