@@ -16,6 +16,7 @@ import NewsUCLSummit from "./pages/NewsUCLSummit";
 import BHFTraining from "./pages/BHFTraining";
 import XPlore from "./pages/XPlore";
 import XPloreTracks from "./pages/XPloreTracks";
+import XPloreChallenge from "./pages/XPloreChallenge";
 import EventHistory from "./pages/EventHistory";
 import NewsIndex from "./pages/NewsIndex";
 
