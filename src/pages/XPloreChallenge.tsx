@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ArrowRight, Users, Briefcase, HeartPulse, ShoppingBag, Gamepad2, Globe } from "lucide-react";
+import { ChevronLeft, ArrowRight, Users, Briefcase, HeartPulse, ShoppingBag, Gamepad2 } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
 
