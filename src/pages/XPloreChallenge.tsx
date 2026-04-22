@@ -18,7 +18,7 @@ const TRACKS_DATA = [
       "A written reflection on the workflow, tools used, and ethical considerations",
     ],
     currentTeams: 0,
-    maxTeams: 10,
+    maxTeams: 3,
   },
   {
     id: "B",
@@ -31,7 +31,7 @@ const TRACKS_DATA = [
       "A pitch deck with market analysis and implementation roadmap",
     ],
     currentTeams: 0,
-    maxTeams: 10,
+    maxTeams: 3,
   },
   {
     id: "C",
@@ -44,7 +44,7 @@ const TRACKS_DATA = [
       "A demo video showcasing the user journey",
     ],
     currentTeams: 0,
-    maxTeams: 10,
+    maxTeams: 3,
   },
   {
     id: "D",
@@ -57,7 +57,7 @@ const TRACKS_DATA = [
       "A marketing strategy for launch and community building",
     ],
     currentTeams: 0,
-    maxTeams: 10,
+    maxTeams: 3,
   },
 ];
 
