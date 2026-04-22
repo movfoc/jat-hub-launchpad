@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ArrowRight, Users, Briefcase, HeartPulse, ShoppingBag, Gamepad2, Globe } from "lucide-react";
+import { ChevronLeft, ArrowRight, Users, Briefcase, HeartPulse, ShoppingBag, Gamepad2 } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
 
@@ -17,7 +17,7 @@ const TRACKS_DATA = [
       "A short presentation explaining the idea, target users, and how AI powers the experience",
       "A written reflection on the workflow, tools used, and ethical considerations",
     ],
-    currentTeams: 3,
+    currentTeams: 0,
     maxTeams: 10,
   },
   {
@@ -30,7 +30,7 @@ const TRACKS_DATA = [
       "User research findings and persona definitions",
       "A pitch deck with market analysis and implementation roadmap",
     ],
-    currentTeams: 7,
+    currentTeams: 0,
     maxTeams: 10,
   },
   {
@@ -43,7 +43,7 @@ const TRACKS_DATA = [
       "A business model canvas outlining revenue streams and scalability",
       "A demo video showcasing the user journey",
     ],
-    currentTeams: 5,
+    currentTeams: 0,
     maxTeams: 10,
   },
   {
@@ -56,20 +56,7 @@ const TRACKS_DATA = [
       "Game design document with mechanics, narrative, and art direction",
       "A marketing strategy for launch and community building",
     ],
-    currentTeams: 10,
-    maxTeams: 10,
-  },
-  {
-    id: "E",
-    icon: Globe,
-    title: "Social Impact in Roblox",
-    description: "Leverage the Roblox platform to create experiences that drive positive social change. Build games or interactive worlds that educate, raise awareness, or support communities in need.",
-    deliverables: [
-      "A published or demo-ready Roblox experience",
-      "Impact measurement framework and target metrics",
-      "A partnership proposal for NGOs or community organizations",
-    ],
-    currentTeams: 4,
+    currentTeams: 0,
     maxTeams: 10,
   },
 ];
