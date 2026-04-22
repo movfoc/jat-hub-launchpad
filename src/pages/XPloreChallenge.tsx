@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ArrowRight, Users, Palette, HeartPulse, ShoppingBag, Gamepad2, Globe } from "lucide-react";
+import { ChevronLeft, ArrowRight, Users, Briefcase, HeartPulse, ShoppingBag, Gamepad2, Globe } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
 
@@ -9,13 +9,13 @@ const REGISTRATION_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfG_3QDN
 const TRACKS_DATA = [
   {
     id: "A",
-    icon: Palette,
-    title: "Visual Design Contents Using AI Tools",
-    description: "Harness the power of generative AI to create stunning visual content. Explore how AI-driven design tools can revolutionize branding, advertising, and digital storytelling.",
+    icon: Briefcase,
+    title: "Next-Gen Career Development",
+    description: "Convert your idea into reality using AI-driven design tools or AI agents. Reimagine how people discover careers, build skills, and navigate the future of work through intelligent, personalized experiences powered by AI.",
     deliverables: [
-      "A portfolio of AI-generated visual assets (posters, social media graphics, brand identity)",
-      "A short presentation explaining the creative process and tools used",
-      "A written reflection on ethical considerations in AI-generated design",
+      "A working prototype or interactive demo built with AI-driven design tools or AI agents",
+      "A short presentation explaining the idea, target users, and how AI powers the experience",
+      "A written reflection on the workflow, tools used, and ethical considerations",
     ],
     currentTeams: 3,
     maxTeams: 10,
