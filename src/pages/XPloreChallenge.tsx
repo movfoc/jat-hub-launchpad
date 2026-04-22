@@ -178,7 +178,7 @@ const XPloreChallenge = () => {
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "rgba(255,255,255,0.08)" }}>
                     <Icon className="w-5 h-5 text-blue-400" />
                   </div>
-                  <span className="text-xs font-mono text-white/30 uppercase tracking-widest">Track {track.id}</span>
+                  <span className="text-xs font-mono text-white/30 uppercase tracking-widest">Challenge {track.id}</span>
                 </div>
 
                 {/* Title */}
@@ -212,7 +212,7 @@ const XPloreChallenge = () => {
                       className="flex-1 py-2.5 rounded-xl text-sm font-medium text-white transition-all flex items-center justify-center gap-1"
                       style={{ background: "linear-gradient(135deg, #3b82f6, #8b5cf6)" }}
                     >
-                      Join Track <ArrowRight className="w-3.5 h-3.5" />
+                      Join Challenge <ArrowRight className="w-3.5 h-3.5" />
                     </button>
                   )}
                   <button
@@ -237,7 +237,7 @@ const XPloreChallenge = () => {
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "rgba(255,255,255,0.08)" }}>
                   <selectedTrack.icon className="w-5 h-5 text-blue-400" />
                 </div>
-                <span className="text-xs font-mono text-white/30 uppercase tracking-widest">Track {selectedTrack.id}</span>
+                <span className="text-xs font-mono text-white/30 uppercase tracking-widest">Challenge {selectedTrack.id}</span>
               </div>
               <DialogTitle className="text-xl text-white">{selectedTrack.title}</DialogTitle>
               <DialogDescription className="text-white/50 mt-2">{selectedTrack.description}</DialogDescription>
@@ -281,7 +281,7 @@ const XPloreChallenge = () => {
                   className="w-full py-3 rounded-xl text-sm font-medium text-white transition-all flex items-center justify-center gap-1"
                   style={{ background: "linear-gradient(135deg, #3b82f6, #8b5cf6)" }}
                 >
-                  Join This Track <ArrowRight className="w-4 h-4" />
+                  Join This Challenge <ArrowRight className="w-4 h-4" />
                 </button>
               )}
             </div>
