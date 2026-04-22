@@ -143,7 +143,7 @@ const XPloreChallenge = () => {
             Back to Jabhub
           </Link>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white text-center tracking-tight">
-            Challenge Tracks
+            Challenges
           </h1>
           <p className="text-white/50 text-center mt-4 text-lg max-w-xl mx-auto">
             Choose your mission. Solve real-world problems. Win big.
