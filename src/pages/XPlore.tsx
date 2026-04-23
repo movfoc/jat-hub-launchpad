@@ -122,6 +122,7 @@ const XPlore = () => {
             <a href="#partners" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-white transition-colors text-sm">For Partners</a>
             <a href="#students" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-white transition-colors text-sm">For Students</a>
             <a href="#process" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-white transition-colors text-sm">The Process</a>
+            <a href="/xplore/challenge" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-[#D4FF00] transition-colors text-sm">Challenges</a>
             <a href="#students" onClick={() => setMobileMenuOpen(false)} className="mt-2 text-center py-3 text-sm font-bold text-white border border-white/20 rounded-full hover:text-[#D4FF00]">Join as Student</a>
             <a href="#partners" onClick={() => setMobileMenuOpen(false)} className="text-center py-3 bg-[#D4FF00] text-black rounded-full text-sm font-bold hover:bg-white transition-all">Partner With Us</a>
           </div>
