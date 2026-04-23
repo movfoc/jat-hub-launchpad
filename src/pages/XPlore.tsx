@@ -101,11 +101,11 @@ const XPlore = () => {
             <div className="w-3 h-3 bg-[#D4FF00] rounded-sm shadow-[0_0_10px_#D4FF00]" />
             JatHub <span className="text-[#D4FF00]">X-PLORE</span>
           </a>
-          <div className="hidden lg:flex gap-8 text-sm font-medium text-gray-400">
-            <a href="#philosophy" className="hover:text-[#D4FF00] transition-colors">Philosophy</a>
-            <a href="#partners" className="hover:text-white transition-colors">For Partners</a>
-            <a href="#students" className="hover:text-white transition-colors">For Students</a>
-            <a href="#process" className="hover:text-white transition-colors">The Process</a>
+          <div className="hidden md:flex gap-6 lg:gap-8 text-sm font-medium text-gray-400">
+            <a href="#philosophy" className="hover:text-[#D4FF00] transition-colors cursor-pointer">Philosophy</a>
+            <a href="#partners" className="hover:text-[#D4FF00] transition-colors cursor-pointer">For Partners</a>
+            <a href="#students" className="hover:text-[#D4FF00] transition-colors cursor-pointer">For Students</a>
+            <a href="#process" className="hover:text-[#D4FF00] transition-colors cursor-pointer">The Process</a>
           </div>
           <div className="hidden md:flex gap-4">
             <a href="#students" className="px-4 py-2 text-sm font-bold text-white hover:text-[#D4FF00] transition-colors">Join as Student</a>
