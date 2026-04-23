@@ -106,6 +106,7 @@ const XPlore = () => {
             <a href="#partners" className="hover:text-[#D4FF00] transition-colors cursor-pointer">For Partners</a>
             <a href="#students" className="hover:text-[#D4FF00] transition-colors cursor-pointer">For Students</a>
             <a href="#process" className="hover:text-[#D4FF00] transition-colors cursor-pointer">The Process</a>
+            <a href="/xplore/challenge" className="hover:text-[#D4FF00] transition-colors cursor-pointer">Challenges</a>
           </div>
           <div className="hidden md:flex gap-4">
             <a href="#students" className="px-4 py-2 text-sm font-bold text-white hover:text-[#D4FF00] transition-colors">Join as Student</a>
