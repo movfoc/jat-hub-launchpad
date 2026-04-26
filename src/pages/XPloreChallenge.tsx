@@ -252,12 +252,24 @@ const XPloreChallenge = () => {
               <div>
                 <h4 className="text-sm font-semibold text-white/70 mb-2">Expected Deliverables</h4>
                 <ul className="space-y-2">
-                  {selectedTrack.deliverables.map((d, i) => (
-                    <li key={i} className="flex gap-2 text-sm text-white/50">
-                      <span className="text-blue-400 mt-0.5">•</span>
-                      {d}
-                    </li>
-                  ))}
+                  {selectedTrack.deliverables.map((d, i) => {
+                    const isBonus = d.includes("⭐");
+                    return (
+                      <li
+                        key={i}
+                        className={`flex gap-2 text-sm rounded-lg ${
+                          isBonus
+                            ? "p-2.5 border border-[#D4FF00]/30 bg-[#D4FF00]/5 text-[#D4FF00]"
+                            : "text-white/50"
+                        }`}
+                      >
+                        <span className={`mt-0.5 ${isBonus ? "text-[#D4FF00]" : "text-blue-400"}`}>
+                          {isBonus ? "★" : "•"}
+                        </span>
+                        {d}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
 
