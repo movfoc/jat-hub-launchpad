@@ -17,7 +17,7 @@ const TRACKS_DATA = [
       "A short presentation explaining the idea, target users, and how AI powers the experience",
       "A written reflection on the workflow, tools used, and ethical considerations",
     ],
-    currentTeams: 0,
+    currentTeams: 2,
     maxTeams: 3,
   },
   {
@@ -30,7 +30,7 @@ const TRACKS_DATA = [
       "User research findings and persona definitions",
       "A pitch deck with market analysis and implementation roadmap",
     ],
-    currentTeams: 0,
+    currentTeams: 3,
     maxTeams: 3,
   },
   {
@@ -43,7 +43,7 @@ const TRACKS_DATA = [
       "A business model canvas outlining revenue streams and scalability",
       "A demo video showcasing the user journey",
     ],
-    currentTeams: 0,
+    currentTeams: 1,
     maxTeams: 3,
   },
   {
@@ -56,7 +56,7 @@ const TRACKS_DATA = [
       "Game design document with mechanics, narrative, and art direction",
       "A marketing strategy for launch and community building",
     ],
-    currentTeams: 0,
+    currentTeams: 3,
     maxTeams: 3,
   },
 ];
