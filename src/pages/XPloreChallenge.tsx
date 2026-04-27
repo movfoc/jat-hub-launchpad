@@ -33,7 +33,8 @@ const TRACKS_DATA = [
       "Record a 10-minute video showcasing your solution ⭐ Extra points awarded for submitting this video!",
     ],
     currentTeams: 3,
-    maxTeams: 3,
+    maxTeams: 4,
+    extended: true,
   },
   {
     id: "C",
@@ -61,7 +62,8 @@ const TRACKS_DATA = [
       "Record a 10-minute video showcasing your solution ⭐ Extra points awarded for submitting this video!",
     ],
     currentTeams: 3,
-    maxTeams: 3,
+    maxTeams: 4,
+    extended: true,
   },
 ];
 
