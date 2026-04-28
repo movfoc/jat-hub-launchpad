@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 import {
   Lightbulb, Sparkles, Zap, Brain, Target, Layers,
   Telescope, FlaskConical, Rocket, Briefcase, GraduationCap,
@@ -129,8 +130,21 @@ const XPlore = () => {
         )}
       </nav>
 
+      {/* Back to JatHub link */}
+      <div className="pt-20 px-6 bg-[#050505]">
+        <div className="max-w-7xl mx-auto">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-[#D4FF00] transition-colors py-4"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to JatHub
+          </Link>
+        </div>
+      </div>
+
       {/* Hero */}
-      <section className="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 overflow-hidden bg-[#050505]">
+      <section className="relative min-h-screen flex flex-col justify-center items-center px-6 pt-8 overflow-hidden bg-[#050505]">
         <div className="absolute inset-0 z-0 opacity-50">
           <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2670&auto=format&fit=crop" className="w-full h-full object-cover grayscale mix-blend-screen" alt="" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#050505]/90 to-[#050505]" />
