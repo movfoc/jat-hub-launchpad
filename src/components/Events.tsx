@@ -9,12 +9,11 @@ export const Events = () => {
 
   const events = [
     {
-      date: "APR - JUN, 2026",
-      title: "Jathub X-plore Marketing Ideathon",
-      description: "Hybrid event. Click to learn more about the X-plore Marketing Ideathon.",
+      date: "MAY 2, 2026",
+      title: "Jathub X-plore Marketing Ideathon - Online Demo Day",
+      description: "1 PM - 5 PM Online. Demo Day for the X-plore Marketing Ideathon.",
       isPast: false,
-      registrationUrl: undefined,
-      isXploreLink: true,
+      registrationUrl: "https://luma.com/i37y6d2k",
     },
     {
       date: "FEB 17, 2026",
