@@ -9,12 +9,11 @@ export const Events = () => {
 
   const events = [
     {
-      date: "APR - JUN, 2026",
-      title: "Jathub X-plore Marketing Ideathon",
-      description: "Hybrid event. Click to learn more about the X-plore Marketing Ideathon.",
+      date: "MAY 2, 2026",
+      title: "Jathub X-plore Marketing Ideathon - Online Demo Day",
+      description: "1 PM - 5 PM Online. Demo Day for the X-plore Marketing Ideathon.",
       isPast: false,
-      registrationUrl: undefined,
-      isXploreLink: true,
+      registrationUrl: "https://luma.com/i37y6d2k",
     },
     {
       date: "FEB 17, 2026",
@@ -149,13 +148,7 @@ export const Events = () => {
                 </CardDescription>
               </CardContent>
               <CardFooter className="pt-0">
-                {event.isXploreLink ? (
-                  <Button variant="link" className="text-primary hover:text-primary/80 p-0 h-auto text-sm" asChild>
-                    <a href="/xplore" target="_blank" rel="noopener noreferrer">
-                      Learn More →
-                    </a>
-                  </Button>
-                ) : event.isPast ? (
+                {event.isPast ? (
                   <span className="text-foreground/50 font-medium text-sm">
                     See you next time
                   </span>
