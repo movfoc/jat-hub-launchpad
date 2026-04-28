@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroBackground from "@/assets/hero-bg.jpg";
+import partnersBanner from "@/assets/partners-banner.png";
 
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -44,6 +45,14 @@ export const Hero = () => {
               Become a Member
             </a>
           </Button>
+        </div>
+        <div className="mt-12 flex justify-center">
+          <img
+            src={partnersBanner}
+            alt="Special thanks to our partners and communities including University of Cambridge, Imperial College London, Microsoft, Google, and more"
+            className="max-w-full h-auto rounded-lg"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
