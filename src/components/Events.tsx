@@ -148,13 +148,7 @@ export const Events = () => {
                 </CardDescription>
               </CardContent>
               <CardFooter className="pt-0">
-                {event.isXploreLink ? (
-                  <Button variant="link" className="text-primary hover:text-primary/80 p-0 h-auto text-sm" asChild>
-                    <a href="/xplore" target="_blank" rel="noopener noreferrer">
-                      Learn More →
-                    </a>
-                  </Button>
-                ) : event.isPast ? (
+                {event.isPast ? (
                   <span className="text-foreground/50 font-medium text-sm">
                     See you next time
                   </span>
