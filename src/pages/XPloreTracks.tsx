@@ -466,7 +466,7 @@ const XPloreTracks = () => {
                         Open to university students and digital-native talents worldwide. We encourage you to break geographical boundaries and collaborate internationally!
                       </div>
                       <div className="bg-black/30 p-5 rounded-xl border border-white/5 hover:border-[#c8ef50]/30 transition-colors">
-                        <span className="block font-extrabold text-[#c8ef50] text-base mb-1 tracking-tight">Required Team Size: 3 - 5 Members</span>
+                        <span className="block font-extrabold text-[#c8ef50] text-base mb-1 tracking-tight">Required Team Size: 1 - 4 Members</span>
                         To master the friction of real-world teamwork, we highly advise forming <strong>cross-disciplinary teams</strong> uniting Creative Strategists, Tech Developers, and UI/UX Designers.
                       </div>
                     </div>
