@@ -99,7 +99,7 @@ const trackData: Record<string, TrackData> = {
   },
 };
 
-const trackKeys = ["april", "may", "june"] as const;
+const trackKeys = ["april", "may", "june", "agentic"] as const;
 
 /* ─── Sub-components ─── */
 
@@ -234,9 +234,10 @@ const XPloreTracks = () => {
   const data = activeTrack ? trackData[activeTrack] : null;
 
   const panels = [
-    { key: "april", label: "April", title: "Immersive Experience", sub: "AR/VR & Spatial Retail", bg: trackData.april.bg },
-    { key: "may", label: "May", title: "AI-Generated Content", sub: "Hyper-Personalized Ads", bg: trackData.may.bg },
-    { key: "june", label: "June", title: "Mini-game Development", sub: "Gamified Reward Loops", bg: trackData.june.bg },
+    { key: "april", title: "Immersive Experience", sub: "AR/VR & Spatial Retail", bg: trackData.april.bg },
+    { key: "may", title: "AI-Generated Content", sub: "Hyper-Personalized Ads", bg: trackData.may.bg },
+    { key: "june", title: "Mini-game Development", sub: "Gamified Reward Loops", bg: trackData.june.bg },
+    { key: "agentic", title: "Agentic AI", sub: "Autonomous Marketing Agents", bg: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop" },
   ];
 
   return (
@@ -256,13 +257,12 @@ const XPloreTracks = () => {
       </nav>
 
       {/* Main grid */}
-      <section className={`w-full min-h-screen grid grid-cols-1 md:grid-cols-3 bg-black pt-16 md:pt-0 md:absolute md:inset-0 z-10 transition-opacity duration-700 ${activeTrack ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
+      <section className={`w-full min-h-screen grid grid-cols-1 md:grid-cols-4 bg-black pt-16 md:pt-0 md:absolute md:inset-0 z-10 transition-opacity duration-700 ${activeTrack ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
         {panels.map((p) => (
-          <div key={p.key} className={`relative w-full h-[calc(33.33vh-1px)] md:h-full group overflow-hidden flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-white/5 ${p.key === "april" ? "cursor-pointer" : "cursor-default"}`} onClick={() => p.key === "april" ? openTrack(p.key) : null}>
-            <img src={p.bg} className="absolute inset-0 w-full h-full object-cover transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 z-0" alt={p.label} />
+          <div key={p.key} className={`relative w-full h-[calc(25vh-1px)] md:h-full group overflow-hidden flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-white/5 ${p.key === "april" ? "cursor-pointer" : "cursor-default"}`} onClick={() => p.key === "april" ? openTrack(p.key) : null}>
+            <img src={p.bg} className="absolute inset-0 w-full h-full object-cover transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 z-0" alt={p.title} />
             <div className="absolute inset-0 bg-black/60 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] md:group-hover:bg-white/80 md:group-hover:backdrop-blur-md z-0" />
             <div className="relative z-10 text-white transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] md:group-hover:text-black flex flex-col items-center text-center px-6">
-              <span className="text-[10px] font-medium tracking-[0.2em] uppercase border border-current px-3 py-1 rounded-full mb-3 md:mb-6 opacity-80">{p.label}</span>
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-1.5 md:mb-3">{p.title}</h2>
               <p className="text-sm md:text-base lg:text-lg font-light opacity-80">{p.sub}</p>
               {p.key === "april" ? (
