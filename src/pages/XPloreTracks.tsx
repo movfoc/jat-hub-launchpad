@@ -37,8 +37,8 @@ interface TrackData {
 const trackData: Record<string, TrackData> = {
   april: {
     month: "April Track",
-    title: "Immersive Experience",
-    subtitle: "AR/VR & Spatial Retail",
+    title: "Xplore Marketing Ideathon",
+    subtitle: "Schedule Timeline",
     bg: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1200&auto=format&fit=crop",
     status: [
       { name: "Challenge A: Virtual Try-On", count: 12 },
