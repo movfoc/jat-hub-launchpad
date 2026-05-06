@@ -9,10 +9,17 @@ export const Events = () => {
 
   const events = [
     {
+      date: "MAY 19, 2026",
+      title: "Roblox × JatHub Workshop: Build Marketing Games That Engage Millions",
+      description: "2 PM - 3 PM Online. Exclusive workshop in collaboration with Roblox.",
+      isPast: false,
+      registrationUrl: "/roblox-workshop",
+    },
+    {
       date: "MAY 2, 2026",
       title: "Jathub X-plore Marketing Ideathon - Online Demo Day",
       description: "1 PM - 5 PM Online. Demo Day for the X-plore Marketing Ideathon.",
-      isPast: false,
+      isPast: true,
       registrationUrl: "https://luma.com/i37y6d2k",
     },
     {
