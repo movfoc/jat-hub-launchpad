@@ -129,9 +129,9 @@ const RobloxWorkshop = () => {
           <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight">
             🎮 Roblox <span className="text-[#D4FF00]">×</span> JatHub:
             <br />
-            Build Marketing Games That{" "}
+            Bridging the Gap Between Play and{" "}
             <span className="bg-gradient-to-r from-pink-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
-              Engage Millions
+              Big Brand Marketing
             </span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
