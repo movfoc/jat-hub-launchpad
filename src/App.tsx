@@ -19,6 +19,7 @@ import XPloreTracks from "./pages/XPloreTracks";
 import XPloreChallenge from "./pages/XPloreChallenge";
 import EventHistory from "./pages/EventHistory";
 import NewsIndex from "./pages/NewsIndex";
+import RobloxWorkshop from "./pages/RobloxWorkshop";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/xplore/tracks" element={<XPloreTracks />} />
           <Route path="/xplore/challenge" element={<XPloreChallenge />} />
           <Route path="/events" element={<EventHistory />} />
+          <Route path="/roblox-workshop" element={<RobloxWorkshop />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
