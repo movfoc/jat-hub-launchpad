@@ -259,31 +259,19 @@ const XPloreTracks = () => {
       {/* Main grid */}
       <section className={`w-full min-h-screen grid grid-cols-1 md:grid-cols-4 bg-black pt-16 md:pt-0 md:absolute md:inset-0 z-10 transition-opacity duration-700 ${activeTrack ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
         {panels.map((p) => (
-          <div key={p.key} className={`relative w-full h-[calc(25vh-1px)] md:h-full group overflow-hidden flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-white/5 ${p.key === "april" ? "cursor-pointer" : "cursor-default"}`} onClick={() => p.key === "april" ? openTrack(p.key) : null}>
+          <div key={p.key} className="relative w-full h-[calc(25vh-1px)] md:h-full group overflow-hidden flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-white/5 cursor-pointer" onClick={() => openTrack("april")}>
             <img src={p.bg} className="absolute inset-0 w-full h-full object-cover transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 z-0" alt={p.title} />
             <div className="absolute inset-0 bg-black/60 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] md:group-hover:bg-white/80 md:group-hover:backdrop-blur-md z-0" />
             <div className="relative z-10 text-white transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] md:group-hover:text-black flex flex-col items-center text-center px-6">
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-1.5 md:mb-3">{p.title}</h2>
               <p className="text-sm md:text-base lg:text-lg font-light opacity-80">{p.sub}</p>
-              {p.key === "april" ? (
-                <span className="mt-4 md:hidden text-xs font-medium flex items-center gap-1.5 bg-white/10 text-white px-4 py-2 rounded-full">
-                  Explore <ArrowRight className="w-3 h-3" />
-                </span>
-              ) : (
-                <span className="mt-4 md:hidden text-xs font-medium flex items-center gap-1.5 bg-white/10 text-white/50 px-4 py-2 rounded-full">
-                  Coming soon
-                </span>
-              )}
+              <span className="mt-4 md:hidden text-xs font-medium flex items-center gap-1.5 bg-white/10 text-white px-4 py-2 rounded-full">
+                Explore <ArrowRight className="w-3 h-3" />
+              </span>
               <div className="hidden md:block overflow-hidden mt-0 h-0 opacity-0 group-hover:mt-8 group-hover:h-10 group-hover:opacity-100 transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)]">
-                {p.key === "april" ? (
-                  <span className="text-sm font-medium flex items-center gap-1.5 bg-black text-white px-5 py-2.5 rounded-full">
-                    Explore <ArrowRight className="w-3.5 h-3.5" />
-                  </span>
-                ) : (
-                  <span className="text-sm font-medium flex items-center gap-1.5 bg-white/20 text-white/70 px-5 py-2.5 rounded-full cursor-default">
-                    Coming soon
-                  </span>
-                )}
+                <span className="text-sm font-medium flex items-center gap-1.5 bg-black text-white px-5 py-2.5 rounded-full">
+                  Explore <ArrowRight className="w-3.5 h-3.5" />
+                </span>
               </div>
             </div>
           </div>
