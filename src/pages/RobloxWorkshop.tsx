@@ -239,12 +239,11 @@ const RobloxWorkshop = () => {
                   </Button>
                   <Button
                     size="sm"
-                    variant="outline"
-                    className="border-white/20 text-white hover:bg-white/10 text-sm rounded-full px-5 py-2.5"
+                    className="bg-[#D4FF00] text-black hover:bg-[#e6ff4d] font-bold text-sm rounded-full px-5 py-2.5"
                     asChild
                   >
                     <a href="https://chat.whatsapp.com/LvIqZTeHLZs6YfMErve5Ji" target="_blank" rel="noopener noreferrer">
-                      WhatsApp
+                      Join WhatsApp Group
                     </a>
                   </Button>
                 </div>
