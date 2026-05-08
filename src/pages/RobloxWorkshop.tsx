@@ -165,8 +165,92 @@ const RobloxWorkshop = () => {
         </div>
       </section>
 
+      {/* BOTH EVENTS — VISIBLE AT TOP */}
+      <section id="session2" className="py-8 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-6">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D4FF00]/10 border border-[#D4FF00]/30 text-xs font-bold uppercase tracking-wider text-[#D4FF00]">
+              <Sparkles className="w-3.5 h-3.5" /> Two Events. One Journey.
+            </span>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {/* SESSION 1 — WORKSHOP */}
+            <div className="relative bg-gradient-to-br from-fuchsia-600/15 via-purple-600/10 to-cyan-500/15 border border-white/15 rounded-2xl p-6 overflow-hidden">
+              <div aria-hidden className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-fuchsia-500/15 blur-2xl" />
+              <div className="relative">
+                <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-[#D4FF00] font-bold mb-2">
+                  <Clock className="w-3.5 h-3.5" /> Session 1 · May 19, 2026
+                </div>
+                <h3 className="text-xl md:text-2xl font-black mb-2">
+                  Roblox × JatHub Workshop
+                </h3>
+                <p className="text-sm text-white/70 mb-4">
+                  Learn how brands like Nike, Gucci, and Walmart build immersive marketing games on Roblox. Hands-on, beginner-friendly.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white/60">Online</span>
+                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white/60">2 PM – 3 PM</span>
+                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-red-500/15 text-red-300">Limited Spots</span>
+                </div>
+                <Button
+                  size="sm"
+                  className="bg-[#D4FF00] text-black hover:bg-[#e6ff4d] font-bold text-sm rounded-full px-5 py-2.5"
+                  asChild
+                >
+                  <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer">
+                    Register →
+                  </a>
+                </Button>
+              </div>
+            </div>
+
+            {/* SESSION 2 — UCL DEMO DAY + IDEATHON */}
+            <div className="relative bg-gradient-to-br from-cyan-600/15 via-blue-600/10 to-fuchsia-500/15 border border-white/15 rounded-2xl p-6 overflow-hidden">
+              <div aria-hidden className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-cyan-500/15 blur-2xl" />
+              <div className="relative">
+                <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-[#D4FF00] font-bold mb-2">
+                  <Calendar className="w-3.5 h-3.5" /> Session 2 · UCL Demo Day
+                </div>
+                <h3 className="text-xl md:text-2xl font-black mb-2">
+                  UCL Demo Day + X-plore Ideathon
+                </h3>
+                <p className="text-sm text-white/70 mb-4">
+                  Pitch at UCL Demo Day and enter the Roblox-sponsored Ideathon with a £250 prize pool for games that market big brands.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white/60">UCL · Cambridge · Surrey</span>
+                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-[#D4FF00]/15 text-[#D4FF00]">£250 Prize</span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <Button
+                    size="sm"
+                    className="bg-[#D4FF00] text-black hover:bg-[#e6ff4d] font-bold text-sm rounded-full px-5 py-2.5"
+                    asChild
+                  >
+                    <a href="https://luma.com/i37y6d2k" target="_blank" rel="noopener noreferrer">
+                      Register UCL →
+                    </a>
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="border-white/20 text-white hover:bg-white/10 text-sm rounded-full px-5 py-2.5"
+                    asChild
+                  >
+                    <a href="https://chat.whatsapp.com/DlpJmvvOQJTFmFNS5VYtK2?mode=gi_t" target="_blank" rel="noopener noreferrer">
+                      WhatsApp
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* WHY THIS MATTERS */}
-      <section className="py-20 px-6">
+      <section className="py-16 px-6">
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="text-3xl md:text-5xl font-black mb-6">
             Why This <span className="text-[#D4FF00]">Matters</span>
@@ -181,24 +265,24 @@ const RobloxWorkshop = () => {
       </section>
 
       {/* WHAT YOU'LL LEARN */}
-      <section className="py-20 px-6 bg-gradient-to-b from-fuchsia-950/20 via-black to-cyan-950/20">
+      <section className="py-16 px-6 bg-gradient-to-b from-fuchsia-950/20 via-black to-cyan-950/20">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-14">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-black">
               What You'll <span className="text-[#D4FF00]">Learn</span>
             </h2>
             <p className="mt-3 text-white/60">Four core skills. One unforgettable session.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {learn.map((item, i) => (
               <div
                 key={i}
-                className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#D4FF00]/60 hover:bg-white/[0.07] transition"
+                className="group bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-[#D4FF00]/60 hover:bg-white/[0.07] transition"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#D4FF00]/15 flex items-center justify-center mb-4 group-hover:bg-[#D4FF00]/25 transition">
-                  <item.icon className="w-6 h-6 text-[#D4FF00]" />
+                <div className="w-10 h-10 rounded-lg bg-[#D4FF00]/15 flex items-center justify-center mb-3 group-hover:bg-[#D4FF00]/25 transition">
+                  <item.icon className="w-5 h-5 text-[#D4FF00]" />
                 </div>
-                <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                <h3 className="text-base font-bold mb-1">{item.title}</h3>
                 <p className="text-sm text-white/60">{item.desc}</p>
               </div>
             ))}
@@ -207,29 +291,29 @@ const RobloxWorkshop = () => {
       </section>
 
       {/* WHO + DETAILS */}
-      <section id="details" className="py-20 px-6">
-        <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-8">
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10">
-            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#D4FF00] font-bold mb-4">
+      <section id="details" className="py-16 px-6">
+        <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-6">
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-8">
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#D4FF00] font-bold mb-3">
               <Users className="w-4 h-4" /> Who Should Join
             </div>
-            <h2 className="text-3xl md:text-4xl font-black mb-6">Built for Curious Minds</h2>
-            <ul className="space-y-3">
+            <h2 className="text-2xl md:text-3xl font-black mb-4">Built for Curious Minds</h2>
+            <ul className="space-y-2.5">
               {audience.map((a, i) => (
                 <li key={i} className="flex items-start gap-3 text-white/85">
                   <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#D4FF00] flex-shrink-0" />
-                  <span className="text-base md:text-lg">{a}</span>
+                  <span className="text-base">{a}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-fuchsia-500/15 via-purple-500/10 to-cyan-400/15 border border-white/10 rounded-3xl p-8 md:p-10">
-            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#D4FF00] font-bold mb-4">
+          <div className="bg-gradient-to-br from-fuchsia-500/15 via-purple-500/10 to-cyan-400/15 border border-white/10 rounded-3xl p-6 md:p-8">
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#D4FF00] font-bold mb-3">
               <Zap className="w-4 h-4" /> Event Details
             </div>
-            <h2 className="text-3xl md:text-4xl font-black mb-6">The Essentials</h2>
-            <ul className="space-y-4">
+            <h2 className="text-2xl md:text-3xl font-black mb-4">The Essentials</h2>
+            <ul className="space-y-3.5">
               <li className="flex items-center gap-3">
                 <Globe className="w-5 h-5 text-[#D4FF00]" />
                 <span><span className="text-white/60">Format:</span> <span className="font-semibold">Online</span></span>
@@ -252,7 +336,7 @@ const RobloxWorkshop = () => {
       </section>
 
       {/* STRONG CTA */}
-      <section className="py-24 px-6 relative overflow-hidden">
+      <section className="py-20 px-6 relative overflow-hidden">
         <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-fuchsia-600/20 via-black to-cyan-500/20" />
         <div aria-hidden className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-[#D4FF00]/10 blur-3xl" />
         <div className="relative container mx-auto max-w-3xl text-center">
