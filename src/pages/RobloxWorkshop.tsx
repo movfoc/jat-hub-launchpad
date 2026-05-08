@@ -117,7 +117,7 @@ const RobloxWorkshop = () => {
       </div>
 
       {/* HERO */}
-      <section className="relative pt-24 pb-20 md:pt-32 md:pb-32">
+      <section className="relative pt-20 pb-8 md:pt-24 md:pb-10">
         <div
           aria-hidden
           className="absolute inset-0 bg-cover bg-center opacity-40"
@@ -129,7 +129,7 @@ const RobloxWorkshop = () => {
             <span className="w-2 h-2 rounded-full bg-[#D4FF00] animate-pulse" />
             Exclusive Roblox × JatHub Workshop
           </span>
-          <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight">
+          <h1 className="mt-4 text-3xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
             🎮 Roblox <span className="text-[#D4FF00]">×</span> JatHub:
             <br />
             Bridging the Gap Between Play and{" "}
@@ -137,13 +137,13 @@ const RobloxWorkshop = () => {
               Big Brand Marketing
             </span>
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
+          <p className="mt-4 text-base md:text-lg text-white/80 max-w-2xl mx-auto">
             Join an exclusive workshop to learn how brands use Roblox to create immersive marketing experiences.
           </p>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
             <Button
               size="lg"
-              className="bg-[#D4FF00] text-black hover:bg-[#e6ff4d] font-bold text-lg px-10 py-6 rounded-full shadow-[0_0_30px_rgba(212,255,0,0.45)] hover:scale-105 transition"
+              className="bg-[#D4FF00] text-black hover:bg-[#e6ff4d] font-bold text-base px-8 py-5 rounded-full shadow-[0_0_30px_rgba(212,255,0,0.45)] hover:scale-105 transition"
               asChild
             >
               <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer">
@@ -153,13 +153,13 @@ const RobloxWorkshop = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/30 bg-white/5 text-white hover:bg-white/10 rounded-full px-8 py-6"
+              className="border-white/30 bg-white/5 text-white hover:bg-white/10 rounded-full px-6 py-5"
               asChild
             >
-              <a href="#details">See Details</a>
+              <a href="#session2">See What's Next</a>
             </Button>
           </div>
-          <p className="mt-6 text-xs text-white/50 uppercase tracking-widest">
+          <p className="mt-4 text-xs text-white/50 uppercase tracking-widest">
             Online · Hosted by Roblox · Limited Spots
           </p>
         </div>
