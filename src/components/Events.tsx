@@ -16,6 +16,13 @@ export const Events = () => {
       registrationUrl: "/roblox-workshop",
     },
     {
+      date: "MAY 26, 2026",
+      title: "2026 X-plore Marketing Ideathon (UCL DEMO Day)",
+      description: "1 PM - 5 PM at UCL School of Management, Canada One, Canary Wharf, E14 5AB.",
+      isPast: false,
+      registrationUrl: "https://luma.com/i37y6d2k",
+    },
+    {
       date: "MAY 2, 2026",
       title: "Jathub X-plore Marketing Ideathon - Online Demo Day",
       description: "1 PM - 5 PM Online. Demo Day for the X-plore Marketing Ideathon.",
