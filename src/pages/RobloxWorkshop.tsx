@@ -20,6 +20,7 @@ import {
   UsersRound,
 } from "lucide-react";
 import heroImg from "@/assets/roblox-workshop-hero.jpg";
+import partnersBanner from "@/assets/partners-banner.png";
 
 const REGISTER_URL =
   "https://events.roblox.com/public/events/bridging-the-gap-between-play-and-big-brand-marketing-xp200yu9ew";
@@ -394,6 +395,14 @@ const RobloxWorkshop = () => {
             JatHub is a non-profit community connecting young dreamers, builders, and creators with the people,
             tools, and opportunities reshaping tech, gaming, and innovation. We open doors — you walk through them.
           </p>
+          <div className="mt-8 flex justify-center">
+            <img
+              src={partnersBanner}
+              alt="Special thanks to our partners and communities"
+              className="max-w-full h-auto rounded-lg"
+              loading="lazy"
+            />
+          </div>
           <div className="mt-8">
             <Link
               to="/"
