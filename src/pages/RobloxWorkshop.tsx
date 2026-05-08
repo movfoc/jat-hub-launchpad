@@ -383,100 +383,19 @@ const RobloxWorkshop = () => {
         </div>
       </section>
 
-      {/* ABOUT JATHUB */}
-      {/* X-PLORE IDEATHON + UCL DEMO DAY */}
-      <section className="py-20 px-6 border-t border-white/10 bg-gradient-to-b from-black via-fuchsia-950/10 to-black">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-14">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#D4FF00]/10 border border-[#D4FF00]/30 text-xs md:text-sm font-bold uppercase tracking-wider text-[#D4FF00]">
-              <Sparkles className="w-4 h-4" /> What's Next
-            </span>
-            <h2 className="mt-4 text-3xl md:text-5xl font-black">
-              Beyond the Workshop
-            </h2>
-            <p className="mt-3 text-white/60 max-w-2xl mx-auto">
-              Take what you learn further. Two unmissable opportunities for JatHub builders.
-            </p>
-          </div>
-
-          {/* UCL DEMO DAY - FEATURED FIRST */}
-          <div className="relative bg-gradient-to-br from-fuchsia-600/20 via-purple-600/15 to-cyan-500/20 border border-white/15 rounded-3xl p-8 md:p-10 mb-8 overflow-hidden">
-            <div aria-hidden className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-fuchsia-500/20 blur-3xl" />
-            <div className="relative">
-              <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#D4FF00] font-bold mb-3">
-                <Calendar className="w-4 h-4" /> Featured · Happening Soon
-              </div>
-              <h3 className="text-3xl md:text-4xl font-black mb-3">
-                UCL Demo Day
-              </h3>
-              <p className="text-white/80 text-lg mb-6 max-w-2xl">
-                Join innovators from UCL, Cambridge, and Surrey for a high-energy demo day. Pitch, connect, and
-                discover real opportunities with sponsors and industry leaders.
-              </p>
-
-              <div className="grid sm:grid-cols-2 gap-4 mb-8">
-                <div className="bg-black/40 border border-white/10 rounded-2xl p-5">
-                  <div className="flex items-center gap-2 text-[#D4FF00] text-xs font-bold uppercase tracking-wider mb-2">
-                    <MessageCircle className="w-4 h-4" /> Stay in the Loop
-                  </div>
-                  <p className="text-sm text-white/70 mb-3">
-                    Join the WhatsApp group for instant updates, sponsor prizes, and technical support.
-                  </p>
-                  <a
-                    href="https://chat.whatsapp.com/DlpJmvvOQJTFmFNS5VYtK2?mode=gi_t"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-[#D4FF00] transition"
-                  >
-                    Join WhatsApp →
-                  </a>
-                </div>
-                <div className="bg-black/40 border border-white/10 rounded-2xl p-5">
-                  <div className="flex items-center gap-2 text-[#D4FF00] text-xs font-bold uppercase tracking-wider mb-2">
-                    <UsersRound className="w-4 h-4" /> Find a Team
-                  </div>
-                  <p className="text-sm text-white/70">
-                    Connect with fellow innovators from UCL, Cambridge, and Surrey to build your dream team.
-                  </p>
-                </div>
-              </div>
-
-              <Button
-                size="lg"
-                className="bg-[#D4FF00] text-black hover:bg-[#e6ff4d] font-bold rounded-full px-8 py-6 shadow-[0_0_30px_rgba(212,255,0,0.4)] hover:scale-105 transition"
-                asChild
-              >
-                <a href="https://luma.com/i37y6d2k" target="_blank" rel="noopener noreferrer">
-                  Register for UCL Demo Day →
-                </a>
-              </Button>
-            </div>
-          </div>
-
-          {/* X-PLORE IDEATHON - ROBLOX SPONSORED */}
-          <div className="bg-white/[0.04] border border-white/10 rounded-3xl p-8 md:p-10">
-            <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-cyan-300 font-bold">
-                <Trophy className="w-4 h-4" /> Sponsored by Roblox
-              </span>
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D4FF00]/15 border border-[#D4FF00]/30 text-[#D4FF00] text-xs font-bold">
-                <Gift className="w-3.5 h-3.5" /> £250 Prize Pool
-              </span>
-            </div>
-            <h3 className="text-2xl md:text-3xl font-black mb-3">
-              JatHub X-plore Ideathon
-            </h3>
-            <p className="text-white/75 leading-relaxed mb-6">
-              Roblox is officially sponsoring our X-plore Ideathon with a{" "}
-              <span className="text-[#D4FF00] font-bold">£250 prize pool</span>. Build a Roblox game that doesn't
-              just play well — it markets a big brand. Take the workshop's lessons and turn them into a winning
-              entry that captures the imagination of Gen Z players and global brands alike.
-            </p>
+      <section className="py-16 px-6 border-t border-white/10">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h2 className="text-2xl md:text-3xl font-black mb-4">About JatHub</h2>
+          <p className="text-white/70 leading-relaxed">
+            JatHub is a non-profit community connecting young dreamers, builders, and creators with the people,
+            tools, and opportunities reshaping tech, gaming, and innovation. We open doors — you walk through them.
+          </p>
+          <div className="mt-8">
             <Link
-              to="/x-plore"
-              className="inline-flex items-center gap-2 text-sm font-bold text-white border border-white/20 rounded-full px-6 py-3 hover:bg-white/10 hover:border-[#D4FF00]/50 transition"
+              to="/"
+              className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-[#D4FF00]"
             >
-              Explore the Ideathon →
+              <ArrowLeft className="w-4 h-4" /> Back to JatHub
             </Link>
           </div>
         </div>
