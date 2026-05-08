@@ -205,22 +205,22 @@ const RobloxWorkshop = () => {
               </div>
             </div>
 
-            {/* SESSION 2 — UCL DEMO DAY + IDEATHON */}
+            {/* SESSION 2 — DEMO DAY + IDEATHON */}
             <div className="relative bg-gradient-to-br from-cyan-600/15 via-blue-600/10 to-fuchsia-500/15 border border-white/15 rounded-2xl p-6 overflow-hidden">
               <div aria-hidden className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-cyan-500/15 blur-2xl" />
               <div className="relative">
                 <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-[#D4FF00] font-bold mb-2">
-                  <Calendar className="w-3.5 h-3.5" /> Session 2 · UCL Demo Day
+                  <Calendar className="w-3.5 h-3.5" /> Session 2 · Demo Day
                 </div>
                 <h3 className="text-xl md:text-2xl font-black mb-2">
-                  UCL Demo Day + X-plore Ideathon
+                  Demo Day + X-plore Ideathon
                 </h3>
                 <p className="text-sm text-white/70 mb-4">
-                  Pitch at UCL Demo Day and enter the Roblox-sponsored Ideathon with a £250 prize pool for games that market big brands.
+                  Pitch at Demo Day and enter the Roblox-sponsored Ideathon. Roblox Game Dev winners can claim a £250 prize pool for games that market big brands.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white/60">UCL · Cambridge · Surrey</span>
-                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-[#D4FF00]/15 text-[#D4FF00]">£250 Prize</span>
+                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white/60">Online</span>
+                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-[#D4FF00]/15 text-[#D4FF00]">£250 for Winners</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   <Button
@@ -229,7 +229,7 @@ const RobloxWorkshop = () => {
                     asChild
                   >
                     <a href="https://luma.com/i37y6d2k" target="_blank" rel="noopener noreferrer">
-                      Register UCL →
+                      Register →
                     </a>
                   </Button>
                   <Button
