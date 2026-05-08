@@ -196,7 +196,7 @@ const RobloxWorkshop = () => {
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white/60">Online</span>
-                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white/60">2 PM – 3 PM</span>
+                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white/60">2 PM – 3 PM (London time)</span>
                   <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-red-500/15 text-red-300">Limited Spots</span>
                 </div>
                 <Button
@@ -219,7 +219,7 @@ const RobloxWorkshop = () => {
                   <Calendar className="w-3.5 h-3.5" /> Session 2 · Demo Day
                 </div>
                 <h3 className="text-xl md:text-2xl font-black mb-2">
-                  Demo Day + X-plore Ideathon
+                  Demo Day &amp; X-plore Ideathon
                 </h3>
                 <p className="text-sm text-white/70 mb-4">
                   Pitch at Demo Day and enter the Roblox-sponsored Ideathon. An in-person event in London Canary Wharf to meet sponsors, mentors, and fellow innovators.
@@ -239,12 +239,11 @@ const RobloxWorkshop = () => {
                   </Button>
                   <Button
                     size="sm"
-                    variant="outline"
-                    className="border-white/20 text-white hover:bg-white/10 text-sm rounded-full px-5 py-2.5"
+                    className="bg-[#D4FF00] text-black hover:bg-[#e6ff4d] font-bold text-sm rounded-full px-5 py-2.5"
                     asChild
                   >
                     <a href="https://chat.whatsapp.com/LvIqZTeHLZs6YfMErve5Ji" target="_blank" rel="noopener noreferrer">
-                      WhatsApp
+                      Join WhatsApp Group
                     </a>
                   </Button>
                 </div>
@@ -407,9 +406,6 @@ const RobloxWorkshop = () => {
       </section>
 
 
-      <footer className="py-8 px-6 text-center text-xs text-white/40 border-t border-white/10">
-        © {new Date().getFullYear()} JatHub · Roblox is a trademark of Roblox Corporation.
-      </footer>
     </main>
   );
 };
