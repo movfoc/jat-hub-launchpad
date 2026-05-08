@@ -162,6 +162,12 @@ const RobloxWorkshop = () => {
           <p className="mt-4 text-xs text-white/50 uppercase tracking-widest">
             Online · Hosted by Roblox · Limited Spots
           </p>
+          <div className="mt-6 max-w-2xl mx-auto inline-flex items-start gap-3 bg-[#D4FF00]/10 border border-[#D4FF00]/30 rounded-2xl px-4 py-3 text-left">
+            <Gift className="w-5 h-5 text-[#D4FF00] mt-0.5 shrink-0" />
+            <p className="text-sm text-white/85">
+              <span className="font-bold text-[#D4FF00]">£250 Prize Pool</span> for Roblox Game Dev winners at the X-plore Ideathon — build a game that markets a big brand and take it home.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -216,11 +222,10 @@ const RobloxWorkshop = () => {
                   Demo Day + X-plore Ideathon
                 </h3>
                 <p className="text-sm text-white/70 mb-4">
-                  Pitch at Demo Day and enter the Roblox-sponsored Ideathon. Roblox Game Dev winners can claim a £250 prize pool for games that market big brands.
+                  Pitch at Demo Day and enter the Roblox-sponsored Ideathon. An in-person event in London Canary Wharf to meet sponsors, mentors, and fellow innovators.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white/60">Online</span>
-                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-[#D4FF00]/15 text-[#D4FF00]">£250 for Winners</span>
+                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white/60">In-Person · London Canary Wharf</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   <Button
