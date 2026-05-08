@@ -196,7 +196,7 @@ const RobloxWorkshop = () => {
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white/60">Online</span>
-                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white/60">2 PM – 3 PM</span>
+                  <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-white/10 text-white/60">2 PM – 3 PM (London time)</span>
                   <span className="text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-red-500/15 text-red-300">Limited Spots</span>
                 </div>
                 <Button
