@@ -219,7 +219,7 @@ const RobloxWorkshop = () => {
                   <Calendar className="w-3.5 h-3.5" /> Session 2 · Demo Day
                 </div>
                 <h3 className="text-xl md:text-2xl font-black mb-2">
-                  Demo Day + X-plore Ideathon
+                  Demo Day &amp; X-plore Ideathon
                 </h3>
                 <p className="text-sm text-white/70 mb-4">
                   Pitch at Demo Day and enter the Roblox-sponsored Ideathon. An in-person event in London Canary Wharf to meet sponsors, mentors, and fellow innovators.
