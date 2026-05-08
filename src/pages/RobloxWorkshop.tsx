@@ -243,7 +243,7 @@ const RobloxWorkshop = () => {
                     className="border-white/20 text-white hover:bg-white/10 text-sm rounded-full px-5 py-2.5"
                     asChild
                   >
-                    <a href="https://chat.whatsapp.com/DlpJmvvOQJTFmFNS5VYtK2?mode=gi_t" target="_blank" rel="noopener noreferrer">
+                    <a href="https://chat.whatsapp.com/LvIqZTeHLZs6YfMErve5Ji" target="_blank" rel="noopener noreferrer">
                       WhatsApp
                     </a>
                   </Button>
@@ -406,23 +406,6 @@ const RobloxWorkshop = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 border-t border-white/10">
-        <div className="container mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl md:text-3xl font-black mb-4">About JatHub</h2>
-          <p className="text-white/70 leading-relaxed">
-            JatHub is a non-profit community connecting young dreamers, builders, and creators with the people,
-            tools, and opportunities reshaping tech, gaming, and innovation. We open doors — you walk through them.
-          </p>
-          <div className="mt-8">
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-[#D4FF00]"
-            >
-              <ArrowLeft className="w-4 h-4" /> Back to JatHub
-            </Link>
-          </div>
-        </div>
-      </section>
 
       <footer className="py-8 px-6 text-center text-xs text-white/40 border-t border-white/10">
         © {new Date().getFullYear()} JatHub · Roblox is a trademark of Roblox Corporation.
