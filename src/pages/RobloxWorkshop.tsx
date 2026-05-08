@@ -406,9 +406,6 @@ const RobloxWorkshop = () => {
       </section>
 
 
-      <footer className="py-8 px-6 text-center text-xs text-white/40 border-t border-white/10">
-        © {new Date().getFullYear()} JatHub · Roblox is a trademark of Roblox Corporation.
-      </footer>
     </main>
   );
 };
