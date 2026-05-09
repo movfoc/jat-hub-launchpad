@@ -8,6 +8,7 @@ import {
   Gamepad2, Bot, Glasses, BarChart2, PenTool, Palette,
   CheckCircle, Calendar, MapPin, ArrowRight
 } from "lucide-react";
+import robloxBanner from "@/assets/roblox-workshop-banner.jpg";
 
 const XPlore = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -93,6 +94,16 @@ const XPlore = () => {
         .animate-float { animation: float 6s ease-in-out infinite; }
         .animate-float-delayed { animation: floatDelayed 8s ease-in-out 2s infinite; }
         .animate-pulse-slow { animation: pulse 4s cubic-bezier(0.4,0,0.6,1) infinite; }
+        @keyframes flashGlow {
+          0%, 100% { box-shadow: 0 0 20px rgba(212,255,0,0.5), 0 0 40px rgba(236,72,153,0.3); transform: scale(1); }
+          50% { box-shadow: 0 0 40px rgba(212,255,0,0.9), 0 0 80px rgba(236,72,153,0.6); transform: scale(1.01); }
+        }
+        @keyframes flashPill {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.4; }
+        }
+        .animate-flash-glow { animation: flashGlow 1.6s ease-in-out infinite; }
+        .animate-flash-pill { animation: flashPill 0.9s ease-in-out infinite; }
       `}</style>
 
       {/* Navigation */}
@@ -174,6 +185,26 @@ const XPlore = () => {
               <GraduationCap className="w-5 h-5" /> For Students
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Roblox Workshop Flashing Banner */}
+      <section className="pt-8 md:pt-12 pb-2 bg-[#050505]">
+        <div className="max-w-5xl mx-auto px-4 md:px-6">
+          <Link
+            to="/roblox-workshop"
+            className="group block relative rounded-2xl md:rounded-3xl overflow-hidden animate-flash-glow"
+            aria-label="Roblox x JatHub Workshop — Bridging the Gap Between Play and Big Brand Marketing"
+          >
+            <img
+              src={robloxBanner}
+              alt="Roblox x JatHub Workshop banner"
+              className="w-full h-auto block transition-transform duration-500 group-hover:scale-[1.02]"
+            />
+            <span className="absolute top-3 right-3 md:top-5 md:right-5 bg-[#D4FF00] text-black px-3 py-1 md:px-4 md:py-1.5 rounded-full text-[10px] md:text-xs font-extrabold tracking-widest uppercase animate-flash-pill shadow-[0_0_15px_rgba(212,255,0,0.8)]">
+              New • Register Now
+            </span>
+          </Link>
         </div>
       </section>
 
