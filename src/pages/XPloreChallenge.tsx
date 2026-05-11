@@ -207,10 +207,10 @@ const XPloreChallenge = () => {
                   <div className="flex items-center justify-between text-xs text-white/40">
                     <span className="flex items-center gap-1"><Users className="w-3 h-3" /> Teams</span>
                     <span>
-                      {track.currentTeams}/{track.maxTeams}
+                      4/6
                     </span>
                   </div>
-                  <Progress value={progress} className="h-1.5 bg-white/10" />
+                  <Progress value={(4 / 6) * 100} className="h-1.5 bg-white/10" />
                 </div>
 
                 {/* Buttons */}
@@ -291,10 +291,10 @@ const XPloreChallenge = () => {
                 <div className="flex items-center justify-between text-sm text-white/40">
                   <span className="flex items-center gap-1"><Users className="w-4 h-4" /> Team Capacity</span>
                   <span>
-                    {selectedTrack.currentTeams}/{selectedTrack.maxTeams}
+                    4/6
                   </span>
                 </div>
-                <Progress value={(selectedTrack.currentTeams / selectedTrack.maxTeams) * 100} className="h-2 bg-white/10" />
+                <Progress value={(4 / 6) * 100} className="h-2 bg-white/10" />
               </div>
 
               {/* Join button */}
