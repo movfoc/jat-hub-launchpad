@@ -158,7 +158,8 @@ const XPloreChallenge = () => {
             href="https://chat.whatsapp.com/LvIqZTeHLZs6YfMErve5Ji"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 flex w-fit mx-auto items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium text-white transition-all border border-white/10 hover:border-white/20 hover:bg-white/5"
+            className="mt-6 flex w-fit mx-auto items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium text-black transition-all"
+            style={{ background: "#c8ef50" }}
           >
             Join WhatsApp Group for Q&A
           </a>
