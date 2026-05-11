@@ -19,7 +19,7 @@ const TRACKS_DATA = [
       "Record a 10-minute video showcasing your solution ⭐ Extra points awarded for submitting this video!",
     ],
     currentTeams: 2,
-    maxTeams: 3,
+    maxTeams: 6,
   },
   {
     id: "B",
@@ -33,7 +33,7 @@ const TRACKS_DATA = [
       "Record a 10-minute video showcasing your solution ⭐ Extra points awarded for submitting this video!",
     ],
     currentTeams: 4,
-    maxTeams: 4,
+    maxTeams: 6,
     extended: true,
   },
   {
@@ -48,7 +48,7 @@ const TRACKS_DATA = [
       "Record a 10-minute video showcasing your solution ⭐ Extra points awarded for submitting this video!",
     ],
     currentTeams: 1,
-    maxTeams: 3,
+    maxTeams: 6,
   },
   {
     id: "D",
@@ -62,7 +62,7 @@ const TRACKS_DATA = [
       "Record a 10-minute video showcasing your solution ⭐ Extra points awarded for submitting this video!",
     ],
     currentTeams: 4,
-    maxTeams: 4,
+    maxTeams: 6,
     extended: true,
   },
 ];
