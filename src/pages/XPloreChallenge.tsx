@@ -144,9 +144,9 @@ const XPloreChallenge = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
         {/* Header */}
         <div className="mb-12 sm:mb-16">
-          <Link to="/" className="inline-flex items-center gap-1 text-sm text-white/60 hover:text-white transition-colors mb-8">
+          <Link to="/xplore" className="inline-flex items-center gap-1 text-sm text-white/60 hover:text-white transition-colors mb-8">
             <ChevronLeft className="w-4 h-4" />
-            Back to Jabhub
+            Back to Xplore
           </Link>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white text-center tracking-tight">
             Challenges
