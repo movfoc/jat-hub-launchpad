@@ -170,7 +170,9 @@ const XPloreChallenge = () => {
           {TRACKS_DATA.map((track) => {
             const isFull = track.currentTeams >= track.maxTeams;
             const Icon = track.icon;
-            const progress = (track.currentTeams / track.maxTeams) * 100;
+            const displayCurrent = track.id === "B" ? 5 : 4;
+            const displayMax = 6;
+            const progress = (displayCurrent / displayMax) * 100;
 
             return (
               <div
@@ -207,10 +209,10 @@ const XPloreChallenge = () => {
                   <div className="flex items-center justify-between text-xs text-white/40">
                     <span className="flex items-center gap-1"><Users className="w-3 h-3" /> Teams</span>
                     <span>
-                      4/6
+                      {displayCurrent}/{displayMax}
                     </span>
                   </div>
-                  <Progress value={(4 / 6) * 100} className="h-1.5 bg-white/10" />
+                  <Progress value={progress} className="h-1.5 bg-white/10" />
                 </div>
 
                 {/* Buttons */}
@@ -291,10 +293,10 @@ const XPloreChallenge = () => {
                 <div className="flex items-center justify-between text-sm text-white/40">
                   <span className="flex items-center gap-1"><Users className="w-4 h-4" /> Team Capacity</span>
                   <span>
-                    4/6
+                    {selectedTrack.id === "B" ? "5" : "4"}/6
                   </span>
                 </div>
-                <Progress value={(4 / 6) * 100} className="h-2 bg-white/10" />
+                <Progress value={((selectedTrack.id === "B" ? 5 : 4) / 6) * 100} className="h-2 bg-white/10" />
               </div>
 
               {/* Join button */}
