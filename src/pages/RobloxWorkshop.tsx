@@ -354,37 +354,6 @@ const RobloxWorkshop = () => {
           <p className="mt-5 text-lg text-white/75">
             Roblox doesn't open the doors like this often. JatHub members get in first.
           </p>
-          <div className="mt-10">
-            <Button
-              size="lg"
-              className="bg-[#D4FF00] text-black hover:bg-[#e6ff4d] font-bold text-lg px-12 py-7 rounded-full shadow-[0_0_40px_rgba(212,255,0,0.5)] hover:scale-105 transition"
-              asChild
-            >
-              <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer">
-                Secure Your Spot →
-              </a>
-            </Button>
-          </div>
-
-          {/* Share */}
-          <div className="mt-12">
-            <p className="text-xs uppercase tracking-widest text-white/50 mb-4">Share with your crew</p>
-            <div className="flex justify-center gap-3 flex-wrap">
-              {shareLinks.map((s, i) => (
-                <a
-                  key={i}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Share on ${s.label}`}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/15 hover:bg-white/15 hover:border-[#D4FF00]/50 transition text-sm"
-                >
-                  <s.icon className="w-4 h-4" />
-                  {s.label}
-                </a>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
