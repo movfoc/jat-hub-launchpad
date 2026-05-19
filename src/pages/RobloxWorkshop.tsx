@@ -147,8 +147,8 @@ const RobloxWorkshop = () => {
               className="bg-[#D4FF00] text-black hover:bg-[#e6ff4d] font-bold text-base px-8 py-5 rounded-full shadow-[0_0_30px_rgba(212,255,0,0.45)] hover:scale-105 transition"
               asChild
             >
-              <a href={REGISTER_URL} target="_blank" rel="noopener noreferrer">
-                Register Now →
+              <a href="/xplore/challenge">
+                Join the challenges →
               </a>
             </Button>
             <Button
