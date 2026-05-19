@@ -9,7 +9,7 @@ export const Events = () => {
 
   const events = [
     {
-      date: "MAY 19, 2026",
+      date: "MAY 27, 2026",
       title: "Roblox × JatHub: Bridging the Gap Between Play and Big Brand Marketing",
       description: "2 PM - 3 PM Online. Exclusive workshop in collaboration with Roblox.",
       isPast: false,
