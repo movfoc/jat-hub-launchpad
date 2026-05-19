@@ -118,11 +118,6 @@ const XPlore = () => {
             <a href="#partners" className="hover:text-[#D4FF00] transition-colors cursor-pointer">For Partners</a>
             <a href="#students" className="hover:text-[#D4FF00] transition-colors cursor-pointer">For Students</a>
             <a href="#process" className="hover:text-[#D4FF00] transition-colors cursor-pointer">The Process</a>
-            <a href="/xplore/tracks" className="hover:text-[#D4FF00] transition-colors cursor-pointer">Challenges</a>
-          </div>
-          <div className="hidden md:flex gap-4">
-            <a href="#students" className="px-4 py-2 text-sm font-bold text-white hover:text-[#D4FF00] transition-colors">Join as Student</a>
-            <a href="/xplore/challenge" className="bg-[#D4FF00] text-black px-6 py-2 rounded-full text-sm font-bold hover:bg-white transition-all shadow-[0_0_15px_rgba(212,255,0,0.3)]">Join the challenges</a>
           </div>
           <button className="md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -134,9 +129,6 @@ const XPlore = () => {
             <a href="#partners" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-white transition-colors text-sm">For Partners</a>
             <a href="#students" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-white transition-colors text-sm">For Students</a>
             <a href="#process" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-white transition-colors text-sm">The Process</a>
-            <a href="/xplore/tracks" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-[#D4FF00] transition-colors text-sm">Challenges</a>
-            <a href="#students" onClick={() => setMobileMenuOpen(false)} className="mt-2 text-center py-3 text-sm font-bold text-white border border-white/20 rounded-full hover:text-[#D4FF00]">Join as Student</a>
-            <a href="/xplore/challenge" onClick={() => setMobileMenuOpen(false)} className="text-center py-3 bg-[#D4FF00] text-black rounded-full text-sm font-bold hover:bg-white transition-all">Join the challenges</a>
           </div>
         )}
       </nav>
