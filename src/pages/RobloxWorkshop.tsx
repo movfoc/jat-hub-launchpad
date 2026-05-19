@@ -187,7 +187,7 @@ const RobloxWorkshop = () => {
               <div aria-hidden className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-fuchsia-500/15 blur-2xl" />
               <div className="relative">
                 <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-[#D4FF00] font-bold mb-2">
-                  <Clock className="w-3.5 h-3.5" /> Session 1 · May 19, 2026
+                  <Clock className="w-3.5 h-3.5" /> May 27, 2026
                 </div>
                 <h3 className="text-xl md:text-2xl font-black mb-2">
                   Roblox × JatHub Workshop
@@ -217,7 +217,7 @@ const RobloxWorkshop = () => {
               <div aria-hidden className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-cyan-500/15 blur-2xl" />
               <div className="relative">
                 <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-[#D4FF00] font-bold mb-2">
-                  <Calendar className="w-3.5 h-3.5" /> Session 2 · Demo Day
+                  <Calendar className="w-3.5 h-3.5" /> Demo Day
                 </div>
                 <h3 className="text-xl md:text-2xl font-black mb-2">
                   Demo Day &amp; X-plore Ideathon
