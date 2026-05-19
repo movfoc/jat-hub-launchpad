@@ -201,7 +201,7 @@ const XPlore = () => {
       </section>
 
       {/* YouTube Video */}
-      <section className="py-8 md:py-12 bg-[#050505]">
+      <section className="pt-20 md:pt-32 pb-8 md:pb-12 bg-[#050505]">
         <div className="max-w-5xl mx-auto px-4 md:px-6">
           <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl" style={{ paddingBottom: '56.25%' }}>
             <iframe
