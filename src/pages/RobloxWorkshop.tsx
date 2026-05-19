@@ -106,14 +106,6 @@ const RobloxWorkshop = () => {
           <Link to="/" className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-white">
             <ArrowLeft className="w-4 h-4" /> JatHub
           </Link>
-          <a
-            href={REGISTER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-1.5 bg-[#D4FF00] text-black px-4 py-2 rounded-full text-sm font-bold hover:bg-[#e6ff4d] transition"
-          >
-            Register Now
-          </a>
         </div>
       </div>
 
