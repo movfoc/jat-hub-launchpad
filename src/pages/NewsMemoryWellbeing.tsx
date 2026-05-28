@@ -49,7 +49,30 @@ const NewsMemoryWellbeing = () => {
       <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Connecting Generations Through Creativity</h3>
 
       <p className="text-lg text-muted-foreground leading-relaxed">
-        Beyond the informative discussions, the festival celebrated heart and creativity. JatHub partnered closely with community groups <em>Crafting Smiles</em> and <em>Tree of Life</em>, whose stunning balloon and crochet creations added a joyful and artistic dimension to the day.
+        Beyond the informative discussions, the festival celebrated heart and creativity. JatHub partnered closely with two dedicated community groups:
+      </p>
+
+      <ul className="list-disc list-inside text-lg text-muted-foreground leading-relaxed pl-4 space-y-2">
+        <li>
+          <strong>
+            <a
+              href="https://craftingsmiles.uk/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-foreground"
+            >
+              Crafting Smiles
+            </a>
+          </strong>
+          : An organization committed to spreading joy and support through creative engagement.
+        </li>
+        <li>
+          <strong>Tree of Life</strong>: A group dedicated to uplifting the community and supporting wellbeing by spreading warmth, care, and hope through intricate balloon art and meaningful, creative projects.
+        </li>
+      </ul>
+
+      <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+        Their combined efforts, featuring stunning balloon and crochet creations, added a joyful, artistic, and deeply comforting dimension to the day.
       </p>
 
       <div className="my-8 grid md:grid-cols-2 gap-4">
@@ -58,11 +81,7 @@ const NewsMemoryWellbeing = () => {
       </div>
 
       <p className="text-lg text-muted-foreground leading-relaxed">
-        At JatHub, our ongoing mission is to seamlessly connect students, startups, universities, and organizations to drive collaborative social impact.
-      </p>
-
-      <p className="text-lg text-muted-foreground leading-relaxed">
-        We look forward to continuing these meaningful collaborations and building an even more inclusive, supportive ecosystem in the events to come.
+        At JatHub, our ongoing mission is to seamlessly connect students, startups, universities, and organizations to drive collaborative social impact. We look forward to continuing these meaningful collaborations and building an even more inclusive, supportive ecosystem in the events to come.
       </p>
 
       <div className="my-8 rounded-lg overflow-hidden">
