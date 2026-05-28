@@ -58,7 +58,7 @@ const NewsMemoryWellbeing = () => {
       </div>
 
       <p className="text-lg text-muted-foreground leading-relaxed">
-        At JatHub, our ongoing mission is to seamlessly connect students, startups, universities, and organizations to drive collaborative social impact.
+        At JatHub, our ongoing mission is to seamlessly connect students, startups, universities, and organizations to drive collaborative social impact. Represented at the festival by team members including Vian LAU, Frankie L., Lawrence Tse, Yanle (Leona) LI, Yuan-Yuan W., and Rebecca Fairlamb, we are deeply committed to engaging the younger generation in these vital societal conversations.
       </p>
 
       <p className="text-lg text-muted-foreground leading-relaxed">
