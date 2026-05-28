@@ -166,7 +166,7 @@ export const News = () => {
             <Link
               key={index}
               to={item.link}
-              className="group min-w-[300px] md:min-w-[340px] max-w-[360px] snap-start shrink-0 flex flex-col rounded-xl overflow-hidden bg-card border border-border/40 hover:border-primary/30 transition-all duration-300"
+              className="group min-w-[360px] md:min-w-[440px] max-w-[480px] snap-start shrink-0 flex flex-col rounded-xl overflow-hidden bg-card border border-border/40 hover:border-primary/30 transition-all duration-300"
             >
               {/* Image */}
               <div className="aspect-video overflow-hidden">
@@ -178,11 +178,11 @@ export const News = () => {
               </div>
 
               {/* Content */}
-              <div className="p-5 flex flex-col flex-grow">
+              <div className="p-6 flex flex-col flex-grow">
                 <span className="text-primary text-xs font-semibold tracking-wider uppercase mb-2">
                   {item.category}
                 </span>
-                <h3 className="text-foreground font-semibold text-base leading-snug mb-3 line-clamp-2">
+                <h3 className="text-foreground font-semibold text-lg leading-snug mb-3 line-clamp-2">
                   {item.title}
                 </h3>
                 <div className="mt-auto flex items-center justify-between">
