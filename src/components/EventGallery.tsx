@@ -23,11 +23,13 @@ type NewsCard = {
   summary: string;
   date: string;
   link: string;
+  category: string;
 };
 
 const newsItems: NewsCard[] = [
   {
     image: barclaysImg,
+    category: "Innovation Summit",
     title: "JatHub Joins UK's Top Innovators at Barclays AI:100 Event",
     summary: "JatHub was featured alongside the UK's leading AI innovators at the Barclays AI:100 showcase.",
     date: "2026-05-28",
@@ -35,6 +37,7 @@ const newsItems: NewsCard[] = [
   },
   {
     image: dementiaImg,
+    category: "Community",
     title: "JatHub Champions Community Health at the Memory and Wellbeing Festival",
     summary: "Our team supported memory and wellbeing initiatives for the local community.",
     date: "2026-05-22",
@@ -42,6 +45,7 @@ const newsItems: NewsCard[] = [
   },
   {
     image: cambridgeImg,
+    category: "Hackathon",
     title: "JatHub at Cambridge RealityX: Judging the Future of AI & XR",
     summary: "JatHub judged groundbreaking AI and XR projects at Cambridge's RealityX hackathon.",
     date: "2026-03-15",
@@ -49,6 +53,7 @@ const newsItems: NewsCard[] = [
   },
   {
     image: uclSummitImg,
+    category: "Summit",
     title: "JatHub x UCL Summit: Digital Marketing & Gamified Economies",
     summary: "A day of insights on digital marketing and gamified economies with UCL.",
     date: "2026-02-17",
@@ -56,6 +61,7 @@ const newsItems: NewsCard[] = [
   },
   {
     image: gameJamImg,
+    category: "Game Jam",
     title: "Surrey Global Game Jam 2026",
     summary: "JatHub joined creators worldwide for 48 hours of game-making at Surrey GGJ.",
     date: "2026-01-27",
@@ -63,6 +69,7 @@ const newsItems: NewsCard[] = [
   },
   {
     image: roundtableImg,
+    category: "Policy & Innovation",
     title: "Jathub at House of Lords: Defining the UK's Digital Future",
     summary: "JatHub contributed to a House of Lords roundtable shaping the UK's digital policy.",
     date: "2025-12-18",
@@ -70,6 +77,7 @@ const newsItems: NewsCard[] = [
   },
   {
     image: esportsImg,
+    category: "College Visit",
     title: "College of Esports Visit",
     summary: "We toured the College of Esports to explore careers in competitive gaming.",
     date: "2026-01-10",
@@ -77,6 +85,7 @@ const newsItems: NewsCard[] = [
   },
   {
     image: ovhcloudImg,
+    category: "Industry Visit",
     title: "OVHcloud London Office Visit",
     summary: "An inside look at cloud infrastructure at OVHcloud's London headquarters.",
     date: "2025-11-25",
@@ -84,6 +93,7 @@ const newsItems: NewsCard[] = [
   },
   {
     image: aiMarketingImg,
+    category: "Workshop",
     title: "AI for Marketing & Media",
     summary: "A hands-on workshop exploring how AI is reshaping marketing and media.",
     date: "2025-10-29",
@@ -91,6 +101,7 @@ const newsItems: NewsCard[] = [
   },
   {
     image: microsoftImg,
+    category: "Industry Visit",
     title: "Visit Microsoft London — From Student to Tech Professional",
     summary: "Students explored Microsoft London and the journey from study into tech.",
     date: "2025-11-14",
@@ -98,6 +109,7 @@ const newsItems: NewsCard[] = [
   },
   {
     image: partTimeImg,
+    category: "Career Fair",
     title: "Part-time Job Fair",
     summary: "JatHub connected students with part-time opportunities to launch their careers.",
     date: "2025-10-01",
@@ -108,6 +120,15 @@ const newsItems: NewsCard[] = [
 const sortedNews = [...newsItems].sort(
   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
 );
+
+const formatDate = (dateStr: string) => {
+  const d = new Date(dateStr);
+  return d.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+};
 
 export const EventGallery = () => {
   const navigate = useNavigate();
@@ -246,7 +267,7 @@ export const EventGallery = () => {
               <button
                 key={item.link}
                 onClick={() => navigate(item.link)}
-                className="group min-w-[280px] max-w-[320px] shrink-0 snap-start rounded-xl overflow-hidden border border-primary/20 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 text-left focus:outline-none focus:ring-2 focus:ring-ring flex flex-col"
+                className="group min-w-[360px] md:min-w-[440px] max-w-[480px] shrink-0 snap-start rounded-xl overflow-hidden border border-border/40 bg-card hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 text-left focus:outline-none focus:ring-2 focus:ring-ring flex flex-col"
               >
                 <div className="aspect-video overflow-hidden">
                   <img
@@ -256,13 +277,21 @@ export const EventGallery = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="p-4 flex flex-col flex-grow">
-                  <h4 className="text-sm font-semibold text-foreground line-clamp-2 group-hover:text-primary transition-colors mb-2">
+                <div className="p-6 flex flex-col flex-grow">
+                  <span className="text-primary text-xs font-semibold tracking-wider uppercase mb-2">
+                    {item.category}
+                  </span>
+                  <h4 className="text-foreground font-semibold text-lg leading-snug mb-3 line-clamp-2 group-hover:text-primary transition-colors">
                     {item.title}
                   </h4>
-                  <p className="text-xs text-muted-foreground line-clamp-3">
+                  <p className="text-sm text-muted-foreground line-clamp-3 mb-3">
                     {item.summary}
                   </p>
+                  <div className="mt-auto">
+                    <span className="text-muted-foreground text-xs">
+                      {formatDate(item.date)}
+                    </span>
+                  </div>
                 </div>
               </button>
             ))}
