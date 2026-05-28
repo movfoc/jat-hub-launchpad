@@ -11,8 +11,32 @@ import microsoftImg from "@/assets/news/microsoft/Microsoft_Visit_1.jpeg";
 import partTimeImg from "@/assets/news/parttime/Part_time_pics_1.jpeg";
 import gameJamImg from "@/assets/news/game-jam/GGJ_Cover.jpeg";
 import uclSummitImg from "@/assets/news/ucl-summit/Summit_Group.png";
+import barclaysImg from "@/assets/news/barclays/barclays_cover.jpg";
+import cambridgeImg from "@/assets/news/cambridge/cambridge_cover.jpg";
+import dementiaImg from "@/assets/news/dementia/dementia_cover.jpg";
 
 const allNews = [
+  {
+    image: barclaysImg,
+    category: "Innovation Summit",
+    title: "JatHub Joins UK's Top Innovators at Barclays AI:100 Event",
+    date: "2026-05-28",
+    link: "/news/barclays-ai100",
+  },
+  {
+    image: dementiaImg,
+    category: "Community",
+    title: "JatHub Champions Community Health at the Memory and Wellbeing Festival",
+    date: "2026-05-22",
+    link: "/news/memory-wellbeing",
+  },
+  {
+    image: cambridgeImg,
+    category: "Hackathon",
+    title: "JatHub at Cambridge RealityX: Judging the Future of AI & XR",
+    date: "2026-03-15",
+    link: "/news/cambridge-realityx",
+  },
   {
     image: uclSummitImg,
     category: "Summit",
