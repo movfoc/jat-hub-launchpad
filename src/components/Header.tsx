@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Briefcase, Heart } from "lucide-react";
+import { Menu, X, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import jathubLogo from "@/assets/jathub-logo.jpg";
 
@@ -17,14 +17,9 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/30">
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
-        <div className="flex items-center gap-3">
-          <a href="#" aria-label="JAT Hub Home" onClick={() => scrollToSection("hero")}>
-            <img src={jathubLogo} alt="JAT Hub Logo" className="h-10 w-auto" />
-          </a>
-          <a href="/breathe.html" target="_blank" rel="noopener noreferrer" aria-label="Breathe">
-            <img src="/breathe-logo.png" alt="Breathe Logo" className="h-8 w-auto" />
-          </a>
-        </div>
+        <a href="#" aria-label="JAT Hub Home" onClick={() => scrollToSection("hero")}>
+          <img src={jathubLogo} alt="JAT Hub Logo" className="h-10 w-auto" />
+        </a>
         
         <nav className="hidden md:flex space-x-8 items-center">
           <button onClick={() => scrollToSection("news")} className="text-foreground/70 hover:text-primary transition-colors text-sm">
@@ -44,14 +39,6 @@ export const Header = () => {
           >
             <Briefcase className="w-4 h-4" /> X-plore
           </a>
-          <a
-            href="/breathe.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 bg-[#0ABAB5] text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-[#09A19C] transition-all hover:scale-105 shadow-[0_0_10px_rgba(10,186,181,0.4)]"
-          >
-            <Heart className="w-4 h-4" /> Breathe
-          </a>
           <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-transform hover:scale-105 text-sm" asChild>
             <a href="https://luma.com/user/Jathub" target="_blank" rel="noopener noreferrer">
               Become a Member
@@ -66,14 +53,6 @@ export const Header = () => {
             className="inline-flex items-center gap-1 bg-[#D4FF00] text-black px-3 py-1.5 rounded-full text-xs font-bold hover:bg-[#e6ff4d] transition-all shadow-[0_0_8px_rgba(212,255,0,0.3)]"
           >
             <Briefcase className="w-3 h-3" /> X-plore
-          </a>
-          <a
-            href="/breathe.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 bg-[#0ABAB5] text-white px-3 py-1.5 rounded-full text-xs font-bold hover:bg-[#09A19C] transition-all shadow-[0_0_8px_rgba(10,186,181,0.4)]"
-          >
-            <Heart className="w-3 h-3" /> Breathe
           </a>
           <button 
             className="text-foreground" 
@@ -102,15 +81,6 @@ export const Header = () => {
             onClick={() => setMobileMenuOpen(false)}
           >
             <Briefcase className="w-4 h-4" /> X-plore
-          </a>
-          <a
-            href="/breathe.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 w-full inline-flex items-center justify-center gap-1.5 bg-[#0ABAB5] text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-[#09A19C] transition-all shadow-[0_0_10px_rgba(10,186,181,0.4)]"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            <Heart className="w-4 h-4" /> Breathe
           </a>
           <Button className="mt-2 w-full bg-primary text-primary-foreground hover:bg-primary/90" asChild>
             <a href="https://luma.com/user/Jathub" target="_blank" rel="noopener noreferrer">
