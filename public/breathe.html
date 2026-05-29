@@ -30,7 +30,7 @@
         }
     </script>
     <style>
-        body { background-color: #FCF9F2; color: #2C3338; -webkit-font-smoothing: antialiased; }
+        body { background-color: #FCF9F2; color: #2C3338; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
         .carousel-slide { transition: opacity 1s ease-in-out; }
         
         /* Modular Event Macro-Card */
@@ -168,7 +168,7 @@
             .event-macro-card {
                 flex-direction: column;
                 min-height: auto;
-                margin-bottom: 100px;
+                margin-bottom: 56px;
             }
             
             .event-macro-card.reverse {
@@ -176,25 +176,36 @@
             }
             
             .event-image-half {
-                min-height: 300px;
+                min-height: 220px;
                 width: 100%;
+                aspect-ratio: 4 / 3;
             }
             
             .event-text-half {
-                padding: 40px 24px;
+                padding: 28px 22px;
                 background-color: #E0F5F4;
             }
             
             .event-title {
-                font-size: 24px;
+                font-size: 22px;
+                margin-bottom: 14px;
             }
             
             .event-meta {
                 font-size: 14px;
+                margin-bottom: 16px;
             }
             
             .event-description {
                 font-size: 14px;
+                line-height: 1.65;
+                margin-bottom: 22px;
+            }
+            
+            .event-cta-btn {
+                width: 100%;
+                padding: 14px 24px;
+                font-size: 13px;
             }
         }
     </style>
@@ -256,13 +267,13 @@
     <section id="events" class="w-full bg-ivory py-16 sm:py-20 md:py-24">
         <div class="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
             <!-- Section Header -->
-            <div class="mb-32 border-b border-charcoal/10 pb-16">
-                <div class="mb-8">
-                    <h2 class="text-5xl md:text-7xl lg:text-8xl font-bold text-charcoal tracking-tight mb-2">Gather & connect</h2>
-                    <p class="font-handwriting text-3xl md:text-4xl text-tiffany-dark">upcoming activities to bring us together...</p>
+            <div class="mb-16 sm:mb-24 md:mb-32 border-b border-charcoal/10 pb-10 sm:pb-16">
+                <div class="mb-6 sm:mb-8">
+                    <h2 class="text-[2.5rem] sm:text-5xl md:text-7xl lg:text-8xl font-bold text-charcoal tracking-tight mb-2 leading-[1.05]">Gather &amp; connect</h2>
+                    <p class="font-handwriting text-2xl sm:text-3xl md:text-4xl text-tiffany-dark leading-tight">upcoming activities to bring us together...</p>
                 </div>
-                <div class="max-w-4xl mt-10">
-                    <p class="text-lg md:text-xl text-charcoal/80 font-light leading-relaxed border-l-4 border-tiffany pl-8">
+                <div class="max-w-4xl mt-8 sm:mt-10">
+                    <p class="text-base sm:text-lg md:text-xl text-charcoal/80 font-light leading-[1.75] md:leading-relaxed border-l-4 border-tiffany pl-5 sm:pl-8">
                         We believe meaningful change happens through participation, contribution, and community engagement. Whether through volunteering, creative collaboration, mentorship, or simply showing up to support one another — every contribution helps create a healthier and more connected future for young people.
                     </p>
                 </div>
