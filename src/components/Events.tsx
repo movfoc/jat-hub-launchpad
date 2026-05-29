@@ -108,14 +108,14 @@ export const Events = () => {
   };
 
   return (
-    <section id="events" className="py-20 md:py-32 px-6 bg-background">
+    <section id="events" className="py-16 sm:py-20 md:py-32 px-5 sm:px-6 bg-background">
       <div className="container mx-auto max-w-6xl">
-        <div className="flex items-end justify-between mb-10">
+        <div className="flex items-end justify-between mb-8 sm:mb-10">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">
               Jathub Events
             </h2>
-            <p className="text-foreground/60 mt-3">
+            <p className="text-foreground/60 mt-3 text-sm sm:text-base">
               Join us to learn, connect, and grow.
             </p>
           </div>

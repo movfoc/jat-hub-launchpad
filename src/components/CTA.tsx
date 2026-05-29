@@ -2,17 +2,17 @@ import { Button } from "@/components/ui/button";
 
 export const CTA = () => {
   return (
-    <section id="cta" className="py-20 md:py-32 px-6 text-center">
+    <section id="cta" className="py-16 sm:py-20 md:py-32 px-5 sm:px-6 text-center">
       <div className="container mx-auto">
-        <h2 className="text-4xl md:text-6xl font-black text-white leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-white leading-tight">
           Dream. Connect. Build.
         </h2>
-        <p className="text-2xl md:text-3xl font-medium text-primary mt-3">
+        <p className="text-xl sm:text-2xl md:text-3xl font-medium text-primary mt-4">
           Together, we make it happen.
         </p>
         <Button 
           size="lg"
-          className="mt-10 bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105 text-lg px-10 py-6"
+          className="mt-8 sm:mt-10 bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105 text-base sm:text-lg px-8 sm:px-10 py-6 w-full sm:w-auto max-w-xs"
           asChild
         >
           <a href="https://luma.com/user/Jathub" target="_blank" rel="noopener noreferrer">

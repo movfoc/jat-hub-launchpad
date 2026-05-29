@@ -124,15 +124,15 @@ export const News = () => {
   };
 
   return (
-    <section id="news" className="py-20 md:py-32 px-6 bg-background">
+    <section id="news" className="py-16 sm:py-20 md:py-32 px-5 sm:px-6 bg-background">
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
-        <div className="flex items-end justify-between mb-10">
+        <div className="flex items-end justify-between mb-8 sm:mb-10">
           <div>
-            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-2">
+            <p className="text-primary text-xs sm:text-sm font-semibold tracking-widest uppercase mb-2">
               Newsroom
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground leading-tight">
               Latest Updates
             </h2>
           </div>
@@ -159,7 +159,7 @@ export const News = () => {
         {/* Carousel */}
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory"
+          className="flex gap-5 sm:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {sortedNews.map((item, index) => (
@@ -178,11 +178,11 @@ export const News = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="p-5 sm:p-6 flex flex-col flex-grow">
                 <span className="text-primary text-xs font-semibold tracking-wider uppercase mb-2">
                   {item.category}
                 </span>
-                <h3 className="text-foreground font-semibold text-lg leading-snug mb-3 line-clamp-2">
+                <h3 className="text-foreground font-semibold text-base sm:text-lg leading-snug mb-3 line-clamp-2">
                   {item.title}
                 </h3>
                 <div className="mt-auto flex items-center justify-between">

@@ -150,17 +150,17 @@ export const EventGallery = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 px-6 bg-background relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-28 px-5 sm:px-6 bg-background relative overflow-hidden">
       {/* Subtle glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-48 bg-[radial-gradient(circle,hsl(var(--primary)/0.12)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="flex items-end justify-between mb-10">
+        <div className="flex items-end justify-between mb-8 sm:mb-10">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground leading-tight">
               Event Gallery
             </h2>
-            <p className="text-muted-foreground mt-3">
+            <p className="text-muted-foreground mt-3 text-sm sm:text-base">
               Relive our past events — click a poster to see the full story.
             </p>
           </div>
@@ -213,7 +213,7 @@ export const EventGallery = () => {
           ))}
         </div>
 
-        <div className="flex items-center justify-between mt-6">
+        <div className="flex items-center justify-between mt-6 gap-3">
           <p className="text-muted-foreground text-xs md:hidden">
             ← Swipe to browse events →
           </p>
@@ -228,13 +228,13 @@ export const EventGallery = () => {
         </div>
 
         {/* News in the Gallery */}
-        <div className="mt-20">
-          <div className="flex items-end justify-between mb-10">
+        <div className="mt-16 sm:mt-20">
+          <div className="flex items-end justify-between mb-8 sm:mb-10">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground leading-tight">
                 From the Newsroom
               </h3>
-              <p className="text-muted-foreground mt-3">
+              <p className="text-muted-foreground mt-3 text-sm sm:text-base">
                 Highlights and stories from our recent appearances and visits.
               </p>
             </div>
@@ -260,14 +260,14 @@ export const EventGallery = () => {
 
           <div
             ref={newsScrollRef}
-            className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+            className="flex gap-5 sm:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {sortedNews.map((item) => (
               <button
                 key={item.link}
                 onClick={() => navigate(item.link)}
-                className="group min-w-[360px] md:min-w-[440px] max-w-[480px] shrink-0 snap-start rounded-xl overflow-hidden border border-border/40 bg-card hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 text-left focus:outline-none focus:ring-2 focus:ring-ring flex flex-col"
+                className="group w-[80vw] min-w-[260px] sm:w-auto sm:min-w-[360px] md:min-w-[440px] max-w-[480px] shrink-0 snap-start rounded-xl overflow-hidden border border-border/40 bg-card hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 text-left focus:outline-none focus:ring-2 focus:ring-ring flex flex-col"
               >
                 <div className="aspect-video overflow-hidden">
                   <img
@@ -277,11 +277,11 @@ export const EventGallery = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-5 sm:p-6 flex flex-col flex-grow">
                   <span className="text-primary text-xs font-semibold tracking-wider uppercase mb-2">
                     {item.category}
                   </span>
-                  <h4 className="text-foreground font-semibold text-lg leading-snug mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+                  <h4 className="text-foreground font-semibold text-base sm:text-lg leading-snug mb-3 line-clamp-2 group-hover:text-primary transition-colors">
                     {item.title}
                   </h4>
                   <p className="text-sm text-muted-foreground line-clamp-3 mb-3">
@@ -297,7 +297,7 @@ export const EventGallery = () => {
             ))}
           </div>
 
-          <div className="flex items-center justify-between mt-6">
+          <div className="flex items-center justify-between mt-6 gap-3">
             <p className="text-muted-foreground text-xs md:hidden">
               ← Swipe to read more →
             </p>
