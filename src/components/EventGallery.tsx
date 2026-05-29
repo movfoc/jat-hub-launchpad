@@ -193,7 +193,7 @@ export const EventGallery = () => {
             <button
               key={event.id}
               onClick={() => navigate(`/events#${event.id}`)}
-              className="group min-w-[240px] max-w-[280px] shrink-0 snap-start rounded-xl overflow-hidden border border-primary/20 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 text-left focus:outline-none focus:ring-2 focus:ring-ring"
+              className="group w-[68vw] min-w-[220px] sm:w-auto sm:min-w-[240px] max-w-[280px] shrink-0 snap-start rounded-xl overflow-hidden border border-primary/20 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 text-left focus:outline-none focus:ring-2 focus:ring-ring"
             >
               <div className="overflow-hidden">
                 <img
