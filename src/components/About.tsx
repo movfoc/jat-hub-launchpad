@@ -2,8 +2,8 @@ import collaborationImage from "@/assets/collaboration.jpg";
 
 export const About = () => {
   return (
-    <section id="about" className="py-20 md:py-32 px-6 relative section-glow">
-      <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center relative z-10">
+    <section id="about" className="py-16 sm:py-20 md:py-32 px-5 sm:px-6 relative section-glow">
+      <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 md:gap-16 items-center relative z-10">
         <div className="relative group">
           <img
             src={collaborationImage}
@@ -15,10 +15,10 @@ export const About = () => {
         </div>
         
         <div className="text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 sm:mb-8 leading-tight">
             Where Connections Happen
           </h2>
-          <div className="text-foreground/70 space-y-6 leading-relaxed">
+          <div className="text-foreground/70 space-y-5 sm:space-y-6 leading-[1.75] sm:leading-relaxed text-[15px] sm:text-base">
             <p className="text-left md:text-justify">
               Here, students and young professionals from across universities come together to network, share ideas, explore opportunities, and strive toward their goals — side by side.
             </p>
