@@ -137,7 +137,7 @@ export const Events = () => {
           {sorted.map((event, index) => (
             <Card
               key={index}
-              className={`min-w-[300px] max-w-[340px] snap-start border border-primary/30 bg-card/40 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 flex flex-col backdrop-blur-sm shrink-0 ${
+              className={`w-[78vw] min-w-[260px] sm:w-auto sm:min-w-[300px] max-w-[340px] snap-start border border-primary/30 bg-card/40 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 flex flex-col backdrop-blur-sm shrink-0 ${
                 event.isPast ? "opacity-60" : ""
               }`}
             >

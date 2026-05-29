@@ -19,10 +19,10 @@ export const About = () => {
             Where Connections Happen
           </h2>
           <div className="text-foreground/70 space-y-6 leading-relaxed">
-            <p className="text-justify">
+            <p className="text-left md:text-justify">
               Here, students and young professionals from across universities come together to network, share ideas, explore opportunities, and strive toward their goals — side by side.
             </p>
-            <p className="text-justify">
+            <p className="text-left md:text-justify">
               Through cross-university events, corporate visits to leading global companies, and innovation-driven startup programs, JAT Hub bridges the gap between education and the real world.
             </p>
           </div>
