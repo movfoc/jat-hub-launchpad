@@ -134,7 +134,7 @@ const XPlore = () => {
       </nav>
 
       {/* Back to JatHub link */}
-      <div className="pt-20 px-6 bg-[#050505]">
+      <div className="pt-20 px-5 sm:px-6 bg-[#050505]">
         <div className="max-w-7xl mx-auto">
           <Link
             to="/"
@@ -147,7 +147,7 @@ const XPlore = () => {
       </div>
 
       {/* Hero */}
-      <section className="relative min-h-screen flex flex-col justify-center items-center px-6 overflow-hidden bg-[#050505]">
+      <section className="relative min-h-screen flex flex-col justify-center items-center px-5 sm:px-6 py-16 overflow-hidden bg-[#050505]">
         <div className="absolute inset-0 z-0 opacity-50">
           <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2670&auto=format&fit=crop" className="w-full h-full object-cover grayscale mix-blend-screen" alt="" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#050505]/90 to-[#050505]" />
@@ -162,18 +162,18 @@ const XPlore = () => {
         <div className="absolute bottom-1/3 left-32 opacity-20 animate-float-delayed"><Layers className="w-9 h-9 text-[#3B82F6]" /></div>
 
         <div className="relative z-10 text-center max-w-6xl mx-auto reveal-on-scroll opacity-0 translate-y-8">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-extrabold tracking-tight mb-8 leading-none text-white">
+          <h1 className="text-[2.5rem] sm:text-5xl md:text-7xl lg:text-9xl font-extrabold tracking-tight mb-6 sm:mb-8 leading-none text-white">
             X-PLORE <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500 text-2xl sm:text-3xl md:text-5xl lg:text-6xl block mt-2 tracking-normal whitespace-nowrap">Marketing Ideathon</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500 text-xl sm:text-3xl md:text-5xl lg:text-6xl block mt-3 tracking-normal">Marketing Ideathon</span>
           </h1>
-          <h2 className="text-xl md:text-3xl font-normal mb-12 tracking-tight text-[#D4FF00] text-glow">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-normal mb-10 sm:mb-12 tracking-tight text-[#D4FF00] text-glow leading-snug">
             Beyond the Brief. Build the Experience.
           </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center reveal-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: "200ms" }}>
-            <a href="#partners" className="group bg-[#D4FF00] text-black px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all shadow-[0_0_20px_rgba(212,255,0,0.2)] flex items-center justify-center gap-2">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center reveal-on-scroll opacity-0 translate-y-8 max-w-sm sm:max-w-none mx-auto" style={{ transitionDelay: "200ms" }}>
+            <a href="#partners" className="group bg-[#D4FF00] text-black px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:scale-105 transition-all shadow-[0_0_20px_rgba(212,255,0,0.2)] flex items-center justify-center gap-2">
               <Briefcase className="w-5 h-5" /> For Partners
             </a>
-            <a href="#students" className="group px-8 py-4 rounded-full font-medium text-white glass-panel hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+            <a href="#students" className="group px-8 py-4 rounded-full font-medium text-base sm:text-lg text-white glass-panel hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
               <GraduationCap className="w-5 h-5" /> For Students
             </a>
           </div>
