@@ -16,9 +16,9 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/30">
-      <div className="container mx-auto px-6 py-3 flex justify-between items-center">
+      <div className="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center gap-2">
         <a href="#" aria-label="JAT Hub Home" onClick={() => scrollToSection("hero")}>
-          <img src={jathubLogo} alt="JAT Hub Logo" className="h-10 w-auto" />
+          <img src={jathubLogo} alt="JAT Hub Logo" className="h-9 sm:h-10 w-auto" />
         </a>
         
         <nav className="hidden md:flex space-x-8 items-center">
@@ -55,16 +55,16 @@ export const Header = () => {
         </nav>
         
         {/* Mobile: Show X-plore + Menu button */}
-        <div className="md:hidden flex items-center gap-2">
+        <div className="md:hidden flex items-center gap-1.5">
           <a
             href="/xplore"
-            className="inline-flex items-center gap-1 bg-[#D4FF00] text-black px-3 py-1.5 rounded-full text-xs font-bold hover:bg-[#e6ff4d] transition-all shadow-[0_0_8px_rgba(212,255,0,0.3)]"
+            className="inline-flex items-center gap-1 bg-[#D4FF00] text-black px-2.5 py-1.5 rounded-full text-[11px] sm:text-xs font-bold hover:bg-[#e6ff4d] transition-all shadow-[0_0_8px_rgba(212,255,0,0.3)] whitespace-nowrap"
           >
             <Briefcase className="w-3 h-3" /> X-plore
           </a>
           <a
             href="/breathe.html"
-            className="inline-flex items-center gap-1 bg-[#0ABAB5] text-white px-3 py-1.5 rounded-full text-xs font-bold hover:bg-[#09A19C] transition-all shadow-[0_0_8px_rgba(10,186,181,0.3)]"
+            className="inline-flex items-center gap-1 bg-[#0ABAB5] text-white px-2.5 py-1.5 rounded-full text-[11px] sm:text-xs font-bold hover:bg-[#09A19C] transition-all shadow-[0_0_8px_rgba(10,186,181,0.3)] whitespace-nowrap"
           >
             <Heart className="w-3 h-3" /> Breathe
           </a>

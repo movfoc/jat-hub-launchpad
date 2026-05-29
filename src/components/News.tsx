@@ -166,7 +166,7 @@ export const News = () => {
             <Link
               key={index}
               to={item.link}
-              className="group min-w-[360px] md:min-w-[440px] max-w-[480px] snap-start shrink-0 flex flex-col rounded-xl overflow-hidden bg-card border border-border/40 hover:border-primary/30 transition-all duration-300"
+              className="group w-[78vw] min-w-[260px] sm:w-auto sm:min-w-[360px] md:min-w-[440px] max-w-[480px] snap-start shrink-0 flex flex-col rounded-xl overflow-hidden bg-card border border-border/40 hover:border-primary/30 transition-all duration-300"
             >
               {/* Image */}
               <div className="aspect-video overflow-hidden">
