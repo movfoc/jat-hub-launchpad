@@ -134,11 +134,11 @@ const XPlore = () => {
       </nav>
 
       {/* Back to JatHub link */}
-      <div className="pt-20 px-5 sm:px-6 bg-[#050505]">
+      <div className="pt-16 md:pt-20 px-5 sm:px-6 bg-[#050505]">
         <div className="max-w-7xl mx-auto">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-[#D4FF00] transition-colors py-4"
+            className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-[#D4FF00] transition-colors py-3 md:py-4"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to JatHub
@@ -147,7 +147,7 @@ const XPlore = () => {
       </div>
 
       {/* Hero */}
-      <section className="relative min-h-screen flex flex-col justify-center items-center px-5 sm:px-6 py-16 overflow-hidden bg-[#050505]">
+      <section className="relative min-h-[80vh] md:min-h-screen flex flex-col justify-center items-center px-5 sm:px-6 py-12 sm:py-16 overflow-hidden bg-[#050505]">
         <div className="absolute inset-0 z-0 opacity-50">
           <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2670&auto=format&fit=crop" className="w-full h-full object-cover grayscale mix-blend-screen" alt="" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#050505]/90 to-[#050505]" />
@@ -219,33 +219,33 @@ const XPlore = () => {
       {/* 2026 Marketing Ideathon CTA */}
 
       {/* Philosophy */}
-      <section id="philosophy" className="py-24 bg-[#0F0F0F] border-y border-white/5 relative">
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-16 reveal-on-scroll opacity-0 translate-y-8">
+      <section id="philosophy" className="py-16 sm:py-20 md:py-24 bg-[#0F0F0F] border-y border-white/5 relative">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+          <div className="text-center mb-12 sm:mb-16 reveal-on-scroll opacity-0 translate-y-8">
             <div className="text-[#D4FF00] font-mono text-sm uppercase tracking-widest mb-3">The Philosophy</div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">A Mindset Shift</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">We don't accept concepts as outcomes. "Beyond the Brief" means moving from theoretical slides to buildable realities.</p>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 leading-tight">A Mindset Shift</h2>
+            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto leading-[1.7]">We don't accept concepts as outcomes. "Beyond the Brief" means moving from theoretical slides to buildable realities.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 reveal-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: "100ms" }}>
-            <div className="glass-panel p-8 rounded-2xl group border-t-2 border-t-[#3B82F6] hover:!border-t-[#D4FF00]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 reveal-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: "100ms" }}>
+            <div className="glass-panel p-6 sm:p-8 rounded-2xl group border-t-2 border-t-[#3B82F6] hover:!border-t-[#D4FF00]">
               <div className="mb-6 bg-[#3B82F6]/10 w-14 h-14 rounded-lg flex items-center justify-center text-[#3B82F6] group-hover:text-[#D4FF00] transition-colors">
                 <Telescope className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Experience</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Experience</h3>
               <p className="text-sm text-gray-400 leading-relaxed">We explore emerging frontiers like AI, Gaming, and Immersion. We move beyond traditional advertising into worlds where audiences live.</p>
             </div>
-            <div className="glass-panel p-8 rounded-2xl group border-t-2 border-t-[#8B5CF6] hover:!border-t-[#D4FF00]">
+            <div className="glass-panel p-6 sm:p-8 rounded-2xl group border-t-2 border-t-[#8B5CF6] hover:!border-t-[#D4FF00]">
               <div className="mb-6 bg-[#8B5CF6]/10 w-14 h-14 rounded-lg flex items-center justify-center text-[#8B5CF6] group-hover:text-[#D4FF00] transition-colors">
                 <FlaskConical className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Exploration</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Exploration</h3>
               <p className="text-sm text-gray-400 leading-relaxed">No hypothetical campaigns. We experiment with real-world tools to find solutions that actually work in today's digital ecosystem.</p>
             </div>
-            <div className="glass-panel p-8 rounded-2xl group border-t-2 border-t-[#D4FF00] hover:!border-t-white">
+            <div className="glass-panel p-6 sm:p-8 rounded-2xl group border-t-2 border-t-[#D4FF00] hover:!border-t-white">
               <div className="mb-6 bg-[#D4FF00]/10 w-14 h-14 rounded-lg flex items-center justify-center text-[#D4FF00] group-hover:text-white transition-colors">
                 <Rocket className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Execution</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Execution</h3>
               <p className="text-sm text-gray-400 leading-relaxed">No "nice concepts" without delivery. We prioritize buildable prototypes that deliver measurable commercial impact.</p>
             </div>
           </div>
@@ -253,21 +253,21 @@ const XPlore = () => {
       </section>
 
       {/* Mission - Tearing Down The Wall */}
-      <section id="mission" className="py-24 bg-[#050505] relative border-b border-white/5 overflow-hidden">
+      <section id="mission" className="py-16 sm:py-20 md:py-24 bg-[#050505] relative border-b border-white/5 overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(#333 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-20 reveal-on-scroll opacity-0 translate-y-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+          <div className="text-center mb-12 sm:mb-20 reveal-on-scroll opacity-0 translate-y-8">
             <div className="text-[#D4FF00] font-mono text-sm uppercase tracking-widest mb-3">The Mission</div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">Tearing Down The Wall</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+            <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold mb-5 sm:mb-6 leading-tight">Tearing Down The Wall</h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-[1.7]">
               For too long, academia and industry have operated in parallel worlds. <br />X-PLORE demolishes that wall.
             </p>
           </div>
-          <div className="relative grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div className="relative grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-center">
             <div className="md:col-span-5 text-center md:text-right group reveal-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: "100ms" }}>
-              <div className="glass-panel p-10 rounded-3xl md:border-r-4 border-r-[#3B82F6] hover:bg-[#3B82F6]/5 transition-all relative overflow-hidden h-full flex flex-col justify-center">
+              <div className="glass-panel p-6 sm:p-10 rounded-3xl md:border-r-4 border-r-[#3B82F6] hover:bg-[#3B82F6]/5 transition-all relative overflow-hidden h-full flex flex-col justify-center">
                 <div className="absolute -right-10 -top-10 w-32 h-32 bg-[#3B82F6]/20 rounded-full blur-3xl group-hover:bg-[#3B82F6]/30 transition-all" />
-                <h4 className="text-3xl font-bold text-white mb-2 relative z-10">Students</h4>
+                <h4 className="text-2xl sm:text-3xl font-bold text-white mb-2 relative z-10">Students</h4>
                 <p className="text-gray-400 text-sm mb-6 relative z-10 leading-relaxed">Creative, ambitious, digitally native — but disconnected from real commercial execution.</p>
                 <div className="inline-flex items-center justify-end gap-2 text-[#3B82F6] text-xs font-mono uppercase font-bold relative z-10">
                   Action-Oriented Future Makers <Zap className="w-4 h-4" />
@@ -280,9 +280,9 @@ const XPlore = () => {
               </div>
             </div>
             <div className="md:col-span-5 text-center md:text-left group reveal-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: "300ms" }}>
-              <div className="glass-panel p-10 rounded-3xl md:border-l-4 border-l-[#8B5CF6] hover:bg-[#8B5CF6]/5 transition-all relative overflow-hidden h-full flex flex-col justify-center">
+              <div className="glass-panel p-6 sm:p-10 rounded-3xl md:border-l-4 border-l-[#8B5CF6] hover:bg-[#8B5CF6]/5 transition-all relative overflow-hidden h-full flex flex-col justify-center">
                 <div className="absolute -left-10 -bottom-10 w-32 h-32 bg-[#8B5CF6]/20 rounded-full blur-3xl group-hover:bg-[#8B5CF6]/30 transition-all" />
-                <h4 className="text-3xl font-bold text-white mb-2 relative z-10">Brands</h4>
+                <h4 className="text-2xl sm:text-3xl font-bold text-white mb-2 relative z-10">Brands</h4>
                 <p className="text-gray-400 text-sm mb-6 relative z-10 leading-relaxed">Seeking relevance and innovation — but stuck in traditional operational cycles.</p>
                 <div className="inline-flex items-center gap-2 text-[#8B5CF6] text-xs font-mono uppercase font-bold relative z-10">
                   Growth-Seeking Enterprises
@@ -294,20 +294,20 @@ const XPlore = () => {
       </section>
 
       {/* For Partners */}
-      <section id="partners" className="py-24 bg-[#0F0F0F] relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+      <section id="partners" className="py-16 sm:py-20 md:py-24 bg-[#0F0F0F] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center mb-12 md:mb-20">
             <div className="reveal-on-scroll opacity-0 translate-y-8">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#8B5CF6]/10 text-[#8B5CF6] text-xs font-mono font-bold mb-4">FOR BRANDS & ENTERPRISES</div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-5 sm:mb-6 leading-tight">
                 Stop Guessing What Gen Z Wants. <br /><span className="text-[#8B5CF6]">Let Them Build It.</span>
               </h2>
-              <p className="text-gray-400 text-lg mb-8 leading-relaxed">Traditional agencies are expensive and detached. Gen Z ignores corporate messaging. We offer active collaboration to solve the relevance crisis.</p>
-              <a href="mailto:Jat@jathub.com" className="inline-block bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#8B5CF6] hover:text-white transition-all hover:scale-105">Request Partner Deck</a>
+              <p className="text-gray-400 text-base sm:text-lg mb-6 sm:mb-8 leading-[1.7] sm:leading-relaxed">Traditional agencies are expensive and detached. Gen Z ignores corporate messaging. We offer active collaboration to solve the relevance crisis.</p>
+              <a href="mailto:Jat@jathub.com" className="inline-flex items-center justify-center w-full sm:w-auto bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-[#8B5CF6] hover:text-white transition-all hover:scale-105">Request Partner Deck</a>
             </div>
             <div className="relative reveal-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: "200ms" }}>
               <div className="absolute -inset-2 bg-gradient-to-r from-[#8B5CF6] to-blue-600 rounded-2xl blur-lg opacity-30" />
-              <div className="relative rounded-2xl overflow-hidden h-[400px]">
+              <div className="relative rounded-2xl overflow-hidden h-[280px] sm:h-[400px]">
                 <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2670&auto=format&fit=crop" alt="Collaboration" className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
@@ -322,7 +322,7 @@ const XPlore = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 reveal-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: "300ms" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mb-12 sm:mb-16 reveal-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: "300ms" }}>
             {[
               { icon: FileCheck2, title: "Actionable Assets", desc: "Full rights to concepts, prototypes, and activation strategies ready for development." },
               { icon: Search, title: "Direct Insights", desc: "Real feedback and cultural validation from your target demographic." },
@@ -342,12 +342,12 @@ const XPlore = () => {
       </section>
 
       {/* For Students */}
-      <section id="students" className="py-24 bg-[#050505] border-t border-white/5 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+      <section id="students" className="py-16 sm:py-20 md:py-24 bg-[#050505] border-t border-white/5 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center mb-12 md:mb-20">
             <div className="relative order-2 lg:order-1 reveal-on-scroll opacity-0 translate-y-8">
               <div className="absolute -inset-2 bg-gradient-to-r from-[#3B82F6] to-cyan-500 rounded-2xl blur-lg opacity-30" />
-              <div className="relative rounded-2xl overflow-hidden h-[500px] group">
+              <div className="relative rounded-2xl overflow-hidden h-[320px] sm:h-[500px] group">
                 <img src="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?q=80&w=2670&auto=format&fit=crop" alt="Student VR" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6">
@@ -358,16 +358,16 @@ const XPlore = () => {
             </div>
             <div className="order-1 lg:order-2 reveal-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: "100ms" }}>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#3B82F6]/10 text-[#3B82F6] text-xs font-mono font-bold mb-4">FOR STUDENTS & CREATORS</div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-5 sm:mb-6 leading-tight">
                 Not Just Ideas on Slides. <br /><span className="text-[#3B82F6]">Build Real Experiences.</span>
               </h2>
-              <p className="text-gray-400 text-lg max-w-xl mb-8 leading-relaxed">Open to ALL university students across the UK. Don't just write a strategy document. Build a portfolio that gets you hired by top brands.</p>
-              <a href="#contact" className="inline-block border border-[#3B82F6] text-[#3B82F6] px-8 py-4 rounded-full font-bold hover:bg-[#3B82F6] hover:text-white transition-all">Apply Now</a>
+              <p className="text-gray-400 text-base sm:text-lg max-w-xl mb-6 sm:mb-8 leading-[1.7] sm:leading-relaxed">Open to ALL university students across the UK. Don't just write a strategy document. Build a portfolio that gets you hired by top brands.</p>
+              <a href="#contact" className="inline-flex items-center justify-center w-full sm:w-auto border border-[#3B82F6] text-[#3B82F6] px-8 py-4 rounded-full font-bold hover:bg-[#3B82F6] hover:text-white transition-all">Apply Now</a>
             </div>
           </div>
-          <div className="mb-16 reveal-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: "200ms" }}>
+          <div className="mb-12 sm:mb-16 reveal-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: "200ms" }}>
             <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2"><Layers className="w-4 h-4 text-gray-500" /> Recruiting Cross-Disciplinary Talent</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
               {[
                 { icon: Gamepad2, label: "Game Devs" },
                 { icon: Bot, label: "AI Creators" },
@@ -389,14 +389,14 @@ const XPlore = () => {
       </section>
 
       {/* The Process */}
-      <section id="process" className="py-24 bg-[#0F0F0F] border-y border-white/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section id="process" className="py-16 sm:py-20 md:py-24 bg-[#0F0F0F] border-y border-white/5">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <div className="reveal-on-scroll opacity-0 translate-y-8">
               <div className="text-[#D4FF00] font-mono text-sm uppercase tracking-widest mb-4">The Brief</div>
-              <h2 className="text-4xl font-bold mb-6">Real World. Real Rigour.</h2>
-              <p className="text-gray-400 mb-8 leading-relaxed">We ban vague requests like "Promote our brand." Every partner brief must follow our <strong className="text-white">Commercial Impact Framework</strong>.</p>
-              <div className="p-8 bg-black border border-[#D4FF00]/20 rounded-2xl relative overflow-hidden">
+              <h2 className="text-2xl sm:text-4xl font-bold mb-5 sm:mb-6 leading-tight">Real World. Real Rigour.</h2>
+              <p className="text-gray-400 text-sm sm:text-base mb-6 sm:mb-8 leading-[1.7] sm:leading-relaxed">We ban vague requests like "Promote our brand." Every partner brief must follow our <strong className="text-white">Commercial Impact Framework</strong>.</p>
+              <div className="p-6 sm:p-8 bg-black border border-[#D4FF00]/20 rounded-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-20 h-20 bg-[#D4FF00]/10 rounded-bl-full" />
                 <h4 className="text-white font-bold mb-4 text-lg">The Outcome</h4>
                 <ul className="space-y-4">
@@ -414,12 +414,12 @@ const XPlore = () => {
                 { num: "02", title: "The Challenge", desc: "A clear, specific friction point.", tags: ["Gen Z Perception", "Quality vs Image"] },
                 { num: "03", title: "Objectives", desc: "Quantifiable KPIs. No vanity metrics.", tags: ["+15% Sentiment", "5k Interactions"] },
               ].map((step) => (
-                <div key={step.num} className="flex items-start gap-6 p-6 rounded-2xl bg-[#1A1A1A] border border-[#D4FF00]/30 hover:border-[#D4FF00] transition-all hover:-translate-x-2">
-                  <div className="text-4xl font-bold text-[#D4FF00]">{step.num}</div>
+                <div key={step.num} className="flex items-start gap-4 sm:gap-6 p-5 sm:p-6 rounded-2xl bg-[#1A1A1A] border border-[#D4FF00]/30 hover:border-[#D4FF00] transition-all hover:-translate-x-2">
+                  <div className="text-3xl sm:text-4xl font-bold text-[#D4FF00] shrink-0">{step.num}</div>
                   <div>
                     <h4 className="text-white font-bold mb-1 text-lg">{step.title}</h4>
                     <p className="text-sm text-gray-500 mb-2">{step.desc}</p>
-                    <div className="flex gap-2">
+                    <div className="flex flex-wrap gap-2">
                       {step.tags.map((tag) => (
                         <span key={tag} className="text-xs bg-[#D4FF00]/10 text-[#D4FF00] px-2 py-1 rounded">{tag}</span>
                       ))}
@@ -433,15 +433,15 @@ const XPlore = () => {
       </section>
 
       {/* Footer CTA */}
-      <section id="contact" className="py-32 bg-black border-t border-white/10 relative overflow-hidden">
+      <section id="contact" className="py-20 sm:py-28 md:py-32 bg-black border-t border-white/10 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(212,255,0,0.05)_0%,_black_70%)] pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center reveal-on-scroll opacity-0 translate-y-8">
-          <h2 className="text-5xl md:text-7xl font-bold mb-10 tracking-tight text-white">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10 text-center reveal-on-scroll opacity-0 translate-y-8">
+          <h2 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-8 sm:mb-10 tracking-tight text-white leading-tight">
             Ready to co-create <br /> the future?
           </h2>
-          <div className="flex flex-col md:flex-row justify-center gap-6 mb-20">
-            <a href="mailto:Jat@jathub.com" className="bg-[#D4FF00] text-black px-12 py-6 rounded-full font-bold text-xl hover:bg-white hover:scale-105 transition-all shadow-[0_0_30px_rgba(212,255,0,0.3)]">Partner With Us</a>
-            <a href="mailto:Jat@jathub.com" className="border border-white/20 text-white px-12 py-6 rounded-full font-bold text-xl hover:bg-white/10 hover:border-white transition-all">Apply as Student</a>
+          <div className="flex flex-col md:flex-row justify-center items-stretch md:items-center gap-4 sm:gap-6 mb-12 sm:mb-20">
+            <a href="mailto:Jat@jathub.com" className="bg-[#D4FF00] text-black px-8 sm:px-12 py-5 sm:py-6 rounded-full font-bold text-base sm:text-xl hover:bg-white hover:scale-105 transition-all shadow-[0_0_30px_rgba(212,255,0,0.3)]">Partner With Us</a>
+            <a href="mailto:Jat@jathub.com" className="border border-white/20 text-white px-8 sm:px-12 py-5 sm:py-6 rounded-full font-bold text-base sm:text-xl hover:bg-white/10 hover:border-white transition-all">Apply as Student</a>
           </div>
         </div>
       </section>
