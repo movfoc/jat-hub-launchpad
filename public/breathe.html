@@ -275,6 +275,15 @@
         color: #000000 ;
          }
 
+          .tutorial-videos h4 {
+              font-size: 22px;
+              font-weight: 700;
+              color: #0ABAB5;
+              border-left: 4px solid #0ABAB5;
+              padding-left: 12px;
+              line-height: 1.2;
+          }
+
 
           .event-detail-cta {
               align-self: flex-start;
@@ -303,12 +312,18 @@
               .event-tab { padding: 10px 16px; font-size: 13px; }
               .event-detail.active {
                   min-height: 400px;
-                  padding: 40px 24px;
+                  padding: 32px 18px;
               }
-              .event-detail-title { font-size: 24px; margin-bottom: 12px; }
+              .event-detail-title { font-size: 24px; margin-bottom: 12px; line-height: 1.25; }
               .event-detail-meta { gap: 12px; padding: 16px; }
               .event-detail-meta-value { font-size: 14px; }
-              .event-detail-content { font-size: 14px; }
+              .event-detail-content { font-size: 15px; line-height: 1.7; }
+              .event-detail-content h4 { font-size: 20px !important; }
+              .event-detail-text { gap: 18px; }
+              .partner-intro { flex-direction: column; align-items: center; text-align: center; gap: 1rem !important; }
+              .partner-intro img { width: 120px !important; height: 120px !important; }
+              .partner-intro p { min-width: 0 !important; }
+              .tutorial-videos .video-grid { grid-template-columns: 1fr !important; }
               .event-detail-overlay { background-color: rgba(255, 255, 255, 0.88); }
           }
 
@@ -405,7 +420,7 @@
             young people can recharge, connect, and grow emotionally alongside their ambitions.
           </p>
         </div>
-        <div class="flex flex-col justify-end items-stretch sm:items-start lg:items-end lg:w-auto mt-32 lg:mt-20 pt-8">
+        <div class="flex flex-col justify-end items-stretch sm:items-start lg:items-end lg:w-auto mt-10 sm:mt-20 lg:mt-20 pt-4 sm:pt-8">
           <a
             href="#events"
             class="inline-flex items-center justify-center gap-3 bg-tiffany text-white font-bold text-base sm:text-xl md:text-2xl px-6 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 rounded-full hover:bg-white hover:text-tiffany transition-all transform hover:scale-105 w-full sm:w-auto"
@@ -691,6 +706,7 @@
                   style="width: 100%; border-radius: 12px; margin-bottom: 1.5rem;"
                 />
                 <div
+                  class="partner-intro"
                   style="display: flex; align-items: flex-start; gap: 1.25rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
                 >
                   <img
@@ -765,6 +781,7 @@
                   style="width: 100%; border-radius: 12px; margin-bottom: 1.5rem;"
                 />
                 <div
+                  class="partner-intro"
                   style="display: flex; align-items: flex-start; gap: 1.25rem; margin-bottom: 1.5rem; flex-wrap: wrap;"
                 >
                   <img
@@ -790,16 +807,11 @@
                   <li><strong>Education:</strong> Emotional support settings in schools.</li>
                   <li><strong>Community:</strong> Individuals and families in need of comfort.</li>
                 </ul>
-                <p>
-                  <strong
-                    >Create • Connect • Contribute
-                    <p></p
-                  ></strong>
-                  Learn skills, meet like-minded people, and contribute to local wellbeing projects.
-                </p>
+                <p><strong>Create • Connect • Contribute</strong></p>
+                <p>Learn skills, meet like-minded people, and contribute to local wellbeing projects.</p>
                 <div class="tutorial-videos" style="margin-top: 2rem;">
                   <h4 style="margin-top: 1.5rem; margin-bottom: 1rem;">Calm Balls</h4>
-                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+                  <div class="video-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
                     <div
                       style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;"
                     >
@@ -835,7 +847,7 @@
                     </div>
                   </div>
                   <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Fidget Toys</h4>
-                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+                  <div class="video-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
                     <div
                       style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;"
                     >
@@ -860,7 +872,7 @@
                     </div>
                   </div>
                   <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Worry Worms</h4>
-                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+                  <div class="video-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
                     <div
                       style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px;"
                     >
