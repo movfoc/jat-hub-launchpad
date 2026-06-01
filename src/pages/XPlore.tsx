@@ -445,33 +445,6 @@ const XPlore = () => {
           </div>
         </div>
       </section>
-
-      {/* Legal Footer */}
-      <footer className="bg-black border-t border-white/10 py-12 px-5 sm:px-6">
-        <div className="max-w-7xl mx-auto grid gap-8 md:grid-cols-2 text-white/70">
-          <div>
-            <h3 className="text-white font-semibold text-sm mb-3">Legal Information</h3>
-            <p className="text-sm leading-relaxed">
-              JatHub CIC is a Community Interest Company registered in England and Wales.
-            </p>
-            <p className="text-sm leading-relaxed mt-2">
-              Company Number: 17193758<br />
-              Registered Office: Suite 642 Chremma House, 14 London Road, Guildford, Surrey, United Kingdom, GU1 2AG
-            </p>
-          </div>
-          <div>
-            <h3 className="text-white font-semibold text-sm mb-3">Get in Touch</h3>
-            <p className="text-sm leading-relaxed">
-              <a href="mailto:jat@jathub.com" className="hover:text-[#D4FF00] transition-colors">jat@jathub.com</a>
-              <span className="mx-2">·</span>
-              <a href="tel:+447766456376" className="hover:text-[#D4FF00] transition-colors">+44 7766 456376</a>
-            </p>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-white/10 text-center text-white/50 text-sm">
-          © 2026 JatHub CIC. All rights reserved.
-        </div>
-      </footer>
     </div>
   );
 };
