@@ -33,285 +33,294 @@
       }
     </script>
     <style>
-      body { background-color: #FCF9F2; color: #2C3338; -webkit-font-smoothing: antialiased; }
-      .carousel-slide { transition: opacity 1s ease-in-out; }
+          body { background-color: #FCF9F2; color: #2C3338; -webkit-font-smoothing: antialiased; }
+          .carousel-slide { transition: opacity 1s ease-in-out; }
 
-      .event-macro-card {
-          display: flex;
-          align-items: stretch;
-          min-height: 500px;
-          margin-bottom: 100px;
-          transition: all 0.3s ease-in-out;
-      }
-
-      .event-macro-card:hover .event-text-half {
-          background-color: #D4EBE9;
-      }
-
-      .event-macro-card:hover .event-cta-btn {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 24px rgba(10, 186, 181, 0.3);
-      }
-
-      .event-image-half {
-          flex: 2.33;
-          overflow: hidden;
-          position: relative;
-          aspect-ratio: 16 / 9;
-      }
-
-      .event-image-half img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.3s ease-in-out;
-      }
-
-      .event-text-half {
-          flex: 1;
-          background-color: #E0F5F4;
-          padding: 60px 80px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          transition: background-color 0.3s ease-in-out;
-      }
-
-      .date-badge {
-          background-color: #0ABAB5;
-          color: white;
-          border-radius: 4px;
-          padding: 16px 20px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin-bottom: 28px;
-          width: fit-content;
-          font-weight: 700;
-      }
-
-      .date-badge-month { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; line-height: 1; }
-      .date-badge-day { font-size: 36px; line-height: 1; margin-top: 6px; font-weight: 800; }
-      .event-title { font-size: 32px; font-weight: 700; color: #2C3338; margin-bottom: 20px; line-height: 1.2; }
-      .event-meta { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; font-weight: 600; color: #2C3338; font-size: 15px; }
-      .event-meta-item { display: flex; align-items: center; gap: 10px; }
-      .event-description { color: #2C3338; font-size: 16px; line-height: 1.6; margin-bottom: 32px; font-weight: 400; }
-      .event-cta-btn { align-self: flex-start; background-color: #0ABAB5; color: white; font-weight: 700; padding: 16px 40px; border-radius: 4px; border: none; cursor: pointer; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s ease-in-out; }
-      .event-cta-btn:hover { background-color: #09A19C; }
-      .event-macro-card.reverse { flex-direction: row-reverse; }
-
-      /* Event Carousel Styles */
-      .event-carousel-container {
-          margin-bottom: 60px;
-      }
-
-      .event-tabs {
-          display: flex;
-          gap: 16px;
-          overflow-x: auto;
-          padding-bottom: 16px;
-          margin-bottom: 40px;
-          scroll-behavior: smooth;
-          scrollbar-width: thin;
-          scrollbar-color: #0ABAB5 #FCF9F2;
-      }
-
-      .event-tabs::-webkit-scrollbar {
-          height: 6px;
-      }
-
-      .event-tabs::-webkit-scrollbar-track {
-          background: #FCF9F2;
-      }
-
-      .event-tabs::-webkit-scrollbar-thumb {
-          background: #0ABAB5;
-          border-radius: 3px;
-      }
-
-      .event-tab {
-          padding: 12px 24px;
-          background-color: #EFEBE1;
-          border: 2px solid #EFEBE1;
-          border-radius: 8px;
-          cursor: pointer;
-          font-weight: 600;
-          color: #2C3338;
-          white-space: nowrap;
-          transition: all 0.3s ease-in-out;
-          font-size: 15px;
-          flex-shrink: 0;
-      }
-
-      .event-tab:hover {
-          background-color: #E0F5F4;
-          border-color: #0ABAB5;
-      }
-
-      .event-tab.active {
-          background-color: #0ABAB5;
-          color: white;
-          border-color: #0ABAB5;
-      }
-
-      .event-detail {
-          display: none;
-          position: relative;
-          min-height: 600px;
-          border-radius: 8px;
-          overflow: hidden;
-          animation: fadeIn 0.3s ease-in-out;
-      }
-
-      .event-detail.active {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 60px 40px;
-      }
-
-      .event-detail-image {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 0;
-      }
-
-      .event-detail-image img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-      }
-
-      .event-detail-overlay {
-          position: absolute;
-          inset: 0;
-          background-color: rgba(255, 255, 255, 0.82);
-          z-index: 1;
-      }
-
-      .event-detail-text {
-          position: relative;
-          z-index: 2;
-          display: flex;
-          flex-direction: column;
-          gap: 24px;
-          max-width: 850px;
-      }
-
-      @keyframes fadeIn {
-          from {
-              opacity: 0;
-              transform: translateY(10px);
+          .event-macro-card {
+              display: flex;
+              align-items: stretch;
+              min-height: 500px;
+              margin-bottom: 100px;
+              transition: all 0.3s ease-in-out;
           }
-          to {
-              opacity: 1;
-              transform: translateY(0);
+
+          .event-macro-card:hover .event-text-half {
+              background-color: #D4EBE9;
           }
-      }
 
-      .event-detail-title {
-          font-size: 36px;
-          font-weight: 700;
-          color: #2C3338;
-          margin-bottom: 16px;
-          line-height: 1.2;
-      }
+          .event-macro-card:hover .event-cta-btn {
+              transform: translateY(-4px);
+              box-shadow: 0 12px 24px rgba(10, 186, 181, 0.3);
+          }
 
-      .event-detail-meta {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 16px;
-          margin-bottom: 24px;
-          padding: 24px;
-          background-color: rgba(255, 255, 255, 0.85);
-          border-radius: 8px;
-          border: 1px solid rgba(10, 186, 181, 0.2);
-      }
+          .event-image-half {
+              flex: 2.33;
+              overflow: hidden;
+              position: relative;
+              aspect-ratio: 16 / 9;
+          }
 
-      .event-detail-meta-item {
-          display: flex;
-          flex-direction: column;
-          gap: 4px;
-      }
+          .event-image-half img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.3s ease-in-out;
+          }
 
-      .event-detail-meta-label {
-          font-size: 12px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          color: #0ABAB5;
-      }
+          .event-text-half {
+              flex: 1;
+              background-color: #E0F5F4;
+              padding: 60px 80px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              transition: background-color 0.3s ease-in-out;
+          }
 
-      .event-detail-meta-value {
-          font-size: 16px;
-          font-weight: 600;
-          color: #2C3338;
-      }
+          .date-badge {
+              background-color: #0ABAB5;
+              color: white;
+              border-radius: 4px;
+              padding: 16px 20px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin-bottom: 28px;
+              width: fit-content;
+              font-weight: 700;
+          }
 
-      .event-detail-content {
-          font-size: 16px;
-          line-height: 1.8;
-          color: #2C3338;
-          margin-bottom: 32px;
-      }
+          .date-badge-month { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; line-height: 1; }
+          .date-badge-day { font-size: 36px; line-height: 1; margin-top: 6px; font-weight: 800; }
+          .event-title { font-size: 32px; font-weight: 700; color: #2C3338; margin-bottom: 20px; line-height: 1.2; }
+          .event-meta { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; font-weight: 600; color: #2C3338; font-size: 15px; }
+          .event-meta-item { display: flex; align-items: center; gap: 10px; }
+          .event-description { color: #2C3338; font-size: 16px; line-height: 1.6; margin-bottom: 32px; font-weight: 400; }
+          .event-cta-btn { align-self: flex-start; background-color: #0ABAB5; color: white; font-weight: 700; padding: 16px 40px; border-radius: 4px; border: none; cursor: pointer; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s ease-in-out; }
+          .event-cta-btn:hover { background-color: #09A19C; }
+          .event-macro-card.reverse { flex-direction: row-reverse; }
 
-      .event-detail-content p {
-          margin-bottom: 16px;
-      }
+          /* Event Carousel Styles */
+          .event-carousel-container {
+              margin-bottom: 60px;
+          }
 
-      .event-detail-content strong {
-          font-weight: 700;
-          color: #0ABAB5;
-      }
+          .event-tabs {
+              display: flex;
+              gap: 16px;
+              overflow-x: auto;
+              padding-bottom: 16px;
+              margin-bottom: 40px;
+              scroll-behavior: smooth;
+              scrollbar-width: thin;
+              scrollbar-color: #0ABAB5 #FCF9F2;
+          }
 
-      .event-detail-cta {
-          align-self: flex-start;
-          background-color: #0ABAB5;
-          color: white;
-          font-weight: 700;
-          padding: 16px 40px;
-          border-radius: 4px;
-          border: none;
-          cursor: pointer;
-          font-size: 14px;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          transition: all 0.3s ease-in-out;
-      }
+          .event-tabs::-webkit-scrollbar {
+              height: 6px;
+          }
 
-      .event-detail-cta:hover {
-          background-color: #09A19C;
-          transform: translateY(-4px);
-          box-shadow: 0 12px 24px rgba(10, 186, 181, 0.3);
-      }
+          .event-tabs::-webkit-scrollbar-track {
+              background: #FCF9F2;
+          }
 
-      @media (max-width: 767px) {
-          .event-carousel-container { margin-bottom: 40px; }
-          .event-tabs { gap: 8px; margin-bottom: 24px; }
-          .event-tab { padding: 10px 16px; font-size: 13px; }
+          .event-tabs::-webkit-scrollbar-thumb {
+              background: #0ABAB5;
+              border-radius: 3px;
+          }
+
+          .event-tab {
+              padding: 12px 24px;
+              background-color: #EFEBE1;
+              border: 2px solid #EFEBE1;
+              border-radius: 8px;
+              cursor: pointer;
+              font-weight: 600;
+              color: #2C3338;
+              white-space: nowrap;
+              transition: all 0.3s ease-in-out;
+              font-size: 15px;
+              flex-shrink: 0;
+          }
+
+          .event-tab:hover {
+              background-color: #E0F5F4;
+              border-color: #0ABAB5;
+          }
+
+          .event-tab.active {
+              background-color: #0ABAB5;
+              color: white;
+              border-color: #0ABAB5;
+          }
+
+          .event-detail {
+              display: none;
+              position: relative;
+              min-height: 600px;
+              border-radius: 8px;
+              overflow: hidden;
+              animation: fadeIn 0.3s ease-in-out;
+          }
+
           .event-detail.active {
-              min-height: 400px;
-              padding: 40px 24px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 60px 40px;
           }
-          .event-detail-title { font-size: 24px; margin-bottom: 12px; }
-          .event-detail-meta { gap: 12px; padding: 16px; }
-          .event-detail-meta-value { font-size: 14px; }
-          .event-detail-content { font-size: 14px; }
-          .event-detail-overlay { background-color: rgba(255, 255, 255, 0.88); }
-      }
 
-      @media (max-width: 767px) {
-          .event-macro-card { flex-direction: column; min-height: auto; margin-bottom: 100px; }
-          .event-macro-card.reverse { flex-direction: column; }
-          .event-image-half { min-height: 300px; width: 100%; }
-          .event-text-half { padding: 40px 24px; background-color: #E0F5F4; }
-          .event-title { font-size: 24px; }
-          .event-meta { font-size: 14px; }
-          .event-description { font-size: 14px; }
-      }
+          .event-detail-image {
+              position: absolute;
+              inset: 0;
+              width: 100%;
+              height: 100%;
+              z-index: 0;
+          }
+
+          .event-detail-image img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+          }
+
+          .event-detail-overlay {
+              position: absolute;
+              inset: 0;
+              background-color: rgba(255, 255, 255, 0.82);
+              z-index: 1;
+          }
+
+          .event-detail-text {
+              position: relative;
+              z-index: 2;
+              display: flex;
+              flex-direction: column;
+              gap: 24px;
+              max-width: 850px;
+          }
+
+          @keyframes fadeIn {
+              from {
+                  opacity: 0;
+                  transform: translateY(10px);
+              }
+              to {
+                  opacity: 1;
+                  transform: translateY(0);
+              }
+          }
+
+          .event-detail-title {
+              font-size: 36px;
+              font-weight: 700;
+              color: #2C3338;
+              margin-bottom: 16px;
+              line-height: 1.2;
+          }
+
+          .event-detail-meta {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 16px;
+              margin-bottom: 24px;
+              padding: 24px;
+              background-color: rgba(255, 255, 255, 0.85);
+              border-radius: 8px;
+              border: 1px solid rgba(10, 186, 181, 0.2);
+          }
+
+          .event-detail-meta-item {
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+          }
+
+          .event-detail-meta-label {
+              font-size: 12px;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              color: #0ABAB5;
+          }
+
+          .event-detail-meta-value {
+              font-size: 16px;
+              font-weight: 600;
+              color: #2C3338;
+          }
+
+          .event-detail-content {
+              font-size: 16px;
+              line-height: 1.8;
+              color: #2C3338;
+              margin-bottom: 32px;
+          }
+
+          .event-detail-content p {
+              margin-bottom: 16px;
+          }
+
+          .event-detail-content strong {
+              font-weight: 700;
+              color: #0ABAB5;
+          }
+
+          .event-detail-content li {
+        color: #000000 ;
+         }
+
+      .event-detail-content li strong {
+        color: #000000 ;
+         }
+
+
+          .event-detail-cta {
+              align-self: flex-start;
+              background-color: #0ABAB5;
+              color: white;
+              font-weight: 700;
+              padding: 16px 40px;
+              border-radius: 4px;
+              border: none;
+              cursor: pointer;
+              font-size: 14px;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+              transition: all 0.3s ease-in-out;
+          }
+
+          .event-detail-cta:hover {
+              background-color: #09A19C;
+              transform: translateY(-4px);
+              box-shadow: 0 12px 24px rgba(10, 186, 181, 0.3);
+          }
+
+          @media (max-width: 767px) {
+              .event-carousel-container { margin-bottom: 40px; }
+              .event-tabs { gap: 8px; margin-bottom: 24px; }
+              .event-tab { padding: 10px 16px; font-size: 13px; }
+              .event-detail.active {
+                  min-height: 400px;
+                  padding: 40px 24px;
+              }
+              .event-detail-title { font-size: 24px; margin-bottom: 12px; }
+              .event-detail-meta { gap: 12px; padding: 16px; }
+              .event-detail-meta-value { font-size: 14px; }
+              .event-detail-content { font-size: 14px; }
+              .event-detail-overlay { background-color: rgba(255, 255, 255, 0.88); }
+          }
+
+          @media (max-width: 767px) {
+              .event-macro-card { flex-direction: column; min-height: auto; margin-bottom: 100px; }
+              .event-macro-card.reverse { flex-direction: column; }
+              .event-image-half { min-height: 300px; width: 100%; }
+              .event-text-half { padding: 40px 24px; background-color: #E0F5F4; }
+              .event-title { font-size: 24px; }
+              .event-meta { font-size: 14px; }
+              .event-description { font-size: 14px; }
+          }
     </style>
   </head>
   <body class="font-sans">
@@ -551,7 +560,6 @@
                 </div>
               </div>
               <div class="event-detail-content">
-                <img src="/sickle-cell-volunteer-poster.png" alt="World Sickle Cell Awareness Day - Volunteer Needed" style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 1.5rem; display: block;" />
                 <p>
                   <strong>Twist, Connect, and Make a Difference!</strong> Unlock a new skill, find your community, and
                   turn creativity into care.
@@ -583,13 +591,13 @@
           <div class="event-detail" data-event="1">
             <div class="event-detail-image">
               <img
-                src="https://images.unsplash.com/photo-1777537953560-10fda7d9965a?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Slow Crocheting & Chat Circle"
+                src="https://images.unsplash.com/photo-1777537953560-10fda7d9965a?q=80&w=900&auto=format&fit=crop"
+                alt="Moments of Calm Programme"
               />
             </div>
             <div class="event-detail-overlay"></div>
             <div class="event-detail-text">
-              <h3 class="event-detail-title">Slow Crocheting & Chat Circle</h3>
+              <h3 class="event-detail-title">Moments of Calm Programme</h3>
               <div class="event-detail-meta">
                 <div class="event-detail-meta-item">
                   <span class="event-detail-meta-label">Location</span>
@@ -597,45 +605,39 @@
                 </div>
                 <div class="event-detail-meta-item">
                   <span class="event-detail-meta-label">Type</span>
-                  <span class="event-detail-meta-value">Mindfulness & Community</span>
+                  <span class="event-detail-meta-value">Creative Workshop</span>
                 </div>
                 <div class="event-detail-meta-item">
                   <span class="event-detail-meta-label">Cost</span>
                   <span class="event-detail-meta-value">Free</span>
                 </div>
+                <div class="event-detail-meta-item">
+                  <span class="event-detail-meta-label">Time</span>
+                  <span class="event-detail-meta-value">Ongoing Series</span>
+                </div>
               </div>
               <div class="event-detail-content">
                 <p>
+                  <strong>Bringing comfort in stressful moments.</strong> Through simple handmade items—such as Worry
+                  Worms and Calm Balls—we help students create small moments of reassurance.
+                </p>
+                <p><strong>Our creations currently support:</strong></p>
+                <ul>
+                  <li><strong>Healthcare:</strong> Patients and families in hospitals and wellbeing programmes.</li>
+                  <li><strong>Youth Support:</strong> Young people in mental resilience initiatives (e.g., BRIYM).</li>
+                  <li><strong>Education:</strong> Emotional support settings in schools.</li>
+                  <li><strong>Community:</strong> Individuals and families in need of comfort.</li>
+                </ul>
+                <p>
                   <strong
-                    >Grab a hook, settle in with good company, and let your hands create while your mind finds
-                    peace.</strong
-                  >
-                  All skill levels welcome.
-                </p>
-                <p>
-                  In today's fast-paced world, we could all use a moment of calm. This slow crocheting circle offers
-                  exactly that—a judgment-free space to slow down, engage in a meditative craft, and build meaningful
-                  connections.
-                </p>
-                <p>
-                  Whether you're an experienced crocheter or picking up a hook for the first time, our supportive
-                  community welcomes you. We'll provide materials, basic guidance, and plenty of encouragement. The
-                  rhythm of crochet—creating loop after loop—naturally calms the mind and reduces stress.
-                </p>
-                <p>
-                  Beyond the craft itself, this is about human connection. We'll chat, laugh, and support one another as
-                  we create. Some participants find their most meaningful conversations happen in moments like these,
-                  when hands are busy but hearts are open.
-                </p>
-                <p>
-                  <strong>Perfect for anyone seeking:</strong> Stress relief, community connection, creative expression,
-                  or simply a peaceful afternoon with kind people.
+                    >Create • Connect • Contribute
+                    <p></p
+                  ></strong>
+                  Learn skills, meet like-minded people, and contribute to local wellbeing projects.
                 </p>
               </div>
-              <button class="event-detail-cta">Join for Free</button>
             </div>
           </div>
-
           <!-- Event Detail 2 -->
           <div class="event-detail" data-event="2">
             <div class="event-detail-image">
@@ -659,6 +661,10 @@
                 <div class="event-detail-meta-item">
                   <span class="event-detail-meta-label">Cost</span>
                   <span class="event-detail-meta-value">Free</span>
+                </div>
+                <div class="event-detail-meta-item">
+                  <span class="event-detail-meta-label">Time</span>
+                  <span class="event-detail-meta-value">Ongoing Series</span>
                 </div>
               </div>
               <div class="event-detail-content">
