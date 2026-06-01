@@ -100,6 +100,209 @@
       .event-cta-btn:hover { background-color: #09A19C; }
       .event-macro-card.reverse { flex-direction: row-reverse; }
 
+      /* Event Carousel Styles */
+      .event-carousel-container {
+          margin-bottom: 60px;
+      }
+
+      .event-tabs {
+          display: flex;
+          gap: 16px;
+          overflow-x: auto;
+          padding-bottom: 16px;
+          margin-bottom: 40px;
+          scroll-behavior: smooth;
+          scrollbar-width: thin;
+          scrollbar-color: #0ABAB5 #FCF9F2;
+      }
+
+      .event-tabs::-webkit-scrollbar {
+          height: 6px;
+      }
+
+      .event-tabs::-webkit-scrollbar-track {
+          background: #FCF9F2;
+      }
+
+      .event-tabs::-webkit-scrollbar-thumb {
+          background: #0ABAB5;
+          border-radius: 3px;
+      }
+
+      .event-tab {
+          padding: 12px 24px;
+          background-color: #EFEBE1;
+          border: 2px solid #EFEBE1;
+          border-radius: 8px;
+          cursor: pointer;
+          font-weight: 600;
+          color: #2C3338;
+          white-space: nowrap;
+          transition: all 0.3s ease-in-out;
+          font-size: 15px;
+          flex-shrink: 0;
+      }
+
+      .event-tab:hover {
+          background-color: #E0F5F4;
+          border-color: #0ABAB5;
+      }
+
+      .event-tab.active {
+          background-color: #0ABAB5;
+          color: white;
+          border-color: #0ABAB5;
+      }
+
+      .event-detail {
+          display: none;
+          position: relative;
+          min-height: 600px;
+          border-radius: 8px;
+          overflow: hidden;
+          animation: fadeIn 0.3s ease-in-out;
+      }
+
+      .event-detail.active {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 60px 40px;
+      }
+
+      .event-detail-image {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+      }
+
+      .event-detail-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+      }
+
+      .event-detail-overlay {
+          position: absolute;
+          inset: 0;
+          background-color: rgba(255, 255, 255, 0.82);
+          z-index: 1;
+      }
+
+      .event-detail-text {
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          max-width: 850px;
+      }
+
+      @keyframes fadeIn {
+          from {
+              opacity: 0;
+              transform: translateY(10px);
+          }
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+
+      .event-detail-title {
+          font-size: 36px;
+          font-weight: 700;
+          color: #2C3338;
+          margin-bottom: 16px;
+          line-height: 1.2;
+      }
+
+      .event-detail-meta {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 16px;
+          margin-bottom: 24px;
+          padding: 24px;
+          background-color: rgba(255, 255, 255, 0.85);
+          border-radius: 8px;
+          border: 1px solid rgba(10, 186, 181, 0.2);
+      }
+
+      .event-detail-meta-item {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+      }
+
+      .event-detail-meta-label {
+          font-size: 12px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: #0ABAB5;
+      }
+
+      .event-detail-meta-value {
+          font-size: 16px;
+          font-weight: 600;
+          color: #2C3338;
+      }
+
+      .event-detail-content {
+          font-size: 16px;
+          line-height: 1.8;
+          color: #2C3338;
+          margin-bottom: 32px;
+      }
+
+      .event-detail-content p {
+          margin-bottom: 16px;
+      }
+
+      .event-detail-content strong {
+          font-weight: 700;
+          color: #0ABAB5;
+      }
+
+      .event-detail-cta {
+          align-self: flex-start;
+          background-color: #0ABAB5;
+          color: white;
+          font-weight: 700;
+          padding: 16px 40px;
+          border-radius: 4px;
+          border: none;
+          cursor: pointer;
+          font-size: 14px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          transition: all 0.3s ease-in-out;
+      }
+
+      .event-detail-cta:hover {
+          background-color: #09A19C;
+          transform: translateY(-4px);
+          box-shadow: 0 12px 24px rgba(10, 186, 181, 0.3);
+      }
+
+      @media (max-width: 767px) {
+          .event-carousel-container { margin-bottom: 40px; }
+          .event-tabs { gap: 8px; margin-bottom: 24px; }
+          .event-tab { padding: 10px 16px; font-size: 13px; }
+          .event-detail.active {
+              min-height: 400px;
+              padding: 40px 24px;
+          }
+          .event-detail-title { font-size: 24px; margin-bottom: 12px; }
+          .event-detail-meta { gap: 12px; padding: 16px; }
+          .event-detail-meta-value { font-size: 14px; }
+          .event-detail-content { font-size: 14px; }
+          .event-detail-overlay { background-color: rgba(255, 255, 255, 0.88); }
+      }
+
       @media (max-width: 767px) {
           .event-macro-card { flex-direction: column; min-height: auto; margin-bottom: 100px; }
           .event-macro-card.reverse { flex-direction: column; }
@@ -311,72 +514,201 @@
           </div>
         </div>
 
-        <div class="event-macro-card">
-          <div class="event-image-half">
-            <img
-              src="https://plus.unsplash.com/premium_photo-1746637011709-a79c0a1e5175?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Collective Balloon Twisting Workshop"
-            />
+        <div class="event-carousel-container">
+          <div class="event-tabs" id="eventTabs">
+            <button class="event-tab active" data-event="0">Collective Balloon Twisting Workshop</button>
+            <button class="event-tab" data-event="1">Slow Crocheting & Chat Circle</button>
+            <button class="event-tab" data-event="2">Learn CPR in 15 Minutes</button>
           </div>
-          <div class="event-text-half">
-            <h3 class="event-title">Collective Balloon Twisting Workshop</h3>
-            <div class="event-meta">
-              <div class="event-meta-item"></div>
-              <div class="event-meta-item">
-                <span>Guildford, Surrey</span>
-              </div>
+
+          <!-- Event Detail 0 -->
+          <div class="event-detail active" data-event="0">
+            <div class="event-detail-image">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1746637011709-a79c0a1e5175?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Collective Balloon Twisting Workshop"
+              />
             </div>
-            <p class="event-description">
-              Unwind, twist balloons into joy, and meet kind minds. No experience needed—just bring your curiosity and
-              maybe a friend.
-            </p>
-            <button class="event-cta-btn">Join for Free</button>
+            <div class="event-detail-overlay"></div>
+            <div class="event-detail-text">
+              <h3 class="event-detail-title">Collective Balloon Twisting Workshop</h3>
+              <div class="event-detail-meta">
+                <div class="event-detail-meta-item">
+                  <span class="event-detail-meta-label">Location</span>
+                  <span class="event-detail-meta-value">Guildford, Surrey</span>
+                </div>
+                <div class="event-detail-meta-item">
+                  <span class="event-detail-meta-label">Type</span>
+                  <span class="event-detail-meta-value">Creative Workshop</span>
+                </div>
+                <div class="event-detail-meta-item">
+                  <span class="event-detail-meta-label">Cost</span>
+                  <span class="event-detail-meta-value">Free</span>
+                </div>
+              </div>
+              <div class="event-detail-content">
+                <p>
+                  <strong>Unwind, twist balloons into joy, and meet kind minds.</strong> No experience needed—just bring
+                  your curiosity and maybe a friend.
+                </p>
+                <p>
+                  Join us for a relaxing and fun afternoon where creativity meets community. Whether you're looking to
+                  learn a new skill, take a break from daily stress, or simply enjoy the company of like-minded
+                  individuals, this workshop is designed for everyone.
+                </p>
+                <p>
+                  Our experienced instructors will guide you through simple balloon twisting techniques, creating
+                  decorations, animals, and shapes. The best part? No prior artistic experience is required. We provide
+                  all materials, and by the end of the session, you'll leave with new skills, a sense of accomplishment,
+                  and genuine connections with fellow participants.
+                </p>
+                <p>
+                  This is more than just a craft workshop—it's about creating a safe, welcoming space where young people
+                  can recharge, express themselves, and connect with their community.
+                </p>
+              </div>
+              <button class="event-detail-cta">Join for Free</button>
+            </div>
+          </div>
+
+          <!-- Event Detail 1 -->
+          <div class="event-detail" data-event="1">
+            <div class="event-detail-image">
+              <img
+                src="https://images.unsplash.com/photo-1777537953560-10fda7d9965a?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Slow Crocheting & Chat Circle"
+              />
+            </div>
+            <div class="event-detail-overlay"></div>
+            <div class="event-detail-text">
+              <h3 class="event-detail-title">Slow Crocheting & Chat Circle</h3>
+              <div class="event-detail-meta">
+                <div class="event-detail-meta-item">
+                  <span class="event-detail-meta-label">Location</span>
+                  <span class="event-detail-meta-value">Guildford, Surrey</span>
+                </div>
+                <div class="event-detail-meta-item">
+                  <span class="event-detail-meta-label">Type</span>
+                  <span class="event-detail-meta-value">Mindfulness & Community</span>
+                </div>
+                <div class="event-detail-meta-item">
+                  <span class="event-detail-meta-label">Cost</span>
+                  <span class="event-detail-meta-value">Free</span>
+                </div>
+              </div>
+              <div class="event-detail-content">
+                <p>
+                  <strong
+                    >Grab a hook, settle in with good company, and let your hands create while your mind finds
+                    peace.</strong
+                  >
+                  All skill levels welcome.
+                </p>
+                <p>
+                  In today's fast-paced world, we could all use a moment of calm. This slow crocheting circle offers
+                  exactly that—a judgment-free space to slow down, engage in a meditative craft, and build meaningful
+                  connections.
+                </p>
+                <p>
+                  Whether you're an experienced crocheter or picking up a hook for the first time, our supportive
+                  community welcomes you. We'll provide materials, basic guidance, and plenty of encouragement. The
+                  rhythm of crochet—creating loop after loop—naturally calms the mind and reduces stress.
+                </p>
+                <p>
+                  Beyond the craft itself, this is about human connection. We'll chat, laugh, and support one another as
+                  we create. Some participants find their most meaningful conversations happen in moments like these,
+                  when hands are busy but hearts are open.
+                </p>
+                <p>
+                  <strong>Perfect for anyone seeking:</strong> Stress relief, community connection, creative expression,
+                  or simply a peaceful afternoon with kind people.
+                </p>
+              </div>
+              <button class="event-detail-cta">Join for Free</button>
+            </div>
+          </div>
+
+          <!-- Event Detail 2 -->
+          <div class="event-detail" data-event="2">
+            <div class="event-detail-image">
+              <img
+                src="https://listers.co.uk/img/hero/cover/1200x630/news/2022/02/proud-to-support-british-heart-foundation-2022-2023.jpg"
+                alt="Learn CPR in 15 Minutes"
+              />
+            </div>
+            <div class="event-detail-overlay"></div>
+            <div class="event-detail-text">
+              <h3 class="event-detail-title">Learn CPR in 15 Minutes. Save a Life.</h3>
+              <div class="event-detail-meta">
+                <div class="event-detail-meta-item">
+                  <span class="event-detail-meta-label">Organization</span>
+                  <span class="event-detail-meta-value">British Heart Foundation</span>
+                </div>
+                <div class="event-detail-meta-item">
+                  <span class="event-detail-meta-label">Format</span>
+                  <span class="event-detail-meta-value">Online Training</span>
+                </div>
+                <div class="event-detail-meta-item">
+                  <span class="event-detail-meta-label">Cost</span>
+                  <span class="event-detail-meta-value">Free</span>
+                </div>
+              </div>
+              <div class="event-detail-content">
+                <p>
+                  <strong
+                    >Free, trusted online CPR training by the British Heart Foundation. Every second counts.</strong
+                  >
+                </p>
+                <p>
+                  Cardiac arrest can happen to anyone, anywhere, at any time. In these critical moments, knowing CPR can
+                  mean the difference between life and death. The British Heart Foundation's quick 15-minute training
+                  module equips you with the essential knowledge and confidence to act when it matters most.
+                </p>
+                <p><strong>What You'll Learn:</strong></p>
+                <p>
+                  • How to recognize the signs of cardiac arrest <br />• Step-by-step CPR techniques <br />• How to use
+                  an Automated External Defibrillator (AED) <br />• What to do in an emergency <br />• When and how to
+                  call emergency services
+                </p>
+                <p>
+                  <strong>Why This Matters:</strong> While medical professionals are on their way, CPR from a trained
+                  bystander can keep blood flowing to vital organs, significantly improving the chances of survival. You
+                  don't need to be a medical professional—you just need to be willing to help.
+                </p>
+                <p>
+                  In partnership with Breathe and the broader youth wellness community, we believe that equipping young
+                  people with life-saving skills strengthens our collective ability to support one another in times of
+                  crisis.
+                </p>
+              </div>
+              <a href="/bhf-training" class="event-detail-cta">Learn CPR Now</a>
+            </div>
           </div>
         </div>
 
-        <div class="event-macro-card reverse">
-          <div class="event-image-half">
-            <img
-              src="https://images.unsplash.com/photo-1777537953560-10fda7d9965a?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Slow Crocheting & Chat Circle"
-            />
-          </div>
-          <div class="event-text-half">
-            <h3 class="event-title">Slow Crocheting & Chat Circle</h3>
-            <div class="event-meta">
-              <div class="event-meta-item"></div>
-              <div class="event-meta-item">
-                <span>Guildford, Surrey</span>
-              </div>
-            </div>
-            <p class="event-description">
-              Grab a hook, settle in with good company, and let your hands create while your mind finds peace. All skill
-              levels welcome.
-            </p>
-            <button class="event-cta-btn">Join for Free</button>
-          </div>
-        </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.event-tab');
+            const details = document.querySelectorAll('.event-detail');
 
-        <div class="event-macro-card">
-          <div class="event-image-half">
-            <img
-              src="https://listers.co.uk/img/hero/cover/1200x630/news/2022/02/proud-to-support-british-heart-foundation-2022-2023.jpg"
-              alt="Learn CPR in 15 Minutes"
-            />
-          </div>
-          <div class="event-text-half">
-            <h3 class="event-title">Learn CPR in 15 Minutes. Save a Life.</h3>
-            <div class="event-meta">
-              <div class="event-meta-item">
-                <span>British Heart Foundation</span>
-              </div>
-            </div>
-            <p class="event-description">
-              Free, trusted online CPR training by the British Heart Foundation. Every second counts.
-            </p>
-            <a href="/bhf-training" class="event-cta-btn inline-block text-center no-underline">Learn CPR Now</a>
-          </div>
-        </div>
+            tabs.forEach(tab => {
+              tab.addEventListener('click', function() {
+                const eventId = this.getAttribute('data-event');
+
+                // Remove active class from all tabs and details
+                tabs.forEach(t => t.classList.remove('active'));
+                details.forEach(d => d.classList.remove('active'));
+
+                // Add active class to clicked tab and corresponding detail
+                this.classList.add('active');
+                document.querySelector(`.event-detail[data-event="${eventId}"]`).classList.add('active');
+
+                // Scroll tab into view
+                this.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+              });
+            });
+          });
+        </script>
 
         <div class="mt-4 mb-20 sm:mb-24">
           <div class="relative w-full overflow-hidden rounded-sm shadow-xl" style="padding-top: 56.25%;">
