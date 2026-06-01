@@ -665,6 +665,43 @@
 
           observer.observe(section);
           showSlide(currentIndex);
+       }
+
+          // ==========================================
+          //NUMBER COUNTER
+          // ==========================================
+          const counters = document.querySelectorAll('.counter');
+          const speed = 150; // 数字控制滚动的速度，数值越小越快
+
+          const animateCounters = () => {
+              counters.forEach(counter => {
+                  const updateCount = () => {
+                      const target = +counter.getAttribute('data-target');
+                      const count = +counter.innerText;
+                      const inc = target / speed;
+
+                      if (count < target) {
+                          counter.innerText = Math.ceil(count + inc);
+                          setTimeout(updateCount, 20); // 20ms 刷新一次
+                      } else {
+                          counter.innerText = target;
+                      }
+                  };
+                  updateCount();
+              });
+          };
+
+          const statsSection = document.getElementById('intro-stats');
+          if (statsSection && counters.length > 0) {
+              const statsObserver = new IntersectionObserver((entries) => {
+                  if (entries[0].isIntersecting) {
+                      animateCounters();
+                      statsObserver.disconnect(); // 动画播放一次后取消监听
+                  }
+              }, { threshold: 0.3 }); // 当区块露出 30% 时触发动画
+
+              statsObserver.observe(statsSection);
+          }
       });
     </script>
   </body>
