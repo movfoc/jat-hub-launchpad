@@ -130,55 +130,24 @@ const formatDate = (dateStr: string) => {
   });
 };
 
-type GalleryItem = {
-  key: string;
-  image: string;
-  title: string;
-  dateLabel: string;
-  sortDate: number;
-  category?: string;
-  onClick: () => void;
-};
-
-const parseEventDate = (s: string) => {
-  // Handles "FEB 17, 2026" and "JAN 27 - 29, 2026"
-  const cleaned = s.replace(/(\d+)\s*-\s*\d+/, "$1");
-  const t = new Date(cleaned).getTime();
-  return isNaN(t) ? 0 : t;
-};
-
 export const EventGallery = () => {
   const navigate = useNavigate();
   const scrollRef = useRef<HTMLDivElement>(null);
+  const newsScrollRef = useRef<HTMLDivElement>(null);
   // Filter events that have media or a poster
   const events = historicalEvents.filter(e => e.media.length > 0 || e.poster !== "/placeholder.svg");
 
   const scroll = (dir: "left" | "right") => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: dir === "left" ? -360 : 360, behavior: "smooth" });
+      scrollRef.current.scrollBy({ left: dir === "left" ? -320 : 320, behavior: "smooth" });
     }
   };
 
-  const items: GalleryItem[] = [
-    ...events.map<GalleryItem>((e) => ({
-      key: `event-${e.id}`,
-      image: e.poster,
-      title: e.title,
-      dateLabel: e.date,
-      sortDate: parseEventDate(e.date),
-      category: "Event",
-      onClick: () => navigate(`/events#${e.id}`),
-    })),
-    ...sortedNews.map<GalleryItem>((n) => ({
-      key: `news-${n.link}`,
-      image: n.image,
-      title: n.title,
-      dateLabel: formatDate(n.date),
-      sortDate: new Date(n.date).getTime(),
-      category: n.category,
-      onClick: () => navigate(n.link),
-    })),
-  ].sort((a, b) => b.sortDate - a.sortDate);
+  const scrollNews = (dir: "left" | "right") => {
+    if (newsScrollRef.current) {
+      newsScrollRef.current.scrollBy({ left: dir === "left" ? -360 : 360, behavior: "smooth" });
+    }
+  };
 
   return (
     <section className="py-16 sm:py-20 md:py-28 px-5 sm:px-6 bg-background relative overflow-hidden">
@@ -189,10 +158,10 @@ export const EventGallery = () => {
         <div className="flex items-end justify-between mb-8 sm:mb-10">
           <div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground leading-tight">
-              Event Gallery & Newsroom
+              Event Gallery
             </h2>
             <p className="text-muted-foreground mt-3 text-sm sm:text-base">
-              Past events and recent stories — click any card to dive in.
+              Relive our past events — click a poster to see the full story.
             </p>
           </div>
           <div className="hidden md:flex gap-2">
@@ -217,35 +186,28 @@ export const EventGallery = () => {
 
         <div
           ref={scrollRef}
-          className="flex gap-5 sm:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+          className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {items.map((item) => (
+          {events.map((event) => (
             <button
-              key={item.key}
-              onClick={item.onClick}
-              className="group w-[78vw] min-w-[260px] sm:w-auto sm:min-w-[300px] md:min-w-[340px] max-w-[360px] shrink-0 snap-start rounded-xl overflow-hidden border border-primary/20 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 text-left focus:outline-none focus:ring-2 focus:ring-ring flex flex-col"
+              key={event.id}
+              onClick={() => navigate(`/events#${event.id}`)}
+              className="group w-[68vw] min-w-[220px] sm:w-auto sm:min-w-[240px] max-w-[280px] shrink-0 snap-start rounded-xl overflow-hidden border border-primary/20 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 text-left focus:outline-none focus:ring-2 focus:ring-ring"
             >
-              <div className="aspect-video overflow-hidden">
+              <div className="overflow-hidden">
                 <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src={event.poster}
+                  alt={event.title}
+                  className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
               </div>
-              <div className="p-4 sm:p-5 flex flex-col flex-grow">
-                {item.category && (
-                  <span className="text-primary text-[11px] font-semibold tracking-wider uppercase mb-2">
-                    {item.category}
-                  </span>
-                )}
-                <h3 className="text-sm sm:text-base font-semibold text-foreground leading-snug line-clamp-2 group-hover:text-primary transition-colors mb-3">
-                  {item.title}
+              <div className="p-4">
+                <p className="text-xs font-semibold text-primary mb-1">{event.date}</p>
+                <h3 className="text-sm font-semibold text-foreground line-clamp-2 group-hover:text-primary transition-colors">
+                  {event.title}
                 </h3>
-                <span className="mt-auto text-muted-foreground text-xs">
-                  {item.dateLabel}
-                </span>
               </div>
             </button>
           ))}
@@ -253,23 +215,98 @@ export const EventGallery = () => {
 
         <div className="flex items-center justify-between mt-6 gap-3">
           <p className="text-muted-foreground text-xs md:hidden">
-            ← Swipe to browse →
+            ← Swipe to browse events →
           </p>
-          <div className="ml-auto flex gap-2">
+          <Button
+            variant="outline"
+            className="ml-auto border-primary/30 hover:bg-primary/10"
+            onClick={() => navigate("/events")}
+          >
+            View all
+            <ChevronRight className="w-4 h-4 ml-1" />
+          </Button>
+        </div>
+
+        {/* News in the Gallery */}
+        <div className="mt-16 sm:mt-20">
+          <div className="flex items-end justify-between mb-8 sm:mb-10">
+            <div>
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground leading-tight">
+                From the Newsroom
+              </h3>
+              <p className="text-muted-foreground mt-3 text-sm sm:text-base">
+                Highlights and stories from our recent appearances and visits.
+              </p>
+            </div>
+            <div className="hidden md:flex gap-2">
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border-primary/30 hover:bg-primary/10"
+                onClick={() => scrollNews("left")}
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </Button>
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full border-primary/30 hover:bg-primary/10"
+                onClick={() => scrollNews("right")}
+              >
+                <ChevronRight className="w-5 h-5" />
+              </Button>
+            </div>
+          </div>
+
+          <div
+            ref={newsScrollRef}
+            className="flex gap-5 sm:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {sortedNews.map((item) => (
+              <button
+                key={item.link}
+                onClick={() => navigate(item.link)}
+                className="group w-[80vw] min-w-[260px] sm:w-auto sm:min-w-[360px] md:min-w-[440px] max-w-[480px] shrink-0 snap-start rounded-xl overflow-hidden border border-border/40 bg-card hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 text-left focus:outline-none focus:ring-2 focus:ring-ring flex flex-col"
+              >
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-5 sm:p-6 flex flex-col flex-grow">
+                  <span className="text-primary text-xs font-semibold tracking-wider uppercase mb-2">
+                    {item.category}
+                  </span>
+                  <h4 className="text-foreground font-semibold text-base sm:text-lg leading-snug mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+                    {item.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground line-clamp-3 mb-3">
+                    {item.summary}
+                  </p>
+                  <div className="mt-auto">
+                    <span className="text-muted-foreground text-xs">
+                      {formatDate(item.date)}
+                    </span>
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
+
+          <div className="flex items-center justify-between mt-6 gap-3">
+            <p className="text-muted-foreground text-xs md:hidden">
+              ← Swipe to read more →
+            </p>
             <Button
               variant="outline"
-              className="border-primary/30 hover:bg-primary/10"
-              onClick={() => navigate("/events")}
-            >
-              All events
-              <ChevronRight className="w-4 h-4 ml-1" />
-            </Button>
-            <Button
-              variant="outline"
-              className="border-primary/30 hover:bg-primary/10"
+              className="ml-auto border-primary/30 hover:bg-primary/10"
               onClick={() => navigate("/news")}
             >
-              All stories
+              View all stories
               <ChevronRight className="w-4 h-4 ml-1" />
             </Button>
           </div>
