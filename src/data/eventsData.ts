@@ -165,6 +165,20 @@ import cambridge5 from "@/assets/news/cambridge/cambridge_5.jpg";
 
 export const historicalEvents: HistoricalEvent[] = [
   {
+    id: "memory-wellbeing",
+    title: "JatHub Champions Community Health at the Memory and Wellbeing Festival",
+    date: "MAY 22, 2026",
+    description: "Our team supported memory and wellbeing initiatives for the local community.",
+    poster: dementiaCover,
+    media: [
+      { type: "image", src: dementia1, alt: "Memory & Wellbeing 1" },
+      { type: "image", src: dementia2, alt: "Memory & Wellbeing 2" },
+      { type: "image", src: dementia3, alt: "Memory & Wellbeing 3" },
+      { type: "image", src: dementia4, alt: "Memory & Wellbeing 4" },
+      { type: "image", src: dementia5, alt: "Memory & Wellbeing 5" },
+    ],
+  },
+  {
     id: "barclays-ai100",
     title: "JatHub Joins UK's Top Innovators at Barclays AI:100 Event",
     date: "MAY 18, 2026",
@@ -177,20 +191,6 @@ export const historicalEvents: HistoricalEvent[] = [
       { type: "image", src: barclays4, alt: "Barclays AI:100 4" },
       { type: "image", src: barclays5, alt: "Barclays AI:100 5" },
       { type: "image", src: barclays7, alt: "Barclays AI:100 6" },
-    ],
-  },
-  {
-    id: "memory-wellbeing",
-    title: "JatHub Champions Community Health at the Memory and Wellbeing Festival",
-    date: "MAY 22, 2026",
-    description: "Our team supported memory and wellbeing initiatives for the local community.",
-    poster: dementiaCover,
-    media: [
-      { type: "image", src: dementia1, alt: "Memory & Wellbeing 1" },
-      { type: "image", src: dementia2, alt: "Memory & Wellbeing 2" },
-      { type: "image", src: dementia3, alt: "Memory & Wellbeing 3" },
-      { type: "image", src: dementia4, alt: "Memory & Wellbeing 4" },
-      { type: "image", src: dementia5, alt: "Memory & Wellbeing 5" },
     ],
   },
   {
