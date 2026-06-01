@@ -36,7 +36,6 @@
       body { background-color: #FCF9F2; color: #2C3338; -webkit-font-smoothing: antialiased; }
       .carousel-slide { transition: opacity 1s ease-in-out; }
 
-      /* Modular Event Macro-Card */
       .event-macro-card {
           display: flex;
           align-items: stretch;
@@ -54,7 +53,6 @@
           box-shadow: 0 12px 24px rgba(10, 186, 181, 0.3);
       }
 
-      /* Image Half */
       .event-image-half {
           flex: 2.33;
           overflow: hidden;
@@ -69,7 +67,6 @@
           transition: transform 0.3s ease-in-out;
       }
 
-      /* Text Half */
       .event-text-half {
           flex: 1;
           background-color: #E0F5F4;
@@ -80,7 +77,6 @@
           transition: background-color 0.3s ease-in-out;
       }
 
-      /* Date Badge */
       .date-badge {
           background-color: #0ABAB5;
           color: white;
@@ -94,115 +90,29 @@
           font-weight: 700;
       }
 
-      .date-badge-month {
-          font-size: 11px;
-          letter-spacing: 2px;
-          text-transform: uppercase;
-          line-height: 1;
-      }
+      .date-badge-month { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; line-height: 1; }
+      .date-badge-day { font-size: 36px; line-height: 1; margin-top: 6px; font-weight: 800; }
+      .event-title { font-size: 32px; font-weight: 700; color: #2C3338; margin-bottom: 20px; line-height: 1.2; }
+      .event-meta { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; font-weight: 600; color: #2C3338; font-size: 15px; }
+      .event-meta-item { display: flex; align-items: center; gap: 10px; }
+      .event-description { color: #2C3338; font-size: 16px; line-height: 1.6; margin-bottom: 32px; font-weight: 400; }
+      .event-cta-btn { align-self: flex-start; background-color: #0ABAB5; color: white; font-weight: 700; padding: 16px 40px; border-radius: 4px; border: none; cursor: pointer; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s ease-in-out; }
+      .event-cta-btn:hover { background-color: #09A19C; }
+      .event-macro-card.reverse { flex-direction: row-reverse; }
 
-      .date-badge-day {
-          font-size: 36px;
-          line-height: 1;
-          margin-top: 6px;
-          font-weight: 800;
-      }
-
-      .event-title {
-          font-size: 32px;
-          font-weight: 700;
-          color: #2C3338;
-          margin-bottom: 20px;
-          line-height: 1.2;
-      }
-
-      .event-meta {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-          margin-bottom: 24px;
-          font-weight: 600;
-          color: #2C3338;
-          font-size: 15px;
-      }
-
-      .event-meta-item {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-      }
-
-      .event-description {
-          color: #2C3338;
-          font-size: 16px;
-          line-height: 1.6;
-          margin-bottom: 32px;
-          font-weight: 400;
-      }
-
-      .event-cta-btn {
-          align-self: flex-start;
-          background-color: #0ABAB5;
-          color: white;
-          font-weight: 700;
-          padding: 16px 40px;
-          border-radius: 4px;
-          border: none;
-          cursor: pointer;
-          font-size: 14px;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          transition: all 0.3s ease-in-out;
-      }
-
-      .event-cta-btn:hover {
-          background-color: #09A19C;
-      }
-
-      /* Reverse layout for alternating pattern */
-      .event-macro-card.reverse {
-          flex-direction: row-reverse;
-      }
-
-      /* Mobile Responsiveness */
       @media (max-width: 767px) {
-          .event-macro-card {
-              flex-direction: column;
-              min-height: auto;
-              margin-bottom: 100px;
-          }
-
-          .event-macro-card.reverse {
-              flex-direction: column;
-          }
-
-          .event-image-half {
-              min-height: 300px;
-              width: 100%;
-          }
-
-          .event-text-half {
-              padding: 40px 24px;
-              background-color: #E0F5F4;
-          }
-
-          .event-title {
-              font-size: 24px;
-          }
-
-          .event-meta {
-              font-size: 14px;
-          }
-
-          .event-description {
-              font-size: 14px;
-          }
+          .event-macro-card { flex-direction: column; min-height: auto; margin-bottom: 100px; }
+          .event-macro-card.reverse { flex-direction: column; }
+          .event-image-half { min-height: 300px; width: 100%; }
+          .event-text-half { padding: 40px 24px; background-color: #E0F5F4; }
+          .event-title { font-size: 24px; }
+          .event-meta { font-size: 14px; }
+          .event-description { font-size: 14px; }
       }
     </style>
   </head>
   <body class="font-sans">
-    <!-- HERO SECTION -->
-    <section class="relative w-full min-h-screen flex flex-col overflow-hidden pt-[60px] pb-[60px] md:pt-0 md:pb-0">
+    <section class="relative w-full min-h-screen flex flex-col overflow-hidden pt-8 pb-8 md:pt-0 md:pb-0">
       <div class="absolute inset-0 z-0">
         <img
           src="https://images.pexels.com/photos/7503354/pexels-photo-7503354.jpeg"
@@ -225,7 +135,7 @@
         </div>
       </nav>
 
-      <div class="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-6 mt-1 sm:-mt-4 mb-2">
+      <div class="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-6">
         <a
           href="/"
           class="inline-flex items-center gap-2 text-tiffany hover:text-white transition-colors text-sm font-medium"
@@ -238,12 +148,12 @@
       </div>
 
       <div
-        class="relative z-10 flex-grow flex flex-col lg:flex-row px-5 sm:px-6 max-w-7xl mx-auto w-full pt-8 pb-12 gap-8 sm:gap-10 lg:gap-12"
+        class="relative z-10 flex-grow flex flex-col lg:flex-row px-5 sm:px-6 max-w-7xl mx-auto w-full pt-4 pb-6 gap-6 sm:gap-8 lg:gap-10"
       >
         <div class="flex flex-col justify-center lg:flex-1 max-w-[90%] sm:max-w-none">
           <h1 class="text-white relative">
             <span
-              class="font-handwriting text-[3.75rem] xs:text-7xl sm:text-8xl md:text-[140px] lg:text-[180px] text-sage-light leading-none transform -rotate-2 relative inline-block"
+              class="font-handwriting text-5xl xs:text-6xl sm:text-7xl md:text-[120px] lg:text-[150px] text-sage-light leading-none transform -rotate-2 relative inline-block"
             >
               Let's BREATHE.
               <svg
@@ -277,13 +187,13 @@
             </span>
           </h1>
           <p
-            class="text-[15px] sm:text-base md:text-lg text-white/90 font-light leading-[1.7] md:leading-relaxed max-w-3xl mt-6 sm:mt-8"
+            class="text-[15px] sm:text-base md:text-lg text-white/90 font-light leading-[1.7] md:leading-relaxed max-w-3xl mt-4 sm:mt-6"
           >
             A youth wellness initiative by JatHub CIC focused on creating safe, creative, and supportive spaces where
             young people can recharge, connect, and grow emotionally alongside their ambitions.
           </p>
         </div>
-        <div class="flex flex-col justify-end items-stretch sm:items-start lg:items-end lg:w-auto mt-6 lg:mt-0">
+        <div class="flex flex-col justify-end items-stretch sm:items-start lg:items-end lg:w-auto mt-32 lg:mt-20 pt-8">
           <a
             href="#events"
             class="inline-flex items-center justify-center gap-3 bg-tiffany text-white font-bold text-base sm:text-xl md:text-2xl px-6 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 rounded-full hover:bg-white hover:text-tiffany transition-all transform hover:scale-105 w-full sm:w-auto"
@@ -306,13 +216,12 @@
         </div>
       </div>
 
-      <!-- Partner Section -->
-      <div class="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-6 pb-12 mt-auto">
+      <div class="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-6 pb-6 mt-auto">
         <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-4">
           <span class="text-white/80 font-medium text-sm tracking-widest uppercase">We Are Proud to Partner with:</span>
           <div class="flex items-center gap-6">
             <div
-              class="bg-white p-1 rounded-full w-24 h-24 flex items-center justify-center overflow-hidden border-[3px] border-white/20 shadow-xl hover:scale-105 transition-transform"
+              class="bg-white p-1 rounded-full w-20 h-20 md:w-24 md:h-24 flex items-center justify-center overflow-hidden border-[3px] border-white/20 shadow-xl hover:scale-105 transition-transform"
             >
               <img
                 src="https://img1.wsimg.com/isteam/ip/f74161b4-0acb-4de1-ad90-8a5041988716/blob-ee7220d.png/:/rs=w:340,h:340,cg:true,m/cr=w:340,h:340/qt=q:95"
@@ -321,7 +230,7 @@
               />
             </div>
             <div
-              class="bg-white p-1 rounded-full w-24 h-24 flex items-center justify-center overflow-hidden border-[3px] border-white/20 shadow-xl hover:scale-105 transition-transform"
+              class="bg-white p-1 rounded-full w-20 h-20 md:w-24 md:h-24 flex items-center justify-center overflow-hidden border-[3px] border-white/20 shadow-xl hover:scale-105 transition-transform"
             >
               <img
                 src="https://scontent-lhr6-1.cdninstagram.com/v/t51.82787-19/703519770_18059745398717649_561498728314848378_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=scontent-lhr6-1.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2gFDUCC3iyd6XP9OVui5i25AwWD1_UEaE5RO9qeQUUF6a1loHYNr9bQhQuXYGtGzyIA&_nc_ohc=0G5ArMXYkucQ7kNvwHLetRt&_nc_gid=bQkWJ9dTKLhyGdqV6xGS4A&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_Af-ovn4awfl2jsiCQ6gd1qV_Z20ZOLc3y5HvHQybq32e9Q&oe=6A237083&_nc_sid=7a9f4b"
@@ -335,7 +244,6 @@
       </div>
     </section>
 
-    <!-- INTRO & STATS SECTION -->
     <section id="intro-stats" class="w-full bg-white py-20 px-6 relative z-10 border-b border-oatmeal">
       <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
         <div class="lg:w-1/2">
@@ -380,10 +288,8 @@
       </div>
     </section>
 
-    <!-- EVENTS SECTION -->
     <section id="events" class="w-full bg-ivory pt-20 sm:pt-20 md:pt-24 pb-16 sm:pb-20 md:pb-24">
       <div class="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
-        <!-- Section Header -->
         <div class="mb-20 sm:mb-32 border-b border-charcoal/10 pb-10 sm:pb-16">
           <div class="mb-6 sm:mb-8">
             <h2
@@ -406,7 +312,6 @@
           </div>
         </div>
 
-        <!-- Event 1: Balloon Twisting (Image Left, Text Right) -->
         <div class="event-macro-card">
           <div class="event-image-half">
             <img
@@ -430,7 +335,6 @@
           </div>
         </div>
 
-        <!-- Event 2: Crocheting (Text Left, Image Right) -->
         <div class="event-macro-card reverse">
           <div class="event-image-half">
             <img
@@ -454,7 +358,6 @@
           </div>
         </div>
 
-        <!-- Event 3: CPR Training (Image Left, Text Right) -->
         <div class="event-macro-card">
           <div class="event-image-half">
             <img
@@ -476,7 +379,6 @@
           </div>
         </div>
 
-        <!-- Featured Video -->
         <div class="mt-4 mb-20 sm:mb-24">
           <div class="relative w-full overflow-hidden rounded-sm shadow-xl" style="padding-top: 56.25%;">
             <iframe
@@ -501,12 +403,10 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS CAROUSEL -->
     <section
       class="relative w-full min-h-[55vh] md:h-[60vh] py-20 md:py-0 flex items-center bg-charcoal overflow-hidden"
       id="testimonial-carousel"
     >
-      <!-- Slides -->
       <div
         class="carousel-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100 z-10"
         data-index="0"
@@ -611,7 +511,6 @@
       <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex gap-3" id="carousel-dots"></div>
     </section>
 
-    <!-- ABOUT SECTION -->
     <section id="about" class="bg-sage-light w-full py-16 sm:py-20 md:py-32 px-5 sm:px-6 relative z-10">
       <div class="max-w-6xl mx-auto">
         <div class="grid md:grid-cols-2 gap-10 md:gap-24 items-center">
@@ -637,9 +536,6 @@
 
     <script>
       function initInteractiveFeatures() {
-          // ==========================================
-          // 1. 轮播图逻辑 (TESTIMONIAL CAROUSEL)
-          // ==========================================
           const slides = document.querySelectorAll('.carousel-slide');
           const dotsContainer = document.getElementById('carousel-dots');
           const section = document.getElementById('testimonial-carousel');
@@ -698,9 +594,6 @@
               showSlide(currentIndex);
           }
 
-          // ==========================================
-          // 2. 数字递增逻辑 (NUMBER COUNTER)
-          // ==========================================
           const counters = document.querySelectorAll('.counter');
           const speed = 150;
 
