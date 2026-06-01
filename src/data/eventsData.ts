@@ -141,7 +141,71 @@ import aiMarketingWorkshopPoster from "@/assets/posters/ai-marketing-workshop.jp
 import houseOfLordsPoster from "@/assets/posters/house-of-lords.jpeg";
 import partTimeFairPoster from "@/assets/posters/part-time-fair.jpeg";
 
+// News covers + photos (added to gallery)
+import barclaysCover from "@/assets/news/barclays/barclays_cover.jpg";
+import barclays1 from "@/assets/news/barclays/barclays_1.jpg";
+import barclays2 from "@/assets/news/barclays/barclays_2.jpg";
+import barclays3 from "@/assets/news/barclays/barclays_3.jpg";
+import barclays4 from "@/assets/news/barclays/barclays_4.jpg";
+import barclays5 from "@/assets/news/barclays/barclays_5.jpg";
+import barclays7 from "@/assets/news/barclays/barclays_7.jpg";
+
+import dementiaCover from "@/assets/news/dementia/dementia_cover.jpg";
+import dementia1 from "@/assets/news/dementia/dementia_1.jpg";
+import dementia2 from "@/assets/news/dementia/dementia_2.jpg";
+import dementia3 from "@/assets/news/dementia/dementia_3.jpg";
+import dementia4 from "@/assets/news/dementia/dementia_4.jpg";
+import dementia5 from "@/assets/news/dementia/dementia_5.jpg";
+
+import cambridgeCover from "@/assets/news/cambridge/cambridge_cover.jpg";
+import cambridge1 from "@/assets/news/cambridge/cambridge_1.jpg";
+import cambridge2 from "@/assets/news/cambridge/cambridge_2.jpg";
+import cambridge4 from "@/assets/news/cambridge/cambridge_4.jpg";
+import cambridge5 from "@/assets/news/cambridge/cambridge_5.jpg";
+
 export const historicalEvents: HistoricalEvent[] = [
+  {
+    id: "barclays-ai100",
+    title: "JatHub Joins UK's Top Innovators at Barclays AI:100 Event",
+    date: "MAY 28, 2026",
+    description: "JatHub was featured alongside the UK's leading AI innovators at the Barclays AI:100 showcase.",
+    poster: barclaysCover,
+    media: [
+      { type: "image", src: barclays1, alt: "Barclays AI:100 1" },
+      { type: "image", src: barclays2, alt: "Barclays AI:100 2" },
+      { type: "image", src: barclays3, alt: "Barclays AI:100 3" },
+      { type: "image", src: barclays4, alt: "Barclays AI:100 4" },
+      { type: "image", src: barclays5, alt: "Barclays AI:100 5" },
+      { type: "image", src: barclays7, alt: "Barclays AI:100 6" },
+    ],
+  },
+  {
+    id: "memory-wellbeing",
+    title: "JatHub Champions Community Health at the Memory and Wellbeing Festival",
+    date: "MAY 22, 2026",
+    description: "Our team supported memory and wellbeing initiatives for the local community.",
+    poster: dementiaCover,
+    media: [
+      { type: "image", src: dementia1, alt: "Memory & Wellbeing 1" },
+      { type: "image", src: dementia2, alt: "Memory & Wellbeing 2" },
+      { type: "image", src: dementia3, alt: "Memory & Wellbeing 3" },
+      { type: "image", src: dementia4, alt: "Memory & Wellbeing 4" },
+      { type: "image", src: dementia5, alt: "Memory & Wellbeing 5" },
+    ],
+  },
+  {
+    id: "cambridge-realityx",
+    title: "JatHub at Cambridge RealityX: Judging the Future of AI & XR",
+    date: "MAR 15, 2026",
+    description: "JatHub judged groundbreaking AI and XR projects at Cambridge's RealityX hackathon.",
+    poster: cambridgeCover,
+    media: [
+      { type: "image", src: cambridge1, alt: "Cambridge RealityX 1" },
+      { type: "image", src: cambridge2, alt: "Cambridge RealityX 2" },
+      { type: "image", src: cambridge4, alt: "Cambridge RealityX 3" },
+      { type: "image", src: cambridge5, alt: "Cambridge RealityX 4" },
+    ],
+  },
   {
     id: "digital-marketing-summit",
     title: "Digital Marketing & Gamified Economy Summit",
