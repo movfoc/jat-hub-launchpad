@@ -12,14 +12,14 @@ export const Events = () => {
       date: "MAY 27, 2026",
       title: "Roblox × JatHub: Bridging the Gap Between Play and Big Brand Marketing",
       description: "2 PM - 3 PM Online. Exclusive workshop in collaboration with Roblox.",
-      isPast: false,
+      isPast: true,
       registrationUrl: "/roblox-workshop",
     },
     {
       date: "MAY 26, 2026",
       title: "2026 X-plore Marketing Ideathon (UCL DEMO Day)",
       description: "1 PM - 5 PM at UCL School of Management, Canada One, Canary Wharf, E14 5AB.",
-      isPast: false,
+      isPast: true,
       registrationUrl: "https://luma.com/i37y6d2k",
     },
     {
