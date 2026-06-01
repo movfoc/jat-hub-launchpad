@@ -3,11 +3,32 @@ import { Twitter, Linkedin, Instagram } from "lucide-react";
 export const Footer = () => {
   return (
     <footer className="py-8 px-6 border-t border-border/30">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-foreground/50 text-sm">
-          © 2025 JAT Hub. All rights reserved.
-        </p>
-        <div className="flex gap-6">
+      <div className="container mx-auto flex flex-col gap-8">
+        <div className="grid gap-8 md:grid-cols-2">
+          <div>
+            <h3 className="text-foreground font-semibold text-sm mb-2">Legal Information</h3>
+            <p className="text-foreground/60 text-sm leading-relaxed">
+              JatHub CIC is a Community Interest Company registered in England and Wales.
+            </p>
+            <p className="text-foreground/60 text-sm leading-relaxed mt-2">
+              Company Number: 17193758<br />
+              Registered Office: Suite 642 Chremma House, 14 London Road, Guildford, Surrey, United Kingdom, GU1 2AG
+            </p>
+          </div>
+          <div>
+            <h3 className="text-foreground font-semibold text-sm mb-2">Get in Touch</h3>
+            <p className="text-foreground/60 text-sm leading-relaxed">
+              <a href="mailto:jat@jathub.com" className="hover:text-primary transition-colors">jat@jathub.com</a>
+              <span className="mx-2">·</span>
+              <a href="tel:+447766456376" className="hover:text-primary transition-colors">+44 7766 456376</a>
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-border/30">
+          <p className="text-foreground/50 text-sm">
+            © 2026 JatHub CIC. All rights reserved.
+          </p>
+          <div className="flex gap-6">
           <a 
             href="https://twitter.com" 
             target="_blank" 
@@ -35,6 +56,7 @@ export const Footer = () => {
           >
             <Instagram className="w-5 h-5" />
           </a>
+          </div>
         </div>
       </div>
     </footer>
