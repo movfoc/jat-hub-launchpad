@@ -167,7 +167,7 @@ export const historicalEvents: HistoricalEvent[] = [
   {
     id: "barclays-ai100",
     title: "JatHub Joins UK's Top Innovators at Barclays AI:100 Event",
-    date: "MAY 28, 2026",
+    date: "MAY 18, 2026",
     description: "JatHub was featured alongside the UK's leading AI innovators at the Barclays AI:100 showcase.",
     poster: barclaysCover,
     media: [
