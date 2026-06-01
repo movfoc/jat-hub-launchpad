@@ -10,12 +10,12 @@ import img7 from "@/assets/news/barclays/barclays_7.jpg";
 const NewsBarclaysAI100 = () => {
   return (
     <NewsArticle
-      date="MAY 28, 2026"
+      date="MAY 18, 2026"
       title="JatHub Joins UK's Top Innovators at Barclays AI:100 Event"
       subtitle="London, United Kingdom"
     >
       <p className="text-lg text-muted-foreground leading-relaxed">
-        On May 28th, JatHub CIC proudly took its place among the UK's most exciting and ambitious artificial intelligence companies at the highly anticipated Barclays AI:100 event. Hosted at the Google London office, the gathering served as a premier platform for innovators actively shaping the future of AI across various industries and society.
+        On May 18th, JatHub CIC proudly took its place among the UK's most exciting and ambitious artificial intelligence companies at the highly anticipated Barclays AI:100 event. Hosted at the Google London office, the gathering served as a premier platform for innovators actively shaping the future of AI across various industries and society.
       </p>
 
       <p className="text-lg text-muted-foreground leading-relaxed">
