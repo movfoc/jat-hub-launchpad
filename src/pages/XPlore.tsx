@@ -104,6 +104,12 @@ const XPlore = () => {
         }
         .animate-flash-glow { animation: flashGlow 1.6s ease-in-out infinite; }
         .animate-flash-pill { animation: flashPill 0.9s ease-in-out infinite; }
+        @keyframes winners-scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .winners-marquee { display: flex; width: max-content; animation: winners-scroll 50s linear infinite; }
+        .winners-marquee:hover { animation-play-state: paused; }
       `}</style>
 
       {/* Navigation */}
@@ -197,6 +203,83 @@ const XPlore = () => {
               New • Register Now
             </span>
           </Link>
+        </div>
+      </section>
+
+      {/* 2026 X-plore Winners — Rolling Grid */}
+      <section id="winners" className="py-16 md:py-20 bg-[#0F0F0F] border-y border-white/5 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 mb-10 md:mb-12">
+          <div className="text-center reveal-on-scroll opacity-0 translate-y-8">
+            <div className="text-[#D4FF00] font-mono text-sm uppercase tracking-widest mb-3">2026 Winners</div>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 leading-tight">X-plore Ideathon Winners</h2>
+            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto leading-[1.7]">
+              Meet the bold teams turning briefs into buildable realities — from biotech and AI to immersive art.
+            </p>
+          </div>
+        </div>
+
+        <div className="relative">
+          {/* edge fades */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-[#0F0F0F] to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-[#0F0F0F] to-transparent z-10" />
+
+          <div className="winners-marquee gap-5 md:gap-6 py-2">
+            {[...Array(2)].map((_, dup) =>
+              [
+                {
+                  title: "Crafting Smiles",
+                  tag: "Community Wellbeing",
+                  desc: "Creative charitable workshops fostering mental health and community cohesion.",
+                  img: "https://media.licdn.com/dms/image/v2/D4E22AQEoTJQzJVEgRA/feedshare-shrink_800/B4EZ51SqHDJ0Ac-/0/1780084286275?e=1781740800&v=beta&t=LS-S19veKDB4vb2b85xU8qrZZLTh6-fVHRZ5gwDTcm0",
+                  accent: "#D4FF00",
+                },
+                {
+                  title: "Clarity",
+                  tag: "AI · Talent",
+                  desc: "AI-driven matching and fact-based certification to bridge the early-career gap.",
+                  img: "https://media.licdn.com/dms/image/v2/D4E22AQHd_EJ8goKC8g/feedshare-shrink_800/B4EZ51UBKPJ0Ac-/0/1780084642757?e=1781740800&v=beta&t=rk7jGCFZA16cB5geg_MsgugLoRR7eN8UQykTPUZwRFs",
+                  accent: "#3B82F6",
+                },
+                {
+                  title: "Tree of Life",
+                  tag: "Immersive Art",
+                  desc: "Therapeutic balloon art lighting up cathedrals and stitching communities together.",
+                  img: "https://media.licdn.com/dms/image/v2/D4E22AQGCwuqvopUnkg/feedshare-shrink_800/B4EZ51SqMMIAAc-/0/1780084287487?e=1781740800&v=beta&t=Hu6TrcPbk4Q6PKFnfkyWXD0bmUqNz155ie3UhVJSKTM",
+                  accent: "#8B5CF6",
+                },
+                {
+                  title: "VR Drum Simulator",
+                  tag: "VR · Music",
+                  desc: "Immersive multiplayer drumming with custom haptics and pro-grade physics.",
+                  img: "https://media.licdn.com/dms/image/v2/D4E22AQGC_RMtHqBWSw/feedshare-shrink_800/B4EZ51U1oYJAAc-/0/1780084857594?e=1781740800&v=beta&t=b-3dBA85aZf_Hdee3kENqcy3NhYOmIJGnaCdUhvG5EE",
+                  accent: "#D4FF00",
+                },
+                {
+                  title: "Cancer Cell Siege",
+                  tag: "Biotech · Education",
+                  desc: "AI-engineered peptide therapy paired with Roblox gamification by Kowloon True Light School.",
+                  img: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=1200&auto=format&fit=crop",
+                  accent: "#3B82F6",
+                },
+              ].map((w, i) => (
+                <article
+                  key={`${dup}-${i}`}
+                  aria-hidden={dup === 1 ? true : undefined}
+                  className="glass-panel rounded-2xl overflow-hidden w-[280px] sm:w-[320px] md:w-[360px] shrink-0 border-t-2"
+                  style={{ borderTopColor: w.accent }}
+                >
+                  <div className="h-44 md:h-52 overflow-hidden bg-black">
+                    <img src={w.img} alt={w.title} className="w-full h-full object-cover" loading="lazy" />
+                  </div>
+                  <div className="p-5 md:p-6">
+                    <div className="text-[10px] md:text-xs font-mono uppercase tracking-widest mb-2" style={{ color: w.accent }}>{w.tag}</div>
+                    <h3 className="text-lg md:text-xl font-bold text-white mb-2">{w.title}</h3>
+                    <p className="text-xs md:text-sm text-gray-400 leading-relaxed">{w.desc}</p>
+                  </div>
+                </article>
+              ))
+            )}
+          </div>
         </div>
       </section>
 
