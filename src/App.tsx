@@ -23,6 +23,7 @@ import RobloxWorkshop from "./pages/RobloxWorkshop";
 import NewsBarclaysAI100 from "./pages/NewsBarclaysAI100";
 import NewsCambridgeRealityX from "./pages/NewsCambridgeRealityX";
 import NewsMemoryWellbeing from "./pages/NewsMemoryWellbeing";
+import NewsUCLDemoDay from "./pages/NewsUCLDemoDay";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +48,7 @@ const App = () => (
           <Route path="/news/barclays-ai100" element={<NewsBarclaysAI100 />} />
           <Route path="/news/cambridge-realityx" element={<NewsCambridgeRealityX />} />
           <Route path="/news/memory-wellbeing" element={<NewsMemoryWellbeing />} />
+          <Route path="/news/ucl-demo-day" element={<NewsUCLDemoDay />} />
           <Route path="/xplore" element={<XPlore />} />
           <Route path="/xplore/tracks" element={<XPloreTracks />} />
           <Route path="/xplore/challenge" element={<XPloreChallenge />} />
