@@ -175,7 +175,7 @@ export const historicalEvents: HistoricalEvent[] = [
   {
     id: "ucl-demo-day",
     title: "De-risking Frontier Innovation: JatHub and UCL Host 2026 Demo Day",
-    date: "MAY 18, 2026",
+    date: "MAY 26, 2026",
     description: "JatHub and UCL School of Management hosted the 2026 X-plore Marketing Ideathon Demo Day at Canary Wharf.",
     poster: uclDemo1.url,
     media: [

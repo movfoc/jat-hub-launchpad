@@ -18,18 +18,18 @@ import uclDemoImg from "@/assets/news/ucl-demo-day/ucl-demo-1.jpg.asset.json";
 
 const allNews = [
   {
+    image: uclDemoImg.url,
+    category: "Demo Day",
+    title: "De-risking Frontier Innovation: JatHub and UCL Host 2026 Demo Day",
+    date: "2026-05-26",
+    link: "/news/ucl-demo-day",
+  },
+  {
     image: barclaysImg,
     category: "Innovation Summit",
     title: "JatHub Joins UK's Top Innovators at Barclays AI:100 Event",
     date: "2026-05-28",
     link: "/news/barclays-ai100",
-  },
-  {
-    image: uclDemoImg.url,
-    category: "Demo Day",
-    title: "De-risking Frontier Innovation: JatHub and UCL Host 2026 Demo Day",
-    date: "2026-05-18",
-    link: "/news/ucl-demo-day",
   },
   {
     image: dementiaImg,
