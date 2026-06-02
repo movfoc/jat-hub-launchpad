@@ -15,8 +15,16 @@ import uclSummitImg from "@/assets/news/ucl-summit/Summit_Group.png";
 import barclaysImg from "@/assets/news/barclays/barclays_cover.jpg";
 import cambridgeImg from "@/assets/news/cambridge/cambridge_cover.jpg";
 import dementiaImg from "@/assets/news/dementia/dementia_cover.jpg";
+import uclDemoImg from "@/assets/news/ucl-demo-day/ucl-demo-1.jpg.asset.json";
 
 const newsItems = [
+  {
+    image: uclDemoImg.url,
+    category: "Demo Day",
+    title: "De-risking Frontier Innovation: JatHub and UCL Host 2026 Demo Day",
+    date: "2026-05-26",
+    link: "/news/ucl-demo-day",
+  },
   {
     image: barclaysImg,
     category: "Innovation Summit",
