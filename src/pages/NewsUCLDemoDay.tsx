@@ -10,7 +10,7 @@ import img7 from "@/assets/news/ucl-demo-day/ucl-demo-7.jpg.asset.json";
 const NewsUCLDemoDay = () => {
   return (
     <NewsArticle
-      date="MAY 26, 2026"
+      date="MAY 18, 2026"
       title="De-risking Frontier Innovation: JatHub and UCL Host 2026 Demo Day"
       subtitle="London, United Kingdom"
     >
