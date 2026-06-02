@@ -180,26 +180,6 @@ const XPlore = () => {
         </div>
       </section>
 
-      {/* Roblox Workshop Flashing Banner */}
-      <section className="pt-6 md:pt-8 pb-2 bg-[#050505]">
-        <div className="max-w-2xl mx-auto px-4 md:px-6">
-          <Link
-            to="/roblox-workshop"
-            className="group block relative rounded-xl md:rounded-2xl overflow-hidden animate-flash-glow"
-            aria-label="Roblox x JatHub Workshop — Bridging the Gap Between Play and Big Brand Marketing"
-          >
-            <img
-              src={robloxBanner}
-              alt="Roblox x JatHub Workshop banner"
-              className="w-full h-auto max-h-[200px] md:max-h-[260px] object-cover object-center block transition-transform duration-500 group-hover:scale-[1.02]"
-            />
-            <span className="absolute top-2 right-2 md:top-3 md:right-3 bg-[#D4FF00] text-black px-2.5 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] font-extrabold tracking-widest uppercase animate-flash-pill shadow-[0_0_15px_rgba(212,255,0,0.8)]">
-              New • Register Now
-            </span>
-          </Link>
-        </div>
-      </section>
-
       {/* 2026 X-plore Winners */}
       <section id="winners" className="pt-16 md:pt-24 pb-8 md:pb-12 bg-[#050505]">
         <div className="max-w-7xl mx-auto px-5 sm:px-6">
@@ -252,6 +232,26 @@ const XPlore = () => {
               </a>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Roblox Workshop Flashing Banner */}
+      <section className="pt-6 md:pt-8 pb-2 bg-[#050505]">
+        <div className="max-w-2xl mx-auto px-4 md:px-6">
+          <Link
+            to="/roblox-workshop"
+            className="group block relative rounded-xl md:rounded-2xl overflow-hidden animate-flash-glow"
+            aria-label="Roblox x JatHub Workshop — Bridging the Gap Between Play and Big Brand Marketing"
+          >
+            <img
+              src={robloxBanner}
+              alt="Roblox x JatHub Workshop banner"
+              className="w-full h-auto max-h-[200px] md:max-h-[260px] object-cover object-center block transition-transform duration-500 group-hover:scale-[1.02]"
+            />
+            <span className="absolute top-2 right-2 md:top-3 md:right-3 bg-[#D4FF00] text-black px-2.5 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] font-extrabold tracking-widest uppercase animate-flash-pill shadow-[0_0_15px_rgba(212,255,0,0.8)]">
+              New • Register Now
+            </span>
+          </Link>
         </div>
       </section>
 
