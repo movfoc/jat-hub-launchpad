@@ -198,7 +198,7 @@ const XPlore = () => {
               { slug: "tree-of-life", cover: "/xplore-winners/covers/tree-of-life.jpg", category: "Art & Connection", title: "Tree of Life" },
               { slug: "clarity", cover: "/xplore-winners/covers/clarity.jpg", category: "AI Career Tech", title: "Clarity" },
               { slug: "vr-drum-simulator", cover: "/xplore-winners/covers/vr.jpg", category: "VR & Music", title: "VR Drum Simulator" },
-              { slug: "biotech", cover: "/xplore-winners/covers/biotech.jpg", category: "Biotech & Education", title: "Cancer Cell Siege — AI Biotech" },
+              { slug: "biotech", cover: "/__l5e/assets-v1/7635e6ac-5fc4-49a3-8f6e-bc74e9abf4ec/cancer-2.png", category: "Biotech & Education", title: "Cancer Cell Siege — AI Biotech" },
             ].map((w) => (
               <a
                 key={w.slug}
