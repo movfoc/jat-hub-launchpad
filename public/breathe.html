@@ -979,31 +979,57 @@
     </section>
 
     <!-- Event Gallery -->
-    <section id="event-gallery" class="w-full bg-ivory pt-4 sm:pt-6 md:pt-8 pb-16 sm:pb-20 md:pb-24 px-5 sm:px-6">
-      <div class="max-w-6xl mx-auto">
+    <section id="event-gallery" class="w-full bg-ivory pt-4 sm:pt-6 md:pt-8 pb-16 sm:pb-20 md:pb-24">
+      <div class="max-w-6xl mx-auto px-5 sm:px-6">
         <div class="mb-8 sm:mb-10">
           <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-charcoal leading-tight">Event Gallery</h2>
           <p class="text-charcoal/60 mt-3 text-sm sm:text-base">Moments from our Breathe sessions.</p>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
-          <button type="button" data-bg-src="/breathe-gallery/breathe-1.jpg" class="bg-img-btn group block aspect-square overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany">
-            <img src="/breathe-gallery/breathe-1.jpg" alt="Breathe event photo 1" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          </button>
-          <button type="button" data-bg-src="/breathe-gallery/breathe-2.jpg" class="bg-img-btn group block aspect-square overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany">
-            <img src="/breathe-gallery/breathe-2.jpg" alt="Breathe event photo 2" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          </button>
-          <button type="button" data-bg-src="/breathe-gallery/breathe-3.jpg" class="bg-img-btn group block aspect-square overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany">
-            <img src="/breathe-gallery/breathe-3.jpg" alt="Breathe event photo 3" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          </button>
-          <button type="button" data-bg-src="/breathe-gallery/breathe-4.jpg" class="bg-img-btn group block aspect-square overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany">
-            <img src="/breathe-gallery/breathe-4.jpg" alt="Breathe event photo 4" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          </button>
-          <button type="button" data-bg-src="/breathe-gallery/breathe-5.jpg" class="bg-img-btn group block aspect-square overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany">
-            <img src="/breathe-gallery/breathe-5.jpg" alt="Breathe event photo 5" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          </button>
-          <button type="button" data-bg-src="/breathe-gallery/breathe-6.jpg" class="bg-img-btn group block aspect-square overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany">
-            <img src="/breathe-gallery/breathe-6.jpg" alt="Breathe event photo 6" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          </button>
+      </div>
+
+      <style>
+        .bg-marquee { position: relative; overflow: hidden; -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent); mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent); }
+        .bg-marquee-track { display: flex; gap: 1rem; width: max-content; animation: bg-scroll-left 50s linear infinite; }
+        .bg-marquee-track.reverse { animation: bg-scroll-right 55s linear infinite; }
+        .bg-marquee:hover .bg-marquee-track { animation-play-state: paused; }
+        @keyframes bg-scroll-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        @keyframes bg-scroll-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+        .bg-tile { flex: 0 0 auto; width: 220px; height: 220px; }
+        @media (min-width: 768px) { .bg-tile { width: 280px; height: 280px; } }
+      </style>
+
+      <div class="space-y-4">
+        <div class="bg-marquee">
+          <div class="bg-marquee-track">
+            <!-- Row 1: photos 1-5, duplicated for seamless loop -->
+            <button type="button" data-bg-src="/breathe-gallery/breathe-1.jpg" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-1.jpg" alt="Breathe event photo 1" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-2.jpg" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-2.jpg" alt="Breathe event photo 2" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-3.jpg" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-3.jpg" alt="Breathe event photo 3" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-4.jpg" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-4.jpg" alt="Breathe event photo 4" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-5.jpg" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-5.jpg" alt="Breathe event photo 5" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <!-- duplicate -->
+            <button type="button" data-bg-src="/breathe-gallery/breathe-1.jpg" aria-hidden="true" tabindex="-1" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-1.jpg" alt="" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-2.jpg" aria-hidden="true" tabindex="-1" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-2.jpg" alt="" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-3.jpg" aria-hidden="true" tabindex="-1" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-3.jpg" alt="" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-4.jpg" aria-hidden="true" tabindex="-1" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-4.jpg" alt="" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-5.jpg" aria-hidden="true" tabindex="-1" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-5.jpg" alt="" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+          </div>
+        </div>
+        <div class="bg-marquee">
+          <div class="bg-marquee-track reverse">
+            <!-- Row 2: photos 6-10, duplicated -->
+            <button type="button" data-bg-src="/breathe-gallery/breathe-6.jpg" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-6.jpg" alt="Breathe event photo 6" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-7.jpg" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-7.jpg" alt="Breathe event photo 7" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-8.jpg" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-8.jpg" alt="Breathe event photo 8" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-9.jpg" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-9.jpg" alt="Breathe event photo 9" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-10.jpg" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-10.jpg" alt="Breathe event photo 10" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <!-- duplicate -->
+            <button type="button" data-bg-src="/breathe-gallery/breathe-6.jpg" aria-hidden="true" tabindex="-1" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-6.jpg" alt="" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-7.jpg" aria-hidden="true" tabindex="-1" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-7.jpg" alt="" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-8.jpg" aria-hidden="true" tabindex="-1" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-8.jpg" alt="" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-9.jpg" aria-hidden="true" tabindex="-1" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-9.jpg" alt="" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+            <button type="button" data-bg-src="/breathe-gallery/breathe-10.jpg" aria-hidden="true" tabindex="-1" class="bg-img-btn bg-tile group block overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany"><img src="/breathe-gallery/breathe-10.jpg" alt="" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" /></button>
+          </div>
         </div>
       </div>
 
