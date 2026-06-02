@@ -978,10 +978,85 @@
       </div>
     </section>
 
+    <!-- Event Gallery -->
+    <section id="event-gallery" class="w-full bg-ivory pt-4 sm:pt-6 md:pt-8 pb-16 sm:pb-20 md:pb-24 px-5 sm:px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-8 sm:mb-10">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-charcoal leading-tight">Event Gallery</h2>
+          <p class="text-charcoal/60 mt-3 text-sm sm:text-base">Moments from our Breathe sessions.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+          <button type="button" data-bg-src="/breathe-gallery/breathe-1.jpg" class="bg-img-btn group block aspect-square overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany">
+            <img src="/breathe-gallery/breathe-1.jpg" alt="Breathe event photo 1" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </button>
+          <button type="button" data-bg-src="/breathe-gallery/breathe-2.jpg" class="bg-img-btn group block aspect-square overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany">
+            <img src="/breathe-gallery/breathe-2.jpg" alt="Breathe event photo 2" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </button>
+          <button type="button" data-bg-src="/breathe-gallery/breathe-3.jpg" class="bg-img-btn group block aspect-square overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany">
+            <img src="/breathe-gallery/breathe-3.jpg" alt="Breathe event photo 3" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </button>
+          <button type="button" data-bg-src="/breathe-gallery/breathe-4.jpg" class="bg-img-btn group block aspect-square overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany">
+            <img src="/breathe-gallery/breathe-4.jpg" alt="Breathe event photo 4" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </button>
+          <button type="button" data-bg-src="/breathe-gallery/breathe-5.jpg" class="bg-img-btn group block aspect-square overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany">
+            <img src="/breathe-gallery/breathe-5.jpg" alt="Breathe event photo 5" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </button>
+          <button type="button" data-bg-src="/breathe-gallery/breathe-6.jpg" class="bg-img-btn group block aspect-square overflow-hidden rounded-xl border border-charcoal/10 hover:border-tiffany/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-tiffany">
+            <img src="/breathe-gallery/breathe-6.jpg" alt="Breathe event photo 6" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div id="bg-lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-md p-4">
+        <button id="bg-lightbox-close" class="absolute top-4 right-4 text-white/80 hover:text-white text-3xl leading-none w-10 h-10 flex items-center justify-center" aria-label="Close">&times;</button>
+        <button id="bg-lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-4xl w-12 h-12 flex items-center justify-center bg-white/10 rounded-full" aria-label="Previous">&#8249;</button>
+        <img id="bg-lightbox-img" src="" alt="" class="max-w-[92vw] max-h-[88vh] object-contain rounded-lg" />
+        <button id="bg-lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-4xl w-12 h-12 flex items-center justify-center bg-white/10 rounded-full" aria-label="Next">&#8250;</button>
+      </div>
+
+      <script>
+        (function () {
+          const btns = Array.from(document.querySelectorAll('.bg-img-btn'));
+          const srcs = btns.map(b => b.getAttribute('data-bg-src'));
+          const lb = document.getElementById('bg-lightbox');
+          const img = document.getElementById('bg-lightbox-img');
+          const closeBtn = document.getElementById('bg-lightbox-close');
+          const prevBtn = document.getElementById('bg-lightbox-prev');
+          const nextBtn = document.getElementById('bg-lightbox-next');
+          let idx = 0;
+          function show(i) {
+            idx = (i + srcs.length) % srcs.length;
+            img.src = srcs[idx];
+            lb.classList.remove('hidden');
+            lb.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+          }
+          function close() {
+            lb.classList.add('hidden');
+            lb.classList.remove('flex');
+            document.body.style.overflow = '';
+          }
+          btns.forEach((b, i) => b.addEventListener('click', () => show(i)));
+          closeBtn.addEventListener('click', close);
+          prevBtn.addEventListener('click', (e) => { e.stopPropagation(); show(idx - 1); });
+          nextBtn.addEventListener('click', (e) => { e.stopPropagation(); show(idx + 1); });
+          lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+          document.addEventListener('keydown', (e) => {
+            if (lb.classList.contains('hidden')) return;
+            if (e.key === 'Escape') close();
+            if (e.key === 'ArrowLeft') show(idx - 1);
+            if (e.key === 'ArrowRight') show(idx + 1);
+          });
+        })();
+      </script>
+    </section>
+
     <section
       class="relative w-full min-h-[55vh] md:h-[60vh] py-20 md:py-0 flex items-center bg-charcoal overflow-hidden"
       id="testimonial-carousel"
     >
+
       <div
         class="carousel-slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100 z-10"
         data-index="0"
