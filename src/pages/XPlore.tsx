@@ -6,7 +6,7 @@ import {
   Telescope, FlaskConical, Rocket, Briefcase, GraduationCap,
   Check, FileCheck2, Search, Users2, Megaphone,
   Gamepad2, Bot, Glasses, BarChart2, PenTool, Palette,
-  CheckCircle, Calendar, MapPin, ArrowRight
+  CheckCircle, Calendar, MapPin, ArrowRight, Trophy, Heart, Briefcase as BriefcaseIcon, Sprout, Music
 } from "lucide-react";
 import robloxBanner from "@/assets/roblox-workshop-banner.jpg";
 
@@ -197,6 +197,71 @@ const XPlore = () => {
               New • Register Now
             </span>
           </Link>
+        </div>
+      </section>
+
+      {/* 2026 X-PLORE Winners */}
+      <section id="winners" className="py-16 sm:py-20 md:py-28 bg-[#050505] border-y border-white/5 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.07] pointer-events-none" style={{ backgroundImage: "radial-gradient(#D4FF00 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#D4FF00]/10 blur-[120px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+          <div className="text-center mb-12 sm:mb-16 reveal-on-scroll opacity-0 translate-y-8">
+            <div className="inline-flex items-center gap-2 text-[#D4FF00] font-mono text-xs sm:text-sm uppercase tracking-widest mb-4">
+              <Trophy className="w-4 h-4" />
+              2026 Winners
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+              Meet the <span className="text-[#D4FF00] text-glow">X-PLORE</span> Class of 2026
+            </h2>
+            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto leading-[1.7]">
+              Five breakthrough projects crowned at this year's Ideathon — from AI-driven oncology to immersive VR, charitable artistry to data-driven careers.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 reveal-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: "100ms" }}>
+            {[
+              { to: "/xplore/winners/biotech", project: "Biotech / AI in Oncology", team: "Kowloon True Light School", tagline: "AI-engineered peptide inhibitor for KRAS-mutated lung cancer, paired with gamified science education.", Icon: FlaskConical, accent: "#3B82F6" },
+              { to: "/xplore/winners/crafting-smiles", project: "Crafting Smiles", team: "Community Wellbeing", tagline: "Charitable creative workshops fostering mental health, kindness, and social cohesion through handmade art.", Icon: Heart, accent: "#EC4899" },
+              { to: "/xplore/winners/clarity", project: "Clarity", team: "Pascal Altendorf & Yesieniia Liaskina", tagline: "An AI-powered, fact-based matching ecosystem bridging young talent and forward-thinking companies.", Icon: BriefcaseIcon, accent: "#D4FF00" },
+              { to: "/xplore/winners/tree-of-life", project: "Tree of Life", team: "Therapeutic Balloon Art", tagline: "Balloon artistry redefined as a medium for community cohesion, mental wellbeing, and cultural celebration.", Icon: Sprout, accent: "#22C55E" },
+              { to: "/xplore/winners/vr-drum", project: "VR Drum Simulator", team: "Matteo Marelli", tagline: "Immersive VR percussion with custom haptics, FMOD audio engineering, and a fully adjustable virtual kit.", Icon: Music, accent: "#8B5CF6" },
+            ].map(({ to, project, team, tagline, Icon, accent }) => (
+              <Link
+                key={to}
+                to={to}
+                className="glass-panel group rounded-2xl p-6 sm:p-7 flex flex-col gap-4 relative overflow-hidden"
+                style={{ borderTop: `2px solid ${accent}` }}
+              >
+                <div
+                  className="absolute -right-12 -top-12 w-40 h-40 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity"
+                  style={{ background: accent }}
+                />
+                <div className="flex items-center justify-between relative z-10">
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center"
+                    style={{ background: `${accent}1A`, color: accent }}
+                  >
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-widest text-[#D4FF00]/80 bg-[#D4FF00]/10 border border-[#D4FF00]/20 px-2.5 py-1 rounded-full">
+                    <Trophy className="w-3 h-3" /> Winner
+                  </span>
+                </div>
+                <div className="relative z-10">
+                  <div className="text-[11px] font-mono uppercase tracking-widest text-gray-500 mb-1">{team}</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-[#D4FF00] transition-colors leading-tight">
+                    {project}
+                  </h3>
+                </div>
+                <p className="text-sm text-gray-400 leading-relaxed relative z-10 flex-1">{tagline}</p>
+                <div className="inline-flex items-center gap-2 text-sm font-semibold text-white/80 group-hover:text-[#D4FF00] transition-colors relative z-10">
+                  Read the full story
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
