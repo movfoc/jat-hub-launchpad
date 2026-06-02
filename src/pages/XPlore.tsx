@@ -195,7 +195,6 @@ const XPlore = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 reveal-on-scroll opacity-0 translate-y-8">
             {[
               { slug: "crafting-smiles", cover: "/xplore-winners/covers/crafting-smiles.jpg", category: "Community & Wellbeing", title: "Crafting Smiles" },
-              { slug: "tree-of-life", cover: "/xplore-winners/covers/tree-of-life.jpg", category: "Art & Connection", title: "Tree of Life" },
               { slug: "clarity", cover: "/xplore-winners/covers/clarity.jpg", category: "AI Career Tech", title: "Clarity" },
               { slug: "vr-drum-simulator", cover: "/xplore-winners/covers/vr.jpg", category: "VR & Music", title: "VR Drum Simulator" },
               { slug: "biotech", cover: "/__l5e/assets-v1/d25776ed-c938-450c-8e9e-debabf452dfb/cancer-6.png", category: "Biotech & Education", title: "Cancer Cell Siege — AI Biotech" },
