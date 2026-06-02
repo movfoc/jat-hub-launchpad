@@ -28,7 +28,7 @@ const allNews = [
     image: barclaysImg,
     category: "Innovation Summit",
     title: "JatHub Joins UK's Top Innovators at Barclays AI:100 Event",
-    date: "2026-05-28",
+    date: "2026-05-18",
     link: "/news/barclays-ai100",
   },
   {
