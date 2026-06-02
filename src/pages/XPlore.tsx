@@ -6,7 +6,7 @@ import {
   Telescope, FlaskConical, Rocket, Briefcase, GraduationCap,
   Check, FileCheck2, Search, Users2, Megaphone,
   Gamepad2, Bot, Glasses, BarChart2, PenTool, Palette,
-  CheckCircle, Calendar, MapPin, ArrowRight
+  CheckCircle, Calendar, MapPin, ArrowRight, Trophy, Heart, Briefcase as BriefcaseIcon, Sprout, Music
 } from "lucide-react";
 import robloxBanner from "@/assets/roblox-workshop-banner.jpg";
 
