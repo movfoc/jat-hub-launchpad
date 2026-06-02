@@ -163,7 +163,31 @@ import cambridge2 from "@/assets/news/cambridge/cambridge_2.jpg";
 import cambridge4 from "@/assets/news/cambridge/cambridge_4.jpg";
 import cambridge5 from "@/assets/news/cambridge/cambridge_5.jpg";
 
+import uclDemo1 from "@/assets/news/ucl-demo-day/ucl-demo-1.jpg.asset.json";
+import uclDemo2 from "@/assets/news/ucl-demo-day/ucl-demo-2.jpg.asset.json";
+import uclDemo3 from "@/assets/news/ucl-demo-day/ucl-demo-3.jpg.asset.json";
+import uclDemo4 from "@/assets/news/ucl-demo-day/ucl-demo-4.jpg.asset.json";
+import uclDemo5 from "@/assets/news/ucl-demo-day/ucl-demo-5.jpg.asset.json";
+import uclDemo6 from "@/assets/news/ucl-demo-day/ucl-demo-6.jpg.asset.json";
+import uclDemo7 from "@/assets/news/ucl-demo-day/ucl-demo-7.jpg.asset.json";
+
 export const historicalEvents: HistoricalEvent[] = [
+  {
+    id: "ucl-demo-day",
+    title: "De-risking Frontier Innovation: JatHub and UCL Host 2026 Demo Day",
+    date: "MAY 26, 2026",
+    description: "JatHub and UCL School of Management hosted the 2026 X-plore Marketing Ideathon Demo Day at Canary Wharf.",
+    poster: uclDemo1.url,
+    media: [
+      { type: "image", src: uclDemo1.url, alt: "UCL Demo Day 1" },
+      { type: "image", src: uclDemo2.url, alt: "UCL Demo Day 2" },
+      { type: "image", src: uclDemo3.url, alt: "UCL Demo Day 3" },
+      { type: "image", src: uclDemo4.url, alt: "UCL Demo Day 4" },
+      { type: "image", src: uclDemo5.url, alt: "UCL Demo Day 5" },
+      { type: "image", src: uclDemo6.url, alt: "UCL Demo Day 6" },
+      { type: "image", src: uclDemo7.url, alt: "UCL Demo Day 7" },
+    ],
+  },
   {
     id: "memory-wellbeing",
     title: "JatHub Champions Community Health at the Memory and Wellbeing Festival",
