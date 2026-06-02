@@ -23,6 +23,11 @@ import RobloxWorkshop from "./pages/RobloxWorkshop";
 import NewsBarclaysAI100 from "./pages/NewsBarclaysAI100";
 import NewsCambridgeRealityX from "./pages/NewsCambridgeRealityX";
 import NewsMemoryWellbeing from "./pages/NewsMemoryWellbeing";
+import XPloreWinnerBiotech from "./pages/XPloreWinnerBiotech";
+import XPloreWinnerCraftingSmiles from "./pages/XPloreWinnerCraftingSmiles";
+import XPloreWinnerClarity from "./pages/XPloreWinnerClarity";
+import XPloreWinnerTreeOfLife from "./pages/XPloreWinnerTreeOfLife";
+import XPloreWinnerVRDrum from "./pages/XPloreWinnerVRDrum";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +55,11 @@ const App = () => (
           <Route path="/xplore" element={<XPlore />} />
           <Route path="/xplore/tracks" element={<XPloreTracks />} />
           <Route path="/xplore/challenge" element={<XPloreChallenge />} />
+          <Route path="/xplore/winners/biotech" element={<XPloreWinnerBiotech />} />
+          <Route path="/xplore/winners/crafting-smiles" element={<XPloreWinnerCraftingSmiles />} />
+          <Route path="/xplore/winners/clarity" element={<XPloreWinnerClarity />} />
+          <Route path="/xplore/winners/tree-of-life" element={<XPloreWinnerTreeOfLife />} />
+          <Route path="/xplore/winners/vr-drum" element={<XPloreWinnerVRDrum />} />
           <Route path="/events" element={<EventHistory />} />
           <Route path="/roblox-workshop" element={<RobloxWorkshop />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
