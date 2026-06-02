@@ -180,6 +180,61 @@ const XPlore = () => {
         </div>
       </section>
 
+      {/* 2026 X-plore Winners */}
+      <section id="winners" className="pt-16 md:pt-24 pb-8 md:pb-12 bg-[#050505]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6">
+          <div className="flex items-end justify-between mb-8 sm:mb-12 reveal-on-scroll opacity-0 translate-y-8">
+            <div>
+              <div className="text-[#D4FF00] font-mono text-xs sm:text-sm uppercase tracking-widest mb-3">2026 Ideathon</div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">X-plore Winners</h2>
+              <p className="text-sm sm:text-base text-gray-400 mt-3 max-w-2xl leading-relaxed">
+                Celebrating the bold student-led projects awarded by JatHub CIC and UCL at this year's X-plore Ideathon.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 reveal-on-scroll opacity-0 translate-y-8">
+            {[
+              { slug: "crafting-smiles", cover: "/xplore-winners/covers/crafting-smiles.jpg", category: "Community & Wellbeing", title: "Crafting Smiles" },
+              { slug: "tree-of-life", cover: "/xplore-winners/covers/tree-of-life.jpg", category: "Art & Connection", title: "Tree of Life" },
+              { slug: "clarity", cover: "/xplore-winners/covers/clarity.jpg", category: "AI Career Tech", title: "Clarity" },
+              { slug: "vr-drum-simulator", cover: "/xplore-winners/covers/vr.jpg", category: "VR & Music", title: "VR Drum Simulator" },
+              { slug: "biotech", cover: "/xplore-winners/covers/biotech.jpg", category: "Biotech & Education", title: "Cancer Cell Siege — AI Biotech" },
+            ].map((w) => (
+              <a
+                key={w.slug}
+                href={`/xplore-winners/${w.slug}.html`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col rounded-xl overflow-hidden glass-panel"
+              >
+                <div className="aspect-video overflow-hidden bg-black">
+                  <img
+                    src={w.cover}
+                    alt={w.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-5 sm:p-6 flex flex-col flex-grow">
+                  <span className="text-[#D4FF00] text-[11px] font-semibold tracking-widest uppercase mb-2">
+                    {w.category}
+                  </span>
+                  <h3 className="text-white font-semibold text-base sm:text-lg leading-snug mb-3">
+                    {w.title}
+                  </h3>
+                  <div className="mt-auto flex items-center justify-between">
+                    <span className="text-gray-500 text-xs">May 26, 2026</span>
+                    <span className="text-[#D4FF00] text-sm flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      Read <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Roblox Workshop Flashing Banner */}
       <section className="pt-6 md:pt-8 pb-2 bg-[#050505]">
         <div className="max-w-2xl mx-auto px-4 md:px-6">
