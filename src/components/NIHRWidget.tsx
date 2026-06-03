@@ -42,8 +42,8 @@ const LOCATIONS = [
 ];
 
 export const NIHRWidget = () => {
-  const [topic, setTopic] = useState("Cancer");
-  const [location, setLocation] = useState("York");
+  const [topic, setTopic] = useState("Mental Health");
+  const [location, setLocation] = useState("Oxford");
   const distance = 20;
 
   const handleClick = () => {
