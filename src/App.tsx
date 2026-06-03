@@ -24,6 +24,7 @@ import NewsBarclaysAI100 from "./pages/NewsBarclaysAI100";
 import NewsCambridgeRealityX from "./pages/NewsCambridgeRealityX";
 import NewsMemoryWellbeing from "./pages/NewsMemoryWellbeing";
 import NewsUCLDemoDay from "./pages/NewsUCLDemoDay";
+import NIHR from "./pages/NIHR";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +55,7 @@ const App = () => (
           <Route path="/xplore/challenge" element={<XPloreChallenge />} />
           <Route path="/events" element={<EventHistory />} />
           <Route path="/roblox-workshop" element={<RobloxWorkshop />} />
+          <Route path="/nihr" element={<NIHR />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
