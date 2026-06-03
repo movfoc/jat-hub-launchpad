@@ -1105,6 +1105,22 @@
             if (e.key === 'ArrowLeft') show(idx - 1);
             if (e.key === 'ArrowRight') show(idx + 1);
           });
+
+          // Carousel arrow scrolling + View all
+          const carousel = document.getElementById('bg-carousel');
+          const cPrev = document.getElementById('bg-carousel-prev');
+          const cNext = document.getElementById('bg-carousel-next');
+          const viewAll = document.getElementById('bg-view-all');
+          function step() {
+            const tile = carousel.querySelector('.bg-tile');
+            const w = tile ? tile.getBoundingClientRect().width + 16 : 240;
+            return w;
+          }
+          if (cPrev && cNext && carousel) {
+            cPrev.addEventListener('click', () => carousel.scrollBy({ left: -step() * 2, behavior: 'smooth' }));
+            cNext.addEventListener('click', () => carousel.scrollBy({ left: step() * 2, behavior: 'smooth' }));
+          }
+          if (viewAll) viewAll.addEventListener('click', () => show(0));
         })();
       </script>
     </section>
