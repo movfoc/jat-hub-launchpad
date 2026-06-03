@@ -5,6 +5,7 @@ import { About } from "@/components/About";
 import { Events } from "@/components/Events";
 import { EventGallery } from "@/components/EventGallery";
 import { News } from "@/components/News";
+import { NIHRWidget } from "@/components/NIHRWidget";
 import { Mission } from "@/components/Mission";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
@@ -17,6 +18,7 @@ const Index = () => {
         <Hero />
         <Features />
         <About />
+        <NIHRWidget />
         <News />
         <Events />
         <EventGallery />
