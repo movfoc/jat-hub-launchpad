@@ -15,8 +15,8 @@ export const CTA = () => {
           className="mt-8 sm:mt-10 bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105 text-base sm:text-lg px-8 sm:px-10 py-6 w-full sm:w-auto max-w-xs"
           asChild
         >
-          <a href="https://luma.com/user/Jathub" target="_blank" rel="noopener noreferrer">
-            Become a Member
+          <a href="https://calendly.com/jathubpro/30min" target="_blank" rel="noopener noreferrer">
+            Partner with us
           </a>
         </Button>
       </div>
