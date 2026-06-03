@@ -1,4 +1,5 @@
 import { useState } from "react";
+import nihrLogo from "@/assets/nihr-bepartofresearch-logo.png.asset.json";
 
 const TOPICS = [
   "Cancer",
@@ -55,55 +56,51 @@ export const NIHRWidget = () => {
 
   return (
     <section className="py-12 sm:py-16 px-5 sm:px-6 bg-background">
-      <div className="container mx-auto max-w-5xl">
-        <div className="relative overflow-hidden rounded-2xl bg-white border border-slate-200 shadow-[0_10px_40px_-15px_rgba(0,48,135,0.25)]">
-          {/* Top band with logo + decorative wave */}
-          <div className="relative px-6 sm:px-10 pt-6 pb-4 border-b border-slate-100">
-            <div className="flex items-center gap-3">
-              <span className="text-[#193E72] font-extrabold text-2xl sm:text-3xl tracking-tight">
-                NIHR
-              </span>
-              <span className="h-7 w-px bg-[#E04F39]" />
-              <span className="text-[#193E72] font-semibold text-lg sm:text-xl leading-tight">
-                Be Part<br className="sm:hidden" /> of Research
-              </span>
-            </div>
+      <div className="container mx-auto max-w-3xl">
+        <div className="relative overflow-hidden rounded-2xl bg-white border-2 border-[#193E72]/15 shadow-[0_20px_60px_-20px_rgba(25,62,114,0.35)]">
+          {/* Top band: logo + decorative wave */}
+          <div className="relative h-[120px] sm:h-[140px] border-b border-slate-100 overflow-hidden">
+            <img
+              src={nihrLogo.url}
+              alt="NIHR Be Part of Research"
+              className="absolute left-6 sm:left-10 top-1/2 -translate-y-1/2 h-16 sm:h-20 w-auto z-10"
+            />
             <div
               aria-hidden
-              className="pointer-events-none absolute top-0 right-0 h-full w-1/2 opacity-80"
+              className="pointer-events-none absolute inset-y-0 right-0 w-2/3"
               style={{
                 background:
-                  "radial-gradient(60% 120% at 80% 20%, #F4C56B 0%, transparent 55%), radial-gradient(50% 120% at 100% 80%, #2BB3A3 0%, transparent 60%)",
+                  "radial-gradient(70% 140% at 70% 20%, #F4C56B 0%, transparent 55%), radial-gradient(60% 130% at 95% 70%, #2BB3A3 0%, transparent 60%), radial-gradient(50% 100% at 50% 100%, #6FBF8A 0%, transparent 60%)",
               }}
             />
           </div>
 
           {/* Body */}
-          <div className="px-6 sm:px-10 py-7 sm:py-9 grid md:grid-cols-[1fr_auto] gap-6 md:gap-8 items-center">
+          <div className="px-6 sm:px-10 py-8 sm:py-10 grid md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center">
             <div>
-              <h3 className="text-[#193E72] font-bold text-2xl sm:text-3xl leading-tight">
+              <h3 className="text-[#193E72] font-bold text-2xl sm:text-3xl leading-tight tracking-tight">
                 Help change lives with research
               </h3>
-              <p className="mt-3 text-slate-700 text-base sm:text-lg leading-relaxed">
-                <span className="font-semibold">Find</span>
+              <p className="mt-4 text-[#193E72] text-base sm:text-lg leading-relaxed">
+                <span className="font-bold">Find</span>
                 <select
                   value={topic}
                   onChange={(e) => setTopic(e.target.value)}
                   aria-label="Research topic"
-                  className="mx-1.5 px-2 py-1 rounded-md border border-slate-300 bg-white font-semibold text-[#193E72] focus:outline-none focus:ring-2 focus:ring-[#193E72]/30"
+                  className="mx-1.5 px-2 py-0.5 rounded border-b-2 border-dashed border-[#193E72]/40 bg-transparent font-bold text-[#193E72] focus:outline-none focus:border-[#193E72] cursor-pointer"
                 >
                   {TOPICS.map((t) => (
                     <option key={t} value={t}>
-                      {t}
+                      {t.toLowerCase()}
                     </option>
                   ))}
                 </select>
-                <span className="font-semibold">studies in</span>
+                <span className="font-bold">studies in</span>
                 <select
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
                   aria-label="Location"
-                  className="mx-1.5 px-2 py-1 rounded-md border border-slate-300 bg-white font-semibold text-[#193E72] focus:outline-none focus:ring-2 focus:ring-[#193E72]/30"
+                  className="mx-1.5 px-2 py-0.5 rounded border-b-2 border-dashed border-[#193E72]/40 bg-transparent font-bold text-[#193E72] focus:outline-none focus:border-[#193E72] cursor-pointer"
                 >
                   {LOCATIONS.map((l) => (
                     <option key={l} value={l}>
@@ -111,20 +108,20 @@ export const NIHRWidget = () => {
                     </option>
                   ))}
                 </select>
-                <span> currently looking for people like you to take part.</span>
+                <span className="text-[#193E72]/90"> are currently looking for people like you to take part.</span>
               </p>
             </div>
 
             <button
               type="button"
               onClick={handleClick}
-              className="inline-flex items-center justify-center gap-2 bg-[#193E72] hover:bg-[#0f2d57] text-white font-semibold text-base sm:text-lg px-6 py-4 rounded-md transition-colors min-h-11 whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 bg-[#F4C56B] hover:bg-[#eab84c] text-[#193E72] font-semibold text-base sm:text-lg px-6 py-4 rounded-md border-2 border-[#193E72] transition-colors min-h-11 whitespace-nowrap shadow-[0_4px_0_0_#193E72]/10"
             >
               Find studies now
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
+                width="20"
+                height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -133,7 +130,7 @@ export const NIHRWidget = () => {
                 strokeLinejoin="round"
                 aria-hidden
               >
-                <path d="M5 12h14M13 5l7 7-7 7" />
+                <path d="M5 19l7-7-3-3 9-3-3 9-3-3-7 7z" />
               </svg>
             </button>
           </div>
