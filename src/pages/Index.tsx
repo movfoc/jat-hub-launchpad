@@ -18,12 +18,12 @@ const Index = () => {
         <Hero />
         <Features />
         <About />
-        <NIHRWidget />
         <News />
         <Events />
         <EventGallery />
         <Mission />
         <CTA />
+        <NIHRWidget />
       </main>
       <Footer />
     </div>);
