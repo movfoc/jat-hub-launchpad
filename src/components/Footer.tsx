@@ -1,4 +1,4 @@
-import { Twitter, Linkedin, Instagram } from "lucide-react";
+import { Youtube, Linkedin, Instagram } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -26,13 +26,13 @@ export const Footer = () => {
           </p>
         <div className="flex gap-6">
           <a 
-            href="https://twitter.com" 
+            href="https://www.youtube.com/@JatHub" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-foreground/50 hover:text-primary transition-colors"
-            aria-label="Twitter"
+            aria-label="YouTube"
           >
-            <Twitter className="w-5 h-5" />
+            <Youtube className="w-5 h-5" />
           </a>
           <a 
             href="https://www.linkedin.com/company/jathub" 
