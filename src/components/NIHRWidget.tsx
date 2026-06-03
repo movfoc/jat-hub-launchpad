@@ -1,5 +1,6 @@
 import { useState } from "react";
 import nihrLogo from "@/assets/nihr-bepartofresearch-logo.png.asset.json";
+import nhsLogo from "@/assets/nhs-logo.svg.asset.json";
 
 const TOPICS = [
   "Cancer",
@@ -55,15 +56,20 @@ export const NIHRWidget = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 px-5 sm:px-6 bg-background">
+    <section className="py-8 sm:py-10 px-5 sm:px-6 bg-background">
       <div className="container mx-auto max-w-3xl">
         <div className="relative overflow-hidden rounded-2xl bg-white border-2 border-[#193E72]/15 shadow-[0_20px_60px_-20px_rgba(25,62,114,0.35)]">
           {/* Top band: logo + decorative wave */}
-          <div className="relative h-[120px] sm:h-[140px] border-b border-slate-100 overflow-hidden">
+          <div className="relative h-[72px] sm:h-[84px] border-b border-slate-100 overflow-hidden">
             <img
               src={nihrLogo.url}
               alt="NIHR Be Part of Research"
-              className="absolute left-6 sm:left-10 top-1/2 -translate-y-1/2 h-16 sm:h-20 w-auto z-10"
+              className="absolute left-5 sm:left-8 top-1/2 -translate-y-1/2 h-10 sm:h-12 w-auto z-10"
+            />
+            <img
+              src={nhsLogo.url}
+              alt="NHS"
+              className="absolute right-5 sm:right-8 top-1/2 -translate-y-1/2 h-7 sm:h-8 w-auto z-10"
             />
             <div
               aria-hidden
@@ -76,12 +82,12 @@ export const NIHRWidget = () => {
           </div>
 
           {/* Body */}
-          <div className="px-6 sm:px-10 py-8 sm:py-10 grid md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center">
+          <div className="px-6 sm:px-10 py-5 sm:py-6 grid md:grid-cols-[1fr_auto] gap-4 md:gap-8 items-center">
             <div>
-              <h3 className="text-[#193E72] font-bold text-2xl sm:text-3xl leading-tight tracking-tight">
+              <h3 className="text-[#193E72] font-bold text-xl sm:text-2xl leading-tight tracking-tight">
                 Help change lives with research
               </h3>
-              <p className="mt-4 text-[#193E72] text-base sm:text-lg leading-relaxed">
+              <p className="mt-2 text-[#193E72] text-sm sm:text-base leading-snug">
                 <span className="font-bold">Find</span>
                 <select
                   value={topic}
@@ -115,7 +121,7 @@ export const NIHRWidget = () => {
             <button
               type="button"
               onClick={handleClick}
-              className="inline-flex items-center justify-center gap-2 bg-[#F4C56B] hover:bg-[#eab84c] text-[#193E72] font-semibold text-base sm:text-lg px-6 py-4 rounded-md border-2 border-[#193E72] transition-colors min-h-11 whitespace-nowrap shadow-[0_4px_0_0_#193E72]/10"
+              className="inline-flex items-center justify-center gap-2 bg-[#F4C56B] hover:bg-[#eab84c] text-[#193E72] font-semibold text-sm sm:text-base px-5 py-2.5 rounded-md border-2 border-[#193E72] transition-colors whitespace-nowrap shadow-[0_4px_0_0_#193E72]/10"
             >
               Find studies now
               <svg
