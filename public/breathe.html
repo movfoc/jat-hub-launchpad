@@ -1125,6 +1125,19 @@
             if (e.key === 'ArrowLeft') show(idx - 1);
             if (e.key === 'ArrowRight') show(idx + 1);
           });
+
+          // Horizontal scroll arrows for each row
+          document.querySelectorAll('.bg-nav').forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+              e.preventDefault();
+              const targetId = btn.getAttribute('data-scroll-target');
+              const dir = parseInt(btn.getAttribute('data-dir') || '1', 10);
+              const el = document.getElementById(targetId);
+              if (!el) return;
+              const step = Math.max(240, Math.round(el.clientWidth * 0.7));
+              el.scrollBy({ left: dir * step, behavior: 'smooth' });
+            });
+          });
         })();
       </script>
     </section>
