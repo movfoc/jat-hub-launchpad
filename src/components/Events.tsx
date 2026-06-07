@@ -9,6 +9,13 @@ export const Events = () => {
 
   const events = [
     {
+      date: "JUN 11, 2026",
+      title: "Unleashing the Power of AI: Solving Campus Challenges with Design Thinking",
+      description: "11 AM Online at University of Surrey.",
+      isPast: false,
+      registrationUrl: "https://luma.com/i37y6d2k",
+    },
+    {
       date: "MAY 27, 2026",
       title: "Roblox × JatHub: Bridging the Gap Between Play and Big Brand Marketing",
       description: "2 PM - 3 PM Online. Exclusive workshop in collaboration with Roblox.",
