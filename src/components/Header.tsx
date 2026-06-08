@@ -31,6 +31,9 @@ export const Header = () => {
           <button onClick={() => scrollToSection("mission")} className="text-foreground/70 hover:text-primary transition-colors text-sm">
             Mission
           </button>
+          <a href="/bepartofresearch" className="text-foreground/70 hover:text-primary transition-colors text-sm">
+            Be Part of Research
+          </a>
           <a
             href="/xplore"
             target="_blank"
@@ -89,6 +92,9 @@ export const Header = () => {
           <button onClick={() => scrollToSection("mission")} className="block py-2 text-foreground/70 hover:text-primary">
             Mission
           </button>
+          <a href="/bepartofresearch" className="block py-2 text-foreground/70 hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+            Be Part of Research
+          </a>
           <a
             href="/xplore"
             className="mt-2 w-full inline-flex items-center justify-center gap-1.5 bg-[#D4FF00] text-black px-4 py-2 rounded-full text-sm font-bold hover:bg-[#e6ff4d] transition-all shadow-[0_0_10px_rgba(212,255,0,0.3)]"
