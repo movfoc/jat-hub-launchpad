@@ -17,10 +17,10 @@ const BePartOfResearch = () => {
         <section className="px-5 sm:px-6 pt-24 sm:pt-32 pb-12 sm:pb-16">
           <div className="container mx-auto max-w-4xl text-center">
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-white">
-              Shorter wait times. Better treatments.{" "}
-              <span style={{ color: "#D4FF00" }}>A healthier tomorrow.</span>
-              <br />
-              It all starts with you.
+              <span className="block">Shorter wait times.</span>
+              <span className="block">Better treatments.</span>
+              <span className="block" style={{ color: "#D4FF00" }}>A healthier tomorrow.</span>
+              <span className="block">It all starts with you.</span>
             </h1>
             <p className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
               Medical breakthroughs don't just happen in laboratories—they happen because everyday people step forward. By joining the UK's Be Part of Research registry, you can help shape the future of health and social care.
