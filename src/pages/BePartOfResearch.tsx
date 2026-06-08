@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { NIHRWidget } from "@/components/NIHRWidget";
 import { Heart, Users, Target, UserPlus, Mail, CheckCircle2, ArrowRight } from "lucide-react";
 
 const SIGNUP_URL = "https://bepartofresearch.nihr.ac.uk/register/";
@@ -24,20 +25,11 @@ const BePartOfResearch = () => {
             <p className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
               Medical breakthroughs don't just happen in laboratories—they happen because everyday people step forward. By joining the UK's Be Part of Research registry, you can help shape the future of health and social care.
             </p>
-            <div className="mt-8 sm:mt-10">
-              <a
-                href={SIGNUP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 text-white font-bold text-base sm:text-lg px-7 py-4 rounded-lg transition-all hover:brightness-110 min-h-11"
-                style={{ backgroundColor: NHS_BLUE }}
-              >
-                Register with Be Part of Research
-                <ArrowRight className="w-5 h-5" />
-              </a>
-            </div>
           </div>
         </section>
+
+        {/* NIHR search widget */}
+        <NIHRWidget />
 
         {/* Why your contribution matters */}
         <section className="px-5 sm:px-6 py-16 sm:py-20 section-glow">
@@ -159,13 +151,13 @@ const BePartOfResearch = () => {
               </p>
               <div className="mt-8">
                 <a
-                  href={SIGNUP_URL}
+                  href="https://nihr.us14.list-manage.com/subscribe?u=299dc02111e8a68172029095f&id=3b030a1027"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 font-bold text-base sm:text-lg px-7 py-4 rounded-lg transition-all hover:brightness-95 min-h-11 text-black"
                   style={{ backgroundColor: "#D4FF00" }}
                 >
-                  Join the Registry Today
+                  Sign up to NIHR newsletter
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
