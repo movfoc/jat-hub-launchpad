@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { NIHRWidget } from "@/components/NIHRWidget";
-import { Heart, Users, Target, UserPlus, Mail, CheckCircle2, ArrowRight } from "lucide-react";
+import { Heart, Users, Target, UserPlus, Mail, CheckCircle2, ArrowRight, ArrowLeft } from "lucide-react";
 
 const SIGNUP_URL = "https://bepartofresearch.nihr.ac.uk/register/";
 
@@ -15,7 +15,14 @@ const BePartOfResearch = () => {
       <main>
         {/* Hero */}
         <section className="px-5 sm:px-6 pt-24 sm:pt-32 pb-12 sm:pb-16">
-          <div className="container mx-auto max-w-4xl text-center">
+          <div className="container mx-auto max-w-4xl">
+            <a
+              href="/"
+              className="inline-flex items-center gap-1.5 text-sm text-foreground/70 hover:text-primary transition-colors mb-6"
+            >
+              <ArrowLeft className="w-4 h-4" /> Back to Home
+            </a>
+            <div className="text-center">
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] text-white">
               <span className="block">Shorter wait times.</span>
               <span className="block">Better treatments.</span>
@@ -25,6 +32,7 @@ const BePartOfResearch = () => {
             <p className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
               Medical breakthroughs don't just happen in laboratories—they happen because everyday people step forward. By joining the UK's Be Part of Research registry, you can help shape the future of health and social care.
             </p>
+            </div>
           </div>
         </section>
 
