@@ -9,10 +9,17 @@ export const Events = () => {
 
   const events = [
     {
+      date: "JUN 19 - 20, 2026",
+      title: "World Sickle Cell Day",
+      description: "12:45 PM at Guildford Baptist Church, Millmead.",
+      isPast: false,
+      registrationUrl: "https://luma.com/my951j2h",
+    },
+    {
       date: "JUN 11, 2026",
       title: "Unleashing the Power of AI: Solving Campus Challenges with Design Thinking",
       description: "11 AM Online at University of Surrey.",
-      isPast: false,
+      isPast: true,
       registrationUrl: "https://luma.com/i37y6d2k",
     },
     {
