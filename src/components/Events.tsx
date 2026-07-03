@@ -9,10 +9,17 @@ export const Events = () => {
 
   const events = [
     {
+      date: "AUG 7, 2026",
+      title: "AI & Game Development Workshop",
+      description: "10 AM - 12:30 PM at Brooklands Park Community Centre, 2 Clover Wy, Stoke Gifford, Bristol BS34 8AZ.",
+      isPast: false,
+      registrationUrl: "https://luma.com/fliwkd2s",
+    },
+    {
       date: "JUN 19 - 20, 2026",
       title: "World Sickle Cell Day",
       description: "12:45 PM at Guildford Baptist Church, Millmead.",
-      isPast: false,
+      isPast: true,
       registrationUrl: "https://luma.com/my951j2h",
     },
     {
