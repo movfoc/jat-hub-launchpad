@@ -9,6 +9,13 @@ export const Events = () => {
 
   const events = [
     {
+      date: "SEP 12, 2026",
+      title: "Twilight Runway Challenge for the Vine Centre",
+      description: "10 AM at Blackbushe Airport, Camberley GU17 9LQ.",
+      isPast: false,
+      registrationUrl: "https://luma.com/a10czdk1",
+    },
+    {
       date: "AUG 7, 2026",
       title: "AI & Game Development Workshop",
       description: "10 AM - 12:30 PM at Brooklands Park Community Centre, 2 Clover Wy, Stoke Gifford, Bristol BS34 8AZ.",
