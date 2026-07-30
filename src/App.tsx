@@ -26,6 +26,7 @@ import NewsMemoryWellbeing from "./pages/NewsMemoryWellbeing";
 import NewsUCLDemoDay from "./pages/NewsUCLDemoDay";
 import NIHR from "./pages/NIHR";
 import BePartOfResearch from "./pages/BePartOfResearch";
+import FutureOfUs from "./pages/FutureOfUs";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const App = () => (
           <Route path="/roblox-workshop" element={<RobloxWorkshop />} />
           <Route path="/nihr" element={<NIHR />} />
           <Route path="/bepartofresearch" element={<BePartOfResearch />} />
+          <Route path="/future-of-us" element={<FutureOfUs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
