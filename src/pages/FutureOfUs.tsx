@@ -26,6 +26,17 @@ import {
   Sparkles,
 } from "lucide-react";
 
+import readingUni from "@/assets/fou/reading-uni.png.asset.json";
+import surreyLogo from "@/assets/fou/surrey.svg.asset.json";
+import oxfordNorth from "@/assets/fou/oxford-north.jpg.asset.json";
+import nhsBerkshire from "@/assets/fou/nhs-berkshire.webp.asset.json";
+import berkshireCharity from "@/assets/fou/berkshire-charity.webp.asset.json";
+import readingCouncil from "@/assets/fou/reading-council.png.asset.json";
+import vineCentre from "@/assets/fou/vine-centre.avif.asset.json";
+import acreLogo from "@/assets/fou/acre.png.asset.json";
+import jatpointLogo from "@/assets/fou/jatpoint.png.asset.json";
+import artacLogo from "@/assets/fou/artac.png.asset.json";
+
 const CONTACT_EMAIL = "jat@jathub.com";
 
 const tour = [
@@ -35,7 +46,7 @@ const tour = [
     sub: "London Road Campus",
     focus: "Youth Mental Health & Community Wellness",
     tier: "Stall Space Available",
-    accent: "from-sky-400 to-cyan-300",
+    accent: "from-emerald-400 to-teal-300",
   },
   {
     pill: "NOV 2026",
@@ -43,7 +54,7 @@ const tour = [
     sub: "Innovation District",
     focus: "Innovation, HealthTech & Youth Empowerment",
     tier: "Keynote Slots Open",
-    accent: "from-violet-400 to-fuchsia-400",
+    accent: "from-lime-400 to-emerald-300",
   },
   {
     pill: "DEC 2026",
@@ -51,7 +62,7 @@ const tour = [
     sub: "& Surrey Research Park",
     focus: "BioTech, Health Research & Clinical Impact",
     tier: "Sponsor This Stop",
-    accent: "from-teal-300 to-emerald-400",
+    accent: "from-teal-300 to-sky-300",
   },
 ];
 
@@ -78,7 +89,7 @@ const zones = [
   },
 ];
 
-type Partner = { name: string; note?: string };
+type Partner = { name: string; note?: string; logo: string; dark?: boolean };
 
 const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; items: Partner[] }[] = [
   {
@@ -86,10 +97,9 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
     icon: GraduationCap,
     title: "Academic Leadership",
     items: [
-      { name: "University of Reading" },
-      { name: "University of Surrey" },
-      { name: "Oxford North" },
-      { name: "Surrey Business School" },
+      { name: "University of Reading", logo: readingUni.url },
+      { name: "University of Surrey", logo: surreyLogo.url, dark: true },
+      { name: "Oxford North", logo: oxfordNorth.url, dark: true },
     ],
   },
   {
@@ -97,48 +107,42 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
     icon: Stethoscope,
     title: "Healthcare & NHS",
     items: [
-      { name: "NHS SUN", note: "Service User Network" },
-      { name: "Berkshire Healthcare Charity", note: "NHS Health Bus" },
-      { name: "Reading Hospital", note: "Berkshire NHS" },
+      { name: "Berkshire Healthcare NHS", note: "NHS Foundation Trust", logo: nhsBerkshire.url },
+      { name: "Berkshire Healthcare Charity", note: "NHS Health Bus", logo: berkshireCharity.url },
     ],
   },
   {
     id: "civic",
     icon: Building2,
     title: "Civic & Community",
-    items: [{ name: "Reading Borough Council" }, { name: "The Vine Centre" }, { name: "ACRE" }],
+    items: [
+      { name: "Reading Borough Council", logo: readingCouncil.url },
+      { name: "The Vine Centre", logo: vineCentre.url },
+      { name: "ACRE", logo: acreLogo.url },
+    ],
   },
   {
     id: "enterprise",
     icon: Cpu,
     title: "Ecosystem & Enterprise",
     items: [
-      { name: "Visa", note: "Reading" },
-      { name: "JatLink" },
-      { name: "JatPoint" },
-      { name: "Artac", note: "CodeLife.AI" },
+      { name: "JatPoint", logo: jatpointLogo.url },
+      { name: "Artac Academy", note: "CodeLife.AI", logo: artacLogo.url },
     ],
   },
 ];
 
-const monogram = (name: string) =>
-  name
-    .replace(/[^A-Za-z ]/g, "")
-    .split(" ")
-    .filter((w) => w.length > 2 || w === w.toUpperCase())
-    .slice(0, 2)
-    .map((w) => w[0])
-    .join("")
-    .toUpperCase();
-
 const LogoCard = ({ p }: { p: Partner }) => (
-  <div className="group relative rounded-2xl bg-white/95 p-5 ring-1 ring-white/40 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.6)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_-12px_rgba(56,189,248,0.45)]">
-    <div className="flex h-16 items-center justify-center">
-      <span className="text-2xl font-black tracking-tight bg-gradient-to-br from-sky-600 via-indigo-600 to-fuchsia-600 bg-clip-text text-transparent transition-transform duration-300 group-hover:scale-110">
-        {monogram(p.name)}
-      </span>
+  <div className="group relative rounded-2xl bg-white p-5 ring-1 ring-emerald-900/10 shadow-[0_10px_30px_-18px_rgba(6,78,59,0.45)] transition-all duration-300 hover:-translate-y-1.5 hover:ring-emerald-400/60 hover:shadow-[0_20px_45px_-18px_rgba(16,185,129,0.5)]">
+    <div className={`flex h-20 items-center justify-center rounded-xl px-3 ${p.dark ? "bg-slate-900" : "bg-white"}`}>
+      <img
+        src={p.logo}
+        alt={`${p.name} logo`}
+        loading="lazy"
+        className="max-h-14 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+      />
     </div>
-    <p className="mt-2 text-center text-[13px] font-semibold leading-tight text-slate-800">{p.name}</p>
+    <p className="mt-3 text-center text-[13px] font-semibold leading-tight text-slate-800">{p.name}</p>
     {p.note && <p className="mt-0.5 text-center text-[11px] text-slate-500">{p.note}</p>}
     <span className="mt-3 mx-auto block w-fit rounded-full bg-emerald-50 px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-emerald-700 ring-1 ring-emerald-200">
       Confirmed Partner
@@ -168,40 +172,40 @@ const PartnerForm = ({ compact }: FormProps) => {
     toast.success("Thanks! Your email draft is ready to send.");
   };
 
-  const field = "bg-white/5 border-white/15 text-white placeholder:text-slate-500 focus-visible:ring-sky-400";
+  const field = "bg-white border-emerald-900/15 text-slate-900 placeholder:text-slate-400 focus-visible:ring-emerald-400";
 
   return (
     <form onSubmit={onSubmit} className={compact ? "space-y-4" : "grid sm:grid-cols-2 gap-4"}>
       <div className="space-y-1.5">
-        <Label htmlFor="fou-name" className="text-slate-300">Name</Label>
+        <Label htmlFor="fou-name" className="text-slate-700">Name</Label>
         <Input id="fou-name" maxLength={100} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
           className={field} placeholder="Your full name" />
       </div>
       <div className="space-y-1.5">
-        <Label htmlFor="fou-org" className="text-slate-300">Organisation</Label>
+        <Label htmlFor="fou-org" className="text-slate-700">Organisation</Label>
         <Input id="fou-org" maxLength={120} value={form.org} onChange={(e) => setForm({ ...form, org: e.target.value })}
           className={field} placeholder="Company, university or charity" />
       </div>
       <div className="space-y-1.5">
-        <Label htmlFor="fou-email" className="text-slate-300">Email</Label>
+        <Label htmlFor="fou-email" className="text-slate-700">Email</Label>
         <Input id="fou-email" type="email" maxLength={255} value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
           className={field} placeholder="you@organisation.co.uk" />
       </div>
       <div className="space-y-1.5">
-        <Label htmlFor="fou-role" className="text-slate-300">How would you like to get involved?</Label>
+        <Label htmlFor="fou-role" className="text-slate-700">How would you like to get involved?</Label>
         <select
           id="fou-role"
           value={form.role}
           onChange={(e) => setForm({ ...form, role: e.target.value })}
-          className="w-full h-10 rounded-md border border-white/15 bg-white/5 px-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-sky-400"
+          className="w-full h-10 rounded-md border border-emerald-900/15 bg-white px-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-400"
         >
-          {involvement.map((i) => <option key={i} className="bg-slate-900">{i}</option>)}
+          {involvement.map((i) => <option key={i}>{i}</option>)}
         </select>
       </div>
       <div className={compact ? "" : "sm:col-span-2"}>
         <button
           type="submit"
-          className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-sky-400 via-cyan-300 to-teal-300 px-6 py-3 text-sm font-bold text-slate-950 transition-all hover:scale-[1.02] hover:shadow-[0_0_40px_-6px_rgba(45,212,191,0.7)]"
+          className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-teal-400 px-6 py-3 text-sm font-bold text-white transition-all hover:scale-[1.02] hover:shadow-[0_12px_35px_-10px_rgba(16,185,129,0.8)]"
         >
           Submit enquiry <ArrowRight className="w-4 h-4" />
         </button>
@@ -221,21 +225,21 @@ const FutureOfUs = () => {
   const shown = tab === "all" ? partnerGroups : partnerGroups.filter((g) => g.id === tab);
 
   return (
-    <div className="min-h-screen bg-[#05070f] text-slate-200 selection:bg-cyan-300/30">
+    <div className="min-h-screen bg-[#f4fbf6] text-slate-700 selection:bg-emerald-200/60">
       {/* Floating navbar */}
       <header className="fixed inset-x-0 top-3 z-50 px-4">
-        <nav className="container mx-auto max-w-5xl flex items-center justify-between gap-4 rounded-full border border-white/10 bg-white/5 px-4 sm:px-6 py-2.5 backdrop-blur-xl shadow-[0_8px_40px_-12px_rgba(0,0,0,0.9)]">
-          <a href="/" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-300 hover:text-cyan-300 transition-colors">
+        <nav className="container mx-auto max-w-5xl flex items-center justify-between gap-4 rounded-full border border-emerald-900/10 bg-white/80 px-4 sm:px-6 py-2.5 backdrop-blur-xl shadow-[0_10px_35px_-20px_rgba(6,78,59,0.5)]">
+          <a href="/" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-600 hover:text-emerald-600 transition-colors">
             <ArrowLeft className="w-4 h-4" /> <span className="hidden xs:inline">JAT Hub</span>
           </a>
-          <div className="hidden md:flex items-center gap-6 text-sm text-slate-300">
+          <div className="hidden md:flex items-center gap-6 text-sm text-slate-600">
             {navLinks.map((l) => (
-              <a key={l.href} href={l.href} className="relative transition-colors hover:text-white after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-cyan-300 after:transition-all hover:after:w-full">
+              <a key={l.href} href={l.href} className="relative transition-colors hover:text-emerald-700 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-emerald-500 after:transition-all hover:after:w-full">
                 {l.label}
               </a>
             ))}
           </div>
-          <a href="#sponsor" className="rounded-full bg-gradient-to-r from-sky-400 to-teal-300 px-4 sm:px-5 py-2 text-xs sm:text-sm font-bold text-slate-950 transition-all hover:scale-105 hover:shadow-[0_0_30px_-4px_rgba(56,189,248,0.8)]">
+          <a href="#sponsor" className="rounded-full bg-gradient-to-r from-emerald-500 to-teal-400 px-4 sm:px-5 py-2 text-xs sm:text-sm font-bold text-white transition-all hover:scale-105 hover:shadow-[0_10px_30px_-8px_rgba(16,185,129,0.8)]">
             Join as Sponsor
           </a>
         </nav>
@@ -245,35 +249,35 @@ const FutureOfUs = () => {
         {/* Hero */}
         <section className="relative overflow-hidden px-5 sm:px-6 pt-32 sm:pt-40 pb-20 sm:pb-28">
           <div aria-hidden className="pointer-events-none absolute inset-0">
-            <div className="absolute -top-32 -left-24 h-[26rem] w-[26rem] rounded-full bg-sky-500/25 blur-[120px] animate-pulse" />
-            <div className="absolute top-24 right-0 h-[22rem] w-[22rem] rounded-full bg-fuchsia-500/20 blur-[120px]" />
-            <div className="absolute bottom-0 left-1/3 h-[20rem] w-[20rem] rounded-full bg-teal-400/20 blur-[110px]" />
-            <div className="absolute inset-0 opacity-[0.15] [background-image:linear-gradient(rgba(255,255,255,.5)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.5)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
+            <div className="absolute -top-32 -left-24 h-[26rem] w-[26rem] rounded-full bg-emerald-300/40 blur-[120px]" />
+            <div className="absolute top-24 right-0 h-[22rem] w-[22rem] rounded-full bg-lime-200/60 blur-[120px]" />
+            <div className="absolute bottom-0 left-1/3 h-[20rem] w-[20rem] rounded-full bg-teal-200/50 blur-[110px]" />
+            <div className="absolute inset-0 opacity-[0.35] [background-image:linear-gradient(rgba(16,185,129,.18)_1px,transparent_1px),linear-gradient(90deg,rgba(16,185,129,.18)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
           </div>
           <div className="container mx-auto max-w-5xl relative">
-            <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-cyan-200 backdrop-blur-md shadow-[0_0_30px_-8px_rgba(34,211,238,0.8)]">
+            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-emerald-700 shadow-sm">
               <Sparkles className="w-3.5 h-3.5" /> JAT Hub CIC Festival Series
             </span>
-            <h1 className="mt-7 text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-[1.05] text-white">
+            <h1 className="mt-7 text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-[1.05] text-slate-900">
               &ldquo;The Future of Us&rdquo;
-              <span className="mt-2 block bg-gradient-to-r from-sky-300 via-cyan-200 to-violet-300 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(56,189,248,0.35)]">
+              <span className="mt-2 block bg-gradient-to-r from-emerald-600 via-teal-500 to-lime-500 bg-clip-text text-transparent">
                 Wellbeing &amp; Community Festival Series 2026
               </span>
             </h1>
-            <p className="mt-6 max-w-3xl text-base sm:text-lg md:text-xl text-slate-300/90 leading-relaxed">
+            <p className="mt-6 max-w-3xl text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed">
               A 3-Month Cross-Regional Campaign Championing Youth Mental Health, Health Equity, and Innovation.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Dialog>
                 <DialogTrigger asChild>
-                  <button className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-sky-400 via-cyan-300 to-teal-300 px-7 py-3.5 text-sm sm:text-base font-bold text-slate-950 transition-all hover:scale-[1.04] hover:shadow-[0_0_50px_-8px_rgba(45,212,191,0.9)]">
+                  <button className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-teal-400 px-7 py-3.5 text-sm sm:text-base font-bold text-white transition-all hover:scale-[1.04] hover:shadow-[0_18px_45px_-12px_rgba(16,185,129,0.9)]">
                     Become a Sponsor / Partner
                   </button>
                 </DialogTrigger>
-                <DialogContent className="border-white/10 bg-slate-950/90 backdrop-blur-xl sm:max-w-md">
+                <DialogContent className="border-emerald-900/10 bg-white sm:max-w-md">
                   <DialogHeader>
-                    <DialogTitle className="text-white">Partner with The Future of Us</DialogTitle>
-                    <DialogDescription className="text-slate-400">
+                    <DialogTitle className="text-slate-900">Partner with The Future of Us</DialogTitle>
+                    <DialogDescription className="text-slate-500">
                       Tell us a little about you and we&rsquo;ll be in touch within two working days.
                     </DialogDescription>
                   </DialogHeader>
@@ -282,7 +286,7 @@ const FutureOfUs = () => {
               </Dialog>
               <a
                 href="#tour-dates"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3.5 text-sm sm:text-base font-semibold text-white backdrop-blur-md transition-all hover:scale-[1.04] hover:border-cyan-300/50 hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-emerald-900/15 bg-white px-7 py-3.5 text-sm sm:text-base font-semibold text-slate-800 transition-all hover:scale-[1.04] hover:border-emerald-400 hover:text-emerald-700"
               >
                 View Event Tour Dates <CalendarDays className="w-4 h-4" />
               </a>
@@ -293,30 +297,29 @@ const FutureOfUs = () => {
         {/* Tour dates */}
         <section id="tour-dates" className="scroll-mt-24 px-5 sm:px-6 py-16 sm:py-24">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black text-white">The 3-Month Journey</h2>
-            <p className="mt-3 text-center text-slate-400 max-w-2xl mx-auto">Three regions, three themes, one shared mission.</p>
+            <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black text-slate-900">The 3-Month Journey</h2>
+            <p className="mt-3 text-center text-slate-500 max-w-2xl mx-auto">Three regions, three themes, one shared mission.</p>
             <div className="mt-12 grid md:grid-cols-3 gap-6">
               {tour.map((stop, i) => (
                 <article
                   key={stop.pill}
-                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-cyan-300/40 hover:shadow-[0_25px_70px_-25px_rgba(56,189,248,0.7)]"
+                  className="group relative overflow-hidden rounded-3xl border border-emerald-900/10 bg-white p-7 transition-all duration-300 hover:-translate-y-2 hover:border-emerald-300 hover:shadow-[0_25px_60px_-30px_rgba(16,185,129,0.8)]"
                 >
-                  <div className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r ${stop.accent} opacity-70`} />
-                  <div className={`pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-gradient-to-br ${stop.accent} opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-30`} />
+                  <div className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${stop.accent}`} />
                   <div className="flex items-center justify-between">
-                    <span className={`rounded-full bg-gradient-to-r ${stop.accent} px-3 py-1 text-[11px] font-black tracking-widest text-slate-950`}>
+                    <span className={`rounded-full bg-gradient-to-r ${stop.accent} px-3 py-1 text-[11px] font-black tracking-widest text-slate-900`}>
                       {stop.pill}
                     </span>
-                    <span className="text-4xl font-black text-white/10">0{i + 1}</span>
+                    <span className="text-4xl font-black text-emerald-900/10">0{i + 1}</span>
                   </div>
-                  <h3 className="mt-5 text-xl font-bold text-white">{stop.place}</h3>
-                  <p className="mt-1 inline-flex items-center gap-1.5 text-sm text-slate-400">
+                  <h3 className="mt-5 text-xl font-bold text-slate-900">{stop.place}</h3>
+                  <p className="mt-1 inline-flex items-center gap-1.5 text-sm text-slate-500">
                     <MapPin className="w-3.5 h-3.5" /> {stop.sub}
                   </p>
-                  <p className="mt-5 border-t border-white/10 pt-4 text-sm leading-relaxed text-slate-300">
-                    <span className="font-semibold text-white">Focus: </span>{stop.focus}
+                  <p className="mt-5 border-t border-emerald-900/10 pt-4 text-sm leading-relaxed text-slate-600">
+                    <span className="font-semibold text-slate-900">Focus: </span>{stop.focus}
                   </p>
-                  <a href="#sponsor" className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-cyan-200 transition-all hover:border-cyan-300/50 hover:bg-cyan-300/10">
+                  <a href="#sponsor" className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-emerald-700 transition-all hover:bg-emerald-100">
                     {stop.tier} <ArrowRight className="w-3 h-3" />
                   </a>
                 </article>
@@ -328,15 +331,15 @@ const FutureOfUs = () => {
         {/* Zones */}
         <section id="zones" className="scroll-mt-24 px-5 sm:px-6 py-16 sm:py-24">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black text-white">Key Highlights &amp; Impact Zones</h2>
+            <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black text-slate-900">Key Highlights &amp; Impact Zones</h2>
             <div className="mt-12 grid sm:grid-cols-2 gap-6">
               {zones.map((z) => (
-                <article key={z.title} className="group rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-violet-300/40 hover:shadow-[0_25px_70px_-25px_rgba(167,139,250,0.6)]">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-400/20 to-violet-400/20 text-cyan-200 ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-110">
+                <article key={z.title} className="group rounded-3xl border border-emerald-900/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-300 hover:shadow-[0_25px_60px_-30px_rgba(16,185,129,0.7)]">
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-100 to-lime-100 text-emerald-600 ring-1 ring-emerald-200 transition-transform duration-300 group-hover:scale-110">
                     <z.icon className="w-6 h-6" />
                   </span>
-                  <h3 className="mt-5 text-lg font-bold text-white">{z.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{z.body}</p>
+                  <h3 className="mt-5 text-lg font-bold text-slate-900">{z.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{z.body}</p>
                 </article>
               ))}
             </div>
@@ -346,8 +349,8 @@ const FutureOfUs = () => {
         {/* Partner ecosystem */}
         <section id="partners" className="scroll-mt-24 px-5 sm:px-6 py-16 sm:py-24">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black text-white">Partner &amp; Sponsor Ecosystem</h2>
-            <p className="mt-3 text-center text-slate-400 max-w-2xl mx-auto">Universities, NHS teams, councils and enterprise innovators backing the series.</p>
+            <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black text-slate-900">Partner &amp; Sponsor Ecosystem</h2>
+            <p className="mt-3 text-center text-slate-500 max-w-2xl mx-auto">Universities, NHS teams, councils and enterprise innovators backing the series.</p>
 
             <div className="mt-9 flex flex-wrap justify-center gap-2">
               {[{ id: "all", title: "All Partners", icon: Sparkles }, ...partnerGroups].map((g) => (
@@ -356,8 +359,8 @@ const FutureOfUs = () => {
                   onClick={() => setTab(g.id)}
                   className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs sm:text-sm font-semibold transition-all ${
                     tab === g.id
-                      ? "bg-gradient-to-r from-sky-400 to-teal-300 text-slate-950 shadow-[0_0_30px_-8px_rgba(56,189,248,0.9)]"
-                      : "border border-white/10 bg-white/5 text-slate-300 hover:border-cyan-300/40 hover:text-white"
+                      ? "bg-gradient-to-r from-emerald-500 to-teal-400 text-white shadow-[0_10px_30px_-12px_rgba(16,185,129,0.9)]"
+                      : "border border-emerald-900/10 bg-white text-slate-600 hover:border-emerald-300 hover:text-emerald-700"
                   }`}
                 >
                   <g.icon className="w-3.5 h-3.5" /> {g.title}
@@ -369,11 +372,11 @@ const FutureOfUs = () => {
               {shown.map((g) => (
                 <div key={g.id}>
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/5 text-cyan-200 ring-1 ring-white/10">
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 ring-1 ring-emerald-200">
                       <g.icon className="w-4 h-4" />
                     </span>
-                    <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-slate-300">{g.title}</h3>
-                    <span className="h-px flex-1 bg-gradient-to-r from-white/15 to-transparent" />
+                    <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-slate-600">{g.title}</h3>
+                    <span className="h-px flex-1 bg-gradient-to-r from-emerald-900/15 to-transparent" />
                   </div>
                   <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
                     {g.items.map((p) => <LogoCard key={p.name} p={p} />)}
@@ -387,10 +390,10 @@ const FutureOfUs = () => {
         {/* Sponsor CTA */}
         <section id="sponsor" className="scroll-mt-24 px-5 sm:px-6 pb-20 sm:pb-28">
           <div className="container mx-auto max-w-5xl">
-            <div className="rounded-[2rem] bg-gradient-to-br from-sky-400/60 via-cyan-300/40 to-violet-400/60 p-px shadow-[0_30px_90px_-40px_rgba(56,189,248,0.9)]">
-              <div className="rounded-[2rem] bg-[#070a14]/95 p-7 sm:p-10 backdrop-blur-xl">
-                <h2 className="text-2xl sm:text-3xl font-black text-white">Join Us as a Sponsor or Community Partner</h2>
-                <p className="mt-3 max-w-3xl leading-relaxed text-slate-400">
+            <div className="rounded-[2rem] bg-gradient-to-br from-emerald-300 via-teal-200 to-lime-200 p-px shadow-[0_30px_80px_-45px_rgba(16,185,129,0.9)]">
+              <div className="rounded-[2rem] bg-white p-7 sm:p-10">
+                <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Join Us as a Sponsor or Community Partner</h2>
+                <p className="mt-3 max-w-3xl leading-relaxed text-slate-600">
                   Help us bridge the gap between healthcare, university talent, and regional communities. We offer headline sponsorship, stall space, speaking slots, and brand showcase opportunities.
                 </p>
                 <div className="mt-8">
@@ -410,7 +413,7 @@ const FutureOfUs = () => {
               { label: "artac.uk", href: "https://artac.uk" },
             ].map((l) => (
               <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer"
-                className="rounded-full border border-white/10 bg-white/5 px-5 py-2 text-slate-300 backdrop-blur-md transition-all hover:border-cyan-300/50 hover:text-cyan-200">
+                className="rounded-full border border-emerald-900/10 bg-white px-5 py-2 text-slate-600 transition-all hover:border-emerald-400 hover:text-emerald-700">
                 {l.label}
               </a>
             ))}
