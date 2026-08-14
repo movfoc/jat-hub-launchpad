@@ -103,7 +103,16 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
     items: [
       { name: "University of Reading", logo: readingUni.url },
       { name: "University of Surrey", logo: surreyLogo.url, dark: true },
+    ],
+  },
+  {
+    id: "enterprise",
+    icon: Cpu,
+    title: "Ecosystem & Enterprise",
+    items: [
       { name: "Oxford North", logo: oxfordNorth.url, dark: true },
+      { name: "JatPoint", logo: jatpointLogo.url },
+      { name: "Artac Academy", note: "CodeLife.AI", logo: artacLogo.url },
     ],
   },
   {
@@ -127,15 +136,6 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "ACRE", logo: acreLogo.url },
       { name: "Crafting Smiles", logo: craftingSmiles.url, large: true },
       { name: "Tree of Life", logo: treeOfLife.url, large: true },
-    ],
-  },
-  {
-    id: "enterprise",
-    icon: Cpu,
-    title: "Ecosystem & Enterprise",
-    items: [
-      { name: "JatPoint", logo: jatpointLogo.url },
-      { name: "Artac Academy", note: "CodeLife.AI", logo: artacLogo.url },
     ],
   },
 ];
