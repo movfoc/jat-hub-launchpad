@@ -265,7 +265,7 @@ const FutureOfUs = () => {
               </span>
             </h1>
             <p className="mt-6 max-w-3xl text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed">
-              A 3-Month Cross-Regional Campaign Championing Youth Mental Health, Health Equity, and Innovation.
+              A Cross-Regional Campaign Championing Youth Mental Health, Health Equity, and Innovation.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Dialog>
@@ -297,7 +297,7 @@ const FutureOfUs = () => {
         {/* Tour dates */}
         <section id="tour-dates" className="scroll-mt-24 px-5 sm:px-6 py-16 sm:py-24">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black text-slate-900">The 3-Month Journey</h2>
+            <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black text-slate-900">The Cross Region Journey</h2>
             <p className="mt-3 text-center text-slate-500 max-w-2xl mx-auto">Three regions, three themes, one shared mission.</p>
             <div className="mt-12 grid md:grid-cols-3 gap-6">
               {tour.map((stop, i) => (
