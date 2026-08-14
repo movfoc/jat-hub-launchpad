@@ -36,6 +36,10 @@ import vineCentre from "@/assets/fou/vine-centre.avif.asset.json";
 import acreLogo from "@/assets/fou/acre.png.asset.json";
 import jatpointLogo from "@/assets/fou/jatpoint.png.asset.json";
 import artacLogo from "@/assets/fou/artac.png.asset.json";
+import craftingSmiles from "@/assets/fou/crafting-smiles.jpg.asset.json";
+import treeOfLife from "@/assets/fou/tree-of-life.jpg.asset.json";
+import oxfordHealthCharity from "@/assets/fou/oxford-health-charity.jpg.asset.json";
+import nihrBpor from "@/assets/fou/nihr-bpor.jpg.asset.json";
 
 const CONTACT_EMAIL = "jat@jathub.com";
 
@@ -109,6 +113,8 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
     items: [
       { name: "Berkshire Healthcare NHS", note: "NHS Foundation Trust", logo: nhsBerkshire.url },
       { name: "Berkshire Healthcare Charity", note: "NHS Health Bus", logo: berkshireCharity.url },
+      { name: "Oxford Health Charity", logo: oxfordHealthCharity.url },
+      { name: "NIHR", note: "Be Part of Research", logo: nihrBpor.url },
     ],
   },
   {
@@ -119,6 +125,8 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Reading Borough Council", logo: readingCouncil.url },
       { name: "The Vine Centre", logo: vineCentre.url },
       { name: "ACRE", logo: acreLogo.url },
+      { name: "Crafting Smiles", logo: craftingSmiles.url },
+      { name: "Tree of Life", logo: treeOfLife.url },
     ],
   },
   {
