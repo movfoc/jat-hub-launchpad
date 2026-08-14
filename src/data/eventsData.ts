@@ -189,7 +189,30 @@ import special4 from "@/assets/special-school/special-school-4.jpg.asset.json";
 import special5 from "@/assets/special-school/special-school-5.jpg.asset.json";
 import special6 from "@/assets/special-school/special-school-6.jpg.asset.json";
 
+import bristol1 from "@/assets/bristol-workshop/bristol-1.jpg.asset.json";
+import bristol2 from "@/assets/bristol-workshop/bristol-2.jpg.asset.json";
+import bristol3 from "@/assets/bristol-workshop/bristol-3.jpg.asset.json";
+import bristol4 from "@/assets/bristol-workshop/bristol-4.jpg.asset.json";
+import bristol5 from "@/assets/bristol-workshop/bristol-5.jpg.asset.json";
+import bristol6 from "@/assets/bristol-workshop/bristol-6.jpg.asset.json";
+
 export const historicalEvents: HistoricalEvent[] = [
+  {
+    id: "bristol-ai-game-workshop",
+    title: "JatHub at Bristol Community: AI & Game Development Workshop",
+    date: "AUG 7, 2026",
+    description:
+      "We have officially wrapped up our AI & Game Development Workshop at Brooklands Park Community Centre in Bristol, JatHub using AI prototyping tools like Lovable, and stepped into the shoes of game designers using Roblox Studio.",
+    poster: bristol1.url,
+    media: [
+      { type: "image", src: bristol1.url, alt: "Group photo with the JatHub banner at Brooklands Park Community Centre" },
+      { type: "image", src: bristol5.url, alt: "Workshop session with participants on laptops" },
+      { type: "image", src: bristol3.url, alt: "Young participants building projects during the workshop" },
+      { type: "image", src: bristol4.url, alt: "Roblox x JatHub presentation on screen" },
+      { type: "image", src: bristol2.url, alt: "Live demo of AI prototyping tools during the workshop" },
+      { type: "image", src: bristol6.url, alt: "JatHub volunteers and participants at the Bristol workshop" },
+    ],
+  },
   {
     id: "special-school-open-day",
     title: "Support Fund Raising: Special School Open Day",
