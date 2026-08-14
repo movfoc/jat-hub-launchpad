@@ -171,7 +171,38 @@ import uclDemo5 from "@/assets/news/ucl-demo-day/ucl-demo-5.jpg.asset.json";
 import uclDemo6 from "@/assets/news/ucl-demo-day/ucl-demo-6.jpg.asset.json";
 import uclDemo7 from "@/assets/news/ucl-demo-day/ucl-demo-7.jpg.asset.json";
 
+import sickle0 from "@/assets/sickle-cell/sickle-cell-0.jpg.asset.json";
+import sickle1 from "@/assets/sickle-cell/sickle-cell-1.jpg.asset.json";
+import sickle2 from "@/assets/sickle-cell/sickle-cell-2.jpg.asset.json";
+import sickle3 from "@/assets/sickle-cell/sickle-cell-3.jpg.asset.json";
+import sickle5 from "@/assets/sickle-cell/sickle-cell-5.jpg.asset.json";
+import sickle6 from "@/assets/sickle-cell/sickle-cell-6.jpg.asset.json";
+import sickle7 from "@/assets/sickle-cell/sickle-cell-7.jpg.asset.json";
+import sickle8 from "@/assets/sickle-cell/sickle-cell-8.jpg.asset.json";
+import sickle9 from "@/assets/sickle-cell/sickle-cell-9.jpg.asset.json";
+import sickle10 from "@/assets/sickle-cell/sickle-cell-10.jpg.asset.json";
+
 export const historicalEvents: HistoricalEvent[] = [
+  {
+    id: "world-sickle-cell-day",
+    title: "Support Fund Raising: World Sickle Cell Day",
+    date: "JUN 19 - 20, 2026",
+    description:
+      "The very first event under our Breathe project, coming together with Crafting Smiles and Tree of Life Balloon Art to support the Sickle Cell Society for a fundraising and awareness event at Guildford Baptist Church, Millmead.",
+    poster: sickle1.url,
+    media: [
+      { type: "image", src: sickle1.url, alt: "World Sickle Cell Day group photo" },
+      { type: "image", src: sickle0.url, alt: "Welcome balloon arch at the fundraiser" },
+      { type: "image", src: sickle6.url, alt: "Volunteers with balloon art" },
+      { type: "image", src: sickle7.url, alt: "JatHub and Tree of Life stand" },
+      { type: "image", src: sickle5.url, alt: "Team at the JatHub banner" },
+      { type: "image", src: sickle9.url, alt: "Volunteers with heart balloons" },
+      { type: "image", src: sickle8.url, alt: "Supporters at the exhibition" },
+      { type: "image", src: sickle2.url, alt: "Encouragement cards on the sponsored walk" },
+      { type: "image", src: sickle3.url, alt: "Walkers on the fundraising walk" },
+      { type: "image", src: sickle10.url, alt: "Community members celebrating" },
+    ],
+  },
   {
     id: "ucl-demo-day",
     title: "De-risking Frontier Innovation: JatHub and UCL Host 2026 Demo Day",
