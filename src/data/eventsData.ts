@@ -196,7 +196,32 @@ import bristol4 from "@/assets/bristol-workshop/bristol-4.jpg.asset.json";
 import bristol5 from "@/assets/bristol-workshop/bristol-5.jpg.asset.json";
 import bristol6 from "@/assets/bristol-workshop/bristol-6.jpg.asset.json";
 
+import ocean1 from "@/assets/balloon-ocean/balloon-ocean-1.jpg.asset.json";
+import ocean2 from "@/assets/balloon-ocean/balloon-ocean-2.jpg.asset.json";
+import ocean3 from "@/assets/balloon-ocean/balloon-ocean-3.jpg.asset.json";
+import ocean4 from "@/assets/balloon-ocean/balloon-ocean-4.jpg.asset.json";
+import ocean5 from "@/assets/balloon-ocean/balloon-ocean-5.jpg.asset.json";
+import ocean6 from "@/assets/balloon-ocean/balloon-ocean-6.jpg.asset.json";
+import ocean7 from "@/assets/balloon-ocean/balloon-ocean-7.jpg.asset.json";
+
 export const historicalEvents: HistoricalEvent[] = [
+  {
+    id: "balloon-ocean-fun-run",
+    title: "Support the Charity Fun Run 5K & Family Treasure Trail: Balloon Ocean",
+    date: "AUG 8, 2026",
+    description:
+      "Diving headfirst into the amazing Balloon Ocean alongside Tree of Life, from catching balloon sea creatures to capturing special moments for attendees and sharing photos with everyone.",
+    poster: ocean1.url,
+    media: [
+      { type: "image", src: ocean1.url, alt: "Balloon Ocean team illustration at the charity fun run stand" },
+      { type: "image", src: ocean3.url, alt: "JatHub volunteers with a balloon crab at the stand" },
+      { type: "image", src: ocean4.url, alt: "Children fishing for balloon sea creatures" },
+      { type: "image", src: ocean5.url, alt: "Balloon sea creature pool at the Balloon Ocean" },
+      { type: "image", src: ocean6.url, alt: "Young visitors playing the balloon fishing game" },
+      { type: "image", src: ocean7.url, alt: "Kids catching balloon sea creatures with balloon rods" },
+      { type: "image", src: ocean2.url, alt: "Under the Sea photo booth sign at the JatHub stand" },
+    ],
+  },
   {
     id: "bristol-ai-game-workshop",
     title: "JatHub at Bristol Community: AI & Game Development Workshop",
