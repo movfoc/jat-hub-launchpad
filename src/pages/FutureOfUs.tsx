@@ -93,7 +93,7 @@ const zones = [
   },
 ];
 
-type Partner = { name: string; note?: string; logo: string; dark?: boolean };
+type Partner = { name: string; note?: string; logo: string; dark?: boolean; large?: boolean };
 
 const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; items: Partner[] }[] = [
   {
@@ -125,8 +125,8 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Reading Borough Council", logo: readingCouncil.url },
       { name: "The Vine Centre", logo: vineCentre.url },
       { name: "ACRE", logo: acreLogo.url },
-      { name: "Crafting Smiles", logo: craftingSmiles.url },
-      { name: "Tree of Life", logo: treeOfLife.url },
+      { name: "Crafting Smiles", logo: craftingSmiles.url, large: true },
+      { name: "Tree of Life", logo: treeOfLife.url, large: true },
     ],
   },
   {
@@ -142,12 +142,12 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
 
 const LogoCard = ({ p }: { p: Partner }) => (
   <div className="group relative rounded-2xl bg-white p-5 ring-1 ring-emerald-900/10 shadow-[0_10px_30px_-18px_rgba(6,78,59,0.45)] transition-all duration-300 hover:-translate-y-1.5 hover:ring-emerald-400/60 hover:shadow-[0_20px_45px_-18px_rgba(16,185,129,0.5)]">
-    <div className={`flex h-20 items-center justify-center rounded-xl px-3 ${p.dark ? "bg-slate-900" : "bg-white"}`}>
+    <div className={`flex items-center justify-center rounded-xl px-3 ${p.large ? "h-28" : "h-20"} ${p.dark ? "bg-slate-900" : "bg-white"}`}>
       <img
         src={p.logo}
         alt={`${p.name} logo`}
         loading="lazy"
-        className="max-h-14 w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+        className={`w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105 ${p.large ? "max-h-20" : "max-h-14"}`}
       />
     </div>
     <p className="mt-3 text-center text-[13px] font-semibold leading-tight text-slate-800">{p.name}</p>
