@@ -182,7 +182,30 @@ import sickle8 from "@/assets/sickle-cell/sickle-cell-8.jpg.asset.json";
 import sickle9 from "@/assets/sickle-cell/sickle-cell-9.jpg.asset.json";
 import sickle10 from "@/assets/sickle-cell/sickle-cell-10.jpg.asset.json";
 
+import special1 from "@/assets/special-school/special-school-1.jpg.asset.json";
+import special2 from "@/assets/special-school/special-school-2.jpg.asset.json";
+import special3 from "@/assets/special-school/special-school-3.jpg.asset.json";
+import special4 from "@/assets/special-school/special-school-4.jpg.asset.json";
+import special5 from "@/assets/special-school/special-school-5.jpg.asset.json";
+import special6 from "@/assets/special-school/special-school-6.jpg.asset.json";
+
 export const historicalEvents: HistoricalEvent[] = [
+  {
+    id: "special-school-open-day",
+    title: "Support Fund Raising: Special School Open Day",
+    date: "JUN 28, 2026",
+    description:
+      "JatHub had the privilege of supporting Tree of Life and Crafting Smile in a special fundraising event at Portesbery school.",
+    poster: special1.url,
+    media: [
+      { type: "image", src: special1.url, alt: "JatHub team with the banner at Portesbery School" },
+      { type: "image", src: special2.url, alt: "Volunteers at the JatHub and Tree of Life stand" },
+      { type: "image", src: special3.url, alt: "Group selfie with volunteers and visitors" },
+      { type: "image", src: special4.url, alt: "Children enjoying balloon art at the stand" },
+      { type: "image", src: special5.url, alt: "Balloon artistry with families at the open day" },
+      { type: "image", src: special6.url, alt: "Tree of Life balloon creations on display" },
+    ],
+  },
   {
     id: "world-sickle-cell-day",
     title: "Support Fund Raising: World Sickle Cell Day",
