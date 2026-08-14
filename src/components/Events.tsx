@@ -19,7 +19,7 @@ export const Events = () => {
       date: "AUG 7, 2026",
       title: "AI & Game Development Workshop",
       description: "10 AM - 12:30 PM at Brooklands Park Community Centre, 2 Clover Wy, Stoke Gifford, Bristol BS34 8AZ.",
-      isPast: false,
+      isPast: true,
       registrationUrl: "https://luma.com/fliwkd2s",
     },
     {
