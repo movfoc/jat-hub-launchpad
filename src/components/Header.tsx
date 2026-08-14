@@ -51,8 +51,8 @@ export const Header = () => {
             <Heart className="w-4 h-4" /> Breathe
           </a>
           <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-transform hover:scale-105 text-sm" asChild>
-            <a href="https://calendly.com/jathubpro/30min" target="_blank" rel="noopener noreferrer">
-              Partner with us
+            <a href="/future-of-us">
+              The Future of Us
             </a>
           </Button>
         </nav>
