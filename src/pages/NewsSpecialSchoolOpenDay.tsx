@@ -17,18 +17,20 @@ const NewsSpecialSchoolOpenDay = () => {
         Jun 28, the team at JatHub had the privilege of supporting Tree of Life and Crafting Smile in a special fundraising event at Portesbery school.
       </p>
 
-      <div className="my-8 grid md:grid-cols-2 gap-4">
+      <div className="my-8">
         <img src={img1.url} alt="JatHub team with the banner at Portesbery School" className="rounded-lg w-full h-auto" />
-        <img src={img2.url} alt="Volunteers at the JatHub and Tree of Life stand" className="rounded-lg w-full h-auto" />
       </div>
 
       <p className="text-lg text-muted-foreground leading-relaxed">
         Seeing the joy, creativity, and enthusiasm from the children, families, teachers, and volunteers reminded us why community partnerships matter so much. Every smile we saw today was a powerful reminder that when organisations come together with a shared purpose, we can create meaningful impact for young people who need it most. ❤️
       </p>
 
-      <div className="my-8 grid md:grid-cols-2 gap-4">
-        <img src={img3.url} alt="Group selfie with volunteers and visitors" className="rounded-lg w-full h-auto" />
-        <img src={img4.url} alt="Children enjoying balloon art at the stand" className="rounded-lg w-full h-auto" />
+      <div className="my-8 columns-1 md:columns-2 gap-4 space-y-4">
+        <img src={img4.url} alt="Children enjoying balloon art at the stand" className="rounded-lg w-full h-auto break-inside-avoid" />
+        <img src={img2.url} alt="Volunteers at the JatHub and Tree of Life stand" className="rounded-lg w-full h-auto break-inside-avoid" />
+        <img src={img5.url} alt="Balloon artistry with families at the open day" className="rounded-lg w-full h-auto break-inside-avoid" />
+        <img src={img3.url} alt="Group selfie with volunteers and visitors" className="rounded-lg w-full h-auto break-inside-avoid" />
+        <img src={img6.url} alt="Tree of Life balloon creations on display" className="rounded-lg w-full h-auto break-inside-avoid" />
       </div>
 
       <p className="text-lg text-muted-foreground leading-relaxed">
@@ -42,12 +44,7 @@ const NewsSpecialSchoolOpenDay = () => {
         <li>✅ Build a stronger and more inclusive future together</li>
       </ul>
 
-      <div className="my-8 grid md:grid-cols-2 gap-4">
-        <img src={img5.url} alt="Balloon artistry with families at the open day" className="rounded-lg w-full h-auto" />
-        <img src={img6.url} alt="Tree of Life balloon creations on display" className="rounded-lg w-full h-auto" />
-      </div>
-
-      <p className="text-lg text-muted-foreground leading-relaxed">
+      <p className="text-lg text-muted-foreground leading-relaxed mt-8">
         A huge thank you to everyone from Tree of Life and Crafting Smile for their incredible work and dedication. We are honoured to play a small part in this wonderful initiative and look forward to supporting many more community projects in the future. 🌱✨
       </p>
 
