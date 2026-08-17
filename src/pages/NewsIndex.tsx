@@ -19,8 +19,16 @@ import uclDemoImg from "@/assets/news/ucl-demo-day/ucl-demo-1.jpg.asset.json";
 import sickleImg from "@/assets/sickle-cell/sickle-cell-1.jpg.asset.json";
 import specialImg from "@/assets/special-school/special-school-1.jpg.asset.json";
 import bristolImg from "@/assets/bristol-workshop/bristol-1.jpg.asset.json";
+import balloonOceanImg from "@/assets/balloon-ocean/balloon-ocean-1.jpg.asset.json";
 
 const allNews = [
+  {
+    image: balloonOceanImg.url,
+    category: "Community",
+    title: "Charity Fun Run 5K & Family Treasure Trail: Balloon Ocean",
+    date: "2026-08-08",
+    link: "/news/balloon-ocean-fun-run",
+  },
   {
     image: bristolImg.url,
     category: "Workshop",

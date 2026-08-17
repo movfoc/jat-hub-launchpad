@@ -27,6 +27,7 @@ import NewsUCLDemoDay from "./pages/NewsUCLDemoDay";
 import NewsWorldSickleCellDay from "./pages/NewsWorldSickleCellDay";
 import NewsSpecialSchoolOpenDay from "./pages/NewsSpecialSchoolOpenDay";
 import NewsBristolAIGameWorkshop from "./pages/NewsBristolAIGameWorkshop";
+import NewsBalloonOceanFunRun from "./pages/NewsBalloonOceanFunRun";
 import NIHR from "./pages/NIHR";
 import BePartOfResearch from "./pages/BePartOfResearch";
 import FutureOfUs from "./pages/FutureOfUs";
@@ -58,6 +59,7 @@ const App = () => (
           <Route path="/news/world-sickle-cell-day" element={<NewsWorldSickleCellDay />} />
           <Route path="/news/special-school-open-day" element={<NewsSpecialSchoolOpenDay />} />
           <Route path="/news/bristol-ai-game-workshop" element={<NewsBristolAIGameWorkshop />} />
+          <Route path="/news/balloon-ocean-fun-run" element={<NewsBalloonOceanFunRun />} />
           <Route path="/xplore" element={<XPlore />} />
           <Route path="/xplore/tracks" element={<XPloreTracks />} />
           <Route path="/xplore/challenge" element={<XPloreChallenge />} />
