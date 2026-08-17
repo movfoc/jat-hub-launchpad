@@ -17,7 +17,16 @@ import cambridgeImg from "@/assets/news/cambridge/cambridge_cover.jpg";
 import dementiaImg from "@/assets/news/dementia/dementia_cover.jpg";
 import uclDemoImg from "@/assets/news/ucl-demo-day/ucl-demo-1.jpg.asset.json";
 
+import sickleImg from "@/assets/sickle-cell/sickle-cell-1.jpg.asset.json";
+
 const newsItems = [
+  {
+    image: sickleImg.url,
+    category: "Community",
+    title: "World Sickle Cell Day: The First Breathe Project Event",
+    date: "2026-06-19",
+    link: "/news/world-sickle-cell-day",
+  },
   {
     image: uclDemoImg.url,
     category: "Demo Day",
