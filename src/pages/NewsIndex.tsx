@@ -17,8 +17,16 @@ import dementiaImg from "@/assets/news/dementia/dementia_cover.jpg";
 import uclDemoImg from "@/assets/news/ucl-demo-day/ucl-demo-1.jpg.asset.json";
 
 import sickleImg from "@/assets/sickle-cell/sickle-cell-1.jpg.asset.json";
+import specialImg from "@/assets/special-school/special-school-1.jpg.asset.json";
 
 const allNews = [
+  {
+    image: specialImg.url,
+    category: "Community",
+    title: "Creating Smiles, Building Communities, Making a Difference",
+    date: "2026-06-28",
+    link: "/news/special-school-open-day",
+  },
   {
     image: sickleImg.url,
     category: "Community",
