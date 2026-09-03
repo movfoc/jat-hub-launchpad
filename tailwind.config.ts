@@ -61,6 +61,14 @@ export default {
           DEFAULT: "hsl(var(--cpr-accent))",
           foreground: "hsl(var(--cpr-accent-foreground))",
         },
+        creator: {
+          bg: "hsl(var(--creator-bg))",
+          fg: "hsl(var(--creator-fg))",
+          purple: "hsl(var(--creator-purple))",
+          "purple-light": "hsl(var(--creator-purple-light))",
+          cyan: "hsl(var(--creator-cyan))",
+        },
+
       },
       borderRadius: {
         lg: "var(--radius)",

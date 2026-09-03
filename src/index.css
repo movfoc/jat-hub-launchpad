@@ -48,6 +48,14 @@ All colors MUST be HSL.
     /* CPR Banner accent */
     --cpr-accent: 0 84% 60%;
     --cpr-accent-foreground: 0 0% 100%;
+
+    /* AI & Game Creators page palette */
+    --creator-bg: 222 47% 11%;
+    --creator-fg: 0 0% 100%;
+    --creator-purple: 258 90% 56%;
+    --creator-purple-light: 258 90% 72%;
+    --creator-cyan: 189 94% 43%;
+
     
     /* Gradients */
     --gradient-radial: radial-gradient(rgba(29, 78, 216, 0.15) 1px, transparent 1px);
