@@ -1,126 +1,115 @@
 import { useEffect, useMemo, useState } from "react";
-import { Globe, Cpu, Dna, Leaf, Network, Trophy, Rocket, Sparkles, ArrowRight, Youtube, Linkedin, Instagram, Menu, X } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowRight,
+  Building2,
+  Check,
+  Cpu,
+  Dna,
+  Globe2,
+  GraduationCap,
+  Instagram,
+  Leaf,
+  Linkedin,
+  Menu,
+  Network,
+  Radio,
+  Rocket,
+  Trophy,
+  Users,
+  X,
+  Youtube,
+} from "lucide-react";
 import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
 
 const FINAL_DATE = new Date("2026-11-14T09:00:00Z").getTime();
 
 const useCountdown = () => {
   const [now, setNow] = useState(Date.now());
   useEffect(() => {
-    const t = setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(t);
+    const timer = window.setInterval(() => setNow(Date.now()), 1000);
+    return () => window.clearInterval(timer);
   }, []);
   return useMemo(() => {
-    const diff = Math.max(0, FINAL_DATE - now);
-    const s = Math.floor(diff / 1000);
-    return {
-      days: Math.floor(s / 86400),
-      hours: Math.floor((s % 86400) / 3600),
-      minutes: Math.floor((s % 3600) / 60),
-      seconds: s % 60,
-    };
+    const secondsLeft = Math.floor(Math.max(0, FINAL_DATE - now) / 1000);
+    return [
+      { label: "Days", value: Math.floor(secondsLeft / 86400) },
+      { label: "Hours", value: Math.floor((secondsLeft % 86400) / 3600) },
+      { label: "Minutes", value: Math.floor((secondsLeft % 3600) / 60) },
+      { label: "Seconds", value: secondsLeft % 60 },
+    ];
   }, [now]);
 };
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Tracks", href: "#tracks" },
+  { label: "Frontier", href: "#frontier" },
   { label: "Journey", href: "#journey" },
-  { label: "Prizes", href: "#prizes" },
-  { label: "Partners & Sponsors", href: "#partners" },
-];
-
-const tracks = [
-  {
-    id: 1,
-    name: "Biotechnology & Life Sciences",
-    tag: "FLAGSHIP TRACK",
-    icon: Dna,
-    accent: "violet" as const,
-    copy: "Therapeutics, synthetic biology, bioinformatics and AI-accelerated drug discovery.",
-    points: ["Therapeutics & diagnostics", "Synthetic biology", "Bioinformatics pipelines", "AI-accelerated drug discovery"],
-  },
-  {
-    id: 2,
-    name: "AI & Autonomous Systems",
-    tag: "TRACK 02",
-    icon: Cpu,
-    accent: "cyan" as const,
-    copy: "Neural networks, machine learning models and smart robotics built for the real world.",
-    points: ["Neural architectures", "Applied ML models", "Smart robotics", "Edge autonomy"],
-  },
-  {
-    id: 3,
-    name: "Digital Economy & Web Technologies",
-    tag: "TRACK 03",
-    icon: Network,
-    accent: "cyan" as const,
-    copy: "Decentralised applications and advanced software infrastructure for the next internet.",
-    points: ["Decentralised apps", "Fintech rails", "Developer infrastructure", "Data platforms"],
-  },
-  {
-    id: 4,
-    name: "Green Tech & Sustainability",
-    tag: "TRACK 04",
-    icon: Leaf,
-    accent: "cyan" as const,
-    copy: "Clean energy solutions and environmental engineering with measurable impact.",
-    points: ["Clean energy", "Circular materials", "Climate analytics", "Environmental engineering"],
-  },
+  { label: "Tracks", href: "#tracks" },
+  { label: "Prestige", href: "#prizes" },
+  { label: "Partner", href: "#partners" },
 ];
 
 const phases = [
-  {
-    phase: "PHASE 01",
-    title: "Global Registration",
-    where: "Hong Kong & Europe",
-    copy: "Teams register, choose a championship track and submit their concept brief.",
-  },
-  {
-    phase: "PHASE 02",
-    title: "Hong Kong Regional Qualifiers",
-    where: "Pitching & Prototypes",
-    copy: "Live pitching, working prototypes and expert judging select the strongest teams.",
-  },
-  {
-    phase: "PHASE 03",
-    title: "UK Grand Final",
-    where: "Top Teams Converge",
-    copy: "Finalists fly to the UK for the grand final and an international investor showcase.",
-  },
+  { phase: "01", title: "Global Registration", place: "Hong Kong · Europe", copy: "Teams choose a championship track and transmit their first concept brief to the global judging network.", signal: "INTAKE OPEN" },
+  { phase: "02", title: "Hong Kong Qualifiers", place: "Pitching · Prototypes", copy: "Working prototypes meet live scrutiny as experts select the strongest teams for the international stage.", signal: "REGIONAL NODE" },
+  { phase: "03", title: "United Kingdom Grand Final", place: "Global Convergence", copy: "Finalists cross continents for the world final, investor showcase and championship ceremony.", signal: "FINAL VECTOR" },
+];
+
+const tracks = [
+  { id: 1, name: "Biotechnology & Life Sciences", tag: "FLAGSHIP", icon: Dna, violet: true, copy: "Therapeutics, synthetic biology, bioinformatics and AI-accelerated drug discovery.", points: ["Therapeutics & diagnostics", "Synthetic biology", "Bioinformatics pipelines", "AI drug discovery"] },
+  { id: 2, name: "AI & Autonomous Systems", tag: "TRACK 02", icon: Cpu, violet: false, copy: "Neural networks, machine intelligence and autonomous systems built for measurable real-world outcomes.", points: ["Neural architectures", "Applied ML models", "Smart robotics", "Edge autonomy"] },
+  { id: 3, name: "Digital Economy & Web Technologies", tag: "TRACK 03", icon: Network, violet: false, copy: "Decentralised applications and advanced software infrastructure for the next internet.", points: ["Decentralised apps", "Fintech rails", "Developer infrastructure", "Data platforms"] },
+  { id: 4, name: "Green Tech & Sustainability", tag: "TRACK 04", icon: Leaf, violet: false, copy: "Clean energy solutions and environmental engineering with measurable global impact.", points: ["Clean energy", "Circular materials", "Climate analytics", "Environmental engineering"] },
 ];
 
 const tiers = ["Title Sponsor", "Track Sponsor", "Ecosystem Partner"];
 
-const Ticker = () => (
-  <div className="border-y border-cyan-400/20 bg-cyan-400/5 overflow-hidden">
-    <div className="flex whitespace-nowrap py-2 animate-[wstc-marquee_28s_linear_infinite]">
-      {[0, 1].map((k) => (
-        <div key={k} className="flex shrink-0 items-center gap-10 pr-10 font-mono text-[11px] uppercase tracking-[0.25em] text-cyan-300/80">
-          <span>◆ Hong Kong qualifiers open</span>
-          <span>◆ 4 championship tracks live</span>
-          <span>◆ Biotechnology flagship focus</span>
-          <span>◆ UK grand final · investor showcase</span>
-          <span>◆ Presented by JAT Hub</span>
-        </div>
-      ))}
+const particles = [
+  ["left-[8%]", "top-[14%]", "[animation-delay:-1s]"],
+  ["left-[24%]", "top-[68%]", "[animation-delay:-4s]"],
+  ["left-[54%]", "top-[22%]", "[animation-delay:-7s]"],
+  ["left-[72%]", "top-[76%]", "[animation-delay:-2s]"],
+  ["left-[91%]", "top-[38%]", "[animation-delay:-6s]"],
+];
+
+function Telemetry({ left, right }: { left: string; right: string }) {
+  return (
+    <div className="flex items-center justify-between gap-6 border-y border-wstc-line/40 py-3 font-mono text-[9px] uppercase text-wstc-muted sm:text-[10px]">
+      <span>{left}</span>
+      <span className="flex items-center gap-2 text-wstc-cyan"><span className="h-1 w-1 rounded-full bg-wstc-cyan shadow-[0_0_10px_currentColor]" />{right}</span>
     </div>
-  </div>
-);
+  );
+}
+
+function ChapterHeading({ number, eyebrow, title, copy }: { number: string; eyebrow: string; title: string; copy: string }) {
+  return (
+    <div className="relative max-w-4xl">
+      <div className="mb-6 flex items-center gap-4 text-[10px] font-bold uppercase text-wstc-cyan">
+        <span className="border border-wstc-cyan/30 bg-wstc-cyan/5 px-3 py-1.5">Chapter {number}</span>
+        <span className="h-px w-16 bg-wstc-line" />
+        <span className="text-wstc-muted">{eyebrow}</span>
+      </div>
+      <h2 className="text-4xl font-black uppercase leading-[0.98] text-wstc-foreground sm:text-5xl lg:text-7xl">{title}</h2>
+      <p className="mt-6 max-w-2xl text-base font-light leading-8 text-wstc-muted md:text-lg">{copy}</p>
+      <span aria-hidden="true" className="pointer-events-none absolute -right-4 -top-12 hidden text-[10rem] font-black leading-none text-wstc-foreground/[0.025] lg:block">{number}</span>
+    </div>
+  );
+}
 
 export default function WSTC() {
-  const { days, hours, minutes, seconds } = useCountdown();
+  const countdown = useCountdown();
   const [activeTrack, setActiveTrack] = useState(1);
   const [menuOpen, setMenuOpen] = useState(false);
   const [form, setForm] = useState({ org: "", contact: "", tier: tiers[0], message: "" });
 
   useEffect(() => {
-    document.title = "WSTC 2026 | World Science and Technology Championship | JAT Hub";
+    document.title = "WSTC 2026 | World Science & Technology Championship";
   }, []);
 
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.org || !form.contact) {
+  const submit = (event: React.FormEvent) => {
+    event.preventDefault();
+    if (!form.org.trim() || !form.contact.trim()) {
       toast.error("Please add your organisation and contact person.");
       return;
     }
@@ -128,342 +117,165 @@ export default function WSTC() {
     setForm({ org: "", contact: "", tier: tiers[0], message: "" });
   };
 
-  const timeBoxes = [
-    { label: "Days", value: days },
-    { label: "Hours", value: hours },
-    { label: "Minutes", value: minutes },
-    { label: "Seconds", value: seconds },
-  ];
-
   return (
-    <div className="min-h-screen bg-[#030712] text-slate-200 [font-family:Inter,sans-serif]">
-      <style>{`
-        @keyframes wstc-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-        .wstc-display { font-family: Orbitron, Inter, sans-serif; letter-spacing: 0.02em; }
-        .wstc-grid-bg {
-          background-image:
-            linear-gradient(rgba(6,182,212,0.07) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(6,182,212,0.07) 1px, transparent 1px);
-          background-size: 56px 56px;
-        }
-      `}</style>
+    <div className="min-h-screen overflow-x-hidden bg-wstc-bg text-wstc-foreground [font-family:Inter,sans-serif] selection:bg-wstc-cyan/30">
+      <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+        <div className="wstc-atmosphere absolute inset-0" />
+        <div className="absolute left-[-15%] top-[-10%] h-[38rem] w-[38rem] rounded-full bg-wstc-cyan/[0.07] blur-[140px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] h-[42rem] w-[42rem] rounded-full bg-wstc-violet/[0.08] blur-[150px]" />
+        <div className="absolute left-[18%] top-0 h-full w-px bg-gradient-to-b from-transparent via-wstc-cyan/15 to-transparent" />
+        {particles.map(([x, y, delay], index) => (
+          <span key={index} className={`wstc-particle absolute ${x} ${y} ${delay} h-1.5 w-1.5 rounded-full bg-wstc-cyan shadow-[0_0_16px_currentColor]`} />
+        ))}
+      </div>
 
-      {/* NAV */}
-      <header className="fixed top-0 inset-x-0 z-50 border-b border-cyan-400/15 bg-[#030712]/85 backdrop-blur-xl">
-        <div className="container mx-auto flex items-center justify-between gap-4 px-4 py-3">
-          <a href="#top" className="flex items-center gap-3">
-            <span className="relative grid h-10 w-10 place-items-center rounded-xl border border-cyan-400/40 bg-cyan-400/10 shadow-[0_0_20px_rgba(6,182,212,0.35)]">
-              <Globe className="h-5 w-5 text-cyan-300" />
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-wstc-line/40 bg-wstc-bg/80 backdrop-blur-xl">
+        <div className="mx-auto flex h-[72px] max-w-[1500px] items-center justify-between px-5 lg:px-10">
+          <a href="#frontier" className="group flex items-center gap-3" aria-label="WSTC home">
+            <span className="grid h-9 w-9 place-items-center border border-wstc-cyan/35 bg-wstc-cyan/5 transition group-hover:border-wstc-cyan">
+              <Globe2 className="h-4 w-4 text-wstc-cyan" />
             </span>
-            <span className="leading-tight">
-              <span className="wstc-display block text-sm font-black text-white">WSTC</span>
-              <span className="block text-[10px] uppercase tracking-[0.2em] text-slate-400">by JAT Hub</span>
-            </span>
+            <span><strong className="block text-sm font-black">WSTC</strong><span className="block text-[9px] uppercase text-wstc-muted">JAT Hub · 2026</span></span>
           </a>
-
-          <nav className="hidden lg:flex items-center gap-7">
-            {navLinks.map((l) => (
-              <a key={l.href} href={l.href} className="text-sm text-slate-300 hover:text-cyan-300 transition-colors">
-                {l.label}
-              </a>
-            ))}
+          <nav className="hidden items-center gap-7 lg:flex">
+            {navLinks.map((link) => <a key={link.href} href={link.href} className="text-[11px] uppercase text-wstc-muted transition hover:text-wstc-cyan">{link.label}</a>)}
           </nav>
-
           <div className="flex items-center gap-3">
-            <span className="hidden md:inline-flex items-center gap-2 rounded-full border border-violet-400/40 bg-violet-500/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-violet-200">
-              <span className="h-1.5 w-1.5 rounded-full bg-violet-400 animate-pulse" />
-              Hong Kong Qualifiers Open
-            </span>
-            <a
-              href="#register"
-              className="hidden sm:inline-flex wstc-display rounded-lg border border-cyan-400/60 bg-cyan-400/15 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.15em] text-cyan-200 shadow-[0_0_24px_rgba(6,182,212,0.35)] transition hover:bg-cyan-400/25"
-            >
-              [ Register Your Team ]
-            </a>
-            <button className="lg:hidden text-slate-200" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
-              {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+            <span className="hidden items-center gap-2 font-mono text-[9px] text-wstc-cyan md:flex"><Radio className="h-3 w-3 animate-pulse" /> SIG · STABLE · 100%</span>
+            <Button asChild size="sm" className="hidden rounded-none bg-wstc-foreground text-wstc-ink hover:bg-wstc-cyan sm:inline-flex"><a href="#register">Register team</a></Button>
+            <Button variant="ghost" size="icon" onClick={() => setMenuOpen((open) => !open)} className="rounded-none text-wstc-foreground hover:bg-wstc-surface lg:hidden" aria-label="Toggle menu">
+              {menuOpen ? <X /> : <Menu />}
+            </Button>
           </div>
         </div>
-        {menuOpen && (
-          <div className="lg:hidden border-t border-cyan-400/15 px-5 py-4">
-            {navLinks.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)} className="block py-2 text-sm text-slate-300 hover:text-cyan-300">
-                {l.label}
-              </a>
-            ))}
-            <a href="#register" onClick={() => setMenuOpen(false)} className="mt-3 block rounded-lg border border-cyan-400/60 bg-cyan-400/15 py-2 text-center text-xs font-bold uppercase tracking-[0.15em] text-cyan-200">
-              [ Register Your Team ]
-            </a>
-          </div>
-        )}
+        {menuOpen && <nav className="border-t border-wstc-line/40 bg-wstc-bg px-5 py-5 lg:hidden">{navLinks.map((link) => <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)} className="block border-b border-wstc-line/30 py-3 text-sm uppercase text-wstc-muted">{link.label}</a>)}</nav>}
       </header>
 
-      {/* HERO */}
-      <main id="top" className="pt-[68px]">
-        <section className="relative overflow-hidden wstc-grid-bg">
-          <div className="pointer-events-none absolute -top-40 left-1/2 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-cyan-500/15 blur-[120px]" />
-          <div className="pointer-events-none absolute bottom-0 right-0 h-[320px] w-[420px] rounded-full bg-violet-600/20 blur-[120px]" />
-          <div className="container relative mx-auto px-5 py-20 md:py-28 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-slate-900/60 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.25em] text-cyan-300">
-              <Sparkles className="h-3.5 w-3.5" /> Presented by JAT Hub
-            </span>
-            <h1 className="wstc-display mx-auto mt-6 max-w-5xl text-3xl sm:text-5xl md:text-6xl font-black leading-[1.12] text-white">
-              WSTC 2026: <span className="text-cyan-300 drop-shadow-[0_0_24px_rgba(6,182,212,0.5)]">INNOVATE.</span>{" "}
-              <span className="text-violet-300 drop-shadow-[0_0_24px_rgba(139,92,246,0.5)]">COMPETE.</span> TRIUMPH.
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-slate-400">
-              The World Science and Technology Championship takes young innovators from the Hong Kong preliminary rounds
-              all the way to the UK Grand Final — judged by scientists, engineers and global investors.
-            </p>
+      <aside className="fixed bottom-10 left-6 z-40 hidden items-center gap-5 xl:flex">
+        <span className="rotate-180 text-[9px] uppercase text-wstc-muted [writing-mode:vertical-lr]">Narrative progress</span>
+        <div className="flex flex-col gap-4 border-l border-wstc-line/60 py-3 pl-5">
+          {navLinks.map((link, index) => <a key={link.href} href={link.href} aria-label={link.label} className={`block rounded-full transition hover:scale-150 ${index === 0 ? "h-2 w-2 bg-wstc-cyan shadow-[0_0_12px_currentColor]" : "h-1.5 w-1.5 bg-wstc-muted/50 hover:bg-wstc-cyan"}`} />)}
+        </div>
+      </aside>
 
-            <div className="mx-auto mt-10 grid max-w-2xl grid-cols-4 gap-2 sm:gap-4">
-              {timeBoxes.map((b) => (
-                <div key={b.label} className="rounded-2xl border border-cyan-400/25 bg-slate-900/60 px-2 py-4 backdrop-blur shadow-[0_0_30px_rgba(6,182,212,0.12)]">
-                  <div className="wstc-display text-2xl sm:text-4xl font-black text-cyan-300 tabular-nums">
-                    {String(b.value).padStart(2, "0")}
+      <main className="relative z-10">
+        <section id="frontier" className="relative flex min-h-screen items-center border-b border-wstc-line/40 px-5 pb-16 pt-28 lg:px-10">
+          <div className="mx-auto grid w-full max-w-[1400px] items-center gap-14 lg:grid-cols-[1.35fr_0.65fr]">
+            <div>
+              <div className="mb-8 flex items-center gap-4 text-[10px] font-bold uppercase text-wstc-cyan"><span className="border border-wstc-cyan/30 bg-wstc-cyan/5 px-3 py-1.5">Chapter I</span><span className="h-px w-20 bg-wstc-line" /><span className="text-wstc-muted">The Frontier</span></div>
+              <p className="mb-5 font-mono text-[10px] uppercase text-wstc-muted">N 51.50° · W 0.12° / London node online</p>
+              <h1 className="max-w-5xl text-5xl font-black uppercase leading-[0.86] sm:text-7xl lg:text-[6.7rem]">
+                Building the global <span className="wstc-gradient-text block">innovation frontier.</span>
+              </h1>
+              <p className="mt-8 max-w-2xl text-base font-light leading-8 text-wstc-muted md:text-xl">The World Science and Technology Championship bridges Hong Kong and the United Kingdom — connecting young builders with world-class scientists, investors and institutions.</p>
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                <Button asChild size="lg" className="group rounded-none bg-wstc-foreground px-8 text-wstc-ink hover:bg-wstc-cyan"><a href="#register">Register team <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></a></Button>
+                <Button asChild size="lg" variant="outline" className="rounded-none border-wstc-line bg-wstc-surface/30 px-8 text-wstc-foreground hover:border-wstc-violet hover:bg-wstc-violet/10"><a href="#partners">Partner with us</a></Button>
+              </div>
+            </div>
+
+            <div className="relative mx-auto w-full max-w-md">
+              <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full border border-wstc-cyan/10" />
+              <div className="wstc-glass relative aspect-square overflow-hidden p-7 sm:p-9">
+                <div className="absolute inset-8 rounded-full border border-wstc-cyan/15" />
+                <div className="absolute inset-20 rounded-full border border-wstc-violet/20" />
+                <div className="relative flex h-full flex-col justify-between">
+                  <div className="flex justify-between font-mono text-[9px] uppercase text-wstc-muted"><span>Final transmission</span><span className="text-wstc-cyan">Live</span></div>
+                  <div className="grid grid-cols-4 gap-2">
+                    {countdown.map((item) => <div key={item.label} className="border-l border-wstc-cyan/35 pl-2"><strong className="block text-xl font-light tabular-nums text-wstc-foreground sm:text-3xl">{String(item.value).padStart(2, "0")}</strong><span className="mt-1 block text-[8px] uppercase text-wstc-muted">{item.label}</span></div>)}
                   </div>
-                  <div className="mt-1 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-slate-500">{b.label}</div>
+                  <div><div className="mb-3 h-px bg-gradient-to-r from-transparent via-wstc-cyan/50 to-transparent" /><div className="grid grid-cols-2 gap-4 text-[9px] uppercase text-wstc-muted"><span>HK Node · Active</span><span className="text-right">UK Final · 14.11.26</span></div></div>
                 </div>
+              </div>
+            </div>
+          </div>
+          <a href="#journey" aria-label="Continue to chapter two" className="absolute bottom-5 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[9px] uppercase text-wstc-muted md:flex"><span>Continue journey</span><ArrowDown className="h-4 w-4 animate-bounce" /></a>
+        </section>
+
+        <section id="journey" className="min-h-screen border-b border-wstc-line/40 px-5 py-28 lg:px-10">
+          <div className="mx-auto max-w-[1400px]">
+            <ChapterHeading number="II" eyebrow="Hong Kong to United Kingdom" title="The unified journey." copy="One continuous trajectory: from first signal to final stage. Every chapter raises the technical bar and expands the audience." />
+            <div className="mt-16 grid gap-px overflow-hidden border border-wstc-line/50 bg-wstc-line/50 lg:grid-cols-3">
+              {phases.map((phase, index) => (
+                <article key={phase.phase} className="group relative min-h-[360px] bg-wstc-bg p-7 transition duration-500 hover:bg-wstc-surface/70 sm:p-9">
+                  <div className="flex items-start justify-between"><span className="text-6xl font-black text-wstc-foreground/[0.07] transition group-hover:text-wstc-cyan/15">{phase.phase}</span><span className="font-mono text-[9px] uppercase text-wstc-cyan">{phase.signal}</span></div>
+                  <div className="mt-20"><span className="text-[10px] uppercase text-wstc-violet">{phase.place}</span><h3 className="mt-3 text-2xl font-bold text-wstc-foreground">{phase.title}</h3><p className="mt-4 text-sm leading-7 text-wstc-muted">{phase.copy}</p></div>
+                  {index < phases.length - 1 && <ArrowRight className="absolute -right-3 top-1/2 z-10 hidden h-6 w-6 rounded-full bg-wstc-cyan p-1 text-wstc-ink lg:block" />}
+                </article>
               ))}
             </div>
-
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="#register" className="wstc-display w-full sm:w-auto rounded-xl bg-cyan-400 px-8 py-4 text-xs font-black uppercase tracking-[0.15em] text-slate-950 shadow-[0_0_36px_rgba(6,182,212,0.5)] transition hover:scale-[1.03]">
-                [ Register Team Now ]
-              </a>
-              <a href="#partners" className="wstc-display w-full sm:w-auto rounded-xl border border-violet-400/50 bg-violet-500/10 px-8 py-4 text-xs font-black uppercase tracking-[0.15em] text-violet-200 transition hover:bg-violet-500/20">
-                [ Join as Sponsor / Partner ]
-              </a>
-            </div>
-          </div>
-          <Ticker />
-        </section>
-
-        {/* ABOUT */}
-        <section id="about" className="container mx-auto px-5 py-20">
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              { icon: Globe, title: "Two continents, one championship", copy: "Qualifiers in Hong Kong, grand final in the United Kingdom — a genuinely global stage for student innovation." },
-              { icon: Rocket, title: "Build, prototype, pitch", copy: "Every team ships a working prototype and defends it in front of an expert judging panel." },
-              { icon: Trophy, title: "Beyond the trophy", copy: "Cash prizes, patent support, acceleration and introductions to investors and industry partners." },
-            ].map((c) => (
-              <div key={c.title} className="rounded-2xl border border-slate-700/60 bg-slate-900/60 p-7 backdrop-blur transition hover:border-cyan-400/40 hover:shadow-[0_0_36px_rgba(6,182,212,0.15)]">
-                <c.icon className="h-7 w-7 text-cyan-300" />
-                <h3 className="wstc-display mt-4 text-base font-bold text-white">{c.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-400">{c.copy}</p>
-              </div>
-            ))}
+            <Telemetry left="Vector · HKG 22.3193° N / 114.1694° E" right="Route synchronised" />
           </div>
         </section>
 
-        {/* JOURNEY */}
-        <section id="journey" className="relative border-y border-slate-800/80 bg-slate-950/60 py-20">
-          <div className="container mx-auto px-5">
-            <h2 className="wstc-display text-center text-2xl md:text-4xl font-black text-white">The Global Championship Journey</h2>
-            <p className="mx-auto mt-3 max-w-xl text-center text-sm text-slate-400">Three phases. From first registration to the international final stage.</p>
-
-            <div className="relative mt-14">
-              <div className="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-cyan-400/0 via-cyan-400/50 to-violet-400/0 md:block" />
-              <div className="grid gap-8 md:grid-cols-3">
-                {phases.map((p, i) => (
-                  <div key={p.phase} className="group relative">
-                    <div className="relative z-10 mx-auto md:mx-0 grid h-12 w-12 place-items-center rounded-full border border-cyan-400/50 bg-[#030712] wstc-display text-sm font-black text-cyan-300 shadow-[0_0_26px_rgba(6,182,212,0.35)]">
-                      {i + 1}
-                    </div>
-                    <div className="mt-6 rounded-2xl border border-slate-700/60 bg-slate-900/60 p-6 text-center md:text-left backdrop-blur transition group-hover:border-cyan-400/40 group-hover:shadow-[0_0_36px_rgba(6,182,212,0.15)]">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-cyan-400">{p.phase}</span>
-                      <h3 className="wstc-display mt-2 text-lg font-bold text-white">{p.title}</h3>
-                      <p className="mt-1 text-xs uppercase tracking-[0.15em] text-violet-300">{p.where}</p>
-                      <p className="mt-3 text-sm leading-relaxed text-slate-400">{p.copy}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+        <section id="tracks" className="min-h-screen border-b border-wstc-line/40 px-5 py-28 lg:px-10">
+          <div className="mx-auto max-w-[1400px]">
+            <ChapterHeading number="III" eyebrow="Four disciplines · one world stage" title="Championship tracks." copy="Select a frontier. Each track rewards technological depth, human relevance and the courage to build what does not yet exist." />
+            <div className="mt-16 grid gap-4 md:grid-cols-2">
+              {tracks.map((track) => {
+                const active = activeTrack === track.id;
+                return (
+                  <button key={track.id} type="button" onClick={() => setActiveTrack(track.id)} aria-expanded={active} className={`wstc-glass group min-h-[280px] p-7 text-left transition duration-500 sm:p-9 ${active ? track.violet ? "border-wstc-violet/70 shadow-[0_0_50px_hsl(var(--wstc-violet)/0.12)]" : "border-wstc-cyan/70 shadow-[0_0_50px_hsl(var(--wstc-cyan)/0.12)]" : ""}`}>
+                    <div className="flex items-start justify-between"><span className={`grid h-11 w-11 place-items-center border ${track.violet ? "border-wstc-violet/40 text-wstc-violet" : "border-wstc-cyan/40 text-wstc-cyan"}`}><track.icon className="h-5 w-5" /></span><span className={`font-mono text-[9px] uppercase ${track.violet ? "text-wstc-violet" : "text-wstc-muted"}`}>{track.tag}</span></div>
+                    <h3 className="mt-8 text-2xl font-bold text-wstc-foreground">{track.name}</h3>
+                    <p className="mt-3 max-w-xl text-sm leading-7 text-wstc-muted">{track.copy}</p>
+                    <div className={`grid transition-all duration-500 ${active ? "mt-6 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}><ul className="grid min-h-0 gap-2 overflow-hidden sm:grid-cols-2">{track.points.map((point) => <li key={point} className="flex items-center gap-2 text-xs text-wstc-foreground/80"><Check className={`h-3.5 w-3.5 ${track.violet ? "text-wstc-violet" : "text-wstc-cyan"}`} />{point}</li>)}</ul></div>
+                  </button>
+                );
+              })}
             </div>
           </div>
         </section>
 
-        {/* TRACKS */}
-        <section id="tracks" className="container mx-auto px-5 py-20">
-          <h2 className="wstc-display text-center text-2xl md:text-4xl font-black text-white">The Four Championship Tracks</h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-sm text-slate-400">Select a track to explore what teams will be building.</p>
-
-          <div className="mt-12 grid gap-5 md:grid-cols-2">
-            {tracks.map((t) => {
-              const active = activeTrack === t.id;
-              const violet = t.accent === "violet";
-              return (
-                <button
-                  key={t.id}
-                  onClick={() => setActiveTrack(t.id)}
-                  className={`text-left rounded-2xl border bg-slate-900/60 p-7 backdrop-blur transition ${
-                    active
-                      ? violet
-                        ? "border-violet-400/70 shadow-[0_0_48px_rgba(139,92,246,0.28)]"
-                        : "border-cyan-400/70 shadow-[0_0_48px_rgba(6,182,212,0.25)]"
-                      : "border-slate-700/60 hover:border-slate-500"
-                  }`}
-                >
-                  <div className="flex items-start justify-between gap-4">
-                    <span className={`grid h-12 w-12 place-items-center rounded-xl border ${violet ? "border-violet-400/40 bg-violet-500/10" : "border-cyan-400/40 bg-cyan-400/10"}`}>
-                      <t.icon className={`h-6 w-6 ${violet ? "text-violet-300" : "text-cyan-300"}`} />
-                    </span>
-                    <span className={`font-mono text-[10px] uppercase tracking-[0.2em] ${violet ? "text-violet-300" : "text-slate-500"}`}>{t.tag}</span>
-                  </div>
-                  <h3 className="wstc-display mt-5 text-lg font-bold text-white">{t.name}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{t.copy}</p>
-                  <div className={`grid overflow-hidden transition-all duration-300 ${active ? "grid-rows-[1fr] mt-4 opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
-                    <ul className="min-h-0 space-y-2">
-                      {t.points.map((p) => (
-                        <li key={p} className="flex items-center gap-2 text-sm text-slate-300">
-                          <ArrowRight className={`h-3.5 w-3.5 ${violet ? "text-violet-300" : "text-cyan-300"}`} /> {p}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        </section>
-
-        {/* PRIZES */}
-        <section id="prizes" className="border-y border-slate-800/80 bg-slate-950/60 py-20">
-          <div className="container mx-auto px-5">
-            <h2 className="wstc-display text-center text-2xl md:text-4xl font-black text-white">Prizes & Global Prestige</h2>
-            <p className="mx-auto mt-3 max-w-xl text-center text-sm text-slate-400">A podium built for careers, not just certificates.</p>
-
-            <div className="mt-16 grid items-end gap-5 sm:grid-cols-3">
+        <section id="prizes" className="min-h-screen border-b border-wstc-line/40 px-5 py-28 lg:px-10">
+          <div className="mx-auto max-w-[1400px]">
+            <ChapterHeading number="IV" eyebrow="Recognition beyond the podium" title="Global prestige & prizes." copy="Victory opens doors: capital, intellectual property support, international visibility and the networks required to move an idea into the world." />
+            <div className="mt-20 grid items-end gap-4 md:grid-cols-3">
               {[
-                { place: "2nd", h: "h-40", prize: "Silver Laureate", copy: "Cash prize + patent advisory support", ring: "border-slate-400/40", glow: "shadow-[0_0_40px_rgba(148,163,184,0.2)]", text: "text-slate-200" },
-                { place: "1st", h: "h-56", prize: "World Champion", copy: "Grand cash prize, global acceleration & investor showcase", ring: "border-cyan-400/70", glow: "shadow-[0_0_60px_rgba(6,182,212,0.35)]", text: "text-cyan-300" },
-                { place: "3rd", h: "h-32", prize: "Bronze Laureate", copy: "Cash prize + mentorship programme", ring: "border-violet-400/50", glow: "shadow-[0_0_40px_rgba(139,92,246,0.25)]", text: "text-violet-300" },
-              ].map((p) => (
-                <div key={p.place} className="flex flex-col justify-end">
-                  <div className={`rounded-2xl border ${p.ring} bg-slate-900/60 p-6 backdrop-blur ${p.glow}`}>
-                    <Trophy className={`mx-auto h-8 w-8 ${p.text}`} />
-                    <h3 className={`wstc-display mt-3 text-center text-lg font-black ${p.text}`}>{p.prize}</h3>
-                    <p className="mt-2 text-center text-sm text-slate-400">{p.copy}</p>
-                  </div>
-                  <div className={`mt-4 ${p.h} rounded-t-2xl border-x border-t ${p.ring} bg-gradient-to-b from-slate-800/70 to-slate-900/10 grid place-items-start justify-center pt-5`}>
-                    <span className={`wstc-display text-3xl font-black ${p.text}`}>{p.place}</span>
-                  </div>
-                </div>
-              ))}
+                { place: "02", name: "Silver Laureate", copy: "Cash prize · patent advisory", height: "md:min-h-[280px]", color: "text-wstc-foreground" },
+                { place: "01", name: "World Champion", copy: "Grand cash prize · acceleration · investor showcase", height: "md:min-h-[390px]", color: "text-wstc-cyan" },
+                { place: "03", name: "Bronze Laureate", copy: "Cash prize · global mentorship", height: "md:min-h-[235px]", color: "text-wstc-violet" },
+              ].map((prize) => <article key={prize.place} className={`wstc-glass group flex min-h-[230px] flex-col justify-between p-8 transition duration-500 ${prize.height}`}><div className="flex justify-between"><Trophy className={`h-6 w-6 ${prize.color}`} /><span className="font-mono text-[9px] text-wstc-muted">PODIUM / {prize.place}</span></div><div><strong className={`block text-7xl font-black ${prize.color}`}>{prize.place}</strong><h3 className="mt-4 text-xl font-bold">{prize.name}</h3><p className="mt-2 text-sm text-wstc-muted">{prize.copy}</p></div></article>)}
             </div>
-
-            <div className="mt-14 grid gap-4 sm:grid-cols-4">
-              {["Cash prizes", "Patent support", "Global acceleration", "Worldwide fame"].map((b) => (
-                <div key={b} className="rounded-xl border border-slate-700/60 bg-slate-900/60 px-4 py-4 text-center text-xs uppercase tracking-[0.15em] text-slate-300">
-                  {b}
-                </div>
-              ))}
-            </div>
+            <div className="mt-5 grid gap-px bg-wstc-line/50 sm:grid-cols-4">{["Cash prizes", "Patent support", "Investor showcases", "International media"].map((benefit) => <div key={benefit} className="bg-wstc-bg px-5 py-5 text-center text-[10px] uppercase text-wstc-muted">{benefit}</div>)}</div>
           </div>
         </section>
 
-        {/* PARTNERS */}
-        <section id="partners" className="relative overflow-hidden py-20">
-          <div className="pointer-events-none absolute -top-24 right-1/4 h-80 w-80 rounded-full bg-violet-600/20 blur-[120px]" />
-          <div className="container relative mx-auto px-5">
-            <div className="text-center">
-              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-cyan-400">Sponsor & Partner Portal</span>
-              <h2 className="wstc-display mt-3 text-2xl md:text-4xl font-black text-white">Power the Future of Global Innovation</h2>
-              <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-400">
-                Put your brand at the centre of a championship that spans Hong Kong and the United Kingdom, and meet the
-                student scientists, engineers and founders shaping the next decade.
-              </p>
-            </div>
-
-            <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              <div className="space-y-4">
+        <section id="partners" className="min-h-screen px-5 py-28 lg:px-10">
+          <div className="mx-auto max-w-[1400px]">
+            <ChapterHeading number="V" eyebrow="Sponsor & partner portal" title="Build the frontier with us." copy="Stand beside the teams shaping the next decade. Partners gain meaningful access to ideas, talent and influence across Hong Kong and the United Kingdom." />
+            <div className="mt-16 grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+              <div className="space-y-px bg-wstc-line/50">
                 {[
-                  { t: "Corporate partners", c: "Brand visibility across both stages, co-branded track ownership, and direct recruitment access to top-tier international student talent." },
-                  { t: "Venture capital", c: "Front-row seats at the UK Grand Final investor showcase and early sight of deep-tech and biotech teams before anyone else." },
-                  { t: "Academic institutions", c: "Joint research visibility, judging and mentorship roles, and a pipeline of motivated applicants across four disciplines." },
-                ].map((v) => (
-                  <div key={v.t} className="rounded-2xl border border-slate-700/60 bg-slate-900/60 p-6 backdrop-blur transition hover:border-cyan-400/40">
-                    <h3 className="wstc-display text-base font-bold text-cyan-200">{v.t}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-400">{v.c}</p>
-                  </div>
-                ))}
+                  { icon: Building2, title: "Corporate partners", copy: "Own a stage, shape a track and connect your brand with ambitious international builders." },
+                  { icon: Users, title: "Venture capital", copy: "Meet deep-tech and biotech teams early through the UK Grand Final investor showcase." },
+                  { icon: GraduationCap, title: "Academic institutions", copy: "Join the judging network, support research and build a pipeline of future applicants." },
+                ].map((item) => <article key={item.title} className="group bg-wstc-bg p-7 transition hover:bg-wstc-surface/70"><item.icon className="h-5 w-5 text-wstc-cyan" /><h3 className="mt-5 text-lg font-bold">{item.title}</h3><p className="mt-3 text-sm leading-7 text-wstc-muted">{item.copy}</p></article>)}
               </div>
 
-              <form id="register" onSubmit={submit} className="rounded-2xl border border-cyan-400/30 bg-slate-900/60 p-7 backdrop-blur shadow-[0_0_48px_rgba(6,182,212,0.15)]">
-                <h3 className="wstc-display text-lg font-bold text-white">Partnership Application</h3>
-                <p className="mt-1 text-sm text-slate-400">Tell us how you would like to be involved.</p>
-
-                <div className="mt-6 space-y-4">
-                  <div>
-                    <label htmlFor="org" className="mb-1.5 block text-[11px] uppercase tracking-[0.18em] text-slate-400">Organization name</label>
-                    <input id="org" value={form.org} onChange={(e) => setForm({ ...form, org: e.target.value })}
-                      className="w-full rounded-lg border border-slate-700 bg-slate-950/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400/70 focus:shadow-[0_0_20px_rgba(6,182,212,0.2)]" placeholder="Acme Biosciences" />
-                  </div>
-                  <div>
-                    <label htmlFor="contact" className="mb-1.5 block text-[11px] uppercase tracking-[0.18em] text-slate-400">Contact person</label>
-                    <input id="contact" value={form.contact} onChange={(e) => setForm({ ...form, contact: e.target.value })}
-                      className="w-full rounded-lg border border-slate-700 bg-slate-950/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400/70 focus:shadow-[0_0_20px_rgba(6,182,212,0.2)]" placeholder="Name and email" />
-                  </div>
-                  <div>
-                    <label htmlFor="tier" className="mb-1.5 block text-[11px] uppercase tracking-[0.18em] text-slate-400">Partnership tier</label>
-                    <select id="tier" value={form.tier} onChange={(e) => setForm({ ...form, tier: e.target.value })}
-                      className="w-full rounded-lg border border-slate-700 bg-slate-950/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400/70">
-                      {tiers.map((t) => <option key={t} value={t}>{t}</option>)}
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="msg" className="mb-1.5 block text-[11px] uppercase tracking-[0.18em] text-slate-400">Inquiry message</label>
-                    <textarea id="msg" rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="w-full rounded-lg border border-slate-700 bg-slate-950/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400/70" placeholder="What would you like to sponsor or explore?" />
-                  </div>
+              <form id="register" onSubmit={submit} className="wstc-glass p-7 sm:p-10">
+                <div className="flex items-center justify-between gap-4 border-b border-wstc-line/50 pb-6"><div><p className="font-mono text-[9px] uppercase text-wstc-cyan">Direct inquiry channel</p><h3 className="mt-2 text-2xl font-bold">Partnership inquiry</h3></div><Rocket className="h-7 w-7 text-wstc-violet" /></div>
+                <div className="mt-7 grid gap-5 sm:grid-cols-2">
+                  <label className="text-[10px] uppercase text-wstc-muted">Organization name<input value={form.org} onChange={(e) => setForm({ ...form, org: e.target.value })} className="mt-2 w-full rounded-none border border-wstc-line bg-wstc-ink/70 px-4 py-3.5 text-sm normal-case text-wstc-foreground outline-none transition focus:border-wstc-cyan" placeholder="Organisation" /></label>
+                  <label className="text-[10px] uppercase text-wstc-muted">Contact person<input value={form.contact} onChange={(e) => setForm({ ...form, contact: e.target.value })} className="mt-2 w-full rounded-none border border-wstc-line bg-wstc-ink/70 px-4 py-3.5 text-sm normal-case text-wstc-foreground outline-none transition focus:border-wstc-cyan" placeholder="Name and email" /></label>
+                  <label className="text-[10px] uppercase text-wstc-muted sm:col-span-2">Partnership tier<select value={form.tier} onChange={(e) => setForm({ ...form, tier: e.target.value })} className="mt-2 w-full rounded-none border border-wstc-line bg-wstc-ink/70 px-4 py-3.5 text-sm normal-case text-wstc-foreground outline-none transition focus:border-wstc-cyan">{tiers.map((tier) => <option key={tier}>{tier}</option>)}</select></label>
+                  <label className="text-[10px] uppercase text-wstc-muted sm:col-span-2">Inquiry message<textarea rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="mt-2 w-full resize-none rounded-none border border-wstc-line bg-wstc-ink/70 px-4 py-3.5 text-sm normal-case text-wstc-foreground outline-none transition focus:border-wstc-cyan" placeholder="What would you like to sponsor or explore?" /></label>
                 </div>
-
-                <button type="submit" className="wstc-display mt-6 w-full rounded-xl bg-cyan-400 py-4 text-xs font-black uppercase tracking-[0.15em] text-slate-950 shadow-[0_0_36px_rgba(6,182,212,0.45)] transition hover:scale-[1.02]">
-                  [ Submit Partnership Inquiry ]
-                </button>
-                <p className="mt-3 text-center text-xs text-slate-500">
-                  Prefer email? <a href="mailto:jat@jathub.com" className="text-cyan-300 hover:underline">jat@jathub.com</a>
-                </p>
+                <Button type="submit" size="lg" className="mt-6 w-full rounded-none bg-wstc-foreground text-wstc-ink hover:bg-wstc-cyan">Submit partnership inquiry <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                <p className="mt-4 text-center text-xs text-wstc-muted">Direct contact · <a href="mailto:jat@jathub.com" className="text-wstc-cyan hover:underline">jat@jathub.com</a></p>
               </form>
             </div>
           </div>
         </section>
-
-        {/* FOOTER */}
-        <footer className="border-t border-slate-800 bg-[#020509] py-12">
-          <div className="container mx-auto grid gap-8 px-5 md:grid-cols-3">
-            <div>
-              <div className="flex items-center gap-3">
-                <span className="grid h-9 w-9 place-items-center rounded-lg border border-cyan-400/40 bg-cyan-400/10">
-                  <Globe className="h-4 w-4 text-cyan-300" />
-                </span>
-                <span className="wstc-display text-sm font-black text-white">WSTC · JAT Hub</span>
-              </div>
-              <p className="mt-4 text-sm leading-relaxed text-slate-500">
-                The World Science and Technology Championship is presented by JAT Hub CIC, a Community Interest Company
-                registered in England and Wales.
-              </p>
-            </div>
-            <div className="text-sm text-slate-500">
-              <h4 className="mb-3 text-[11px] uppercase tracking-[0.2em] text-slate-300">Contact</h4>
-              <p><a className="hover:text-cyan-300" href="mailto:jat@jathub.com">jat@jathub.com</a></p>
-              <p><a className="hover:text-cyan-300" href="tel:+447766456376">+44 7766 456376</a></p>
-              <p className="mt-3">Company Number: 17193758</p>
-              <p>Suite 642 Chremma House, 14 London Road, Guildford, GU1 2AG</p>
-            </div>
-            <div>
-              <h4 className="mb-3 text-[11px] uppercase tracking-[0.2em] text-slate-300">Follow</h4>
-              <div className="flex gap-5">
-                <a href="https://www.youtube.com/@JatHub" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-slate-500 hover:text-cyan-300"><Youtube className="h-5 w-5" /></a>
-                <a href="https://www.linkedin.com/company/jathub" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-slate-500 hover:text-cyan-300"><Linkedin className="h-5 w-5" /></a>
-                <a href="https://www.instagram.com/jathub_uk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-slate-500 hover:text-cyan-300"><Instagram className="h-5 w-5" /></a>
-              </div>
-              <p className="mt-6 text-xs text-slate-600">© 2026 JAT Hub CIC. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
       </main>
+
+      <footer className="relative z-10 border-t border-wstc-line/50 bg-wstc-ink px-5 py-12 lg:px-10">
+        <div className="mx-auto grid max-w-[1400px] gap-10 md:grid-cols-[1.3fr_1fr_1fr]">
+          <div><div className="flex items-center gap-3"><span className="grid h-9 w-9 place-items-center border border-wstc-cyan/40"><Globe2 className="h-4 w-4 text-wstc-cyan" /></span><strong className="text-sm">WSTC · JAT Hub</strong></div><p className="mt-5 max-w-md text-sm leading-7 text-wstc-muted">The World Science and Technology Championship is presented by JAT Hub CIC, a Community Interest Company registered in England and Wales.</p></div>
+          <div className="text-sm text-wstc-muted"><h4 className="mb-4 text-[10px] uppercase text-wstc-foreground">Official contact</h4><a href="mailto:jat@jathub.com" className="block transition hover:text-wstc-cyan">jat@jathub.com</a><a href="tel:+447766456376" className="mt-2 block transition hover:text-wstc-cyan">+44 7766 456376</a><p className="mt-4">Company No. 17193758</p></div>
+          <div><h4 className="mb-4 text-[10px] uppercase text-wstc-foreground">Global channels</h4><div className="flex gap-4">{[{ icon: Youtube, href: "https://www.youtube.com/@JatHub", label: "YouTube" }, { icon: Linkedin, href: "https://www.linkedin.com/company/jathub", label: "LinkedIn" }, { icon: Instagram, href: "https://www.instagram.com/jathub_uk/", label: "Instagram" }].map((social) => <a key={social.label} href={social.href} target="_blank" rel="noreferrer" aria-label={social.label} className="grid h-10 w-10 place-items-center border border-wstc-line text-wstc-muted transition hover:border-wstc-cyan hover:text-wstc-cyan"><social.icon className="h-4 w-4" /></a>)}</div><p className="mt-6 text-xs text-wstc-muted">© 2026 JAT Hub CIC. All rights reserved.</p></div>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -68,6 +68,17 @@ export default {
           "purple-light": "hsl(var(--creator-purple-light))",
           cyan: "hsl(var(--creator-cyan))",
         },
+        wstc: {
+          bg: "hsl(var(--wstc-bg))",
+          surface: "hsl(var(--wstc-surface))",
+          "surface-strong": "hsl(var(--wstc-surface-strong))",
+          line: "hsl(var(--wstc-line))",
+          foreground: "hsl(var(--wstc-foreground))",
+          muted: "hsl(var(--wstc-muted))",
+          cyan: "hsl(var(--wstc-cyan))",
+          violet: "hsl(var(--wstc-violet))",
+          ink: "hsl(var(--wstc-ink))",
+        },
 
       },
       borderRadius: {
