@@ -29,6 +29,9 @@ import biotechnologyTrackImage from "@/assets/wstc-track-biotechnology.jpg";
 import aiAutonomousTrackImage from "@/assets/wstc-track-ai-autonomous.jpg";
 import digitalEconomyTrackImage from "@/assets/wstc-track-digital-economy.jpg";
 import greenTechTrackImage from "@/assets/wstc-track-green-tech.jpg";
+import partnerCorporateImage from "@/assets/wstc-partner-corporate.jpg";
+import partnerVentureImage from "@/assets/wstc-partner-venture.jpg";
+import partnerAcademicImage from "@/assets/wstc-partner-academic.jpg";
 
 const FINAL_DATE = new Date("2026-11-14T09:00:00Z").getTime();
 
@@ -263,10 +266,23 @@ export default function WSTC() {
             <div className="mt-16 grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
               <div className="space-y-px bg-wstc-line/50">
                 {[
-                  { icon: Building2, title: "Corporate partners", copy: "Own a stage, shape a track and connect your brand with ambitious international builders." },
-                  { icon: Users, title: "Venture capital", copy: "Meet deep-tech and biotech teams early through the UK Grand Final investor showcase." },
-                  { icon: GraduationCap, title: "Academic institutions", copy: "Join the judging network, support research and build a pipeline of future applicants." },
-                ].map((item) => <article key={item.title} className="group bg-wstc-bg p-7 transition hover:bg-wstc-surface/70"><item.icon className="h-5 w-5 text-wstc-cyan" /><h3 className="mt-5 text-lg font-bold">{item.title}</h3><p className="mt-3 text-sm leading-7 text-wstc-muted">{item.copy}</p></article>)}
+                  { icon: Building2, title: "Corporate partners", copy: "Own a stage, shape a track and connect your brand with ambitious international builders.", image: partnerCorporateImage, alt: "Futuristic corporate boardroom overlooking a glowing global city skyline" },
+                  { icon: Users, title: "Venture capital", copy: "Meet deep-tech and biotech teams early through the UK Grand Final investor showcase.", image: partnerVentureImage, alt: "Investor showcase stage with founders pitching beneath holographic data visualisations" },
+                  { icon: GraduationCap, title: "Academic institutions", copy: "Join the judging network, support research and build a pipeline of future applicants.", image: partnerAcademicImage, alt: "Advanced university research hall with DNA helix and neural network holograms" },
+                ].map((item) => (
+                  <article key={item.title} className="group relative min-h-[240px] overflow-hidden bg-wstc-bg p-7 transition sm:p-9">
+                    <img src={item.image} alt={item.alt} loading="lazy" width={1536} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-45 saturate-[0.8] transition duration-700 group-hover:scale-[1.04] group-hover:opacity-60 group-hover:saturate-100" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-wstc-bg/35 via-wstc-bg/55 to-wstc-bg" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-wstc-bg/60 via-transparent to-transparent" />
+                    <div className="relative z-10 flex h-full min-h-[168px] flex-col justify-between">
+                      <span className="grid h-10 w-10 place-items-center border border-wstc-cyan/40 bg-wstc-bg/60 backdrop-blur-md text-wstc-cyan"><item.icon className="h-5 w-5" /></span>
+                      <div>
+                        <h3 className="text-lg font-bold text-wstc-foreground">{item.title}</h3>
+                        <p className="mt-3 max-w-sm text-sm leading-7 text-wstc-foreground/80">{item.copy}</p>
+                      </div>
+                    </div>
+                  </article>
+                ))}
               </div>
 
               <form id="register" onSubmit={submit} className="wstc-glass p-7 sm:p-10">
