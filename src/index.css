@@ -102,8 +102,10 @@ All colors MUST be HSL.
   }
 
   @keyframes wstc-float {
-    0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.35; }
-    50% { transform: translate3d(12px, -18px, 0); opacity: 0.8; }
+    0% { transform: translate3d(0, 14vh, 0) scale(0.85); opacity: 0; }
+    15% { opacity: 0.9; }
+    85% { opacity: 0.7; }
+    100% { transform: translate3d(6px, -22vh, 0) scale(1.1); opacity: 0; }
   }
 
   @keyframes wstc-scan {
@@ -113,23 +115,30 @@ All colors MUST be HSL.
 
   .wstc-atmosphere {
     background-image:
-      linear-gradient(hsl(var(--wstc-cyan) / 0.055) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--wstc-cyan) / 0.055) 1px, transparent 1px);
+      linear-gradient(hsl(var(--wstc-cyan) / 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--wstc-cyan) / 0.07) 1px, transparent 1px);
     background-size: 72px 72px;
     animation: wstc-grid-drift 28s linear infinite;
     mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
   }
 
   .wstc-glass {
-    background: hsl(var(--wstc-surface) / 0.52);
-    border: 1px solid hsl(var(--wstc-cyan) / 0.18);
-    box-shadow: inset 0 1px 0 hsl(var(--wstc-foreground) / 0.04), 0 24px 80px hsl(var(--wstc-ink) / 0.48);
-    backdrop-filter: blur(18px);
+    background: linear-gradient(160deg, hsl(0 0% 100% / 0.07), hsl(0 0% 100% / 0.03));
+    border: 1px solid hsl(var(--wstc-cyan) / 0.28);
+    box-shadow:
+      inset 0 1px 0 hsl(0 0% 100% / 0.12),
+      0 0 0 1px hsl(0 0% 100% / 0.02),
+      0 24px 70px hsl(var(--wstc-ink) / 0.5),
+      0 0 40px hsl(var(--wstc-cyan) / 0.08);
+    backdrop-filter: blur(20px);
   }
 
   .wstc-glass:hover {
-    border-color: hsl(var(--wstc-cyan) / 0.52);
-    box-shadow: inset 0 1px 0 hsl(var(--wstc-foreground) / 0.08), 0 0 40px hsl(var(--wstc-cyan) / 0.12);
+    border-color: hsl(var(--wstc-violet) / 0.6);
+    box-shadow:
+      inset 0 1px 0 hsl(0 0% 100% / 0.16),
+      0 0 60px hsl(var(--wstc-cyan) / 0.22),
+      0 0 90px hsl(var(--wstc-violet) / 0.16);
   }
 
   .wstc-gradient-text {
@@ -139,8 +148,9 @@ All colors MUST be HSL.
   }
 
   .wstc-particle {
-    animation: wstc-float 9s ease-in-out infinite;
+    animation: wstc-float 14s linear infinite;
   }
+
 
   @media (prefers-reduced-motion: reduce) {
     .wstc-atmosphere,
