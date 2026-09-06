@@ -56,16 +56,16 @@ All colors MUST be HSL.
     --creator-purple-light: 258 90% 72%;
     --creator-cyan: 189 94% 43%;
 
-    /* WSTC bright-future twilight palette */
-    --wstc-bg: 224 49% 8%;
-    --wstc-surface: 224 45% 12%;
-    --wstc-surface-strong: 224 42% 16%;
-    --wstc-line: 155 30% 34%;
-    --wstc-foreground: 160 30% 98%;
-    --wstc-muted: 200 25% 76%;
-    --wstc-cyan: 155 89% 51%;
-    --wstc-violet: 51 100% 50%;
-    --wstc-ink: 224 55% 6%;
+    /* WSTC luminous daylight palette */
+    --wstc-bg: 210 40% 98%;
+    --wstc-surface: 0 0% 100%;
+    --wstc-surface-strong: 210 40% 96%;
+    --wstc-line: 226 70% 88%;
+    --wstc-foreground: 222 47% 15%;
+    --wstc-muted: 215 19% 45%;
+    --wstc-cyan: 199 92% 60%;
+    --wstc-violet: 234 89% 74%;
+    --wstc-ink: 222 47% 11%;
 
     
     /* Gradients */
@@ -102,55 +102,48 @@ All colors MUST be HSL.
   }
 
   @keyframes wstc-float {
-    0% { transform: translate3d(0, 14vh, 0) scale(0.85); opacity: 0; }
-    15% { opacity: 0.9; }
-    85% { opacity: 0.7; }
-    100% { transform: translate3d(6px, -22vh, 0) scale(1.1); opacity: 0; }
-  }
-
-  @keyframes wstc-scan {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(100vh); }
+    0% { transform: translate3d(0, 16vh, 0) scaleY(0.5); opacity: 0; }
+    18% { opacity: 1; }
+    82% { opacity: 0.85; }
+    100% { transform: translate3d(0, -26vh, 0) scaleY(1.4); opacity: 0; }
   }
 
   .wstc-atmosphere {
     background-image:
-      linear-gradient(hsl(var(--wstc-cyan) / 0.07) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--wstc-cyan) / 0.07) 1px, transparent 1px);
+      linear-gradient(hsl(var(--wstc-violet) / 0.16) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--wstc-violet) / 0.16) 1px, transparent 1px);
     background-size: 72px 72px;
     animation: wstc-grid-drift 28s linear infinite;
     mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
   }
 
   .wstc-glass {
-    background: linear-gradient(160deg, hsl(0 0% 100% / 0.07), hsl(0 0% 100% / 0.03));
-    border: 1px solid hsl(var(--wstc-cyan) / 0.28);
+    background: hsl(0 0% 100% / 0.8);
+    border: 1px solid hsl(var(--wstc-violet) / 0.35);
     box-shadow:
-      inset 0 1px 0 hsl(0 0% 100% / 0.12),
-      0 0 0 1px hsl(0 0% 100% / 0.02),
-      0 24px 70px hsl(var(--wstc-ink) / 0.5),
-      0 0 40px hsl(var(--wstc-cyan) / 0.08);
-    backdrop-filter: blur(20px);
+      inset 0 1px 0 hsl(0 0% 100% / 0.9),
+      0 18px 50px hsl(var(--wstc-violet) / 0.14),
+      0 0 32px hsl(var(--wstc-cyan) / 0.14);
+    backdrop-filter: blur(18px);
   }
 
   .wstc-glass:hover {
-    border-color: hsl(var(--wstc-violet) / 0.6);
+    border-color: hsl(var(--wstc-cyan) / 0.65);
     box-shadow:
-      inset 0 1px 0 hsl(0 0% 100% / 0.16),
-      0 0 60px hsl(var(--wstc-cyan) / 0.22),
-      0 0 90px hsl(var(--wstc-violet) / 0.16);
+      inset 0 1px 0 hsl(0 0% 100% / 1),
+      0 22px 60px hsl(var(--wstc-violet) / 0.22),
+      0 0 46px hsl(var(--wstc-cyan) / 0.28);
   }
 
   .wstc-gradient-text {
     color: transparent;
-    background-image: linear-gradient(110deg, hsl(var(--wstc-cyan)), hsl(var(--wstc-foreground)) 52%, hsl(var(--wstc-violet)));
+    background-image: linear-gradient(110deg, hsl(var(--wstc-cyan)), hsl(var(--wstc-violet)) 58%, hsl(263 80% 62%));
     background-clip: text;
   }
 
   .wstc-particle {
-    animation: wstc-float 14s linear infinite;
+    animation: wstc-float 12s linear infinite;
   }
-
 
   @media (prefers-reduced-motion: reduce) {
     .wstc-atmosphere,
