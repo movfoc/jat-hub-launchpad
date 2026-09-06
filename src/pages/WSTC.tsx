@@ -33,7 +33,7 @@ import partnerCorporateImage from "@/assets/wstc-partner-corporate.jpg";
 import partnerVentureImage from "@/assets/wstc-partner-venture.jpg";
 import partnerAcademicImage from "@/assets/wstc-partner-academic.jpg";
 
-const FINAL_DATE = new Date("2026-11-14T09:00:00Z").getTime();
+const FINAL_DATE = new Date("2027-08-14T09:00:00Z").getTime();
 
 const useCountdown = () => {
   const [now, setNow] = useState(Date.now());
@@ -63,7 +63,7 @@ const navLinks = [
 const phases = [
   { phase: "01", title: "Global Registration", place: "Hong Kong · Europe", copy: "Teams choose a championship track and transmit their first concept brief to the global judging network.", signal: "INTAKE OPEN", image: globalRegistrationImage, alt: "Europe and Asia connected across a digital globe" },
   { phase: "02", title: "Hong Kong Qualifiers", place: "Pitching · Prototypes", copy: "Working prototypes meet live scrutiny as experts select the strongest teams for the international stage.", signal: "REGIONAL NODE", image: hongKongQualifiersImage, alt: "Hong Kong skyline across Victoria Harbour at night" },
-  { phase: "03", title: "United Kingdom Grand Final", place: "Global Convergence", copy: "Finalists cross continents for the world final, investor showcase and championship ceremony.", signal: "FINAL VECTOR", image: londonFinalImage, alt: "Big Ben and the Palace of Westminster beside the River Thames" },
+  { phase: "03", title: "United Kingdom Grand Final", place: "Oxford University · Aug 2027", copy: "Finalists converge at Oxford University for the world final demo day, investor showcase and championship ceremony.", signal: "FINAL VECTOR", image: londonFinalImage, alt: "Oxford University skyline with historic spires" },
 ];
 
 const tracks = [
@@ -183,7 +183,7 @@ export default function WSTC() {
               <h1 className="max-w-5xl text-5xl font-black uppercase leading-[0.86] sm:text-7xl lg:text-[6.7rem]">
                 Building the global <span className="wstc-gradient-text block">innovation frontier.</span>
               </h1>
-              <p className="mt-8 max-w-2xl text-base font-light leading-8 text-wstc-muted md:text-xl">The World Science and Technology Championship bridges Hong Kong and the United Kingdom — connecting young builders with world-class scientists, investors and institutions.</p>
+              <p className="mt-8 max-w-2xl text-base font-light leading-8 text-wstc-muted md:text-xl">The World Science and Technology Championship bridges Hong Kong and the United Kingdom — connecting young builders with world-class scientists, investors and institutions. The final demo day will be held at <span className="font-semibold text-wstc-foreground">Oxford University in August 2027</span>.</p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg" className="group rounded-none bg-wstc-cyan px-8 text-white shadow-[0_0_34px_hsl(var(--wstc-cyan)/0.45)] hover:bg-wstc-violet hover:shadow-[0_0_40px_hsl(var(--wstc-violet)/0.5)]"><a href="#register">Register team <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></a></Button>
                 <Button asChild size="lg" variant="outline" className="rounded-none border-wstc-violet/50 bg-white/70 px-8 text-wstc-foreground hover:border-wstc-violet hover:bg-wstc-violet/10"><a href="#partners">Partner with us</a></Button>
@@ -200,7 +200,7 @@ export default function WSTC() {
                   <div className="grid grid-cols-4 gap-2">
                     {countdown.map((item) => <div key={item.label} className="border-l border-wstc-cyan/35 pl-2"><strong className="block text-xl font-light tabular-nums text-wstc-foreground sm:text-3xl">{String(item.value).padStart(2, "0")}</strong><span className="mt-1 block text-[8px] uppercase text-wstc-muted">{item.label}</span></div>)}
                   </div>
-                  <div><div className="mb-3 h-px bg-gradient-to-r from-transparent via-wstc-cyan/50 to-transparent" /><div className="grid grid-cols-2 gap-4 text-[9px] uppercase text-wstc-muted"><span>HK Node · Active</span><span className="text-right">UK Final · 14.11.26</span></div></div>
+                  <div><div className="mb-3 h-px bg-gradient-to-r from-transparent via-wstc-cyan/50 to-transparent" /><div className="grid grid-cols-2 gap-4 text-[9px] uppercase text-wstc-muted"><span>HK Node · Active</span><span className="text-right text-wstc-cyan">Oxford · Aug 2027</span></div></div>
                 </div>
               </div>
             </div>
@@ -254,7 +254,7 @@ export default function WSTC() {
 
         <section id="prizes" className="min-h-screen border-b border-wstc-line/40 px-5 py-28 lg:px-10">
           <div className="mx-auto max-w-[1400px]">
-            <ChapterHeading number="IV" eyebrow="Recognition beyond the podium" title="Global prestige & prizes." copy="Victory opens doors: capital, intellectual property support, international visibility and the networks required to move an idea into the world." />
+            <ChapterHeading number="IV" eyebrow="Recognition beyond the podium" title="Global prestige & prizes." copy="Victory opens doors at the Oxford University final demo day in August 2027: capital, intellectual property support, international visibility and the networks required to move an idea into the world." />
             <div className="mt-20 grid items-end gap-4 md:grid-cols-3">
               {[
                 { place: "02", name: "Silver Laureate", copy: "Cash prize · patent advisory", height: "md:min-h-[280px]", color: "text-wstc-foreground" },
