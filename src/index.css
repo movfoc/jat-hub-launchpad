@@ -56,16 +56,16 @@ All colors MUST be HSL.
     --creator-purple-light: 258 90% 72%;
     --creator-cyan: 189 94% 43%;
 
-    /* WSTC architectural noir palette */
-    --wstc-bg: 0 0% 2%;
-    --wstc-surface: 222 47% 8%;
-    --wstc-surface-strong: 222 47% 11%;
-    --wstc-line: 215 25% 27%;
-    --wstc-foreground: 210 40% 98%;
-    --wstc-muted: 215 16% 58%;
-    --wstc-cyan: 188 86% 53%;
-    --wstc-violet: 258 90% 66%;
-    --wstc-ink: 222 47% 5%;
+    /* WSTC bright-future twilight palette */
+    --wstc-bg: 224 49% 8%;
+    --wstc-surface: 224 45% 12%;
+    --wstc-surface-strong: 224 42% 16%;
+    --wstc-line: 155 30% 34%;
+    --wstc-foreground: 160 30% 98%;
+    --wstc-muted: 200 25% 76%;
+    --wstc-cyan: 155 89% 51%;
+    --wstc-violet: 51 100% 50%;
+    --wstc-ink: 224 55% 6%;
 
     
     /* Gradients */
