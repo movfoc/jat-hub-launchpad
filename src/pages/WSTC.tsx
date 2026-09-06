@@ -76,11 +76,16 @@ const tracks = [
 const tiers = ["Title Sponsor", "Track Sponsor", "Ecosystem Partner"];
 
 const particles = [
-  ["left-[8%]", "top-[14%]", "[animation-delay:-1s]"],
-  ["left-[24%]", "top-[68%]", "[animation-delay:-4s]"],
-  ["left-[54%]", "top-[22%]", "[animation-delay:-7s]"],
-  ["left-[72%]", "top-[76%]", "[animation-delay:-2s]"],
-  ["left-[91%]", "top-[38%]", "[animation-delay:-6s]"],
+  ["left-[6%]", "top-[72%]", "[animation-delay:-1s]", "bg-wstc-cyan"],
+  ["left-[16%]", "top-[88%]", "[animation-delay:-9s]", "bg-wstc-violet"],
+  ["left-[27%]", "top-[64%]", "[animation-delay:-4s]", "bg-wstc-cyan"],
+  ["left-[38%]", "top-[92%]", "[animation-delay:-12s]", "bg-wstc-cyan"],
+  ["left-[49%]", "top-[70%]", "[animation-delay:-6s]", "bg-wstc-violet"],
+  ["left-[58%]", "top-[86%]", "[animation-delay:-2s]", "bg-wstc-cyan"],
+  ["left-[69%]", "top-[60%]", "[animation-delay:-10s]", "bg-wstc-cyan"],
+  ["left-[78%]", "top-[90%]", "[animation-delay:-5s]", "bg-wstc-violet"],
+  ["left-[87%]", "top-[68%]", "[animation-delay:-7s]", "bg-wstc-cyan"],
+  ["left-[95%]", "top-[84%]", "[animation-delay:-3s]", "bg-wstc-cyan"],
 ];
 
 function Telemetry({ left, right }: { left: string; right: string }) {
@@ -131,11 +136,12 @@ export default function WSTC() {
     <div className="min-h-screen overflow-x-hidden bg-wstc-bg text-wstc-foreground [font-family:Inter,sans-serif] selection:bg-wstc-cyan/30">
       <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
         <div className="wstc-atmosphere absolute inset-0" />
-        <div className="absolute left-[-15%] top-[-10%] h-[38rem] w-[38rem] rounded-full bg-wstc-cyan/[0.07] blur-[140px]" />
-        <div className="absolute bottom-[-20%] right-[-10%] h-[42rem] w-[42rem] rounded-full bg-wstc-violet/[0.08] blur-[150px]" />
+        <div className="absolute left-[-15%] top-[-10%] h-[38rem] w-[38rem] rounded-full bg-wstc-cyan/[0.14] blur-[150px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] h-[42rem] w-[42rem] rounded-full bg-wstc-violet/[0.12] blur-[160px]" />
         <div className="absolute left-[18%] top-0 h-full w-px bg-gradient-to-b from-transparent via-wstc-cyan/15 to-transparent" />
-        {particles.map(([x, y, delay], index) => (
-          <span key={index} className={`wstc-particle absolute ${x} ${y} ${delay} h-1.5 w-1.5 rounded-full bg-wstc-cyan shadow-[0_0_16px_currentColor]`} />
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-wstc-cyan/[0.06] to-transparent" />
+        {particles.map(([x, y, delay, tone], index) => (
+          <span key={index} className={`wstc-particle absolute ${x} ${y} ${delay} ${tone} h-1.5 w-1.5 rounded-full shadow-[0_0_18px_6px_currentColor] opacity-70`} />
         ))}
       </div>
 
@@ -152,7 +158,7 @@ export default function WSTC() {
           </nav>
           <div className="flex items-center gap-3">
             <span className="hidden items-center gap-2 font-mono text-[9px] text-wstc-cyan md:flex"><Radio className="h-3 w-3 animate-pulse" /> SIG · STABLE · 100%</span>
-            <Button asChild size="sm" className="hidden rounded-none bg-wstc-foreground text-wstc-ink hover:bg-wstc-cyan sm:inline-flex"><a href="#register">Register team</a></Button>
+            <Button asChild size="sm" className="hidden rounded-none bg-wstc-cyan text-wstc-ink shadow-[0_0_28px_hsl(var(--wstc-cyan)/0.4)] hover:bg-wstc-violet hover:shadow-[0_0_34px_hsl(var(--wstc-violet)/0.45)] sm:inline-flex"><a href="#register">Register team</a></Button>
             <Button variant="ghost" size="icon" onClick={() => setMenuOpen((open) => !open)} className="rounded-none text-wstc-foreground hover:bg-wstc-surface lg:hidden" aria-label="Toggle menu">
               {menuOpen ? <X /> : <Menu />}
             </Button>
@@ -179,7 +185,7 @@ export default function WSTC() {
               </h1>
               <p className="mt-8 max-w-2xl text-base font-light leading-8 text-wstc-muted md:text-xl">The World Science and Technology Championship bridges Hong Kong and the United Kingdom — connecting young builders with world-class scientists, investors and institutions.</p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <Button asChild size="lg" className="group rounded-none bg-wstc-foreground px-8 text-wstc-ink hover:bg-wstc-cyan"><a href="#register">Register team <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></a></Button>
+                <Button asChild size="lg" className="group rounded-none bg-wstc-cyan px-8 text-wstc-ink shadow-[0_0_34px_hsl(var(--wstc-cyan)/0.45)] hover:bg-wstc-violet hover:shadow-[0_0_40px_hsl(var(--wstc-violet)/0.5)]"><a href="#register">Register team <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /></a></Button>
                 <Button asChild size="lg" variant="outline" className="rounded-none border-wstc-line bg-wstc-surface/30 px-8 text-wstc-foreground hover:border-wstc-violet hover:bg-wstc-violet/10"><a href="#partners">Partner with us</a></Button>
               </div>
             </div>
@@ -293,7 +299,7 @@ export default function WSTC() {
                   <label className="text-[10px] uppercase text-wstc-muted sm:col-span-2">Partnership tier<select value={form.tier} onChange={(e) => setForm({ ...form, tier: e.target.value })} className="mt-2 w-full rounded-none border border-wstc-line bg-wstc-ink/70 px-4 py-3.5 text-sm normal-case text-wstc-foreground outline-none transition focus:border-wstc-cyan">{tiers.map((tier) => <option key={tier}>{tier}</option>)}</select></label>
                   <label className="text-[10px] uppercase text-wstc-muted sm:col-span-2">Inquiry message<textarea rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="mt-2 w-full resize-none rounded-none border border-wstc-line bg-wstc-ink/70 px-4 py-3.5 text-sm normal-case text-wstc-foreground outline-none transition focus:border-wstc-cyan" placeholder="What would you like to sponsor or explore?" /></label>
                 </div>
-                <Button type="submit" size="lg" className="mt-6 w-full rounded-none bg-wstc-foreground text-wstc-ink hover:bg-wstc-cyan">Submit partnership inquiry <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                <Button type="submit" size="lg" className="mt-6 w-full rounded-none bg-wstc-cyan text-wstc-ink shadow-[0_0_28px_hsl(var(--wstc-cyan)/0.4)] hover:bg-wstc-violet hover:shadow-[0_0_34px_hsl(var(--wstc-violet)/0.45)]">Submit partnership inquiry <ArrowRight className="ml-2 h-4 w-4" /></Button>
                 <p className="mt-4 text-center text-xs text-wstc-muted">Direct contact · <a href="mailto:jat@jathub.com" className="text-wstc-cyan hover:underline">jat@jathub.com</a></p>
               </form>
             </div>
