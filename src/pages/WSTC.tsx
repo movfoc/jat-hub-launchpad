@@ -214,9 +214,9 @@ export default function WSTC() {
             <div className="mt-16 grid gap-px overflow-hidden border border-wstc-line/50 bg-wstc-line/50 lg:grid-cols-3">
               {phases.map((phase, index) => (
                 <article key={phase.phase} className="group relative min-h-[420px] overflow-hidden bg-wstc-bg p-7 sm:p-9">
-                  <img src={phase.image} alt={phase.alt} loading="lazy" width={1536} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-90 saturate-110 transition duration-700 group-hover:scale-[1.04] group-hover:opacity-100 group-hover:saturate-125" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-wstc-bg/25 via-wstc-bg/60 to-wstc-bg" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-wstc-bg/85 via-wstc-bg/45 to-transparent" />
+                  <img src={phase.image} alt={phase.alt} loading="lazy" width={1536} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-100 saturate-125 transition duration-700 group-hover:scale-[1.04] group-hover:opacity-100 group-hover:saturate-125" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-wstc-bg/20 to-wstc-bg/85" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-wstc-bg/75 via-wstc-bg/25 to-transparent" />
                   <div className="relative z-10 flex h-full min-h-[348px] flex-col justify-between">
                     <div className="flex items-start justify-between"><span className="text-6xl font-black text-wstc-foreground/20 transition group-hover:text-wstc-cyan/40">{phase.phase}</span><span className="border border-wstc-cyan/25 bg-white/80 px-2 py-1 font-mono text-[9px] uppercase text-wstc-cyan backdrop-blur-md">{phase.signal}</span></div>
                     <div><span className="text-[10px] uppercase text-wstc-violet">{phase.place}</span><h3 className="mt-3 text-2xl font-bold text-wstc-foreground">{phase.title}</h3><p className="mt-4 max-w-sm text-sm leading-7 text-wstc-muted">{phase.copy}</p></div>
@@ -237,9 +237,9 @@ export default function WSTC() {
                 const active = activeTrack === track.id;
                 return (
                   <button key={track.id} type="button" onClick={() => setActiveTrack(track.id)} aria-expanded={active} className={`wstc-glass group relative min-h-[360px] overflow-hidden p-7 text-left transition duration-500 sm:p-9 ${active ? track.violet ? "border-wstc-violet/70 shadow-[0_0_50px_hsl(var(--wstc-violet)/0.12)]" : "border-wstc-cyan/70 shadow-[0_0_50px_hsl(var(--wstc-cyan)/0.12)]" : ""}`}>
-                    <img src={track.image} alt={track.alt} loading="lazy" width={1536} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-90 saturate-110 transition duration-700 group-hover:scale-[1.04] group-hover:opacity-100 group-hover:saturate-125" />
-                    <span className="absolute inset-0 bg-gradient-to-b from-wstc-bg/25 via-wstc-bg/45 to-wstc-bg" />
-                    <span className="absolute inset-0 bg-gradient-to-r from-wstc-bg/85 via-wstc-bg/45 to-transparent" />
+                    <img src={track.image} alt={track.alt} loading="lazy" width={1536} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-100 saturate-125 transition duration-700 group-hover:scale-[1.04] group-hover:opacity-100 group-hover:saturate-125" />
+                    <span className="absolute inset-0 bg-gradient-to-b from-transparent via-wstc-bg/20 to-wstc-bg/85" />
+                    <span className="absolute inset-0 bg-gradient-to-r from-wstc-bg/75 via-wstc-bg/25 to-transparent" />
                     <span className="relative z-10 flex min-h-[288px] flex-col">
                       <span className="flex items-start justify-between"><span className={`grid h-11 w-11 place-items-center border bg-white/80 backdrop-blur-md ${track.violet ? "border-wstc-violet/40 text-wstc-violet" : "border-wstc-cyan/40 text-wstc-cyan"}`}><track.icon className="h-5 w-5" /></span><span className={`border bg-white/80 px-2 py-1 font-mono text-[9px] uppercase backdrop-blur-md ${track.violet ? "border-wstc-violet/30 text-wstc-violet" : "border-wstc-cyan/25 text-wstc-cyan"}`}>{track.tag}</span></span>
                       <span className="mt-auto block"><span className="block text-2xl font-bold text-wstc-foreground">{track.name}</span><span className="mt-3 block max-w-xl text-sm leading-7 text-wstc-muted">{track.copy}</span></span>
@@ -277,9 +277,9 @@ export default function WSTC() {
                   { icon: GraduationCap, title: "Academic institutions", copy: "Join the judging network, support research and build a pipeline of future applicants.", image: partnerAcademicImage, alt: "Advanced university research hall with DNA helix and neural network holograms" },
                 ].map((item) => (
                   <article key={item.title} className="group relative min-h-[240px] overflow-hidden bg-wstc-bg p-7 transition sm:p-9">
-                    <img src={item.image} alt={item.alt} loading="lazy" width={1536} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-90 saturate-110 transition duration-700 group-hover:scale-[1.04] group-hover:opacity-100 group-hover:saturate-125" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-wstc-bg/25 via-wstc-bg/60 to-wstc-bg" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-wstc-bg/85 via-wstc-bg/45 to-transparent" />
+                    <img src={item.image} alt={item.alt} loading="lazy" width={1536} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-100 saturate-125 transition duration-700 group-hover:scale-[1.04] group-hover:opacity-100 group-hover:saturate-125" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-wstc-bg/20 to-wstc-bg/85" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-wstc-bg/75 via-wstc-bg/25 to-transparent" />
                     <div className="relative z-10 flex h-full min-h-[168px] flex-col justify-between">
                       <span className="grid h-10 w-10 place-items-center border border-wstc-cyan/40 bg-white/80 backdrop-blur-md text-wstc-cyan"><item.icon className="h-5 w-5" /></span>
                       <div>
