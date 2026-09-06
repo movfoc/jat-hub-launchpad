@@ -29,6 +29,9 @@ import biotechnologyTrackImage from "@/assets/wstc-track-biotechnology.jpg";
 import aiAutonomousTrackImage from "@/assets/wstc-track-ai-autonomous.jpg";
 import digitalEconomyTrackImage from "@/assets/wstc-track-digital-economy.jpg";
 import greenTechTrackImage from "@/assets/wstc-track-green-tech.jpg";
+import partnerCorporateImage from "@/assets/wstc-partner-corporate.jpg";
+import partnerVentureImage from "@/assets/wstc-partner-venture.jpg";
+import partnerAcademicImage from "@/assets/wstc-partner-academic.jpg";
 
 const FINAL_DATE = new Date("2026-11-14T09:00:00Z").getTime();
 
