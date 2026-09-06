@@ -214,7 +214,7 @@ export default function WSTC() {
             <div className="mt-16 grid gap-px overflow-hidden border border-wstc-line/50 bg-wstc-line/50 lg:grid-cols-3">
               {phases.map((phase, index) => (
                 <article key={phase.phase} className="group relative min-h-[420px] overflow-hidden bg-wstc-bg p-7 sm:p-9">
-                  <img src={phase.image} alt={phase.alt} loading="lazy" width={1536} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-50 saturate-[0.8] transition duration-700 group-hover:scale-[1.04] group-hover:opacity-65 group-hover:saturate-100" />
+                  <img src={phase.image} alt={phase.alt} loading="lazy" width={1536} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-28 saturate-[0.9] transition duration-700 group-hover:scale-[1.04] group-hover:opacity-45 group-hover:saturate-100" />
                   <div className="absolute inset-0 bg-gradient-to-b from-wstc-bg/65 via-wstc-bg/80 to-wstc-bg" />
                   <div className="absolute inset-0 bg-gradient-to-r from-wstc-bg/80 via-wstc-bg/40 to-transparent" />
                   <div className="relative z-10 flex h-full min-h-[348px] flex-col justify-between">
@@ -237,7 +237,7 @@ export default function WSTC() {
                 const active = activeTrack === track.id;
                 return (
                   <button key={track.id} type="button" onClick={() => setActiveTrack(track.id)} aria-expanded={active} className={`wstc-glass group relative min-h-[360px] overflow-hidden p-7 text-left transition duration-500 sm:p-9 ${active ? track.violet ? "border-wstc-violet/70 shadow-[0_0_50px_hsl(var(--wstc-violet)/0.12)]" : "border-wstc-cyan/70 shadow-[0_0_50px_hsl(var(--wstc-cyan)/0.12)]" : ""}`}>
-                    <img src={track.image} alt={track.alt} loading="lazy" width={1536} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-25 saturate-[0.9] transition duration-700 group-hover:scale-[1.04] group-hover:opacity-55 group-hover:saturate-100" />
+                    <img src={track.image} alt={track.alt} loading="lazy" width={1536} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-25 saturate-[0.9] transition duration-700 group-hover:scale-[1.04] group-hover:opacity-45 group-hover:saturate-100" />
                     <span className="absolute inset-0 bg-gradient-to-b from-wstc-bg/25 via-wstc-bg/45 to-wstc-bg" />
                     <span className="absolute inset-0 bg-gradient-to-r from-wstc-bg/85 via-wstc-bg/45 to-transparent" />
                     <span className="relative z-10 flex min-h-[288px] flex-col">
