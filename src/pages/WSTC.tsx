@@ -25,6 +25,10 @@ import { Button } from "@/components/ui/button";
 import globalRegistrationImage from "@/assets/wstc-global-registration.jpg";
 import hongKongQualifiersImage from "@/assets/wstc-hong-kong-qualifiers.jpg";
 import londonFinalImage from "@/assets/wstc-london-final.jpg";
+import biotechnologyTrackImage from "@/assets/wstc-track-biotechnology.jpg";
+import aiAutonomousTrackImage from "@/assets/wstc-track-ai-autonomous.jpg";
+import digitalEconomyTrackImage from "@/assets/wstc-track-digital-economy.jpg";
+import greenTechTrackImage from "@/assets/wstc-track-green-tech.jpg";
 
 const FINAL_DATE = new Date("2026-11-14T09:00:00Z").getTime();
 
@@ -60,10 +64,10 @@ const phases = [
 ];
 
 const tracks = [
-  { id: 1, name: "Biotechnology & Life Sciences", tag: "FLAGSHIP", icon: Dna, violet: true, copy: "Therapeutics, synthetic biology, bioinformatics and AI-accelerated drug discovery.", points: ["Therapeutics & diagnostics", "Synthetic biology", "Bioinformatics pipelines", "AI drug discovery"] },
-  { id: 2, name: "AI & Autonomous Systems", tag: "TRACK 02", icon: Cpu, violet: false, copy: "Neural networks, machine intelligence and autonomous systems built for measurable real-world outcomes.", points: ["Neural architectures", "Applied ML models", "Smart robotics", "Edge autonomy"] },
-  { id: 3, name: "Digital Economy & Web Technologies", tag: "TRACK 03", icon: Network, violet: false, copy: "Decentralised applications and advanced software infrastructure for the next internet.", points: ["Decentralised apps", "Fintech rails", "Developer infrastructure", "Data platforms"] },
-  { id: 4, name: "Green Tech & Sustainability", tag: "TRACK 04", icon: Leaf, violet: false, copy: "Clean energy solutions and environmental engineering with measurable global impact.", points: ["Clean energy", "Circular materials", "Climate analytics", "Environmental engineering"] },
+  { id: 1, name: "Biotechnology & Life Sciences", tag: "FLAGSHIP", icon: Dna, violet: true, image: biotechnologyTrackImage, alt: "DNA, molecular structures and biotechnology laboratory equipment", copy: "Therapeutics, synthetic biology, bioinformatics and AI-accelerated drug discovery.", points: ["Therapeutics & diagnostics", "Synthetic biology", "Bioinformatics pipelines", "AI drug discovery"] },
+  { id: 2, name: "AI & Autonomous Systems", tag: "TRACK 02", icon: Cpu, violet: false, image: aiAutonomousTrackImage, alt: "Robotic hand connecting with an artificial intelligence neural network", copy: "Neural networks, machine intelligence and autonomous systems built for measurable real-world outcomes.", points: ["Neural architectures", "Applied ML models", "Smart robotics", "Edge autonomy"] },
+  { id: 3, name: "Digital Economy & Web Technologies", tag: "TRACK 03", icon: Network, violet: false, image: digitalEconomyTrackImage, alt: "Connected digital infrastructure flowing towards a modern city", copy: "Decentralised applications and advanced software infrastructure for the next internet.", points: ["Decentralised apps", "Fintech rails", "Developer infrastructure", "Data platforms"] },
+  { id: 4, name: "Green Tech & Sustainability", tag: "TRACK 04", icon: Leaf, violet: false, image: greenTechTrackImage, alt: "Wind turbines, solar panels and a sustainable future city", copy: "Clean energy solutions and environmental engineering with measurable global impact.", points: ["Clean energy", "Circular materials", "Climate analytics", "Environmental engineering"] },
 ];
 
 const tiers = ["Title Sponsor", "Track Sponsor", "Ecosystem Partner"];
@@ -223,11 +227,15 @@ export default function WSTC() {
               {tracks.map((track) => {
                 const active = activeTrack === track.id;
                 return (
-                  <button key={track.id} type="button" onClick={() => setActiveTrack(track.id)} aria-expanded={active} className={`wstc-glass group min-h-[280px] p-7 text-left transition duration-500 sm:p-9 ${active ? track.violet ? "border-wstc-violet/70 shadow-[0_0_50px_hsl(var(--wstc-violet)/0.12)]" : "border-wstc-cyan/70 shadow-[0_0_50px_hsl(var(--wstc-cyan)/0.12)]" : ""}`}>
-                    <div className="flex items-start justify-between"><span className={`grid h-11 w-11 place-items-center border ${track.violet ? "border-wstc-violet/40 text-wstc-violet" : "border-wstc-cyan/40 text-wstc-cyan"}`}><track.icon className="h-5 w-5" /></span><span className={`font-mono text-[9px] uppercase ${track.violet ? "text-wstc-violet" : "text-wstc-muted"}`}>{track.tag}</span></div>
-                    <h3 className="mt-8 text-2xl font-bold text-wstc-foreground">{track.name}</h3>
-                    <p className="mt-3 max-w-xl text-sm leading-7 text-wstc-muted">{track.copy}</p>
-                    <div className={`grid transition-all duration-500 ${active ? "mt-6 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}><ul className="grid min-h-0 gap-2 overflow-hidden sm:grid-cols-2">{track.points.map((point) => <li key={point} className="flex items-center gap-2 text-xs text-wstc-foreground/80"><Check className={`h-3.5 w-3.5 ${track.violet ? "text-wstc-violet" : "text-wstc-cyan"}`} />{point}</li>)}</ul></div>
+                  <button key={track.id} type="button" onClick={() => setActiveTrack(track.id)} aria-expanded={active} className={`wstc-glass group relative min-h-[360px] overflow-hidden p-7 text-left transition duration-500 sm:p-9 ${active ? track.violet ? "border-wstc-violet/70 shadow-[0_0_50px_hsl(var(--wstc-violet)/0.12)]" : "border-wstc-cyan/70 shadow-[0_0_50px_hsl(var(--wstc-cyan)/0.12)]" : ""}`}>
+                    <img src={track.image} alt={track.alt} loading="lazy" width={1536} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-40 saturate-[0.75] transition duration-700 group-hover:scale-[1.04] group-hover:opacity-55 group-hover:saturate-100" />
+                    <span className="absolute inset-0 bg-gradient-to-b from-wstc-bg/25 via-wstc-bg/45 to-wstc-bg" />
+                    <span className="absolute inset-0 bg-gradient-to-r from-wstc-bg/65 via-wstc-bg/20 to-transparent" />
+                    <span className="relative z-10 flex min-h-[288px] flex-col">
+                      <span className="flex items-start justify-between"><span className={`grid h-11 w-11 place-items-center border bg-wstc-bg/60 backdrop-blur-md ${track.violet ? "border-wstc-violet/40 text-wstc-violet" : "border-wstc-cyan/40 text-wstc-cyan"}`}><track.icon className="h-5 w-5" /></span><span className={`border bg-wstc-bg/60 px-2 py-1 font-mono text-[9px] uppercase backdrop-blur-md ${track.violet ? "border-wstc-violet/30 text-wstc-violet" : "border-wstc-cyan/25 text-wstc-cyan"}`}>{track.tag}</span></span>
+                      <span className="mt-auto block"><span className="block text-2xl font-bold text-wstc-foreground">{track.name}</span><span className="mt-3 block max-w-xl text-sm leading-7 text-wstc-foreground/75">{track.copy}</span></span>
+                      <span className={`grid transition-all duration-500 ${active ? "mt-6 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}><span className="grid min-h-0 gap-2 overflow-hidden sm:grid-cols-2">{track.points.map((point) => <span key={point} className="flex items-center gap-2 text-xs text-wstc-foreground/80"><Check className={`h-3.5 w-3.5 ${track.violet ? "text-wstc-violet" : "text-wstc-cyan"}`} />{point}</span>)}</span></span>
+                    </span>
                   </button>
                 );
               })}
