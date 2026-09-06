@@ -22,6 +22,9 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import globalRegistrationImage from "@/assets/wstc-global-registration.jpg";
+import hongKongQualifiersImage from "@/assets/wstc-hong-kong-qualifiers.jpg";
+import londonFinalImage from "@/assets/wstc-london-final.jpg";
 
 const FINAL_DATE = new Date("2026-11-14T09:00:00Z").getTime();
 
@@ -51,9 +54,9 @@ const navLinks = [
 ];
 
 const phases = [
-  { phase: "01", title: "Global Registration", place: "Hong Kong · Europe", copy: "Teams choose a championship track and transmit their first concept brief to the global judging network.", signal: "INTAKE OPEN" },
-  { phase: "02", title: "Hong Kong Qualifiers", place: "Pitching · Prototypes", copy: "Working prototypes meet live scrutiny as experts select the strongest teams for the international stage.", signal: "REGIONAL NODE" },
-  { phase: "03", title: "United Kingdom Grand Final", place: "Global Convergence", copy: "Finalists cross continents for the world final, investor showcase and championship ceremony.", signal: "FINAL VECTOR" },
+  { phase: "01", title: "Global Registration", place: "Hong Kong · Europe", copy: "Teams choose a championship track and transmit their first concept brief to the global judging network.", signal: "INTAKE OPEN", image: globalRegistrationImage, alt: "Europe and Asia connected across a digital globe" },
+  { phase: "02", title: "Hong Kong Qualifiers", place: "Pitching · Prototypes", copy: "Working prototypes meet live scrutiny as experts select the strongest teams for the international stage.", signal: "REGIONAL NODE", image: hongKongQualifiersImage, alt: "Hong Kong skyline across Victoria Harbour at night" },
+  { phase: "03", title: "United Kingdom Grand Final", place: "Global Convergence", copy: "Finalists cross continents for the world final, investor showcase and championship ceremony.", signal: "FINAL VECTOR", image: londonFinalImage, alt: "Big Ben and the Palace of Westminster beside the River Thames" },
 ];
 
 const tracks = [
@@ -197,9 +200,14 @@ export default function WSTC() {
             <ChapterHeading number="II" eyebrow="Hong Kong to United Kingdom" title="The unified journey." copy="One continuous trajectory: from first signal to final stage. Every chapter raises the technical bar and expands the audience." />
             <div className="mt-16 grid gap-px overflow-hidden border border-wstc-line/50 bg-wstc-line/50 lg:grid-cols-3">
               {phases.map((phase, index) => (
-                <article key={phase.phase} className="group relative min-h-[360px] bg-wstc-bg p-7 transition duration-500 hover:bg-wstc-surface/70 sm:p-9">
-                  <div className="flex items-start justify-between"><span className="text-6xl font-black text-wstc-foreground/[0.07] transition group-hover:text-wstc-cyan/15">{phase.phase}</span><span className="font-mono text-[9px] uppercase text-wstc-cyan">{phase.signal}</span></div>
-                  <div className="mt-20"><span className="text-[10px] uppercase text-wstc-violet">{phase.place}</span><h3 className="mt-3 text-2xl font-bold text-wstc-foreground">{phase.title}</h3><p className="mt-4 text-sm leading-7 text-wstc-muted">{phase.copy}</p></div>
+                <article key={phase.phase} className="group relative min-h-[420px] overflow-hidden bg-wstc-bg p-7 sm:p-9">
+                  <img src={phase.image} alt={phase.alt} loading="lazy" width={1536} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-50 saturate-[0.8] transition duration-700 group-hover:scale-[1.04] group-hover:opacity-65 group-hover:saturate-100" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-wstc-bg/30 via-wstc-bg/45 to-wstc-bg" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-wstc-bg/55 via-transparent to-transparent" />
+                  <div className="relative z-10 flex h-full min-h-[348px] flex-col justify-between">
+                    <div className="flex items-start justify-between"><span className="text-6xl font-black text-wstc-foreground/20 transition group-hover:text-wstc-cyan/40">{phase.phase}</span><span className="border border-wstc-cyan/25 bg-wstc-bg/60 px-2 py-1 font-mono text-[9px] uppercase text-wstc-cyan backdrop-blur-md">{phase.signal}</span></div>
+                    <div><span className="text-[10px] uppercase text-wstc-violet">{phase.place}</span><h3 className="mt-3 text-2xl font-bold text-wstc-foreground">{phase.title}</h3><p className="mt-4 max-w-sm text-sm leading-7 text-wstc-foreground/75">{phase.copy}</p></div>
+                  </div>
                   {index < phases.length - 1 && <ArrowRight className="absolute -right-3 top-1/2 z-10 hidden h-6 w-6 rounded-full bg-wstc-cyan p-1 text-wstc-ink lg:block" />}
                 </article>
               ))}
