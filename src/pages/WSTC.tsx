@@ -238,7 +238,7 @@ export default function WSTC() {
                 return (
                   <button key={track.id} type="button" onClick={() => setActiveTrack(track.id)} aria-expanded={active} className={`wstc-glass group relative min-h-[360px] overflow-hidden p-7 text-left transition duration-500 sm:p-9 ${active ? track.violet ? "border-wstc-violet/70 shadow-[0_0_50px_hsl(var(--wstc-violet)/0.12)]" : "border-wstc-cyan/70 shadow-[0_0_50px_hsl(var(--wstc-cyan)/0.12)]" : ""}`}>
                     <img src={track.image} alt={track.alt} loading="lazy" width={1536} height={1024} className="absolute inset-0 h-full w-full object-cover opacity-100 saturate-125 transition duration-700 group-hover:scale-[1.04] group-hover:opacity-100 group-hover:saturate-125" />
-                    <span className="absolute inset-0 bg-gradient-to-b from-wstc-bg/25 via-wstc-bg/45 to-wstc-bg" />
+                    <span className="absolute inset-0 bg-gradient-to-b from-transparent via-wstc-bg/20 to-wstc-bg/85" />
                     <span className="absolute inset-0 bg-gradient-to-r from-wstc-bg/75 via-wstc-bg/25 to-transparent" />
                     <span className="relative z-10 flex min-h-[288px] flex-col">
                       <span className="flex items-start justify-between"><span className={`grid h-11 w-11 place-items-center border bg-white/80 backdrop-blur-md ${track.violet ? "border-wstc-violet/40 text-wstc-violet" : "border-wstc-cyan/40 text-wstc-cyan"}`}><track.icon className="h-5 w-5" /></span><span className={`border bg-white/80 px-2 py-1 font-mono text-[9px] uppercase backdrop-blur-md ${track.violet ? "border-wstc-violet/30 text-wstc-violet" : "border-wstc-cyan/25 text-wstc-cyan"}`}>{track.tag}</span></span>
