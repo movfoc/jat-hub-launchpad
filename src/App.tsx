@@ -32,6 +32,7 @@ import NIHR from "./pages/NIHR";
 import BePartOfResearch from "./pages/BePartOfResearch";
 import FutureOfUs from "./pages/FutureOfUs";
 import AIGameCreators from "./pages/AIGameCreators";
+import WSTC from "./pages/WSTC";
 
 
 const queryClient = new QueryClient();
@@ -71,6 +72,7 @@ const App = () => (
           <Route path="/bepartofresearch" element={<BePartOfResearch />} />
           <Route path="/future-of-us" element={<FutureOfUs />} />
           <Route path="/ai-game-creators" element={<AIGameCreators />} />
+          <Route path="/wstc" element={<WSTC />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
