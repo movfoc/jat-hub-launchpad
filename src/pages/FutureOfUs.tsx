@@ -45,7 +45,7 @@ const CONTACT_EMAIL = "jat@jathub.com";
 
 const tour = [
   {
-    pill: "OCT 2026",
+    pill: "FEB 2027",
     place: "University of Reading",
     sub: "London Road Campus",
     focus: "Youth Mental Health & Community Wellness",
@@ -53,7 +53,7 @@ const tour = [
     accent: "from-emerald-400 to-teal-300",
   },
   {
-    pill: "NOV 2026",
+    pill: "MAY 2027",
     place: "Oxford North",
     sub: "Innovation District",
     focus: "Innovation, HealthTech & Youth Empowerment",
@@ -61,7 +61,7 @@ const tour = [
     accent: "from-lime-400 to-emerald-300",
   },
   {
-    pill: "DEC 2026",
+    pill: "TBC",
     place: "University of Surrey",
     sub: "& Surrey Research Park",
     focus: "BioTech, Health Research & Clinical Impact",
