@@ -17,9 +17,10 @@ import {
   CalendarDays,
   MapPin,
   Stethoscope,
-  Mic2,
-  UtensilsCrossed,
-  HeartHandshake,
+  Brain,
+  MonitorSmartphone,
+  Users,
+  HeartPulse,
   GraduationCap,
   Building2,
   Cpu,
@@ -45,6 +46,14 @@ const CONTACT_EMAIL = "jat@jathub.com";
 
 const tour = [
   {
+    pill: "NOV 2026",
+    place: "University of Surrey",
+    sub: "Surrey Sport Park",
+    focus: "Sport, Youth Voice & Community Wellness",
+    tier: "Sponsor This Stop",
+    accent: "from-teal-300 to-sky-300",
+  },
+  {
     pill: "FEB 2027",
     place: "University of Reading",
     sub: "London Road Campus",
@@ -56,40 +65,32 @@ const tour = [
     pill: "MAY 2027",
     place: "Oxford North",
     sub: "Innovation District",
-    focus: "Innovation, HealthTech & Youth Empowerment",
+    focus: "Innovation, BioTech, HealthTech & Youth Empowerment",
     tier: "Keynote Slots Open",
     accent: "from-lime-400 to-emerald-300",
-  },
-  {
-    pill: "TBC",
-    place: "University of Surrey",
-    sub: "& Surrey Research Park",
-    focus: "BioTech, Health Research & Clinical Impact",
-    tier: "Sponsor This Stop",
-    accent: "from-teal-300 to-sky-300",
   },
 ];
 
 const zones = [
   {
-    icon: Stethoscope,
-    title: "Interactive Exhibition Zone",
-    body: "Health stalls, NHS Mobile Bus, interactive wellness resources, and on-site physical and mental health check-ups.",
+    icon: HeartPulse,
+    title: "Physical & Preventive Health",
+    body: "Live health check-ups, biometric screening, tailored nutrition guidance, and preventive care stalls.",
   },
   {
-    icon: Mic2,
-    title: "Auditorium & Live Stage",
-    body: "\u201CLet\u2019s Talk\u201D panel discussions pairing clinical experts with youth voices, keynote speeches, and live choir performances.",
+    icon: Brain,
+    title: "Mental Wellbeing & Mindfulness",
+    body: "Dedicated mindfulness quiet spaces, de-stressing interactive workshops, and student mental health toolkits.",
   },
   {
-    icon: UtensilsCrossed,
-    title: "Food & Community Village",
-    body: "Local food trucks (pizza, rice, ice cream) and relaxed community networking spaces.",
+    icon: MonitorSmartphone,
+    title: "Digital Wellness & Tech",
+    body: "Interactive explorations of healthy gaming habits, digital resilience, and mental wellness in tech careers.",
   },
   {
-    icon: HeartHandshake,
-    title: "Charity Fundraising",
-    body: "Direct proceeds supporting regional healthcare charities, including Berkshire Healthcare Charity and Royal Surrey Charity.",
+    icon: Users,
+    title: "SU & Community Engagement",
+    body: "Student Union society booths, welfare campaigns, peer networking, and professional career pathways.",
   },
 ];
 
