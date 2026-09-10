@@ -17,6 +17,9 @@ import {
   CalendarDays,
   MapPin,
   Stethoscope,
+  Mic,
+  Utensils,
+  HeartHandshake,
   Brain,
   MonitorSmartphone,
   Users,
@@ -91,6 +94,26 @@ const zones = [
     icon: Users,
     title: "SU & Community Engagement",
     body: "Student Union society booths, welfare campaigns, peer networking, and professional career pathways.",
+  },
+  {
+    icon: Stethoscope,
+    title: "Interactive Exhibition Zone",
+    body: "Health stalls, NHS Mobile Bus, interactive wellness resources, and on-site physical and mental health check-ups.",
+  },
+  {
+    icon: Mic,
+    title: "Auditorium & Live Stage",
+    body: "“Let's Talk” panel discussions pairing clinical experts with youth voices, keynote speeches, and live choir performances.",
+  },
+  {
+    icon: Utensils,
+    title: "Food & Community Village",
+    body: "Local food trucks (pizza, rice, ice cream) and relaxed community networking spaces.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Charity Fundraising",
+    body: "Direct proceeds supporting regional healthcare charities, including Berkshire Healthcare Charity and Royal Surrey Charity.",
   },
 ];
 
