@@ -111,9 +111,10 @@ const XPlore = () => {
         <div className="max-w-7xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
           <a href="/" className="font-mono text-lg md:text-xl font-bold tracking-tighter flex items-center gap-2">
             <div className="w-3 h-3 bg-[#D4FF00] rounded-sm shadow-[0_0_10px_#D4FF00]" />
-            JatHub <span className="text-[#D4FF00]">X-PLORE</span>
+            JatHub <span className="text-[#D4FF00]">X-PLORE 2027</span>
           </a>
           <div className="hidden md:flex gap-6 lg:gap-8 text-sm font-medium text-gray-400">
+            <a href="#tracks" className="hover:text-[#D4FF00] transition-colors cursor-pointer">Tracks</a>
             <a href="#philosophy" className="hover:text-[#D4FF00] transition-colors cursor-pointer">Philosophy</a>
             <a href="#partners" className="hover:text-[#D4FF00] transition-colors cursor-pointer">For Partners</a>
             <a href="#students" className="hover:text-[#D4FF00] transition-colors cursor-pointer">For Students</a>
@@ -125,6 +126,7 @@ const XPlore = () => {
         </div>
         {mobileMenuOpen && (
           <div className="md:hidden px-6 pb-4 bg-[#050505]/95 backdrop-blur-xl border-t border-white/5 flex flex-col gap-3">
+            <a href="#tracks" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-[#D4FF00] transition-colors text-sm">Tracks</a>
             <a href="#philosophy" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-[#D4FF00] transition-colors text-sm">Philosophy</a>
             <a href="#partners" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-white transition-colors text-sm">For Partners</a>
             <a href="#students" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-white transition-colors text-sm">For Students</a>
@@ -436,10 +438,10 @@ const XPlore = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
               {[
                 { icon: Gamepad2, label: "Game Devs" },
+                { icon: Rocket, label: "Product Engineers" },
+                { icon: BarChart2, label: "FinTech Builders" },
+                { icon: FlaskConical, label: "BioTech Researchers" },
                 { icon: Bot, label: "AI Creators" },
-                { icon: Glasses, label: "XR Designers" },
-                { icon: BarChart2, label: "Strategists" },
-                { icon: PenTool, label: "Copywriters" },
                 { icon: Palette, label: "Designers" },
               ].map((role) => (
                 <div key={role.label} className="glass-panel p-5 rounded-xl text-center hover:bg-white/5 transition-colors cursor-default group">
