@@ -162,13 +162,19 @@ const XPlore = () => {
         <div className="absolute bottom-1/3 left-32 opacity-20 animate-float-delayed"><Layers className="w-9 h-9 text-[#3B82F6]" /></div>
 
         <div className="relative z-10 text-center max-w-6xl mx-auto reveal-on-scroll opacity-0 translate-y-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#D4FF00]/40 bg-[#D4FF00]/10 text-[#D4FF00] text-[11px] sm:text-xs font-mono font-bold uppercase tracking-widest mb-6">
+            <Sparkles className="w-3.5 h-3.5" /> 2027 Edition · Applications Opening
+          </div>
           <h1 className="text-[2.5rem] sm:text-5xl md:text-7xl lg:text-9xl font-extrabold tracking-tight mb-6 sm:mb-8 leading-none text-white">
-            X-PLORE <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500 text-xl sm:text-3xl md:text-5xl lg:text-6xl block mt-3 tracking-normal">Marketing Ideathon</span>
+            X-PLORE <span className="text-[#D4FF00]">2027</span> <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500 text-xl sm:text-3xl md:text-5xl lg:text-6xl block mt-3 tracking-normal">Ideathon</span>
           </h1>
-          <h2 className="text-lg sm:text-xl md:text-3xl font-normal mb-10 sm:mb-12 tracking-tight text-[#D4FF00] text-glow leading-snug">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-normal mb-6 sm:mb-8 tracking-tight text-[#D4FF00] text-glow leading-snug">
             Beyond the Brief. Build the Experience.
           </h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-3xl mx-auto mb-10 sm:mb-12 leading-[1.7]">
+            Four frontiers. One mission. This year we focus on <span className="text-white font-semibold">Game Design</span>, <span className="text-white font-semibold">Product Engineering</span>, <span className="text-white font-semibold">FinTech Infra</span> and <span className="text-white font-semibold">BioTech</span>.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center reveal-on-scroll opacity-0 translate-y-8 max-w-sm sm:max-w-none mx-auto" style={{ transitionDelay: "200ms" }}>
             <a href="#partners" className="group bg-[#D4FF00] text-black px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:scale-105 transition-all shadow-[0_0_20px_rgba(212,255,0,0.2)] flex items-center justify-center gap-2">
               <Briefcase className="w-5 h-5" /> For Partners
