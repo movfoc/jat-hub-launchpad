@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Briefcase, Heart } from "lucide-react";
+import { Menu, X, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import jathubLogo from "@/assets/jathub-logo.jpg";
 
