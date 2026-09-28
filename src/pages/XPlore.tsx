@@ -186,56 +186,62 @@ const XPlore = () => {
         </div>
       </section>
 
-      {/* 2026 X-plore Winners */}
-      <section id="winners" className="pt-16 md:pt-24 pb-8 md:pb-12 bg-[#050505]">
+      {/* 2027 Focus Tracks */}
+      <section id="tracks" className="pt-16 md:pt-24 pb-8 md:pb-12 bg-[#050505]">
         <div className="max-w-7xl mx-auto px-5 sm:px-6">
-          <div className="flex items-end justify-between mb-8 sm:mb-12 reveal-on-scroll opacity-0 translate-y-8">
-            <div>
-              <div className="text-[#D4FF00] font-mono text-xs sm:text-sm uppercase tracking-widest mb-3">2026 Ideathon</div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">X-plore Winners</h2>
-              <p className="text-sm sm:text-base text-gray-400 mt-3 max-w-2xl leading-relaxed">
-                Celebrating the bold student-led projects awarded by JatHub CIC and UCL at this year's X-plore Ideathon.
-              </p>
-            </div>
+          <div className="text-center mb-10 sm:mb-14 reveal-on-scroll opacity-0 translate-y-8">
+            <div className="text-[#D4FF00] font-mono text-xs sm:text-sm uppercase tracking-widest mb-3">2027 Ideathon</div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">The Four Tracks</h2>
+            <p className="text-sm sm:text-base text-gray-400 mt-3 max-w-2xl mx-auto leading-relaxed">
+              Pick your frontier. Each track pairs student teams with a real partner brief and a buildable outcome.
+            </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 reveal-on-scroll opacity-0 translate-y-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 reveal-on-scroll opacity-0 translate-y-8">
             {[
-              { slug: "crafting-smiles", cover: "/xplore-winners/covers/crafting-smiles.jpg", category: "Community & Wellbeing", title: "Crafting Smiles" },
-              { slug: "clarity", cover: "/xplore-winners/covers/clarity.jpg", category: "AI Career Tech", title: "Clarity" },
-              { slug: "vr-drum-simulator", cover: "/xplore-winners/covers/vr.jpg", category: "VR & Music", title: "VR Drum Simulator" },
-              { slug: "biotech", cover: "/__l5e/assets-v1/d25776ed-c938-450c-8e9e-debabf452dfb/cancer-6.png", category: "Biotech & Education", title: "Cancer Cell Siege — AI Biotech" },
-            ].map((w) => (
-              <a
-                key={w.slug}
-                href={`/xplore-winners/${w.slug}.html`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col rounded-xl overflow-hidden glass-panel"
+              { icon: Gamepad2, num: "01", title: "Game Design", accent: "#D4FF00", desc: "Playable worlds, gameplay systems and immersive mechanics that turn audiences into participants.", tags: ["Unity / Unreal", "Roblox", "Level Design"] },
+              { icon: Rocket, num: "02", title: "Product Engineering", accent: "#3B82F6", desc: "Rapid full-stack prototyping and scalable architecture — from first sketch to shippable product.", tags: ["Full-Stack", "AI Tooling", "UX Systems"] },
+              { icon: BarChart2, num: "03", title: "FinTech Infra", accent: "#8B5CF6", desc: "Payment rails, risk and compliance tooling, and the infrastructure behind modern money movement.", tags: ["Payments", "RegTech", "Data Infra"] },
+              { icon: FlaskConical, num: "04", title: "BioTech", accent: "#22D3EE", desc: "Computational biology, digital health and AI-accelerated life sciences with real clinical relevance.", tags: ["Bioinformatics", "Digital Health", "AI Discovery"] },
+            ].map((t) => (
+              <div
+                key={t.title}
+                className="glass-panel p-6 sm:p-7 rounded-2xl group flex flex-col border-t-2"
+                style={{ borderTopColor: t.accent }}
               >
-                <div className="aspect-video overflow-hidden bg-black">
-                  <img
-                    src={w.cover}
-                    alt={w.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-5 sm:p-6 flex flex-col flex-grow">
-                  <span className="text-[#D4FF00] text-[11px] font-semibold tracking-widest uppercase mb-2">
-                    {w.category}
-                  </span>
-                  <h3 className="text-white font-semibold text-base sm:text-lg leading-snug mb-3">
-                    {w.title}
-                  </h3>
-                  <div className="mt-auto flex items-center justify-between">
-                    <span className="text-gray-500 text-xs">May 26, 2026</span>
-                    <span className="text-[#D4FF00] text-sm flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      Read <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
+                <div className="flex items-center justify-between mb-5">
+                  <div
+                    className="w-12 h-12 rounded-lg flex items-center justify-center"
+                    style={{ backgroundColor: `${t.accent}1A`, color: t.accent }}
+                  >
+                    <t.icon className="w-6 h-6" />
                   </div>
+                  <span className="font-mono text-2xl font-bold text-white/10 group-hover:text-white/25 transition-colors">{t.num}</span>
                 </div>
-              </a>
+                <h3 className="text-xl font-bold text-white mb-3">{t.title}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed mb-5 flex-grow">{t.desc}</p>
+                <div className="flex flex-wrap gap-2">
+                  {t.tags.map((tag) => (
+                    <span key={tag} className="text-[11px] px-2 py-1 rounded bg-white/5 text-gray-300 border border-white/10">{tag}</span>
+                  ))}
+                </div>
+              </div>
             ))}
+          </div>
+
+          {/* 2026 archive link */}
+          <div className="mt-10 sm:mt-14 reveal-on-scroll opacity-0 translate-y-8">
+            <Link
+              to="/xplore2026"
+              className="group glass-panel rounded-2xl px-6 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+            >
+              <div>
+                <div className="text-[#D4FF00] font-mono text-[11px] uppercase tracking-widest mb-1">Archive</div>
+                <div className="text-white font-semibold text-base sm:text-lg">X-plore 2026 — Marketing Ideathon &amp; Winners</div>
+              </div>
+              <span className="text-[#D4FF00] text-sm font-semibold flex items-center gap-2">
+                View 2026 edition <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>
