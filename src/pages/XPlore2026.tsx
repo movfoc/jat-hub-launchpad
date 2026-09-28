@@ -5,12 +5,12 @@ import {
   Lightbulb, Sparkles, Zap, Brain, Target, Layers,
   Telescope, FlaskConical, Rocket, Briefcase, GraduationCap,
   Check, FileCheck2, Search, Users2, Megaphone,
-  Gamepad2, Bot, BarChart2, Palette,
+  Gamepad2, Bot, Glasses, BarChart2, PenTool, Palette,
   CheckCircle, Calendar, MapPin, ArrowRight
 } from "lucide-react";
 import robloxBanner from "@/assets/roblox-workshop-banner.jpg";
 
-const XPlore = () => {
+const XPlore2026 = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const revealRefs = useRef<HTMLElement[]>([]);
   const dotRef = useRef<HTMLDivElement>(null);
@@ -111,10 +111,9 @@ const XPlore = () => {
         <div className="max-w-7xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
           <a href="/" className="font-mono text-lg md:text-xl font-bold tracking-tighter flex items-center gap-2">
             <div className="w-3 h-3 bg-[#D4FF00] rounded-sm shadow-[0_0_10px_#D4FF00]" />
-            JatHub <span className="text-[#D4FF00]">X-PLORE 2027</span>
+            JatHub <span className="text-[#D4FF00]">X-PLORE 2026</span>
           </a>
           <div className="hidden md:flex gap-6 lg:gap-8 text-sm font-medium text-gray-400">
-            <a href="#tracks" className="hover:text-[#D4FF00] transition-colors cursor-pointer">Tracks</a>
             <a href="#philosophy" className="hover:text-[#D4FF00] transition-colors cursor-pointer">Philosophy</a>
             <a href="#partners" className="hover:text-[#D4FF00] transition-colors cursor-pointer">For Partners</a>
             <a href="#students" className="hover:text-[#D4FF00] transition-colors cursor-pointer">For Students</a>
@@ -126,7 +125,6 @@ const XPlore = () => {
         </div>
         {mobileMenuOpen && (
           <div className="md:hidden px-6 pb-4 bg-[#050505]/95 backdrop-blur-xl border-t border-white/5 flex flex-col gap-3">
-            <a href="#tracks" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-[#D4FF00] transition-colors text-sm">Tracks</a>
             <a href="#philosophy" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-[#D4FF00] transition-colors text-sm">Philosophy</a>
             <a href="#partners" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-white transition-colors text-sm">For Partners</a>
             <a href="#students" onClick={() => setMobileMenuOpen(false)} className="py-2 text-gray-300 hover:text-white transition-colors text-sm">For Students</a>
@@ -164,19 +162,13 @@ const XPlore = () => {
         <div className="absolute bottom-1/3 left-32 opacity-20 animate-float-delayed"><Layers className="w-9 h-9 text-[#3B82F6]" /></div>
 
         <div className="relative z-10 text-center max-w-6xl mx-auto reveal-on-scroll opacity-0 translate-y-8">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#D4FF00]/40 bg-[#D4FF00]/10 text-[#D4FF00] text-[11px] sm:text-xs font-mono font-bold uppercase tracking-widest mb-6">
-            <Sparkles className="w-3.5 h-3.5" /> 2027 Edition · Applications Opening
-          </div>
           <h1 className="text-[2.5rem] sm:text-5xl md:text-7xl lg:text-9xl font-extrabold tracking-tight mb-6 sm:mb-8 leading-none text-white">
-            X-PLORE <span className="text-[#D4FF00]">2027</span> <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500 text-xl sm:text-3xl md:text-5xl lg:text-6xl block mt-3 tracking-normal">Ideathon</span>
+            X-PLORE 2026 <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500 text-xl sm:text-3xl md:text-5xl lg:text-6xl block mt-3 tracking-normal">Marketing Ideathon</span>
           </h1>
-          <h2 className="text-lg sm:text-xl md:text-3xl font-normal mb-6 sm:mb-8 tracking-tight text-[#D4FF00] text-glow leading-snug">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-normal mb-10 sm:mb-12 tracking-tight text-[#D4FF00] text-glow leading-snug">
             Beyond the Brief. Build the Experience.
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-3xl mx-auto mb-10 sm:mb-12 leading-[1.7]">
-            Four frontiers. One mission. This year we focus on <span className="text-white font-semibold">Game Design</span>, <span className="text-white font-semibold">Product Engineering</span>, <span className="text-white font-semibold">FinTech Infra</span> and <span className="text-white font-semibold">BioTech</span>.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center reveal-on-scroll opacity-0 translate-y-8 max-w-sm sm:max-w-none mx-auto" style={{ transitionDelay: "200ms" }}>
             <a href="#partners" className="group bg-[#D4FF00] text-black px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:scale-105 transition-all shadow-[0_0_20px_rgba(212,255,0,0.2)] flex items-center justify-center gap-2">
               <Briefcase className="w-5 h-5" /> For Partners
@@ -188,62 +180,56 @@ const XPlore = () => {
         </div>
       </section>
 
-      {/* 2027 Focus Tracks */}
-      <section id="tracks" className="pt-16 md:pt-24 pb-8 md:pb-12 bg-[#050505]">
+      {/* 2026 X-plore Winners */}
+      <section id="winners" className="pt-16 md:pt-24 pb-8 md:pb-12 bg-[#050505]">
         <div className="max-w-7xl mx-auto px-5 sm:px-6">
-          <div className="text-center mb-10 sm:mb-14 reveal-on-scroll opacity-0 translate-y-8">
-            <div className="text-[#D4FF00] font-mono text-xs sm:text-sm uppercase tracking-widest mb-3">2027 Ideathon</div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">The Four Tracks</h2>
-            <p className="text-sm sm:text-base text-gray-400 mt-3 max-w-2xl mx-auto leading-relaxed">
-              Pick your frontier. Each track pairs student teams with a real partner brief and a buildable outcome.
-            </p>
+          <div className="flex items-end justify-between mb-8 sm:mb-12 reveal-on-scroll opacity-0 translate-y-8">
+            <div>
+              <div className="text-[#D4FF00] font-mono text-xs sm:text-sm uppercase tracking-widest mb-3">2026 Ideathon</div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">X-plore Winners</h2>
+              <p className="text-sm sm:text-base text-gray-400 mt-3 max-w-2xl leading-relaxed">
+                Celebrating the bold student-led projects awarded by JatHub CIC and UCL at this year's X-plore Ideathon.
+              </p>
+            </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 reveal-on-scroll opacity-0 translate-y-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 reveal-on-scroll opacity-0 translate-y-8">
             {[
-              { icon: Gamepad2, num: "01", title: "Game Design", accent: "#D4FF00", desc: "Playable worlds, gameplay systems and immersive mechanics that turn audiences into participants.", tags: ["Unity / Unreal", "Roblox", "Level Design"] },
-              { icon: Rocket, num: "02", title: "Product Engineering", accent: "#3B82F6", desc: "Rapid full-stack prototyping and scalable architecture — from first sketch to shippable product.", tags: ["Full-Stack", "AI Tooling", "UX Systems"] },
-              { icon: BarChart2, num: "03", title: "FinTech Infra", accent: "#8B5CF6", desc: "Payment rails, risk and compliance tooling, and the infrastructure behind modern money movement.", tags: ["Payments", "RegTech", "Data Infra"] },
-              { icon: FlaskConical, num: "04", title: "BioTech", accent: "#22D3EE", desc: "Computational biology, digital health and AI-accelerated life sciences with real clinical relevance.", tags: ["Bioinformatics", "Digital Health", "AI Discovery"] },
-            ].map((t) => (
-              <div
-                key={t.title}
-                className="glass-panel p-6 sm:p-7 rounded-2xl group flex flex-col border-t-2"
-                style={{ borderTopColor: t.accent }}
+              { slug: "crafting-smiles", cover: "/xplore-winners/covers/crafting-smiles.jpg", category: "Community & Wellbeing", title: "Crafting Smiles" },
+              { slug: "clarity", cover: "/xplore-winners/covers/clarity.jpg", category: "AI Career Tech", title: "Clarity" },
+              { slug: "vr-drum-simulator", cover: "/xplore-winners/covers/vr.jpg", category: "VR & Music", title: "VR Drum Simulator" },
+              { slug: "biotech", cover: "/__l5e/assets-v1/d25776ed-c938-450c-8e9e-debabf452dfb/cancer-6.png", category: "Biotech & Education", title: "Cancer Cell Siege — AI Biotech" },
+            ].map((w) => (
+              <a
+                key={w.slug}
+                href={`/xplore-winners/${w.slug}.html`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col rounded-xl overflow-hidden glass-panel"
               >
-                <div className="flex items-center justify-between mb-5">
-                  <div
-                    className="w-12 h-12 rounded-lg flex items-center justify-center"
-                    style={{ backgroundColor: `${t.accent}1A`, color: t.accent }}
-                  >
-                    <t.icon className="w-6 h-6" />
+                <div className="aspect-video overflow-hidden bg-black">
+                  <img
+                    src={w.cover}
+                    alt={w.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-5 sm:p-6 flex flex-col flex-grow">
+                  <span className="text-[#D4FF00] text-[11px] font-semibold tracking-widest uppercase mb-2">
+                    {w.category}
+                  </span>
+                  <h3 className="text-white font-semibold text-base sm:text-lg leading-snug mb-3">
+                    {w.title}
+                  </h3>
+                  <div className="mt-auto flex items-center justify-between">
+                    <span className="text-gray-500 text-xs">May 26, 2026</span>
+                    <span className="text-[#D4FF00] text-sm flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      Read <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
                   </div>
-                  <span className="font-mono text-2xl font-bold text-white/10 group-hover:text-white/25 transition-colors">{t.num}</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{t.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed mb-5 flex-grow">{t.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {t.tags.map((tag) => (
-                    <span key={tag} className="text-[11px] px-2 py-1 rounded bg-white/5 text-gray-300 border border-white/10">{tag}</span>
-                  ))}
-                </div>
-              </div>
+              </a>
             ))}
-          </div>
-
-          {/* 2026 archive link */}
-          <div className="mt-10 sm:mt-14 reveal-on-scroll opacity-0 translate-y-8">
-            <Link
-              to="/xplore2026"
-              className="group glass-panel rounded-2xl px-6 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
-            >
-              <div>
-                <div className="text-[#D4FF00] font-mono text-[11px] uppercase tracking-widest mb-1">Archive</div>
-                <div className="text-white font-semibold text-base sm:text-lg">X-plore 2026 — Marketing Ideathon &amp; Winners</div>
-              </div>
-              <span className="text-[#D4FF00] text-sm font-semibold flex items-center gap-2">
-                View 2026 edition <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </Link>
           </div>
         </div>
       </section>
@@ -292,7 +278,7 @@ const XPlore = () => {
           <div className="text-center mb-12 sm:mb-16 reveal-on-scroll opacity-0 translate-y-8">
             <div className="text-[#D4FF00] font-mono text-sm uppercase tracking-widest mb-3">The Philosophy</div>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 leading-tight">A Mindset Shift</h2>
-            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto leading-[1.7]">We don't accept concepts as outcomes. "Beyond the Brief" means moving from theoretical slides to buildable realities across games, products, finance and life sciences.</p>
+            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto leading-[1.7]">We don't accept concepts as outcomes. "Beyond the Brief" means moving from theoretical slides to buildable realities.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 reveal-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: "100ms" }}>
             <div className="glass-panel p-6 sm:p-8 rounded-2xl group border-t-2 border-t-[#3B82F6] hover:!border-t-[#D4FF00]">
@@ -438,10 +424,10 @@ const XPlore = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
               {[
                 { icon: Gamepad2, label: "Game Devs" },
-                { icon: Rocket, label: "Product Engineers" },
-                { icon: BarChart2, label: "FinTech Builders" },
-                { icon: FlaskConical, label: "BioTech Researchers" },
                 { icon: Bot, label: "AI Creators" },
+                { icon: Glasses, label: "XR Designers" },
+                { icon: BarChart2, label: "Strategists" },
+                { icon: PenTool, label: "Copywriters" },
                 { icon: Palette, label: "Designers" },
               ].map((role) => (
                 <div key={role.label} className="glass-panel p-5 rounded-xl text-center hover:bg-white/5 transition-colors cursor-default group">
@@ -468,7 +454,7 @@ const XPlore = () => {
                 <div className="absolute top-0 right-0 w-20 h-20 bg-[#D4FF00]/10 rounded-bl-full" />
                 <h4 className="text-white font-bold mb-4 text-lg">The Outcome</h4>
                 <ul className="space-y-4">
-                  {["Playable or working prototypes", "Technical architecture and feasibility notes", "Commercially viable go-to-market thinking"].map((item) => (
+                  {["Commercial-ready marketing strategies", "Early-stage interactive prototypes", "Youth-validated engagement concepts"].map((item) => (
                     <li key={item} className="flex items-center gap-3 text-sm text-gray-300">
                       <CheckCircle className="text-[#D4FF00] w-5 h-5 shrink-0" /> {item}
                     </li>
@@ -533,11 +519,11 @@ const XPlore = () => {
               </p>
             </div>
           </div>
-          <p className="pt-6 border-t border-white/10 text-gray-400">© 2027 JatHub CIC. All rights reserved.</p>
+          <p className="pt-6 border-t border-white/10 text-gray-400">© 2026 JatHub CIC. All rights reserved.</p>
         </div>
       </footer>
     </div>
   );
 };
 
-export default XPlore;
+export default XPlore2026;
