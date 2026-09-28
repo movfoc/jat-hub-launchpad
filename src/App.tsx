@@ -15,6 +15,7 @@ import NewsGameJam from "./pages/NewsGameJam";
 import NewsUCLSummit from "./pages/NewsUCLSummit";
 import BHFTraining from "./pages/BHFTraining";
 import XPlore from "./pages/XPlore";
+import XPlore2026 from "./pages/XPlore2026";
 import XPloreTracks from "./pages/XPloreTracks";
 import XPloreChallenge from "./pages/XPloreChallenge";
 import EventHistory from "./pages/EventHistory";
@@ -64,6 +65,7 @@ const App = () => (
           <Route path="/news/bristol-ai-game-workshop" element={<NewsBristolAIGameWorkshop />} />
           <Route path="/news/balloon-ocean-fun-run" element={<NewsBalloonOceanFunRun />} />
           <Route path="/xplore" element={<XPlore />} />
+          <Route path="/xplore2026" element={<XPlore2026 />} />
           <Route path="/xplore/tracks" element={<XPloreTracks />} />
           <Route path="/xplore/challenge" element={<XPloreChallenge />} />
           <Route path="/events" element={<EventHistory />} />

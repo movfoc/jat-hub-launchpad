@@ -5,7 +5,7 @@ import {
   Lightbulb, Sparkles, Zap, Brain, Target, Layers,
   Telescope, FlaskConical, Rocket, Briefcase, GraduationCap,
   Check, FileCheck2, Search, Users2, Megaphone,
-  Gamepad2, Bot, Glasses, BarChart2, PenTool, Palette,
+  Gamepad2, Bot, BarChart2, Palette,
   CheckCircle, Calendar, MapPin, ArrowRight
 } from "lucide-react";
 import robloxBanner from "@/assets/roblox-workshop-banner.jpg";
@@ -292,7 +292,7 @@ const XPlore = () => {
           <div className="text-center mb-12 sm:mb-16 reveal-on-scroll opacity-0 translate-y-8">
             <div className="text-[#D4FF00] font-mono text-sm uppercase tracking-widest mb-3">The Philosophy</div>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 leading-tight">A Mindset Shift</h2>
-            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto leading-[1.7]">We don't accept concepts as outcomes. "Beyond the Brief" means moving from theoretical slides to buildable realities.</p>
+            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto leading-[1.7]">We don't accept concepts as outcomes. "Beyond the Brief" means moving from theoretical slides to buildable realities across games, products, finance and life sciences.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 reveal-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: "100ms" }}>
             <div className="glass-panel p-6 sm:p-8 rounded-2xl group border-t-2 border-t-[#3B82F6] hover:!border-t-[#D4FF00]">
@@ -468,7 +468,7 @@ const XPlore = () => {
                 <div className="absolute top-0 right-0 w-20 h-20 bg-[#D4FF00]/10 rounded-bl-full" />
                 <h4 className="text-white font-bold mb-4 text-lg">The Outcome</h4>
                 <ul className="space-y-4">
-                  {["Commercial-ready marketing strategies", "Early-stage interactive prototypes", "Youth-validated engagement concepts"].map((item) => (
+                  {["Playable or working prototypes", "Technical architecture and feasibility notes", "Commercially viable go-to-market thinking"].map((item) => (
                     <li key={item} className="flex items-center gap-3 text-sm text-gray-300">
                       <CheckCircle className="text-[#D4FF00] w-5 h-5 shrink-0" /> {item}
                     </li>
@@ -533,7 +533,7 @@ const XPlore = () => {
               </p>
             </div>
           </div>
-          <p className="pt-6 border-t border-white/10 text-gray-400">© 2026 JatHub CIC. All rights reserved.</p>
+          <p className="pt-6 border-t border-white/10 text-gray-400">© 2027 JatHub CIC. All rights reserved.</p>
         </div>
       </footer>
     </div>
