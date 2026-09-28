@@ -111,7 +111,7 @@ const XPlore2026 = () => {
         <div className="max-w-7xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
           <a href="/" className="font-mono text-lg md:text-xl font-bold tracking-tighter flex items-center gap-2">
             <div className="w-3 h-3 bg-[#D4FF00] rounded-sm shadow-[0_0_10px_#D4FF00]" />
-            JatHub <span className="text-[#D4FF00]">X-PLORE</span>
+            JatHub <span className="text-[#D4FF00]">X-PLORE 2026</span>
           </a>
           <div className="hidden md:flex gap-6 lg:gap-8 text-sm font-medium text-gray-400">
             <a href="#philosophy" className="hover:text-[#D4FF00] transition-colors cursor-pointer">Philosophy</a>
@@ -163,7 +163,7 @@ const XPlore2026 = () => {
 
         <div className="relative z-10 text-center max-w-6xl mx-auto reveal-on-scroll opacity-0 translate-y-8">
           <h1 className="text-[2.5rem] sm:text-5xl md:text-7xl lg:text-9xl font-extrabold tracking-tight mb-6 sm:mb-8 leading-none text-white">
-            X-PLORE <br />
+            X-PLORE 2026 <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500 text-xl sm:text-3xl md:text-5xl lg:text-6xl block mt-3 tracking-normal">Marketing Ideathon</span>
           </h1>
           <h2 className="text-lg sm:text-xl md:text-3xl font-normal mb-10 sm:mb-12 tracking-tight text-[#D4FF00] text-glow leading-snug">
