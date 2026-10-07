@@ -47,6 +47,9 @@ import craftingSmiles from "@/assets/fou/crafting-smiles.jpg.asset.json";
 import treeOfLife from "@/assets/fou/tree-of-life.jpg.asset.json";
 import oxfordHealthCharity from "@/assets/fou/oxford-health-charity.jpg.asset.json";
 import nihrBpor from "@/assets/fou/nihr-bpor.jpg.asset.json";
+import oakleaf from "@/assets/fou/oakleaf.jpg.asset.json";
+import healthySurrey from "@/assets/fou/healthy-surrey.png.asset.json";
+import oneYouSurrey from "@/assets/fou/one-you-surrey.jpg.asset.json";
 
 const CONTACT_EMAIL = "jat@jathub.com";
 
@@ -120,7 +123,7 @@ const zones = [
   },
 ];
 
-type Partner = { name: string; note?: string; logo: string; dark?: boolean; large?: boolean };
+type Partner = { name: string; note?: string; logo: string; dark?: boolean; large?: boolean; aid?: boolean };
 
 const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; items: Partner[] }[] = [
   {
@@ -162,6 +165,9 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Reading Borough Council", logo: readingCouncil.url },
       { name: "The Vine Centre", logo: vineCentre.url },
       { name: "ACRE", logo: acreLogo.url },
+      { name: "Oakleaf", note: "Making life work with mental illness", logo: oakleaf.url, aid: true },
+      { name: "Healthy Surrey", note: "#HealthySurrey", logo: healthySurrey.url, aid: true },
+      { name: "One You Surrey", logo: oneYouSurrey.url, aid: true },
       { name: "Crafting Smiles", logo: craftingSmiles.url, large: true },
       { name: "Tree of Life", logo: treeOfLife.url, large: true },
     ],
@@ -169,7 +175,12 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
 ];
 
 const LogoCard = ({ p }: { p: Partner }) => (
-  <div className="group relative rounded-lg bg-card p-5 ring-1 ring-border shadow-youth transition-all duration-300 hover:-translate-y-1.5 hover:ring-primary/60 hover:shadow-youth">
+  <div className="group relative flex h-full flex-col rounded-lg bg-card p-5 ring-1 ring-border shadow-youth transition-all duration-300 hover:-translate-y-1.5 hover:ring-primary/60 hover:shadow-youth">
+    {p.aid && (
+      <p className="mb-2 text-center text-[10px] font-bold uppercase tracking-normal text-muted-foreground">
+        In aid of
+      </p>
+    )}
     <div className={`flex items-center justify-center rounded-xl px-3 ${p.large ? "h-28" : "h-20"} ${p.dark ? "bg-youth-navy" : "bg-card"}`}>
       <img
         src={p.logo}
@@ -180,7 +191,7 @@ const LogoCard = ({ p }: { p: Partner }) => (
     </div>
     <p className="mt-3 text-center text-[13px] font-semibold leading-tight text-foreground">{p.name}</p>
     {p.note && <p className="mt-0.5 text-center text-[11px] text-muted-foreground">{p.note}</p>}
-    <span className="mt-3 mx-auto block w-fit rounded-full bg-secondary px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-normal text-foreground ring-1 ring-primary/30">
+    <span className="mt-auto pt-3 mx-auto block w-fit rounded-full bg-secondary px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-normal text-foreground ring-1 ring-primary/30">
       Confirmed Partner
     </span>
   </div>
