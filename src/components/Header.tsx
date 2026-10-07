@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import jathubLogo from "@/assets/jathub-logo.jpg";
+import youthHeaderLogo from "@/assets/fou/future-of-youth-logo-wide.png.asset.json";
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,11 +43,13 @@ export const Header = () => {
           >
             <Briefcase className="w-4 h-4" /> X-plore
           </a>
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-transform hover:scale-105 text-sm" asChild>
-            <a href="/future-of-youth">
-              Future of Youth
-            </a>
-          </Button>
+          <a
+            href="/future-of-youth"
+            aria-label="Future of Youth"
+            className="inline-flex items-center shrink-0 transition-transform hover:scale-105"
+          >
+            <img src={youthHeaderLogo.url} alt="Future of Youth" className="h-7 sm:h-8 w-auto" />
+          </a>
         </nav>
         
         {/* Mobile: Show X-plore + Menu button */}
@@ -88,11 +91,12 @@ export const Header = () => {
           >
             <Briefcase className="w-4 h-4" /> X-plore
           </a>
-          <Button className="mt-2 w-full bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-            <a href="/future-of-youth">
-              Future of Youth
-            </a>
-          </Button>
+          <a
+            href="/future-of-youth"
+            className="mt-2 flex w-full items-center justify-center rounded-full border border-border/40 bg-white/5 px-4 py-2.5 transition-colors hover:bg-white/10"
+          >
+            <img src={youthHeaderLogo.url} alt="Future of Youth" className="h-7 w-auto" />
+          </a>
         </div>
       )}
     </header>
