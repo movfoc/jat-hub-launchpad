@@ -49,7 +49,7 @@ import oxfordHealthCharity from "@/assets/fou/oxford-health-charity.jpg.asset.js
 import nihrBpor from "@/assets/fou/nihr-bpor.jpg.asset.json";
 import oakleaf from "@/assets/fou/oakleaf.jpg.asset.json";
 import healthySurrey from "@/assets/fou/healthy-surrey.png.asset.json";
-import oneYouSurrey from "@/assets/fou/one-you-surrey.jpg.asset.json";
+import oneYouSurrey from "@/assets/fou/one-you-surrey.png.asset.json";
 
 const CONTACT_EMAIL = "jat@jathub.com";
 
@@ -123,7 +123,7 @@ const zones = [
   },
 ];
 
-type Partner = { name: string; note?: string; logo: string; dark?: boolean; large?: boolean; aid?: boolean };
+type Partner = { name: string; note?: string; logo: string; dark?: boolean; large?: boolean; aid?: boolean; fill?: boolean };
 
 const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; items: Partner[] }[] = [
   {
@@ -166,8 +166,8 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "The Vine Centre", logo: vineCentre.url },
       { name: "ACRE", logo: acreLogo.url },
       { name: "Oakleaf", note: "\n", logo: oakleaf.url, aid: true },
-      { name: "Healthy Surrey", note: "#HealthySurrey", logo: healthySurrey.url, aid: true },
-      { name: "One You Surrey", logo: oneYouSurrey.url, aid: true },
+      { name: "Healthy Surrey", note: "#HealthySurrey", logo: healthySurrey.url, aid: true, large: true },
+      { name: "One You Surrey", logo: oneYouSurrey.url, aid: true, large: true, fill: true },
       { name: "Crafting Smiles", logo: craftingSmiles.url, large: true },
       { name: "Tree of Life", logo: treeOfLife.url, large: true },
     ],
@@ -186,7 +186,7 @@ const LogoCard = ({ p }: { p: Partner }) => (
         src={p.logo}
         alt={`${p.name} logo`}
         loading="lazy"
-        className={`w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105 ${p.large ? "max-h-20" : "max-h-14"}`}
+        className={`w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105 ${p.fill ? "max-h-full" : p.large ? "max-h-20" : "max-h-14"}`}
       />
     </div>
     <p className="mt-3 text-center text-[13px] font-semibold leading-tight text-foreground">{p.name}</p>
