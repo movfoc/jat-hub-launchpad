@@ -262,7 +262,7 @@ const navLinks = [
   { label: "Partners", href: "#partners" },
 ];
 
-const FutureOfUs = () => {
+const FutureOfYouth = () => {
   const [tab, setTab] = useState<string>("all");
   const shown = tab === "all" ? partnerGroups : partnerGroups.filter((g) => g.id === tab);
 
@@ -461,4 +461,4 @@ const FutureOfUs = () => {
   );
 };
 
-export default FutureOfUs;
+export default FutureOfYouth;
