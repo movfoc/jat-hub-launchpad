@@ -34,6 +34,7 @@ import {
 
 import readingUni from "@/assets/fou/reading-uni.png.asset.json";
 import surreyLogo from "@/assets/fou/surrey.svg.asset.json";
+import surreySportsPark from "@/assets/fou/surrey-sports-park.jpg.asset.json";
 import oxfordNorth from "@/assets/fou/oxford-north.jpg.asset.json";
 import nhsBerkshire from "@/assets/fou/nhs-berkshire.webp.asset.json";
 import berkshireCharity from "@/assets/fou/berkshire-charity.webp.asset.json";
@@ -51,7 +52,7 @@ const CONTACT_EMAIL = "jat@jathub.com";
 
 const tour = [
   {
-    pill: "NOV 2026",
+    pill: "12 DEC 2026",
     place: "University of Surrey",
     sub: "Surrey Sport Park",
     focus: "Sport, Youth Voice & Community Wellness",
@@ -59,7 +60,7 @@ const tour = [
     accent: "from-youth-gold to-youth-gold-light",
   },
   {
-    pill: "FEB 2027",
+    pill: "11 FEB 2027",
     place: "University of Reading",
     sub: "London Road Campus",
     focus: "Youth Mental Health & Community Wellness",
@@ -125,10 +126,11 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
   {
     id: "academic",
     icon: GraduationCap,
-    title: "Academic Leadership",
+    title: "Academic & Sport Leadership",
     items: [
       { name: "University of Reading", logo: readingUni.url },
       { name: "University of Surrey", logo: surreyLogo.url, dark: true },
+      { name: "Surrey Sports Park", logo: surreySportsPark.url },
     ],
   },
   {
