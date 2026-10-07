@@ -49,7 +49,7 @@ import oxfordHealthCharity from "@/assets/fou/oxford-health-charity.jpg.asset.js
 import nihrBpor from "@/assets/fou/nihr-bpor.jpg.asset.json";
 import oakleaf from "@/assets/fou/oakleaf.jpg.asset.json";
 import healthySurrey from "@/assets/fou/healthy-surrey.png.asset.json";
-import oneYouSurrey from "@/assets/fou/one-you-surrey.jpg.asset.json";
+import oneYouSurrey from "@/assets/fou/one-you-surrey.png.asset.json";
 
 const CONTACT_EMAIL = "jat@jathub.com";
 
@@ -166,8 +166,8 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "The Vine Centre", logo: vineCentre.url },
       { name: "ACRE", logo: acreLogo.url },
       { name: "Oakleaf", note: "\n", logo: oakleaf.url, aid: true },
-      { name: "Healthy Surrey", note: "#HealthySurrey", logo: healthySurrey.url, aid: true },
-      { name: "One You Surrey", logo: oneYouSurrey.url, aid: true },
+      { name: "Healthy Surrey", note: "#HealthySurrey", logo: healthySurrey.url, aid: true, large: true },
+      { name: "One You Surrey", logo: oneYouSurrey.url, aid: true, large: true },
       { name: "Crafting Smiles", logo: craftingSmiles.url, large: true },
       { name: "Tree of Life", logo: treeOfLife.url, large: true },
     ],
