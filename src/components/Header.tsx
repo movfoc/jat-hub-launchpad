@@ -43,7 +43,7 @@ export const Header = () => {
             <Briefcase className="w-4 h-4" /> X-plore
           </a>
           <Button className="bg-primary text-primary-foreground hover:bg-primary/90 transition-transform hover:scale-105 text-sm" asChild>
-            <a href="/future-of-us">
+            <a href="/future-of-youth">
               Future of Youth
             </a>
           </Button>
@@ -89,7 +89,7 @@ export const Header = () => {
             <Briefcase className="w-4 h-4" /> X-plore
           </a>
           <Button className="mt-2 w-full bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-            <a href="/future-of-us">
+            <a href="/future-of-youth">
               Future of Youth
             </a>
           </Button>
