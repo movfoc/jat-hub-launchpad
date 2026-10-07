@@ -120,7 +120,7 @@ const zones = [
   },
 ];
 
-type Partner = { name: string; note?: string; logo: string; dark?: boolean; large?: boolean };
+type Partner = { name: string; note?: string; logo: string; dark?: boolean; large?: boolean; aid?: boolean };
 
 const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; items: Partner[] }[] = [
   {
@@ -162,6 +162,9 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Reading Borough Council", logo: readingCouncil.url },
       { name: "The Vine Centre", logo: vineCentre.url },
       { name: "ACRE", logo: acreLogo.url },
+      { name: "Oakleaf", note: "Making life work with mental illness", logo: oakleaf.url, aid: true },
+      { name: "Healthy Surrey", note: "#HealthySurrey", logo: healthySurrey.url, aid: true },
+      { name: "One You Surrey", logo: oneYouSurrey.url, aid: true },
       { name: "Crafting Smiles", logo: craftingSmiles.url, large: true },
       { name: "Tree of Life", logo: treeOfLife.url, large: true },
     ],
@@ -169,7 +172,12 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
 ];
 
 const LogoCard = ({ p }: { p: Partner }) => (
-  <div className="group relative rounded-lg bg-card p-5 ring-1 ring-border shadow-youth transition-all duration-300 hover:-translate-y-1.5 hover:ring-primary/60 hover:shadow-youth">
+  <div className="group relative flex h-full flex-col rounded-lg bg-card p-5 ring-1 ring-border shadow-youth transition-all duration-300 hover:-translate-y-1.5 hover:ring-primary/60 hover:shadow-youth">
+    {p.aid && (
+      <p className="mb-2 text-center text-[10px] font-bold uppercase tracking-normal text-muted-foreground">
+        In aid of
+      </p>
+    )}
     <div className={`flex items-center justify-center rounded-xl px-3 ${p.large ? "h-28" : "h-20"} ${p.dark ? "bg-youth-navy" : "bg-card"}`}>
       <img
         src={p.logo}
