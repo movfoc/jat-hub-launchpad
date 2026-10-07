@@ -33,14 +33,13 @@ import {
 } from "lucide-react";
 
 import readingUni from "@/assets/fou/reading-uni.png.asset.json";
-import surreyLogo from "@/assets/fou/surrey.svg.asset.json";
+import surreyLogo from "@/assets/fou/surrey-master.png.asset.json";
 import surreySportsPark from "@/assets/fou/surrey-sports-park.jpg.asset.json";
-import oxfordNorth from "@/assets/fou/oxford-north.jpg.asset.json";
+import oxfordNorth from "@/assets/fou/oxford-north.png.asset.json";
 import nhsBerkshire from "@/assets/fou/nhs-berkshire.webp.asset.json";
 import berkshireCharity from "@/assets/fou/berkshire-charity.webp.asset.json";
 import readingCouncil from "@/assets/fou/reading-council.png.asset.json";
 import vineCentre from "@/assets/fou/vine-centre.avif.asset.json";
-import acreLogo from "@/assets/fou/acre.png.asset.json";
 import jatpointLogo from "@/assets/fou/jatpoint.png.asset.json";
 import artacLogo from "@/assets/fou/artac.png.asset.json";
 import craftingSmiles from "@/assets/fou/crafting-smiles.jpg.asset.json";
@@ -132,7 +131,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
     title: "Academic & Sport Leadership",
     items: [
       { name: "University of Reading", logo: readingUni.url },
-      { name: "University of Surrey", logo: surreyLogo.url, dark: true },
+      { name: "University of Surrey", logo: surreyLogo.url, fill: true },
       { name: "Surrey Sports Park", logo: surreySportsPark.url },
     ],
   },
@@ -141,7 +140,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
     icon: Cpu,
     title: "Ecosystem & Enterprise",
     items: [
-      { name: "Oxford North", logo: oxfordNorth.url, dark: true },
+      { name: "Oxford North", logo: oxfordNorth.url, fill: true },
       { name: "JatPoint", logo: jatpointLogo.url },
       { name: "Artac Academy", note: "CodeLife.AI", logo: artacLogo.url },
     ],
@@ -164,7 +163,6 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
     items: [
       { name: "Reading Borough Council", logo: readingCouncil.url },
       { name: "The Vine Centre", logo: vineCentre.url },
-      { name: "ACRE", logo: acreLogo.url },
       { name: "Oakleaf", note: "\n", logo: oakleaf.url, aid: true },
       { name: "Healthy Surrey", note: "#HealthySurrey", logo: healthySurrey.url, aid: true, large: true },
       { name: "One You Surrey", logo: oneYouSurrey.url, aid: true, large: true, fill: true },
