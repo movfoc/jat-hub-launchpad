@@ -165,7 +165,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Reading Borough Council", logo: readingCouncil.url },
       { name: "The Vine Centre", logo: vineCentre.url },
       { name: "ACRE", logo: acreLogo.url },
-      { name: "Oakleaf", note: "Making life work with mental illness", logo: oakleaf.url, aid: true },
+      { name: "Oakleaf", note: "\n", logo: oakleaf.url, aid: true },
       { name: "Healthy Surrey", note: "#HealthySurrey", logo: healthySurrey.url, aid: true },
       { name: "One You Surrey", logo: oneYouSurrey.url, aid: true },
       { name: "Crafting Smiles", logo: craftingSmiles.url, large: true },
