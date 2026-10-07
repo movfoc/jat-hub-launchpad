@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import NewsMicrosoftLondon from "./pages/NewsMicrosoftLondon";
@@ -31,7 +31,7 @@ import NewsBristolAIGameWorkshop from "./pages/NewsBristolAIGameWorkshop";
 import NewsBalloonOceanFunRun from "./pages/NewsBalloonOceanFunRun";
 import NIHR from "./pages/NIHR";
 import BePartOfResearch from "./pages/BePartOfResearch";
-import FutureOfUs from "./pages/FutureOfUs";
+import FutureOfYouth from "./pages/FutureOfYouth";
 import AIGameCreators from "./pages/AIGameCreators";
 import WSTC from "./pages/WSTC";
 
@@ -72,7 +72,8 @@ const App = () => (
           <Route path="/roblox-workshop" element={<RobloxWorkshop />} />
           <Route path="/nihr" element={<NIHR />} />
           <Route path="/bepartofresearch" element={<BePartOfResearch />} />
-          <Route path="/future-of-us" element={<FutureOfUs />} />
+          <Route path="/future-of-youth" element={<FutureOfYouth />} />
+          <Route path="/future-of-us" element={<Navigate to="/future-of-youth" replace />} />
           <Route path="/ai-game-creators" element={<AIGameCreators />} />
           <Route path="/wstc" element={<WSTC />} />
 
