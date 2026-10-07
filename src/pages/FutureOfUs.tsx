@@ -47,6 +47,9 @@ import craftingSmiles from "@/assets/fou/crafting-smiles.jpg.asset.json";
 import treeOfLife from "@/assets/fou/tree-of-life.jpg.asset.json";
 import oxfordHealthCharity from "@/assets/fou/oxford-health-charity.jpg.asset.json";
 import nihrBpor from "@/assets/fou/nihr-bpor.jpg.asset.json";
+import oakleaf from "@/assets/fou/oakleaf.jpg.asset.json";
+import healthySurrey from "@/assets/fou/healthy-surrey.png.asset.json";
+import oneYouSurrey from "@/assets/fou/one-you-surrey.jpg.asset.json";
 
 const CONTACT_EMAIL = "jat@jathub.com";
 
