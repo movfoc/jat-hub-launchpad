@@ -191,7 +191,7 @@ const LogoCard = ({ p }: { p: Partner }) => (
     </div>
     <p className="mt-3 text-center text-[13px] font-semibold leading-tight text-foreground">{p.name}</p>
     {p.note && <p className="mt-0.5 text-center text-[11px] text-muted-foreground">{p.note}</p>}
-    <span className="mt-3 mx-auto block w-fit rounded-full bg-secondary px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-normal text-foreground ring-1 ring-primary/30">
+    <span className="mt-auto pt-3 mx-auto block w-fit rounded-full bg-secondary px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-normal text-foreground ring-1 ring-primary/30">
       Confirmed Partner
     </span>
   </div>
