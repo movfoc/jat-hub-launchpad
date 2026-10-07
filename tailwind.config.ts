@@ -17,6 +17,11 @@ export default {
         sans: ['Inter', 'sans-serif'],
       },
       colors: {
+        youth: {
+          gold: "hsl(var(--youth-gold))",
+          "gold-light": "hsl(var(--youth-gold-light))",
+          navy: "hsl(var(--youth-navy))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -85,6 +90,9 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        youth: "var(--shadow-youth)",
       },
       keyframes: {
         "accordion-down": {
