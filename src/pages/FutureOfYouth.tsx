@@ -49,7 +49,7 @@ import nihrBpor from "@/assets/fou/nihr-bpor.jpg.asset.json";
 import oakleaf from "@/assets/fou/oakleaf.jpg.asset.json";
 import healthySurrey from "@/assets/fou/healthy-surrey.png.asset.json";
 import oneYouSurrey from "@/assets/fou/one-you-surrey.png.asset.json";
-import porkyKong from "@/assets/fou/porky-kong-full.png.asset.json";
+import porkyKong from "@/assets/fou/porky-kong-full.jpg.asset.json";
 
 const CONTACT_EMAIL = "jat@jathub.com";
 
