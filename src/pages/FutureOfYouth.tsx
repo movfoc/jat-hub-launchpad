@@ -36,7 +36,7 @@ import readingUni from "@/assets/fou/reading-uni.png.asset.json";
 import surreyLogo from "@/assets/fou/surrey-master.png.asset.json";
 import surreySportsPark from "@/assets/fou/surrey-sports-park.jpg.asset.json";
 import oxfordNorth from "@/assets/fou/oxford-north.png.asset.json";
-import nhsBerkshire from "@/assets/fou/nhs-berkshire.webp.asset.json";
+import nhsBerkshire from "@/assets/fou/nhs-blue.png.asset.json";
 import berkshireCharity from "@/assets/fou/berkshire-charity.webp.asset.json";
 import readingCouncil from "@/assets/fou/reading-council.png.asset.json";
 import vineCentre from "@/assets/fou/vine-centre.avif.asset.json";
