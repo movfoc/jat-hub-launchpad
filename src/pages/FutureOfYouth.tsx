@@ -49,7 +49,7 @@ import nihrBpor from "@/assets/fou/nihr-bpor.jpg.asset.json";
 import oakleaf from "@/assets/fou/oakleaf.jpg.asset.json";
 import healthySurrey from "@/assets/fou/healthy-surrey.png.asset.json";
 import oneYouSurrey from "@/assets/fou/one-you-surrey.png.asset.json";
-import porkyKong from "@/assets/fou/porky-kong.png.asset.json";
+import porkyKong from "@/assets/fou/porky-kong-full.png.asset.json";
 
 const CONTACT_EMAIL = "jat@jathub.com";
 
@@ -144,7 +144,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Oxford North", logo: oxfordNorth.url, fill: true },
       { name: "JatPoint", logo: jatpointLogo.url },
       { name: "Artac Academy", note: "CodeLife.AI", logo: artacLogo.url },
-      { name: "Porky Kong", logo: porkyKong.url, big: true },
+      { name: "Porky Kong", logo: porkyKong.url, fill: true },
     ],
   },
   {
