@@ -123,7 +123,7 @@ const zones = [
   },
 ];
 
-type Partner = { name: string; note?: string; logo: string; dark?: boolean; large?: boolean; aid?: boolean; fill?: boolean; big?: boolean; maximize?: boolean };
+type Partner = { name: string; note?: string; logo: string; dark?: boolean; large?: boolean; aid?: boolean; fill?: boolean; big?: boolean; maximize?: boolean; hero?: boolean };
 
 const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; items: Partner[] }[] = [
   {
@@ -168,8 +168,8 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Oakleaf", note: "\n", logo: oakleaf.url, aid: true },
       { name: "Healthy Surrey", note: "#HealthySurrey", logo: healthySurrey.url, aid: true, large: true },
       { name: "One You Surrey", logo: oneYouSurrey.url, aid: true, large: true, fill: true },
-      { name: "Crafting Smiles", logo: craftingSmiles.url, large: true, fill: true, maximize: true },
-      { name: "Tree of Life", logo: treeOfLife.url, large: true },
+      { name: "Crafting Smiles", logo: craftingSmiles.url, large: true, fill: true, maximize: true, hero: true },
+      { name: "Tree of Life", logo: treeOfLife.url, large: true, hero: true },
     ],
   },
 ];
@@ -181,13 +181,22 @@ const LogoCard = ({ p }: { p: Partner }) => (
         {"\n"}
       </p>
     )}
-    <div className={`flex items-center justify-center rounded-xl px-3 ${p.large ? "h-28" : "h-20"} ${p.dark ? "bg-youth-navy" : "bg-card"}`}>
-      <img
-        src={p.logo}
-        alt={`${p.name} logo`}
-        loading="lazy"
-        className={`${p.maximize ? "h-full w-full" : "w-auto"} max-w-full object-contain transition-transform duration-300 group-hover:scale-105 ${p.fill ? "max-h-full" : p.large ? "max-h-20" : p.big ? "max-h-16" : "max-h-14"}`}
-      />
+    <div className={`relative flex items-center justify-center rounded-xl px-3 ${p.large ? "h-28" : "h-20"} ${p.dark ? "bg-youth-navy" : "bg-card"} ${p.hero && p.maximize ? "overflow-hidden" : ""}`}>
+      {p.hero ? (
+        <img
+          src={p.logo}
+          alt={`${p.name} logo`}
+          loading="lazy"
+          className={`object-contain transition-transform duration-300 ${p.maximize ? "h-36 w-auto max-w-none scale-[1.22] group-hover:scale-[1.28]" : "absolute inset-0 m-auto h-36 w-auto group-hover:scale-105"}`}
+        />
+      ) : (
+        <img
+          src={p.logo}
+          alt={`${p.name} logo`}
+          loading="lazy"
+          className={`${p.maximize ? "h-full w-full" : "w-auto"} max-w-full object-contain transition-transform duration-300 group-hover:scale-105 ${p.fill ? "max-h-full" : p.large ? "max-h-20" : p.big ? "max-h-16" : "max-h-14"}`}
+        />
+      )}
     </div>
     <p className="mt-3 text-center text-[13px] font-semibold leading-tight text-foreground">{p.name}</p>
     {p.note && <p className="mt-0.5 text-center text-[11px] text-muted-foreground">{p.note}</p>}
