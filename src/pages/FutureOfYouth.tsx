@@ -49,6 +49,7 @@ import nihrBpor from "@/assets/fou/nihr-bpor.jpg.asset.json";
 import oakleaf from "@/assets/fou/oakleaf.jpg.asset.json";
 import healthySurrey from "@/assets/fou/healthy-surrey.png.asset.json";
 import oneYouSurrey from "@/assets/fou/one-you-surrey.png.asset.json";
+import porkyKong from "@/assets/fou/porky-kong.png.asset.json";
 
 const CONTACT_EMAIL = "jat@jathub.com";
 
@@ -122,7 +123,7 @@ const zones = [
   },
 ];
 
-type Partner = { name: string; note?: string; logo: string; dark?: boolean; large?: boolean; aid?: boolean; fill?: boolean };
+type Partner = { name: string; note?: string; logo: string; dark?: boolean; large?: boolean; aid?: boolean; fill?: boolean; big?: boolean };
 
 const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; items: Partner[] }[] = [
   {
@@ -143,6 +144,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Oxford North", logo: oxfordNorth.url, fill: true },
       { name: "JatPoint", logo: jatpointLogo.url },
       { name: "Artac Academy", note: "CodeLife.AI", logo: artacLogo.url },
+      { name: "Porky Kong", logo: porkyKong.url, big: true },
     ],
   },
   {
@@ -184,7 +186,7 @@ const LogoCard = ({ p }: { p: Partner }) => (
         src={p.logo}
         alt={`${p.name} logo`}
         loading="lazy"
-        className={`w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105 ${p.fill ? "max-h-full" : p.large ? "max-h-20" : "max-h-14"}`}
+        className={`w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105 ${p.fill ? "max-h-full" : p.large ? "max-h-20" : p.big ? "max-h-16" : "max-h-14"}`}
       />
     </div>
     <p className="mt-3 text-center text-[13px] font-semibold leading-tight text-foreground">{p.name}</p>
