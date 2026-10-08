@@ -168,7 +168,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Oakleaf", note: "\n", logo: oakleaf.url, aid: true },
       { name: "Healthy Surrey", note: "#HealthySurrey", logo: healthySurrey.url, aid: true, large: true },
       { name: "One You Surrey", logo: oneYouSurrey.url, aid: true, large: true, fill: true },
-      { name: "Crafting Smiles", logo: craftingSmiles.url, large: true },
+      { name: "Crafting Smiles", logo: craftingSmiles.url, large: true, fill: true },
       { name: "Tree of Life", logo: treeOfLife.url, large: true },
     ],
   },
