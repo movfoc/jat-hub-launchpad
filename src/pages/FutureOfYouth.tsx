@@ -123,7 +123,7 @@ const zones = [
   },
 ];
 
-type Partner = { name: string; note?: string; logo: string; dark?: boolean; large?: boolean; aid?: boolean; fill?: boolean; big?: boolean };
+type Partner = { name: string; note?: string; logo: string; dark?: boolean; large?: boolean; aid?: boolean; fill?: boolean; big?: boolean; maximize?: boolean };
 
 const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; items: Partner[] }[] = [
   {
@@ -168,7 +168,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Oakleaf", note: "\n", logo: oakleaf.url, aid: true },
       { name: "Healthy Surrey", note: "#HealthySurrey", logo: healthySurrey.url, aid: true, large: true },
       { name: "One You Surrey", logo: oneYouSurrey.url, aid: true, large: true, fill: true },
-      { name: "Crafting Smiles", logo: craftingSmiles.url, large: true, fill: true },
+      { name: "Crafting Smiles", logo: craftingSmiles.url, large: true, fill: true, maximize: true },
       { name: "Tree of Life", logo: treeOfLife.url, large: true },
     ],
   },
@@ -186,7 +186,7 @@ const LogoCard = ({ p }: { p: Partner }) => (
         src={p.logo}
         alt={`${p.name} logo`}
         loading="lazy"
-        className={`w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105 ${p.fill ? "max-h-full" : p.large ? "max-h-20" : p.big ? "max-h-16" : "max-h-14"}`}
+        className={`${p.maximize ? "h-full w-full" : "w-auto"} max-w-full object-contain transition-transform duration-300 group-hover:scale-105 ${p.fill ? "max-h-full" : p.large ? "max-h-20" : p.big ? "max-h-16" : "max-h-14"}`}
       />
     </div>
     <p className="mt-3 text-center text-[13px] font-semibold leading-tight text-foreground">{p.name}</p>
