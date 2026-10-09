@@ -204,6 +204,18 @@ import ocean5 from "@/assets/balloon-ocean/balloon-ocean-5.jpg.asset.json";
 import ocean6 from "@/assets/balloon-ocean/balloon-ocean-6.jpg.asset.json";
 import ocean7 from "@/assets/balloon-ocean/balloon-ocean-7.jpg.asset.json";
 
+// House of Lords 2024 events
+import davos1 from "@/assets/hol-2024/Davos1.jpg.asset.json";
+import davos2 from "@/assets/hol-2024/Davos2.jpeg.asset.json";
+import davos3 from "@/assets/hol-2024/Davos3.jpeg.asset.json";
+import davos4 from "@/assets/hol-2024/Davos4.jpeg.asset.json";
+import game1 from "@/assets/hol-2024/Game01.jpg.asset.json";
+import game2 from "@/assets/hol-2024/Game02.jpeg.asset.json";
+import game3 from "@/assets/hol-2024/Game03.jpeg.asset.json";
+import may1 from "@/assets/hol-2024/22May01.jpeg.asset.json";
+import may2 from "@/assets/hol-2024/22May02.jpeg.asset.json";
+import may3 from "@/assets/hol-2024/22May03.png.asset.json";
+
 export const historicalEvents: HistoricalEvent[] = [
   {
     id: "balloon-ocean-fun-run",
