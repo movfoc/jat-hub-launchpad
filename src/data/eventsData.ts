@@ -226,6 +226,7 @@ export const historicalEvents: HistoricalEvent[] = [
     description:
       "Diving headfirst into the amazing Balloon Ocean alongside Tree of Life, from catching balloon sea creatures to capturing special moments for attendees and sharing photos with everyone.",
     poster: ocean1.url,
+    cover: ocean4.url,
     media: [
       { type: "image", src: ocean1.url, alt: "Balloon Ocean team illustration at the charity fun run stand" },
       { type: "image", src: ocean3.url, alt: "JatHub volunteers with a balloon crab at the stand" },
