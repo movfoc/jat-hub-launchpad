@@ -218,6 +218,14 @@ import may1 from "@/assets/hol-2024/22May01.jpeg.asset.json";
 import may2 from "@/assets/hol-2024/22May02.jpeg.asset.json";
 import may3 from "@/assets/hol-2024/22May03.png.asset.json";
 
+// Event Gallery covers chosen by the team
+import coverAug8 from "@/assets/event-covers/cover-aug8-balloon-ocean.png.asset.json";
+import coverMay18 from "@/assets/event-covers/cover-may18-barclays-ai100.png.asset.json";
+import coverJan10 from "@/assets/event-covers/cover-jan10-esports.png.asset.json";
+import coverNov14 from "@/assets/event-covers/cover-nov14-microsoft.png.asset.json";
+import coverOct29 from "@/assets/event-covers/cover-oct29-ai-marketing.png.asset.json";
+import coverOct1 from "@/assets/event-covers/cover-oct1-parttime-fair.png.asset.json";
+
 export const historicalEvents: HistoricalEvent[] = [
   {
     id: "balloon-ocean-fun-run",
@@ -226,7 +234,7 @@ export const historicalEvents: HistoricalEvent[] = [
     description:
       "Diving headfirst into the amazing Balloon Ocean alongside Tree of Life, from catching balloon sea creatures to capturing special moments for attendees and sharing photos with everyone.",
     poster: ocean1.url,
-    cover: ocean4.url,
+    cover: coverAug8.url,
     media: [
       { type: "image", src: ocean1.url, alt: "Balloon Ocean team illustration at the charity fun run stand" },
       { type: "image", src: ocean3.url, alt: "JatHub volunteers with a balloon crab at the stand" },
@@ -326,7 +334,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "MAY 18, 2026",
     description: "JatHub was featured alongside the UK's leading AI innovators at the Barclays AI:100 showcase.",
     poster: barclaysCover,
-    cover: barclays7,
+    cover: coverMay18.url,
     media: [
       { type: "image", src: barclays1, alt: "Barclays AI:100 1" },
       { type: "image", src: barclays2, alt: "Barclays AI:100 2" },
@@ -425,7 +433,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "JAN 10, 2026",
     description: "An exclusive visit to the College of Esports at Queen Elizabeth Olympic Park.",
     poster: esportsEventPoster,
-    cover: Esport1,
+    cover: coverJan10.url,
     media: [
       { type: "image", src: Esport1, alt: "Esports visit 1" },
       { type: "image", src: Esport2, alt: "Esports visit 2" },
@@ -475,7 +483,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "NOV 14, 2025",
     description: "An inspiring visit to Microsoft's London office, bridging the gap from student life to tech careers.",
     poster: microsoftPoster,
-    cover: Microsoft1,
+    cover: coverNov14.url,
     media: [
       { type: "image", src: Microsoft1, alt: "Microsoft visit 1" },
       { type: "image", src: Microsoft2, alt: "Microsoft visit 2" },
@@ -497,7 +505,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "OCT 29, 2025",
     description: "A hands-on workshop at the University of Surrey exploring AI applications in marketing and media.",
     poster: aiMarketingWorkshopPoster,
-    cover: AI1,
+    cover: coverOct29.url,
     media: [
       { type: "image", src: AI1, alt: "AI Marketing 1" },
       { type: "image", src: AI2, alt: "AI Marketing 2" },
@@ -516,7 +524,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "OCT 1, 2025",
     description: "A career fair at the University of Surrey connecting students with part-time employment opportunities.",
     poster: partTimeFairPoster,
-    cover: PT1,
+    cover: coverOct1.url,
     media: [
       { type: "image", src: PT1, alt: "Part-time fair 1" },
       { type: "image", src: PT2, alt: "Part-time fair 2" },
