@@ -64,7 +64,7 @@ export const EventGallery = () => {
             >
               <div className="overflow-hidden">
                 <img
-                  src={event.poster}
+                  src={event.cover ?? event.poster}
                   alt={event.title}
                   className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"

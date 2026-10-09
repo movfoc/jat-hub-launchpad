@@ -13,6 +13,8 @@ export interface HistoricalEvent {
   date: string;
   description?: string;
   poster: string;     // poster image for the homepage carousel
+  cover?: string;     // optional gallery card cover (group photo); falls back to poster
+
   media: EventMedia[];
 }
 
@@ -308,6 +310,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "MAY 22, 2026",
     description: "Our team supported memory and wellbeing initiatives for the local community.",
     poster: dementiaCover,
+    cover: dementia1,
     media: [
       { type: "image", src: dementia1, alt: "Memory & Wellbeing 1" },
       { type: "image", src: dementia2, alt: "Memory & Wellbeing 2" },
@@ -322,6 +325,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "MAY 18, 2026",
     description: "JatHub was featured alongside the UK's leading AI innovators at the Barclays AI:100 showcase.",
     poster: barclaysCover,
+    cover: barclays7,
     media: [
       { type: "image", src: barclays1, alt: "Barclays AI:100 1" },
       { type: "image", src: barclays2, alt: "Barclays AI:100 2" },
@@ -337,6 +341,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "MAR 15, 2026",
     description: "JatHub judged groundbreaking AI and XR projects at Cambridge's RealityX hackathon.",
     poster: cambridgeCover,
+    cover: cambridge1,
     media: [
       { type: "image", src: cambridge1, alt: "Cambridge RealityX 1" },
       { type: "image", src: cambridge2, alt: "Cambridge RealityX 2" },
@@ -350,6 +355,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "FEB 17, 2026",
     description: "A full-day summit at UCL School of Management exploring the intersection of digital marketing, gamified economies, and emerging technologies.",
     poster: digitalMarketingPoster,
+    cover: SummitGroup,
     media: [
       { type: "image", src: SummitGroup, alt: "Summit group photo" },
       { type: "image", src: SummitVenue, alt: "Summit venue at UCL" },
@@ -383,6 +389,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "JAN 27 - 29, 2026",
     description: "Three-day game development marathon at the University of Surrey, bringing together developers, artists, and designers.",
     poster: gameJamPoster,
+    cover: GGJGroupBanner,
     media: [
       { type: "image", src: GGJGroupBanner, alt: "Group photo with JatHub banner" },
       { type: "image", src: GGJOrganisers, alt: "Game Jam organisers" },
@@ -417,6 +424,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "JAN 10, 2026",
     description: "An exclusive visit to the College of Esports at Queen Elizabeth Olympic Park.",
     poster: esportsEventPoster,
+    cover: Esport1,
     media: [
       { type: "image", src: Esport1, alt: "Esports visit 1" },
       { type: "image", src: Esport2, alt: "Esports visit 2" },
@@ -431,6 +439,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "DEC 18, 2025",
     description: "An exclusive roundtable discussion at the House of Lords exploring decentralised digital economies.",
     poster: houseOfLordsPoster,
+    cover: HoL7,
     media: [
       { type: "image", src: HoL1, alt: "Roundtable 1" },
       { type: "image", src: HoL2, alt: "Roundtable 2" },
@@ -447,6 +456,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "NOV 25, 2025",
     description: "A visit to OVHcloud's London office exploring cloud infrastructure and emerging technologies.",
     poster: ovhcloudEventPoster,
+    cover: OVH1,
     media: [
       { type: "image", src: OVH1, alt: "OVHcloud visit 1" },
       { type: "image", src: OVH2, alt: "OVHcloud visit 2" },
@@ -464,6 +474,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "NOV 14, 2025",
     description: "An inspiring visit to Microsoft's London office, bridging the gap from student life to tech careers.",
     poster: microsoftPoster,
+    cover: Microsoft1,
     media: [
       { type: "image", src: Microsoft1, alt: "Microsoft visit 1" },
       { type: "image", src: Microsoft2, alt: "Microsoft visit 2" },
@@ -485,6 +496,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "OCT 29, 2025",
     description: "A hands-on workshop at the University of Surrey exploring AI applications in marketing and media.",
     poster: aiMarketingWorkshopPoster,
+    cover: AI1,
     media: [
       { type: "image", src: AI1, alt: "AI Marketing 1" },
       { type: "image", src: AI2, alt: "AI Marketing 2" },
@@ -503,6 +515,7 @@ export const historicalEvents: HistoricalEvent[] = [
     date: "OCT 1, 2025",
     description: "A career fair at the University of Surrey connecting students with part-time employment opportunities.",
     poster: partTimeFairPoster,
+    cover: PT1,
     media: [
       { type: "image", src: PT1, alt: "Part-time fair 1" },
       { type: "image", src: PT2, alt: "Part-time fair 2" },
