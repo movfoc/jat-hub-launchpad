@@ -214,6 +214,7 @@ import davos4 from "@/assets/hol-2024/Davos4.jpeg.asset.json";
 import game1 from "@/assets/hol-2024/Game01.jpg.asset.json";
 import game2 from "@/assets/hol-2024/Game02.jpeg.asset.json";
 import game3 from "@/assets/hol-2024/Game03.jpeg.asset.json";
+import gameInvite from "@/assets/hol-2024/game-invite.png.asset.json";
 import may1 from "@/assets/hol-2024/22May01.jpeg.asset.json";
 import may2 from "@/assets/hol-2024/22May02.jpeg.asset.json";
 import may3 from "@/assets/hol-2024/22May03.png.asset.json";
@@ -559,6 +560,7 @@ export const historicalEvents: HistoricalEvent[] = [
       { type: "image", src: game1.url, alt: "JatHub founders at the House of Lords" },
       { type: "image", src: game2.url, alt: "Guests at the future of computer gaming discussion" },
       { type: "image", src: game3.url, alt: "Inside Westminster Hall" },
+      { type: "image", src: gameInvite.url, alt: "Invitation to the Future of Computer Gaming meeting" },
     ],
   },
   {
