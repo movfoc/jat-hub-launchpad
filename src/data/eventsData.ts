@@ -501,4 +501,45 @@ export const historicalEvents: HistoricalEvent[] = [
       { type: "image", src: PT7, alt: "Part-time fair 7" },
     ],
   },
+  {
+    id: "hol-metaverse-web3-policy",
+    title: "Policy Discussion on Metaverse and Web 3.0: Current Progress & Future Development",
+    date: "MAY 22, 2024",
+    description:
+      "JatHub team involved to discuss the policy of current and future development, at a House of Lords policy discussion hosted by Baroness Manzila Uddin and Khalid Mahmood MP.",
+    poster: may1.url,
+    media: [
+      { type: "image", src: may1.url, alt: "JatHub team outside the Palace of Westminster" },
+      { type: "image", src: may2.url, alt: "Policy discussion in session at the House of Lords" },
+      { type: "image", src: may3.url, alt: "Official invitation to the Policy Discussion on Metaverse and Web 3.0" },
+    ],
+  },
+  {
+    id: "hol-future-of-gaming",
+    title: "Discussing the Future of Computer Gaming",
+    date: "JAN 24, 2024",
+    description:
+      "The Founder and co-founder of JatHub were involved to discuss the future of computer gaming with policymakers and industry guests at the House of Lords.",
+    poster: game1.url,
+    media: [
+      { type: "image", src: game1.url, alt: "JatHub founders at the House of Lords" },
+      { type: "image", src: game2.url, alt: "Guests at the future of computer gaming discussion" },
+      { type: "image", src: game3.url, alt: "Inside Westminster Hall" },
+    ],
+  },
+  {
+    id: "hol-davos-2024-view",
+    title:
+      "The Davos 2024 View on Web3, Metaverse and other Emerging Technologies' role in re-building Trust",
+    date: "JAN 11, 2024",
+    description:
+      "A House of Lords session drawing on the Davos 2024 view of how Web3, the metaverse and other emerging technologies can help rebuild trust.",
+    poster: davos1.url,
+    media: [
+      { type: "image", src: davos1.url, alt: "Group photo in the House of Lords committee room" },
+      { type: "image", src: davos2.url, alt: "Attendees at the Davos 2024 view session" },
+      { type: "image", src: davos3.url, alt: "Guests photographed inside the Palace of Westminster" },
+      { type: "image", src: davos4.url, alt: "Attendees seated together at the session" },
+    ],
+  },
 ];
