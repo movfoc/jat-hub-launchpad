@@ -538,7 +538,7 @@ export const historicalEvents: HistoricalEvent[] = [
   },
   {
     id: "hol-metaverse-web3-policy",
-    title: "Policy Discussion on Metaverse and Web 3.0: Current Progress & Future Development",
+    title: "UK House of Lords: Policy Discussion on Metaverse and Web 3.0: Current Progress & Future Development",
     date: "MAY 22, 2024",
     description:
       "JatHub team involved to discuss the policy of current and future development, at a House of Lords policy discussion hosted by Baroness Manzila Uddin and Khalid Mahmood MP.",
@@ -551,7 +551,7 @@ export const historicalEvents: HistoricalEvent[] = [
   },
   {
     id: "hol-future-of-gaming",
-    title: "Discussing the Future of Computer Gaming",
+    title: "UK House of Lords: Discussing the Future of Computer Gaming",
     date: "JAN 24, 2024",
     description:
       "The Founder and co-founder of JatHub were involved to discuss the future of computer gaming with policymakers and industry guests at the House of Lords.",
@@ -566,7 +566,7 @@ export const historicalEvents: HistoricalEvent[] = [
   {
     id: "hol-davos-2024-view",
     title:
-      "The Davos 2024 View on Web3, Metaverse and other Emerging Technologies' role in re-building Trust",
+      "UK House of Lords: The Davos 2024 View on Web3, Metaverse and other Emerging Technologies' role in re-building Trust",
     date: "JAN 11, 2024",
     description:
       "A House of Lords session drawing on the Davos 2024 view of how Web3, the metaverse and other emerging technologies can help rebuild trust.",
