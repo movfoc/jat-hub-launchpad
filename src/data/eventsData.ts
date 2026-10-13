@@ -63,9 +63,7 @@ import AI7 from "@/assets/news/ai-marketing/ODOS_Thaicamp_7.jpeg";
 import AI8 from "@/assets/news/ai-marketing/ODOS_Thaicamp_8.jpeg";
 import AI9 from "@/assets/news/ai-marketing/ODOS_Thaicamp_9.jpeg";
 
-import PT1 from "@/assets/news/parttime/Part_time_pics_1.jpeg";
 import PT2 from "@/assets/news/parttime/Part_time_pics_2.jpeg";
-import PT3 from "@/assets/news/parttime/Part_time_pics_3.jpeg";
 import PT4 from "@/assets/news/parttime/Part_time_pics_4.jpeg";
 import PT5 from "@/assets/news/parttime/Part_time_pics_5.jpeg";
 import PT6 from "@/assets/news/parttime/Part_time_pics_6.jpeg";
@@ -527,9 +525,7 @@ export const historicalEvents: HistoricalEvent[] = [
     poster: partTimeFairPoster,
     cover: coverOct1.url,
     media: [
-      { type: "image", src: PT1, alt: "Part-time fair 1" },
       { type: "image", src: PT2, alt: "Part-time fair 2" },
-      { type: "image", src: PT3, alt: "Part-time fair 3" },
       { type: "image", src: PT4, alt: "Part-time fair 4" },
       { type: "image", src: PT5, alt: "Part-time fair 5" },
       { type: "image", src: PT6, alt: "Part-time fair 6" },
