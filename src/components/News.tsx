@@ -21,8 +21,16 @@ import sickleImg from "@/assets/sickle-cell/sickle-cell-1.jpg.asset.json";
 import specialImg from "@/assets/special-school/special-school-1.jpg.asset.json";
 import bristolImg from "@/assets/bristol-workshop/bristol-1.jpg.asset.json";
 import balloonOceanImg from "@/assets/balloon-ocean/balloon-ocean-1.jpg.asset.json";
+import vineWorkshopImg from "@/assets/vine-workshop/Vine_workshop1.jpeg.asset.json";
 
 const newsItems = [
+  {
+    image: vineWorkshopImg.url,
+    category: "Workshop",
+    title: "Demystifying AI: Highlights from Our Workshop at The Vine Centre",
+    date: "2026-10-13",
+    link: "/news/vine-centre-ai-workshop",
+  },
   {
     image: balloonOceanImg.url,
     category: "Community",
