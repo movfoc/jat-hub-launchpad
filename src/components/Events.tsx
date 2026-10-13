@@ -47,7 +47,7 @@ export const Events = () => {
       date: "SEP 12, 2026",
       title: "Twilight Runway Challenge for the Vine Centre",
       description: "10 AM at Blackbushe Airport, Camberley GU17 9LQ.",
-      isPast: false,
+      isPast: true,
       registrationUrl: "https://luma.com/a10czdk1",
     },
     {
