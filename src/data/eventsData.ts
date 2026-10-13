@@ -225,7 +225,23 @@ import coverNov14 from "@/assets/event-covers/cover-nov14-microsoft.png.asset.js
 import coverOct29 from "@/assets/event-covers/cover-oct29-ai-marketing.png.asset.json";
 import coverOct1 from "@/assets/event-covers/cover-oct1-parttime-fair.png.asset.json";
 
+import Vine1 from "@/assets/vine-workshop/Vine_workshop1.jpeg.asset.json";
+import Vine2 from "@/assets/vine-workshop/Vine_workshop2.jpeg.asset.json";
+import Vine3 from "@/assets/vine-workshop/Vine_workshop3.jpeg.asset.json";
+
 export const historicalEvents: HistoricalEvent[] = [
+  {
+    id: "vine-centre-ai-workshop",
+    title: "Demystifying AI: Highlights from Our Workshop at The Vine Centre",
+    date: "OCT 13, 2026",
+    poster: Vine1.url,
+    cover: Vine1.url,
+    media: [
+      { type: "image", src: Vine1.url, alt: "Workshop participants and JatHub team posing together at The Vine Centre" },
+      { type: "image", src: Vine2.url, alt: "Participants using laptops during the hands-on AI workshop at The Vine Centre" },
+      { type: "image", src: Vine3.url, alt: "JatHub workshop facilitators in front of the session welcome slide" },
+    ],
+  },
   {
     id: "balloon-ocean-fun-run",
     title: "Support the Charity Fun Run 5K & Family Treasure Trail: Balloon Ocean",
