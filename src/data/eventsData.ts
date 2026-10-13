@@ -234,6 +234,8 @@ export const historicalEvents: HistoricalEvent[] = [
     id: "vine-centre-ai-workshop",
     title: "Demystifying AI: Highlights from Our Workshop at The Vine Centre",
     date: "OCT 13, 2026",
+    description:
+      "Frankie ran a relaxed, hands-on hour at The Vine Centre, guiding participants through using AI for everyday tasks, structuring CVs and cover letters, and spotting online scams.",
     poster: Vine1.url,
     cover: Vine1.url,
     media: [
