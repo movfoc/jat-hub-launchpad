@@ -9,6 +9,41 @@ export const Events = () => {
 
   const events = [
     {
+      date: "MAY 2027",
+      title: "Future of Youth — Oxford",
+      description: "Oxford North, during Mental Health Awareness Week.",
+      isPast: false,
+      registrationUrl: "/future-of-youth",
+    },
+    {
+      date: "FEB 11, 2027",
+      title: "Future of Youth — Reading",
+      description: "University of Reading, London Road Campus.",
+      isPast: false,
+      registrationUrl: "/future-of-youth",
+    },
+    {
+      date: "DEC 12, 2026",
+      title: "Future of Youth — Surrey",
+      description: "1:00 PM - 4:00 PM at Surrey Sports Park, Guildford.",
+      isPast: false,
+      registrationUrl: "/future-of-youth",
+    },
+    {
+      date: "OCT 18, 2026",
+      title: "Guildford 5K, 10K & Junior Race",
+      description: "8:00 - 11:00 AM on Sunday 18th October 2026.",
+      isPast: false,
+      registrationUrl: "https://www.runthrough.co.uk/event/guildford-5k-10k-juniors-october-2026",
+    },
+    {
+      date: "OCT 13, 2026",
+      title: "CV Toolkit & Cyber Security Workshop",
+      description: "1:00 - 2:00 PM at The Vine Centre, Aldershot.",
+      isPast: true,
+      registrationUrl: undefined,
+    },
+    {
       date: "SEP 12, 2026",
       title: "Twilight Runway Challenge for the Vine Centre",
       description: "10 AM at Blackbushe Airport, Camberley GU17 9LQ.",
