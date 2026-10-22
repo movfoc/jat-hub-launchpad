@@ -50,6 +50,7 @@ import oakleaf from "@/assets/fou/oakleaf.jpg.asset.json";
 import healthySurrey from "@/assets/fou/healthy-surrey.png.asset.json";
 import oneYouSurrey from "@/assets/fou/one-you-surrey.png.asset.json";
 import porkyKong from "@/assets/fou/porky-kong-full.jpg.asset.json";
+import sportInMind from "@/assets/fou/sport-in-mind.png.asset.json";
 
 const CONTACT_EMAIL = "jat@jathub.com";
 
@@ -170,6 +171,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "One You Surrey", logo: oneYouSurrey.url, aid: true, large: true, fill: true },
       { name: "Crafting Smiles", logo: craftingSmiles.url, large: true, fill: true, maximize: true, hero: true },
       { name: "Tree of Life", logo: treeOfLife.url, large: true, hero: true },
+      { name: "Sport In Mind", logo: sportInMind.url, large: true, fill: true },
     ],
   },
 ];
