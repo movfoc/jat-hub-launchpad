@@ -1,6 +1,6 @@
 import { hasEventKnowledge, groundingInstructions } from "./grounding.ts";
 import { test, expect } from "bun:test";
-import knowledge from "./event-knowledge.json";
+import knowledge from "./event-knowledge.json" with { type: "json" };
 
 test("no event answers before organiser JSON arrives", () => {
   const placeholder = { event: "Future of Youth", status: "awaiting_organiser_upload", facts: [] };
