@@ -25,7 +25,16 @@ All colors MUST be HSL.
     --border: 208 25% 85%;
     --input: 208 25% 85%;
     --ring: 41 100% 51%;
+    --color-background: hsl(var(--background));
+    --color-muted-foreground: hsl(var(--muted-foreground));
   }
+
+  .youth-composer [data-slot="input-group"] {
+    height: auto;
+    flex-direction: column;
+    background: hsl(var(--background));
+  }
+  .youth-composer textarea { width: 100%; }
 
   :root {
     --youth-gold: 41 100% 51%;

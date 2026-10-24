@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import youthLogo from "@/assets/fou/future-of-youth-logo.png.asset.json";
 import { Footer } from "@/components/Footer";
+import { YouthAssistant } from "@/components/YouthAssistant";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
@@ -273,6 +274,7 @@ const navLinks = [
   { label: "Tour Dates", href: "#tour-dates" },
   { label: "Impact Zones", href: "#zones" },
   { label: "Partners", href: "#partners" },
+  { label: "Assistant", href: "#event-assistant" },
 ];
 
 const FutureOfYouth = () => {
@@ -344,6 +346,7 @@ const FutureOfYouth = () => {
         </section>
 
         {/* Tour dates */}
+        <YouthAssistant />
         <section id="tour-dates" className="scroll-mt-24 px-5 sm:px-6 py-16 sm:py-24">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black text-foreground">The Cross Region Journey</h2>
