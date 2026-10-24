@@ -12,6 +12,39 @@
     "title": "Future of Youth & Wellbeing Series",
     "summary": "A community program by JAT Hub bringing youth, students, and tech innovators together across UK regions to champion mental health, digital innovation, and physical wellness."
   },
+  "schedule_and_venues": [
+    {
+      "stop": 1,
+      "location": "Surrey",
+      "host": "University of Surrey",
+      "date": "2026-12-12",
+      "date_display": "12 December 2026",
+      "venue": "Surrey Sport Park",
+      "focus": "Sport, Youth Voice & Community Wellness",
+      "opportunity": "Sponsor this stop"
+    },
+    {
+      "stop": 2,
+      "location": "Reading",
+      "host": "University of Reading",
+      "date": "2027-02-11",
+      "date_display": "11 February 2027",
+      "venue": "London Road Campus",
+      "focus": "Youth Mental Health & Community Wellness",
+      "opportunity": "Stall space available"
+    },
+    {
+      "stop": 3,
+      "location": "Oxford",
+      "host": "Oxford North",
+      "date": "2027-05",
+      "date_display": "May 2027",
+      "venue": "Innovation District",
+      "focus": "Innovation, BioTech, HealthTech & Youth Empowerment",
+      "opportunity": "Keynote slots open"
+    }
+  ],
+  "schedule_and_venue_notes": "These are the organiser-supplied dates, venues and focuses. An exact day for Oxford, session timetables, start and finish times, street addresses and travel directions have not been supplied in this schedule. Do not guess these details.",
   "supported_services_and_partners": [
     {
       "category": "Mental Health & Physical Activity",
@@ -70,12 +103,6 @@
         "A wide range of other health and wellbeing resources"
       ],
       "how_to_access": "Browse public health services and support at www.healthysurrey.org.uk."
-    },
-    {
-      "category": "Community Wellbeing & Innovation",
-      "provider": "JAT Hub Breathe Project & Community Groups",
-      "description": "JAT Hub's community wellness initiatives bridging technology, creative engagement, and healthcare.",
-      "services_offered": ["Crafting & creative wellbeing workshops", "Sickle cell & health equity awareness", "Student de-stressing zones"]
     }
   ],
   "faqs": [

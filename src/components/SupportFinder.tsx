@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Brain, Hospital, Users, CigaretteOff, Leaf, HeartPulse, Phone, ExternalLink, MessageCircle, Siren, Globe } from "lucide-react";
+import { Brain, Hospital, Users, CigaretteOff, HeartPulse, Phone, ExternalLink, MessageCircle, Siren, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 type Service = {
@@ -63,14 +63,6 @@ const services: Service[] = [
     summary: "Confidential, judgement-free help with quitting smoking, alcohol and drug advice, and recovery support for young people and families.",
     locations: ALL_REGIONS,
     action: { label: "Visit Talk to Frank", href: "https://www.talktofrank.com", external: true },
-  },
-  {
-    icon: Leaf,
-    name: "JAT Hub Breathe Project",
-    category: "Community & Wellbeing",
-    summary: "JAT Hub's own community wellness programme — creative crafting workshops, health equity awareness, and student de-stress zones.",
-    locations: ALL_REGIONS,
-    action: { label: "Visit website", href: "https://jathub.com/future-of-youth", external: true },
   },
 ];
 
