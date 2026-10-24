@@ -40,6 +40,23 @@
       "services_offered": ["Quit smoking programs (NHS Smoke Free)", "Youth substance advice & recovery support", "Frank (TalkToFrank) confidential advice line"]
     },
     {
+      "category": "Stop Smoking & Weight Management (Surrey only)",
+      "provider": "One You Surrey",
+      "description": "Surrey's free healthy lifestyles service, available to people who live, work or are registered with a GP in Surrey. Self-refer via the One You Surrey website.",
+      "website": "https://www.oneyousurrey.org.uk",
+      "location": "Surrey",
+      "services_offered": [
+        "Stop Smoking Programme: 12 weeks of free support including nicotine replacement therapy and weekly appointments with a stop smoking advisor, via face-to-face clinics or telephone. Eligibility: currently using tobacco products, aged 12 or over, living, working or registered with a GP in Surrey.",
+        "Adult Weight Management: 12 weeks of free support through Gloji programmes, Slimming World or Man v Fat. Eligibility: aged 18 or over, BMI over 30 (over 27.5 for South Asian, black and minority ethnic groups), living, working or registered with a GP in Surrey.",
+        "Gloji Option 1: digital only — 24/7 access to expert videos, workouts, meal ideas and more.",
+        "Gloji Option 2: digital plus group support — group sessions held at Guildford Spectrum in 12-week blocks.",
+        "Gloji Option 3: digital plus 1:1 support — one-to-one calls with a personal health mentor.",
+        "Slimming World Voucher: 12-week access to a local Slimming World group.",
+        "Man v Fat: for men aged 18+ with a starting BMI of 27.5 or higher who live, work or are registered with a GP in Surrey. Tailored digital support plus weekly sessions with a weigh-in followed by a 30-minute game of football, at Kings College (Park Barn Drive, Guildford) and Woking Sportsbox (Egley Road)."
+      ],
+      "how_to_refer": "Individuals can self-refer via the One You Surrey website."
+    },
+    {
       "category": "Community Wellbeing & Innovation",
       "provider": "JAT Hub Breathe Project & Community Groups",
       "description": "JAT Hub's community wellness initiatives bridging technology, creative engagement, and healthcare.",
