@@ -476,6 +476,7 @@ const FutureOfYouth = () => {
         </section>
       </main>
       <Footer />
+      <YouthAssistant />
     </div>
   );
 };
