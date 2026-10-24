@@ -12,6 +12,15 @@ test("organiser facts activate grounding and are passed without invented details
   expect(groundingInstructions(data)).toContain(JSON.stringify(data));
   expect(groundingInstructions(data)).not.toContain("£");
 });
+
+Deno.test("grounding instructions enforce schedule and venue answer formats", () => {
+  const data = { schedule_and_venues: [{ stop: 1, location: "Surrey", host: "University of Surrey", date_display: "12 December 2026", venue: "Surrey Sport Park" }] };
+  const instructions = groundingInstructions(data);
+  expect(instructions).toContain("ANSWER FORMAT RULES");
+  expect(instructions).toContain("answer ONLY the date and time for each stop");
+  expect(instructions).toContain("answer ONLY the venue name and its location");
+  expect(instructions).toContain("omit the host");
+});
 test("structured organiser JSON without a facts array still counts as knowledge", () => {
   expect(hasEventKnowledge({ organization_info: { name: "JAT Hub CIC" }, faqs: [] })).toBe(true);
   expect(hasEventKnowledge({ event: "Future of Youth", status: "awaiting_organiser_upload", facts: [] })).toBe(false);
