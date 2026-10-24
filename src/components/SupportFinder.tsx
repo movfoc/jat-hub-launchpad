@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Brain, Hospital, Users, CigaretteOff, Leaf, Phone, ExternalLink, MessageCircle, Siren } from "lucide-react";
+import { Brain, Hospital, Users, CigaretteOff, Leaf, HeartPulse, Phone, ExternalLink, MessageCircle, Siren } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 type Service = {
@@ -17,7 +17,7 @@ const ALL_REGIONS = ["Surrey", "Reading", "Oxford"];
 // Services without a city in the knowledge base are listed as available across the series.
 const services: Service[] = [
   {
-    icon: CigaretteOff,
+    icon: HeartPulse,
     name: "One You Surrey",
     category: "Stop Smoking & Weight Management",
     summary: "Free 12-week stop smoking support with nicotine replacement therapy and a personal advisor, plus free adult weight management through Gloji, Slimming World vouchers, and Man v Fat football — for anyone living, working or registered with a GP in Surrey.",
