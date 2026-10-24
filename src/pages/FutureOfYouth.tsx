@@ -377,8 +377,8 @@ const FutureOfYouth = () => {
                   <p className="mt-1 inline-flex items-center gap-1.5 text-sm text-muted-foreground">
                     <MapPin className="w-3.5 h-3.5" /> {stop.sub}
                   </p>
-                  <p className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground">
-                    <Clock className="w-3.5 h-3.5" /> {stop.time}
+                  <p className="mt-1 flex items-center gap-1.5 text-sm font-semibold text-foreground">
+                    <Clock className="w-3.5 h-3.5 shrink-0" /> {stop.time}
                   </p>
                   <p className="mt-5 border-t border-border pt-4 text-sm leading-relaxed text-muted-foreground">
                     <span className="font-semibold text-foreground">Focus: </span>{stop.focus}
