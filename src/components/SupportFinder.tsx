@@ -7,13 +7,23 @@ type Service = {
   name: string;
   category: string;
   summary: string;
+  locations: string[];
   action: { label: string; href: string; external?: boolean };
 };
 
+const ALL_REGIONS = ["Surrey", "Reading", "Oxford"];
+
 // Sourced from the organiser's event knowledge base (supported_services_and_partners).
-// The knowledge base lists these services as available across the series, so every
-// service carries an "All Regions" badge and appears under each location tab.
+// Services without a city in the knowledge base are listed as available across the series.
 const services: Service[] = [
+  {
+    icon: CigaretteOff,
+    name: "One You Surrey",
+    category: "Stop Smoking & Weight Management",
+    summary: "Free 12-week stop smoking support with nicotine replacement therapy and a personal advisor, plus free adult weight management through Gloji, Slimming World vouchers, and Man v Fat football — for anyone living, working or registered with a GP in Surrey.",
+    locations: ["Surrey"],
+    action: { label: "Visit One You Surrey", href: "https://www.oneyousurrey.org.uk", external: true },
+  },
   {
     icon: Brain,
     name: "Sport in Mind",
