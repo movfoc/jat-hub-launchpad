@@ -25,6 +25,14 @@ const services: Service[] = [
     action: { label: "Visit One You Surrey", href: "https://www.oneyousurrey.org.uk", external: true },
   },
   {
+    icon: Globe,
+    name: "Healthy Surrey",
+    category: "Public Health Information & Resources",
+    summary: "Surrey's public health information service — find services and support on healthy Surrey, including substance use services, food and nutrition, sexual health, mental health, and a wide range of other health and wellbeing resources.",
+    locations: ["Surrey"],
+    action: { label: "Visit Healthy Surrey", href: "https://www.healthysurrey.org.uk", external: true },
+  },
+  {
     icon: Brain,
     name: "Sport in Mind",
     category: "Mental Health & Sport",
