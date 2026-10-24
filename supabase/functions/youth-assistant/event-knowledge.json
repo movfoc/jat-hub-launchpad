@@ -1,5 +1,66 @@
 {
-  "event": "Future of Youth",
-  "status": "awaiting_organiser_upload",
-  "facts": []
+  "organization_info": {
+    "name": "JAT Hub CIC",
+    "mission": "A non-profit community built for young dreamers, innovators, and changemakers connecting students, startups, and institutions.",
+    "contact": {
+      "email": "jat@jathub.com",
+      "phone": "+44 7766 456376",
+      "website": "https://jathub.com/future-of-youth"
+    }
+  },
+  "initiative": {
+    "title": "Future of Youth & Wellbeing Series",
+    "summary": "A community program by JAT Hub bringing youth, students, and tech innovators together across UK regions to champion mental health, digital innovation, and physical wellness."
+  },
+  "supported_services_and_partners": [
+    {
+      "category": "Mental Health & Physical Activity",
+      "provider": "Sport in Mind",
+      "description": "UK mental health charity using sport and physical activity to improve the lives of people experiencing mental health problems.",
+      "services_offered": ["Free sport sessions", "Youth wellbeing programs", "Movement for mental health workshops"],
+      "website": "https://www.sportinmind.org"
+    },
+    {
+      "category": "Healthcare & Crisis Support",
+      "provider": "NHS Foundation Trusts",
+      "description": "Local NHS Healthcare Trusts providing mental health services, crisis response, and youth wellbeing support.",
+      "services_offered": ["Child and Adolescent Mental Health Services (CAMHS)", "Urgent NHS 111 Mental Health Line", "Mobile Health Clinics"],
+      "contact": "Call 111 for 24/7 NHS mental health support"
+    },
+    {
+      "category": "Family & Youth Support",
+      "provider": "Family & Community Services",
+      "description": "Local community trusts and family support hubs offering guidance for parents, carers, and young people.",
+      "services_offered": ["Family counseling", "Youth mentoring", "Early intervention & parental wellbeing support"]
+    },
+    {
+      "category": "Substance & Addiction Support",
+      "provider": "Drug, Alcohol & Smoking Cessation Services",
+      "description": "Confidential support services helping young people and families with addiction recovery, smoking cessation, and substance awareness.",
+      "services_offered": ["Quit smoking programs (NHS Smoke Free)", "Youth substance advice & recovery support", "Frank (TalkToFrank) confidential advice line"]
+    },
+    {
+      "category": "Community Wellbeing & Innovation",
+      "provider": "JAT Hub Breathe Project & Community Groups",
+      "description": "JAT Hub's community wellness initiatives bridging technology, creative engagement, and healthcare.",
+      "services_offered": ["Crafting & creative wellbeing workshops", "Sickle cell & health equity awareness", "Student de-stressing zones"]
+    }
+  ],
+  "faqs": [
+    {
+      "id": "mental-health-support",
+      "question": "Where can I get mental health support at the event?",
+      "answer": "You can visit the dedicated 'Mental Wellbeing & Mindfulness' zone where partners like Sport in Mind, NHS wellbeing stalls, and local support hubs offer free guidance and resources."
+    },
+    {
+      "id": "family-and-addiction-services",
+      "question": "Are there services available for family care, smoking, or drug support?",
+      "answer": "Yes! The event exhibition zone features community support stalls providing confidential advice on family mentoring, smoking cessation, and substance recovery guidance."
+    },
+    {
+      "id": "urgent-help",
+      "question": "What should I do if I need urgent mental health help?",
+      "answer": "For immediate crisis support, speak to an on-site welfare staff member or contact NHS 111 (Option 2) for 24/7 mental health crisis services."
+    }
+  ]
 }
