@@ -6,3 +6,4 @@
 - [x] Rename the festival series Future of Youth in page copy and navigation.
 - [x] Add the uploaded event logo and matching favicon.
 - [x] Apply the logo's gold, navy and white palette and verify the page and partner dialog.
+- [x] Confirm the Surrey stop time 1:30 PM - 4:00 PM on the journey card, events list and assistant knowledge.

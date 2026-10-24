@@ -19,6 +19,7 @@
       "host": "University of Surrey",
       "date": "2026-12-12",
       "date_display": "12 December 2026",
+      "time": "1:30 PM - 4:00 PM",
       "venue": "Surrey Sport Park",
       "focus": "Sport, Youth Voice & Community Wellness",
       "opportunity": "Sponsor this stop"
@@ -44,7 +45,7 @@
       "opportunity": "Keynote slots open"
     }
   ],
-  "schedule_and_venue_notes": "These are the organiser-supplied dates, venues and focuses. An exact day for Oxford, session timetables, start and finish times, street addresses and travel directions have not been supplied in this schedule. Do not guess these details.",
+  "schedule_and_venue_notes": "These are the organiser-supplied dates, venues and focuses. The Surrey stop on 12 December 2026 runs 1:30 PM - 4:00 PM. Start and finish times for the Reading and Oxford stops have not been supplied. An exact day for Oxford, session timetables, street addresses and travel directions have not been supplied in this schedule. Do not guess these details.",
   "supported_services_and_partners": [
     {
       "category": "Mental Health & Physical Activity",
