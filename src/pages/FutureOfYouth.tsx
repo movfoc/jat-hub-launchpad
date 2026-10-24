@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import youthLogo from "@/assets/fou/future-of-youth-logo.png.asset.json";
 import { Footer } from "@/components/Footer";
 import { YouthAssistant } from "@/components/YouthAssistant";
+import { SupportFinder } from "@/components/SupportFinder";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
@@ -274,6 +275,7 @@ const navLinks = [
   { label: "Tour Dates", href: "#tour-dates" },
   { label: "Impact Zones", href: "#zones" },
   { label: "Partners", href: "#partners" },
+  { label: "Support", href: "#support" },
   { label: "Assistant", href: "#event-assistant" },
 ];
 
@@ -441,6 +443,9 @@ const FutureOfYouth = () => {
             </div>
           </div>
         </section>
+
+        {/* Local support finder */}
+        <SupportFinder />
 
         {/* Sponsor CTA */}
         <section id="sponsor" className="scroll-mt-24 px-5 sm:px-6 pb-20 sm:pb-28">
