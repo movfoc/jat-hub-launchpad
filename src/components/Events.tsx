@@ -25,7 +25,7 @@ export const Events = () => {
     {
       date: "DEC 12, 2026",
       title: "Future of Youth — Surrey",
-      description: "1:00 PM - 4:00 PM at Surrey Sports Park, Guildford.",
+      description: "1:30 PM - 4:00 PM at Surrey Sports Park, Guildford.",
       isPast: false,
       registrationUrl: "/future-of-youth",
     },
