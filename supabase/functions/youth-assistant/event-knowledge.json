@@ -57,6 +57,21 @@
       "how_to_refer": "Individuals can self-refer via the One You Surrey website."
     },
     {
+      "category": "Public Health Information & Resources (Surrey only)",
+      "provider": "Healthy Surrey",
+      "description": "Surrey's public health information service. Information about public health services and support can be found on www.healthysurrey.org.uk, including substance use services, food and nutrition, sexual health, mental health, and a wide range of other health and wellbeing resources.",
+      "website": "https://www.healthysurrey.org.uk",
+      "location": "Surrey",
+      "services_offered": [
+        "Substance use services",
+        "Food and nutrition",
+        "Sexual health",
+        "Mental health",
+        "A wide range of other health and wellbeing resources"
+      ],
+      "how_to_access": "Browse public health services and support at www.healthysurrey.org.uk."
+    },
+    {
       "category": "Community Wellbeing & Innovation",
       "provider": "JAT Hub Breathe Project & Community Groups",
       "description": "JAT Hub's community wellness initiatives bridging technology, creative engagement, and healthcare.",
