@@ -18,8 +18,12 @@ Deno.serve(async (request) => {
     const payload = await request.text();
     if (payload.length > 100000) return Response.json({ error: "This conversation is too long. Please clear the chat and start again." }, { status: 400, headers: cors });
     const body = JSON.parse(payload);
-    const messages = await validateUIMessages({ messages: body.messages });
-    if (!messages.length || messages.some(m => !["user", "assistant"].includes(m.role) || m.parts.some(p => !["text", "reasoning"].includes(p.type)))) {
+    const validated = await validateUIMessages({ messages: body.messages });
+    // Strip non-text parts (e.g. step-start, data parts) instead of rejecting the conversation.
+    const messages = validated
+      .filter(m => ["user", "assistant"].includes(m.role))
+      .map(m => ({ ...m, parts: m.parts.filter(p => ["text", "reasoning"].includes(p.type)) }));
+    if (!messages.length || !messages.some(m => m.role === "user" && m.parts.some(p => p.type === "text" && p.text.trim()))) {
       return Response.json({ error: "Please send a text question." }, { status: 400, headers: cors });
     }
     if (!hasEventKnowledge(knowledge)) {
