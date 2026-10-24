@@ -32,6 +32,7 @@ import {
   Building2,
   Cpu,
   Sparkles,
+  Clock,
 } from "lucide-react";
 
 import readingUni from "@/assets/fou/reading-uni.png.asset.json";
@@ -61,6 +62,7 @@ const tour = [
     pill: "12 DEC 2026",
     place: "University of Surrey",
     sub: "Surrey Sport Park",
+    time: "1:30 PM – 4:00 PM",
     focus: "Sport, Youth Voice & Community Wellness",
     tier: "Sponsor This Stop",
     accent: "from-youth-gold to-youth-gold-light",
@@ -69,6 +71,7 @@ const tour = [
     pill: "11 FEB 2027",
     place: "University of Reading",
     sub: "London Road Campus",
+    time: "Time TBC",
     focus: "Youth Mental Health & Community Wellness",
     tier: "Stall Space Available",
     accent: "from-youth-gold to-youth-gold-light",
@@ -77,6 +80,7 @@ const tour = [
     pill: "MAY 2027",
     place: "Oxford North",
     sub: "Innovation District",
+    time: "Time TBC",
     focus: "Innovation, BioTech, HealthTech & Youth Empowerment",
     tier: "Keynote Slots Open",
     accent: "from-youth-gold to-youth-gold-light",
@@ -372,6 +376,9 @@ const FutureOfYouth = () => {
                   <h3 className="mt-5 text-xl font-bold text-foreground">{stop.place}</h3>
                   <p className="mt-1 inline-flex items-center gap-1.5 text-sm text-muted-foreground">
                     <MapPin className="w-3.5 h-3.5" /> {stop.sub}
+                  </p>
+                  <p className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-foreground">
+                    <Clock className="w-3.5 h-3.5" /> {stop.time}
                   </p>
                   <p className="mt-5 border-t border-border pt-4 text-sm leading-relaxed text-muted-foreground">
                     <span className="font-semibold text-foreground">Focus: </span>{stop.focus}
