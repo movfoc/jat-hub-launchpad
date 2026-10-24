@@ -290,7 +290,11 @@ const FutureOfYouth = () => {
             <ArrowLeft className="w-4 h-4" /> <span className="hidden xs:inline">JAT Hub</span>
           </a>
           <div className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
-            {navLinks.map((l) => (
+            {navLinks.map((l) => l.href === "#event-assistant" ? (
+              <button key={l.href} type="button" onClick={() => window.dispatchEvent(new Event("youth-assistant-open"))} className="relative transition-colors hover:text-foreground after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-secondary0 after:transition-all hover:after:w-full">
+                {l.label}
+              </button>
+            ) : (
               <a key={l.href} href={l.href} className="relative transition-colors hover:text-foreground after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-secondary0 after:transition-all hover:after:w-full">
                 {l.label}
               </a>
@@ -346,7 +350,6 @@ const FutureOfYouth = () => {
         </section>
 
         {/* Tour dates */}
-        <YouthAssistant />
         <section id="tour-dates" className="scroll-mt-24 px-5 sm:px-6 py-16 sm:py-24">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black text-foreground">The Cross Region Journey</h2>
@@ -473,6 +476,7 @@ const FutureOfYouth = () => {
         </section>
       </main>
       <Footer />
+      <YouthAssistant />
     </div>
   );
 };
