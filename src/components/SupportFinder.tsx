@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Brain, Hospital, Users, CigaretteOff, Leaf, HeartPulse, Phone, ExternalLink, MessageCircle, Siren } from "lucide-react";
+import { Brain, Hospital, Users, CigaretteOff, Leaf, HeartPulse, Phone, ExternalLink, MessageCircle, Siren, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 type Service = {
