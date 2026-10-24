@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
-import { CalendarDays, MapPin, Mic, Ticket, Trash2, ArrowUp, Mail, ShieldCheck, MessageCircle, X } from "lucide-react";
+import { CalendarDays, MapPin, Mic, Ticket, Trash2, ArrowUp, Mail, ShieldCheck, MessageCircle, X, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Conversation, ConversationContent, ConversationScrollButton } from "@/components/ai-elements/conversation";
 import { Message, MessageContent, MessageResponse, MessageAction, MessageActions } from "@/components/ai-elements/message";
@@ -18,6 +18,7 @@ const actions = [
   { label: "Venue Details", icon: MapPin, prompt: "What are the venue details and travel information for each stop?" },
   { label: "Speaker Lineup", icon: Mic, prompt: "Who is speaking at Future of Youth?" },
   { label: "Ticketing", icon: Ticket, prompt: "How can I get tickets, and what do they cost?" },
+  { label: "🧠 Find Local Mental Health Support", icon: Brain, prompt: "Tell me more about local mental health support at Future of Youth" },
 ];
 function restore(): UIMessage[] {
   try {
@@ -62,6 +63,16 @@ export function YouthAssistant() {
     window.addEventListener("youth-assistant-open", onOpen);
     return () => window.removeEventListener("youth-assistant-open", onOpen);
   }, []);
+  useEffect(() => {
+    const onAsk = (e: Event) => {
+      const text = (e as CustomEvent<string>).detail;
+      if (typeof text !== "string" || !text.trim()) return;
+      setOpen(true);
+      ask(text);
+    };
+    window.addEventListener("youth-assistant-ask", onAsk);
+    return () => window.removeEventListener("youth-assistant-ask", onAsk);
+  });
   function ask(text: string) {
     if (busy || !text.trim()) return;
     clearError(); setInput("");
