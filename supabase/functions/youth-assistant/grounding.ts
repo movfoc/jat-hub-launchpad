@@ -1,7 +1,9 @@
 export const MISSING_KNOWLEDGE = "The organiser’s event information has not been added yet, so I can’t confirm that detail. Please contact jat@jathub.com for help.";
 
-export function hasEventKnowledge(knowledge: { facts: unknown[] }): boolean {
-  return Array.isArray(knowledge.facts) && knowledge.facts.length > 0;
+export function hasEventKnowledge(knowledge: Record<string, unknown>): boolean {
+  if (Array.isArray(knowledge.facts) && knowledge.facts.length > 0) return true;
+  // Placeholder uploads only carry event/status/facts; any other key means organiser data arrived.
+  return Object.keys(knowledge).some(k => !["event", "status", "facts"].includes(k));
 }
 
 export function groundingInstructions(knowledge: unknown): string {

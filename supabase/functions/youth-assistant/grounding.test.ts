@@ -11,3 +11,7 @@ test("organiser facts activate grounding and are passed without invented details
   expect(groundingInstructions(data)).toContain(JSON.stringify(data));
   expect(groundingInstructions(data)).not.toContain("£");
 });
+test("structured organiser JSON without a facts array still counts as knowledge", () => {
+  expect(hasEventKnowledge({ organization_info: { name: "JAT Hub CIC" }, faqs: [] })).toBe(true);
+  expect(hasEventKnowledge({ event: "Future of Youth", status: "awaiting_organiser_upload", facts: [] })).toBe(false);
+});
