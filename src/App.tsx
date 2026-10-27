@@ -33,6 +33,7 @@ import NewsVineCentreAIWorkshop from "./pages/NewsVineCentreAIWorkshop";
 import NIHR from "./pages/NIHR";
 import BePartOfResearch from "./pages/BePartOfResearch";
 import FutureOfYouth from "./pages/FutureOfYouth";
+import FutureOfYouthPrivacy from "./pages/FutureOfYouthPrivacy";
 import AIGameCreators from "./pages/AIGameCreators";
 import WSTC from "./pages/WSTC";
 
@@ -75,6 +76,7 @@ const App = () => (
           <Route path="/nihr" element={<NIHR />} />
           <Route path="/bepartofresearch" element={<BePartOfResearch />} />
           <Route path="/future-of-youth" element={<FutureOfYouth />} />
+          <Route path="/future-of-youth/privacy-policy" element={<FutureOfYouthPrivacy />} />
           <Route path="/future-of-us" element={<Navigate to="/future-of-youth" replace />} />
           <Route path="/ai-game-creators" element={<AIGameCreators />} />
           <Route path="/wstc" element={<WSTC />} />

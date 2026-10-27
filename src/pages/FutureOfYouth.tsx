@@ -489,6 +489,10 @@ const FutureOfYouth = () => {
           </div>
         </section>
       </main>
+      <div className="border-t border-border px-5 py-6 text-center text-sm text-muted-foreground">
+        <a href="/future-of-youth/privacy-policy" className="font-semibold underline underline-offset-4 hover:text-foreground">Privacy policy</a>
+        <p className="mt-2">Public event · Photography and press coverage</p>
+      </div>
       <Footer />
       <YouthAssistant />
     </div>

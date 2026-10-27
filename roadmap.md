@@ -1,4 +1,5 @@
 # Tasks
+- [ ] Add and verify the Future of Youth privacy page and event-page link.
 - [x] Add Future of Youth assistant with quick actions and browser-saved conversation.
 - [x] Enforce uploaded-JSON-only event answers and verify the pending-knowledge chat behaviour.
 - [x] Load and verify grounded AI event answers from the organiser's uploaded JSON.
