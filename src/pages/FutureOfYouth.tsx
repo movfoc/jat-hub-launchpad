@@ -330,7 +330,7 @@ const FutureOfYouth = () => {
                   alt="Scan to register for a free ticket"
                   className="w-36 sm:w-44 h-auto rounded-2xl border border-border bg-white p-2 shadow-youth"
                 />
-                <p className="text-center font-black uppercase tracking-tight text-primary text-xl sm:text-2xl leading-tight">
+                <p className="text-center font-black uppercase tracking-tight text-foreground text-xl sm:text-2xl leading-tight">
                   Register for<br />Free Ticket
                 </p>
                 <p className="text-xs font-semibold text-muted-foreground">Scan the QR code</p>
