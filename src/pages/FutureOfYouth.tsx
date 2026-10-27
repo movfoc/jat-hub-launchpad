@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import youthLogo from "@/assets/fou/future-of-youth-logo.png.asset.json";
+import fouQr from "@/assets/fou/fou-qr-dragon.png.asset.json";
 import { Footer } from "@/components/Footer";
 import { YouthAssistant } from "@/components/YouthAssistant";
 import { SupportFinder } from "@/components/SupportFinder";
