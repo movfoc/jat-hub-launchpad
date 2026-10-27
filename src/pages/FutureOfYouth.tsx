@@ -322,8 +322,19 @@ const FutureOfYouth = () => {
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-card px-4 py-1.5 text-xs font-bold uppercase tracking-normal text-foreground shadow-sm">
               <Sparkles className="w-3.5 h-3.5" /> JAT Hub CIC Festival Series
             </span>
-            <h1 className="mt-7">
+            <h1 className="mt-7 flex flex-col-reverse sm:flex-row items-center sm:items-start justify-between gap-8">
               <img src={youthLogo.url} alt="Future of Youth" className="w-full max-w-[620px] h-auto" />
+              <div className="flex flex-col items-center gap-3 shrink-0">
+                <img
+                  src={fouQr.url}
+                  alt="Scan to register for a free ticket"
+                  className="w-36 sm:w-44 h-auto rounded-2xl border border-border bg-white p-2 shadow-youth"
+                />
+                <p className="text-center font-black uppercase tracking-tight text-primary text-xl sm:text-2xl leading-tight">
+                  Register for<br />Free Ticket
+                </p>
+                <p className="text-xs font-semibold text-muted-foreground">Scan the QR code</p>
+              </div>
             </h1>
             <p className="mt-6 max-w-4xl text-3xl sm:text-5xl font-black leading-tight text-foreground">
               Wellbeing &amp; Community Festival Series 2026
