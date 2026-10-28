@@ -56,6 +56,7 @@ import oneYouSurrey from "@/assets/fou/one-you-surrey.png.asset.json";
 import porkyKong from "@/assets/fou/porky-kong-full.jpg.asset.json";
 import sportInMind from "@/assets/fou/sport-in-mind.png.asset.json";
 import gamesDesign from "@/assets/fou/games-design.jpg.asset.json";
+import surreyAngels from "@/assets/fou/surrey-angels.png.asset.json";
 
 const CONTACT_EMAIL = "jat@jathub.com";
 
@@ -181,6 +182,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Tree of Life", logo: treeOfLife.url, large: true, hero: true },
       { name: "Sport In Mind", logo: sportInMind.url, large: true, fill: true },
       { name: "Game Design", note: "University of Surrey", logo: gamesDesign.url, large: true, fill: true },
+      { name: "Surrey Angels", logo: surreyAngels.url, large: true },
     ],
   },
 ];
