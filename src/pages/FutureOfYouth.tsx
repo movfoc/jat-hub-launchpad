@@ -324,17 +324,22 @@ const FutureOfYouth = () => {
             </span>
             <h1 className="mt-7 flex flex-col-reverse sm:flex-row items-center sm:items-start justify-between gap-8">
               <img src={youthLogo.url} alt="Future of Youth" className="w-full max-w-[620px] h-auto" />
-              <div className="flex flex-col items-center gap-3 shrink-0">
+              <a
+                href="https://jatpoint.com/event/th69gg53xttc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-3 shrink-0 group"
+              >
                 <img
                   src={fouQr.url}
                   alt="Scan to register for a free ticket"
-                  className="w-36 sm:w-44 h-auto rounded-2xl border border-border bg-white p-2 shadow-youth"
+                  className="w-36 sm:w-44 h-auto rounded-2xl border border-border bg-white p-2 shadow-youth transition-transform group-hover:scale-105"
                 />
-                <p className="text-center font-black uppercase tracking-tight text-foreground text-xl sm:text-2xl leading-tight">
+                <p className="text-center font-black uppercase tracking-tight text-foreground text-xl sm:text-2xl leading-tight group-hover:text-primary transition-colors">
                   Register for<br />Free Ticket
                 </p>
-                <p className="text-xs font-semibold text-muted-foreground">Scan the QR code</p>
-              </div>
+                <p className="text-xs font-semibold text-muted-foreground">Scan the QR code or tap to register</p>
+              </a>
             </h1>
             <p className="mt-6 max-w-4xl text-3xl sm:text-5xl font-black leading-tight text-foreground">
               Wellbeing &amp; Community Festival Series 2026
