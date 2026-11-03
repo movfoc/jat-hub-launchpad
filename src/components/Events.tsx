@@ -30,6 +30,13 @@ export const Events = () => {
       registrationUrl: "/future-of-youth",
     },
     {
+      date: "NOV 7, 2026",
+      title: "Winter Wellfest Guildford",
+      description: "10 AM - 6 PM at GLive, Guildford. A full day of indoor wellbeing — Aerial Yoga, Readings, Spa treatments, Journaling, Dance fitness and more. JatHub members get 50% off admission with code JATHUB50.",
+      isPast: false,
+      registrationUrl: "https://www.eventbrite.co.uk/e/winter-wellfest-guildford-tickets-1997685495092?foo=bar&discount=JATHUB50",
+    },
+    {
       date: "OCT 18, 2026",
       title: "Guildford 5K, 10K & Junior Race",
       description: "8:00 - 11:00 AM on Sunday 18th October 2026.",
