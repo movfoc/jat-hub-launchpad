@@ -40,7 +40,7 @@ export const Events = () => {
       date: "OCT 18, 2026",
       title: "Guildford 5K, 10K & Junior Race",
       description: "8:00 - 11:00 AM on Sunday 18th October 2026.",
-      isPast: false,
+      isPast: true,
       registrationUrl: "https://www.runthrough.co.uk/event/guildford-5k-10k-juniors-october-2026",
     },
     {
