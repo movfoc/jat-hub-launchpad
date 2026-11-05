@@ -33,13 +33,16 @@ Deno.test("Breathe is not offered in the organiser support knowledge", () => {
 Deno.test("Surrey is the first stop on 12 December 2026 at Surrey Sport Park", () => {
   assertEquals(knowledge.schedule_and_venues[0], { ...knowledge.schedule_and_venues[0], stop: 1, host: "University of Surrey", date: "2026-12-12", venue: "Surrey Sport Park", focus: "Sport, Youth Voice & Community Wellness" });
 });
-Deno.test("Surrey stop time is confirmed 1:30 PM - 4:00 PM and other stops have no invented time", () => {
-  assertEquals(knowledge.schedule_and_venues[0].time, "1:30 PM - 4:00 PM");
+Deno.test("Surrey stop time is confirmed 1:15 PM - 4:00 PM and other stops have no invented time", () => {
+  assertEquals(knowledge.schedule_and_venues[0].time, "1:15 PM - 4:00 PM");
   assertEquals(knowledge.schedule_and_venues[1].time, undefined);
   assertEquals(knowledge.schedule_and_venues[2].time, undefined);
 });
 Deno.test("Reading is the second stop on 11 February 2027 at London Road Campus", () => {
   assertEquals(knowledge.schedule_and_venues[1], { ...knowledge.schedule_and_venues[1], stop: 2, host: "University of Reading", date: "2027-02-11", venue: "London Road Campus", focus: "Youth Mental Health & Community Wellness" });
+});
+Deno.test("December 12 registration uses the supplied Jatpoint event", () => {
+  assertEquals(knowledge.schedule_and_venues[0].registration_url, "https://jatpoint.com/event/th69gg53xttc");
 });
 Deno.test("Oxford is the third stop in May 2027 without an invented day", () => {
   assertEquals(knowledge.schedule_and_venues[2], { ...knowledge.schedule_and_venues[2], stop: 3, host: "Oxford North", date: "2027-05", venue: "Innovation District", focus: "Innovation, BioTech, HealthTech & Youth Empowerment" });

@@ -66,7 +66,7 @@ const tour = [
     pill: "12 DEC 2026",
     place: "University of Surrey",
     sub: "Surrey Sport Park",
-    time: "1:30 PM – 4:00 PM",
+    time: "1:15 PM – 4:00 PM",
     focus: "Sport, Youth Voice & Community Wellness",
     tier: "Sponsor This Stop",
     accent: "from-youth-gold to-youth-gold-light",
@@ -350,6 +350,10 @@ const FutureOfYouth = () => {
             </p>
             <p className="mt-6 max-w-3xl text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
               A Cross-Regional Campaign Championing Youth Mental Health, Health Equity, and Innovation.
+            </p>
+            <p className="mt-6 max-w-3xl border-l-4 border-primary pl-4 text-lg sm:text-xl font-bold text-foreground">
+              12 December 2026 · Our flagship Year End &amp; Future of Youth Kick Start event
+              <span className="mt-2 block text-base font-semibold text-muted-foreground">1:15 PM – 4:00 PM · Surrey Sports Park, Guildford</span>
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Dialog>
