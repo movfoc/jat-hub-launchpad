@@ -7,5 +7,5 @@
 - [x] Rename the festival series Future of Youth in page copy and navigation.
 - [x] Add the uploaded event logo and matching favicon.
 - [x] Apply the logo's gold, navy and white palette and verify the page and partner dialog.
-- [ ] Update and verify the December 12 registration link, 1:15 PM start time, and flagship Year End / Future of Youth Kick Start emphasis across event displays and assistant knowledge.
+- [x] Update and verify the December 12 registration link, 1:15 PM start time, and flagship Year End / Future of Youth Kick Start emphasis across event displays and assistant knowledge.
 - [x] Add the Game Design (University of Surrey) logo card under Civic & Community.
