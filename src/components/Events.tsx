@@ -24,7 +24,7 @@ export const Events = () => {
     },
     {
       date: "DEC 12, 2026",
-      title: "Future of Youth — Surrey: Flagship Year End & Kick Start",
+      title: "Future of Youth Kick Start — Surrey: Flagship Year End Event",
       description: "1:15 PM - 4:00 PM at Surrey Sports Park, Guildford. Our flagship Year End and Future of Youth Kick Start event.",
       isPast: false,
       registrationUrl: "https://jatpoint.com/event/th69gg53xttc",
