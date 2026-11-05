@@ -235,6 +235,7 @@ import fair3 from "@/assets/guildford-fair/guildford-fair-3.jpeg.asset.json";
 import fair4 from "@/assets/guildford-fair/guildford-fair-4.jpg.asset.json";
 import fair5 from "@/assets/guildford-fair/guildford-fair-5.jpeg.asset.json";
 import fair6 from "@/assets/guildford-fair/guildford-fair-6.jpg.asset.json";
+import fairCover from "@/assets/guildford-fair/guildford-fair-cover.jpg.asset.json";
 
 export const historicalEvents: HistoricalEvent[] = [
   {
@@ -244,7 +245,7 @@ export const historicalEvents: HistoricalEvent[] = [
     description:
       "JatHub brought local charities together at the Guildhall on Guildford High Street and welcomed the Mayor of Guildford, Cllr Jane Tyson, to our charity table in front of the Queen Elizabeth II portrait.",
     poster: fair5.url,
-    cover: fair5.url,
+    cover: fairCover.url,
     media: [
       { type: "image", src: fair5.url, alt: "JatHub team at their charity table in front of the Queen Elizabeth II portrait at the Guildhall" },
       { type: "image", src: fair1.url, alt: "Mayor of Guildford, Cllr Jane Tyson, visiting the JatHub charity booth" },
