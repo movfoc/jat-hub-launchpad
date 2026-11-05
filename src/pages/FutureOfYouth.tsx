@@ -58,6 +58,7 @@ import sportInMind from "@/assets/fou/sport-in-mind.png.asset.json";
 import gamesDesign from "@/assets/fou/games-design.jpg.asset.json";
 import surreyAngels from "@/assets/fou/surrey-angels.png.asset.json";
 import studioSlash from "@/assets/fou/studio-slash.png.asset.json";
+import compSoc from "@/assets/fou/compsoc-surrey.jpeg.asset.json";
 
 const CONTACT_EMAIL = "jat@jathub.com";
 
@@ -185,6 +186,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Game Design", note: "University of Surrey", logo: gamesDesign.url, large: true, fill: true },
       { name: "Surrey Angels", logo: surreyAngels.url, large: true },
       { name: "Studio Slash", logo: studioSlash.url, large: true },
+      { name: "CompSoc", note: "University of Surrey", logo: compSoc.url, large: true, fill: true },
     ],
   },
 ];
