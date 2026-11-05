@@ -229,7 +229,31 @@ import Vine1 from "@/assets/vine-workshop/Vine_workshop1.jpeg.asset.json";
 import Vine2 from "@/assets/vine-workshop/Vine_workshop2.jpeg.asset.json";
 import Vine3 from "@/assets/vine-workshop/Vine_workshop3.jpeg.asset.json";
 
+import fair1 from "@/assets/guildford-fair/guildford-fair-1.jpg.asset.json";
+import fair2 from "@/assets/guildford-fair/guildford-fair-2.jpeg.asset.json";
+import fair3 from "@/assets/guildford-fair/guildford-fair-3.jpeg.asset.json";
+import fair4 from "@/assets/guildford-fair/guildford-fair-4.jpg.asset.json";
+import fair5 from "@/assets/guildford-fair/guildford-fair-5.jpeg.asset.json";
+import fair6 from "@/assets/guildford-fair/guildford-fair-6.jpg.asset.json";
+
 export const historicalEvents: HistoricalEvent[] = [
+  {
+    id: "guildford-charity-fair",
+    title: "JatHub Hosts Charity Table at Combined Charities Christmas Fair in Guildford",
+    date: "NOV 1, 2026",
+    description:
+      "JatHub brought local charities together at the Guildhall on Guildford High Street and welcomed the Mayor of Guildford, Cllr Jane Tyson, to our charity table in front of the Queen Elizabeth II portrait.",
+    poster: fair5.url,
+    cover: fair5.url,
+    media: [
+      { type: "image", src: fair5.url, alt: "JatHub team at their charity table in front of the Queen Elizabeth II portrait at the Guildhall" },
+      { type: "image", src: fair1.url, alt: "Mayor of Guildford, Cllr Jane Tyson, visiting the JatHub charity booth" },
+      { type: "image", src: fair2.url, alt: "JatHub team with the Eczema UK team at the fair" },
+      { type: "image", src: fair3.url, alt: "JatHub team with Home-Start Guildford at their stall" },
+      { type: "image", src: fair4.url, alt: "JatHub team with the GRACE charity team at the fair" },
+      { type: "image", src: fair6.url, alt: "JatHub team sharing Winter Wellfest Guildford flyers at the fair" },
+    ],
+  },
   {
     id: "vine-centre-ai-workshop",
     title: "Demystifying AI: Highlights from Our Workshop at The Vine Centre",
