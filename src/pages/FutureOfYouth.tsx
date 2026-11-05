@@ -60,6 +60,7 @@ import surreyAngels from "@/assets/fou/surrey-angels.png.asset.json";
 import studioSlash from "@/assets/fou/studio-slash.png.asset.json";
 import compSoc from "@/assets/fou/compsoc-surrey.jpeg.asset.json";
 import chessSurrey from "@/assets/fou/chess-surrey.jpeg.asset.json";
+import teranceBalloon from "@/assets/fou/terance-balloon.png.asset.json";
 
 const CONTACT_EMAIL = "jat@jathub.com";
 
@@ -189,6 +190,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Studio Slash", logo: studioSlash.url, large: true },
       { name: "CompSoc", note: "University of Surrey", logo: compSoc.url, large: true, fill: true },
       { name: "Chess", note: "University of Surrey", logo: chessSurrey.url, large: true, fill: true },
+      { name: "Terance Balloon", logo: teranceBalloon.url, large: true, fill: true },
     ],
   },
 ];
