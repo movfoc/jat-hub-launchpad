@@ -62,6 +62,7 @@ import compSoc from "@/assets/fou/compsoc-surrey.jpeg.asset.json";
 import chessSurrey from "@/assets/fou/chess-surrey.jpeg.asset.json";
 import teranceBalloon from "@/assets/fou/terance-balloon.png.asset.json";
 import robloxSociety from "@/assets/fou/roblox-society-surrey.jpg.asset.json";
+import homeStartLogo from "@/assets/fou/home-start-guildford.png.asset.json";
 
 const CONTACT_EMAIL = "jat@jathub.com";
 
@@ -193,6 +194,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Chess", note: "University of Surrey", logo: chessSurrey.url, large: true, fill: true },
       { name: "Terance Balloon", logo: teranceBalloon.url, large: true, fill: true },
       { name: "Roblox Society", note: "University of Surrey", logo: robloxSociety.url, large: true, fill: true },
+      { name: "Home-Start Guildford", logo: homeStartLogo.url, large: true, fill: true },
     ],
   },
 ];
