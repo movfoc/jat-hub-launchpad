@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { Brain, Hospital, Users, CigaretteOff, HeartPulse, Phone, ExternalLink, MessageCircle, Siren, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { homeStartGuildford } from "@/data/homeStartGuildford";
 
 type Service = {
   icon: typeof Brain;
   name: string;
   category: string;
   summary: string;
+  tagline?: string;
   locations: string[];
   action: { label: string; href: string; external?: boolean };
 };
@@ -16,6 +18,7 @@ const ALL_REGIONS = ["Surrey", "Reading", "Oxford"];
 // Sourced from the organiser's event knowledge base (supported_services_and_partners).
 // Services without a city in the knowledge base are listed as available across the series.
 const services: Service[] = [
+  { icon: Users, ...homeStartGuildford },
   {
     icon: HeartPulse,
     name: "One You Surrey",
@@ -128,6 +131,7 @@ export function SupportFinder() {
               </div>
               <p className="mt-4 text-[11px] font-bold uppercase tracking-normal text-primary">{s.category}</p>
               <h3 className="mt-1 text-lg font-bold text-foreground">{s.name}</h3>
+              {s.tagline && <p className="mt-2 text-sm font-semibold text-foreground">{s.tagline}</p>}
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{s.summary}</p>
               <div className="mt-5 flex flex-col gap-2 border-t border-border pt-4">
                 <a
