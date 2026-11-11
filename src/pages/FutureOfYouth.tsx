@@ -61,6 +61,7 @@ import studioSlash from "@/assets/fou/studio-slash.png.asset.json";
 import compSoc from "@/assets/fou/compsoc-surrey.jpeg.asset.json";
 import chessSurrey from "@/assets/fou/chess-surrey.jpeg.asset.json";
 import teranceBalloon from "@/assets/fou/terance-balloon.png.asset.json";
+import robloxSociety from "@/assets/fou/roblox-society-surrey.jpg.asset.json";
 
 const CONTACT_EMAIL = "jat@jathub.com";
 
@@ -191,6 +192,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "CompSoc", note: "University of Surrey", logo: compSoc.url, large: true, fill: true },
       { name: "Chess", note: "University of Surrey", logo: chessSurrey.url, large: true, fill: true },
       { name: "Terance Balloon", logo: teranceBalloon.url, large: true, fill: true },
+      { name: "Roblox Society", note: "University of Surrey", logo: robloxSociety.url, large: true, fill: true },
     ],
   },
 ];
