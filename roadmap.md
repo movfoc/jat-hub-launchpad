@@ -1,4 +1,5 @@
 # Tasks
+- [x] Amend and verify the Guildford plan: top-centre screen with two tables, 49 marketplace tables aligned with courts 02–04, separate bottom-right audience seating, active badminton court 01 and bottom-right entrance.
 - [x] Create and verify the Guildford draft floor-plan subpage with four courts, 40 unassigned 2 m tables, 150 chairs and festival-page link.
 - [x] Place the main entrance at the bottom-right corner as confirmed.
 - [x] Add Home-Start Guildford to Civic & Community and verify its Surrey-only support card (local logo loading remains unavailable).
