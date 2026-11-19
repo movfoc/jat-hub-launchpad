@@ -18,7 +18,7 @@ export const youthFloorPlan = {
     { id: "pickleball", name: "Pickleball", y: 540, detail: "Court 2 · Pickleball activities." },
     { id: "badminton", name: "Badminton", y: 734, detail: "Court 1 · Active badminton court. Audience seating is separate, on the right near the entrance." },
   ],
-  tables: Array.from({ length: 35 }, (_, index) => {
+  tables: Array.from({ length: 36 }, (_, index) => {
     const row = Math.floor(index / 6);
     const column = index % 6;
     return { id: index + 1, row: row + 1, x: 630 + column * 64, y: tableRowPositions[row] ?? 642, assignedTo: null };

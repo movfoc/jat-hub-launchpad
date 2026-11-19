@@ -3,9 +3,9 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { youthFloorPlan } from "./youthFloorPlan";
 
-test("marketplace contains 35 tables", () => assert.equal(youthFloorPlan.tables.length, 35));
-test("rows have six tables except the final five-table row", () => {
-  assert.deepEqual([1,2,3,4,5,6].map(row => youthFloorPlan.tables.filter(table => table.row === row).length), [6,6,6,6,6,5]);
+test("marketplace contains 36 tables", () => assert.equal(youthFloorPlan.tables.length, 36));
+test("all six rows have six tables", () => {
+  assert.deepEqual([1,2,3,4,5,6].map(row => youthFloorPlan.tables.filter(table => table.row === row).length), [6,6,6,6,6,6]);
 });
 test("rows 07–12 and 13–18 touch without a passage", () => {
   const upper = youthFloorPlan.tables.filter(table => table.row === 2);
