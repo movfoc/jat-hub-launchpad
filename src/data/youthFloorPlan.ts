@@ -12,9 +12,9 @@ export const youthFloorPlan = {
     { id: "pickleball", name: "Pickleball", y: 480, detail: "Court 2 · Pickleball activities." },
     { id: "badminton", name: "Badminton", y: 644, detail: "Court 1 · Active badminton court. Audience seating is separate, on the right near the entrance." },
   ],
-  tables: Array.from({ length: 49 }, (_, index) => {
+  tables: Array.from({ length: 35 }, (_, index) => {
     const row = Math.floor(index / 7);
     const column = row % 2 === 0 ? index % 7 : 6 - index % 7;
-    return { id: index + 1, x: 612 + column * 64, y: 198 + row * 58, assignedTo: null };
+    return { id: index + 1, x: 612 + column * 64, y: 198 + row * 87, assignedTo: null };
   }),
 };

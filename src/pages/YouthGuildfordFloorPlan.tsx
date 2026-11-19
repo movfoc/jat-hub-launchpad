@@ -11,7 +11,7 @@ export default function YouthGuildfordFloorPlan() {
   const selectedTable = selected.startsWith("table-") ? Number(selected.slice(6)) : undefined;
   const court = plan.courts.find(item => item.id === selected);
   const title = selectedTable ? `Marketplace · Table ${String(selectedTable).padStart(2, "0")}` : court?.name ?? (selected === "marketplace" ? "Marketplace" : selected === "audience" ? "Audience seating" : "Guildford station floor plan");
-  const detail = selectedTable ? "2 m table · Unassigned. Exhibitor allocations will be added later." : court?.detail ?? (selected === "marketplace" ? "49 tables, each 2 m long, arranged along an S-shaped aisle on the right, aligned with courts 02–04. All tables are unassigned." : selected === "audience" ? "150 chairs on the bottom-right, next to the main entrance, facing the top-centre wall-mounted screen. Two presentation tables sit in front of the screen." : "Four active courts on the left; 49 marketplace tables above the audience seating on the right. The screen is mounted on the top-centre wall, with two presentation tables in front. Main entrance: bottom-right corner.");
+  const detail = selectedTable ? "2 m table · Unassigned. Exhibitor allocations will be added later." : court?.detail ?? (selected === "marketplace" ? "35 tables, each 2 m long, arranged along an S-shaped aisle on the right, aligned with courts 02–04. All tables are unassigned." : selected === "audience" ? "150 chairs on the bottom-right, next to the main entrance, facing the top-centre wall-mounted screen. Two presentation tables sit in front of the screen." : "Four active courts on the left; 35 marketplace tables above the audience seating on the right. The screen is mounted on the top-centre wall, with two presentation tables in front. Main entrance: bottom-right corner.");
 
   useEffect(() => {
     const previous = document.title;
@@ -41,7 +41,7 @@ export default function YouthGuildfordFloorPlan() {
       </div>
       <div className="mt-7 flex flex-wrap gap-x-8 gap-y-3 border-y border-border py-4 text-sm font-semibold">
         <span className="inline-flex items-center gap-2"><LayoutGrid className="h-5 w-5" />4 activity courts</span>
-        <span className="inline-flex items-center gap-2"><Store className="h-5 w-5" />49 × 2 m marketplace tables + 2 presentation tables</span>
+        <span className="inline-flex items-center gap-2"><Store className="h-5 w-5" />35 × 2 m marketplace tables + 2 presentation tables</span>
         <span className="inline-flex items-center gap-2"><Armchair className="h-5 w-5" />150 audience chairs</span>
         <span className="text-muted-foreground">Draft · Not to scale</span>
       </div>
@@ -50,7 +50,7 @@ export default function YouthGuildfordFloorPlan() {
           <Button key={area.id} size="sm" variant={selected === area.id ? "default" : "outline"} aria-pressed={selected === area.id} onClick={() => setSelected(area.id)}>{area.name}</Button>)}
       </div>
       <div className="mt-5 overflow-x-auto rounded-lg border border-border bg-muted/30">
-        <svg viewBox="0 0 1140 910" className="floor-drawing block w-full min-w-[720px]" role="img" aria-label="Draft hall floor plan: four active left-hand courts, 49 unassigned marketplace tables aligned with courts 02 to 04, 150 audience chairs on the bottom-right near the entrance, top-centre wall-mounted screen with two presentation tables">
+        <svg viewBox="0 0 1140 910" className="floor-drawing block w-full min-w-[720px]" role="img" aria-label="Draft hall floor plan: four active left-hand courts, 35 unassigned marketplace tables aligned with courts 02 to 04, 150 audience chairs on the bottom-right near the entrance, top-centre wall-mounted screen with two presentation tables">
           <defs><marker id="floor-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" className="floor-arrow" /></marker></defs>
           <rect x="40" y="38" width="1060" height="812" rx="3" className="floor-hall" />
           <text x="85" y="132" className="floor-section-label">ACTIVITY COURTS</text>
@@ -79,8 +79,8 @@ export default function YouthGuildfordFloorPlan() {
           <text x="790" y="783" textAnchor="middle" className="floor-small">Facing top-centre screen ↑</text>
           <path d="M 1024 824 V 672" className="floor-aisle" markerEnd="url(#floor-arrow)" />
           <rect {...plan.marketplace} rx="6" className={`floor-market ${selected === "marketplace" ? "floor-selected" : ""}`} />
-          <text x="831" y="181" textAnchor="middle" className="floor-title">49 TABLES · 2 m EACH · UNASSIGNED</text>
-          <path d="M 615 244 H 1031 Q 1080 244 1080 273 Q 1080 302 1031 302 H 624 Q 580 302 580 331 Q 580 360 624 360 H 1031 Q 1080 360 1080 389 Q 1080 418 1031 418 H 624 Q 580 418 580 447 Q 580 476 624 476 H 1031 Q 1080 476 1080 505 Q 1080 534 1031 534 H 624 Q 580 534 580 563 Q 580 592 624 592 H 1031" className="floor-aisle" markerEnd="url(#floor-arrow)" />
+          <text x="831" y="181" textAnchor="middle" className="floor-title">35 TABLES · 2 m EACH · UNASSIGNED</text>
+          <path d="M 615 258 H 1031 Q 1080 258 1080 301.5 Q 1080 345 1031 345 H 624 Q 580 345 580 388.5 Q 580 432 624 432 H 1031 Q 1080 432 1080 475.5 Q 1080 519 1031 519 H 624 Q 580 519 580 562.5 Q 580 606 624 606 H 1031" className="floor-aisle" markerEnd="url(#floor-arrow)" />
           {plan.tables.map(table => <g key={table.id} role="button" tabIndex={0} aria-label={`Table ${table.id}, 2 metres, unassigned`} onClick={() => setSelected(`table-${table.id}`)} onKeyDown={event => {if(event.key === "Enter" || event.key === " "){event.preventDefault();setSelected(`table-${table.id}`);}}} className="floor-table-control">
             <rect data-table="true" x={table.x} y={table.y} width="45" height="35" rx="3" className={`floor-table ${selectedTable === table.id ? "floor-selected" : ""}`} />
             <text x={table.x+22.5} y={table.y+23} textAnchor="middle" className="floor-table-number">{String(table.id).padStart(2,"0")}</text>

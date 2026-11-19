@@ -3,7 +3,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { youthFloorPlan } from "./youthFloorPlan";
 
-test("marketplace contains 49 tables", () => assert.equal(youthFloorPlan.tables.length, 49));
+test("marketplace contains 35 tables", () => assert.equal(youthFloorPlan.tables.length, 35));
 test("each marketplace table is 2 metres long", () => assert.equal(youthFloorPlan.tableLengthMetres, 2));
 test("marketplace tables remain unassigned", () => assert.ok(youthFloorPlan.tables.every(table => table.assignedTo === null)));
 test("audience has 150 chairs", () => assert.equal(youthFloorPlan.chairCount, 150));
