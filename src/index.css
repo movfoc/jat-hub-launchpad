@@ -36,6 +36,38 @@ All colors MUST be HSL.
   }
   .youth-composer textarea { width: 100%; }
 
+  .youth-floor-page {
+    --floor-court: 160 40% 94%;
+    --floor-lines: 160 25% 58%;
+    --floor-market: 42 85% 96%;
+  }
+  .floor-drawing { font-family: inherit; }
+  .floor-hall { fill: hsl(var(--card)); stroke: hsl(var(--foreground)); stroke-width: 5; }
+  .floor-section-label { fill: hsl(var(--muted-foreground)); font-size: 14px; font-weight: 700; }
+  .floor-title { fill: hsl(var(--foreground)); font-size: 15px; font-weight: 800; }
+  .floor-small { fill: hsl(var(--muted-foreground)); font-size: 13px; }
+  .floor-court { fill: hsl(var(--floor-court)); stroke: hsl(var(--floor-lines)); stroke-width: 1.5; }
+  .floor-court-lines { fill: none; stroke: hsl(var(--floor-lines) / .5); stroke-width: 1; }
+  .floor-label-back { fill: hsl(var(--floor-court)); }
+  .floor-divider { stroke: hsl(var(--border)); stroke-dasharray: 8 8; }
+  .floor-market { fill: hsl(var(--floor-market)); stroke: hsl(var(--border)); }
+  .floor-table { fill: hsl(var(--primary) / .45); stroke: hsl(var(--primary)); stroke-width: 1.5; }
+  .floor-table-number { fill: hsl(var(--foreground)); font-size: 14px; font-weight: 700; pointer-events: none; }
+  .floor-table-control { cursor: pointer; outline: none; }
+  .floor-table-control:hover .floor-table, .floor-table-control:focus .floor-table, .floor-selected { stroke: hsl(var(--foreground)); stroke-width: 3; }
+  .floor-aisle { fill: none; stroke: hsl(var(--foreground) / .5); stroke-width: 3; stroke-dasharray: 7 6; }
+  .floor-arrow, .floor-chair, .floor-screen { fill: hsl(var(--foreground)); }
+  .floor-equipment, .floor-door { fill: none; stroke: hsl(var(--foreground)); stroke-width: 2; }
+  .floor-mat { fill: hsl(var(--floor-lines) / .55); }
+  .floor-net { stroke: hsl(var(--foreground) / .4); stroke-width: 3; stroke-dasharray: 4 3; }
+  .floor-door-gap { fill: hsl(var(--card)); }
+  @media print {
+    .youth-floor-page header, .youth-floor-page button, .youth-floor-page [aria-label="Floor plan areas"] { display: none; }
+    .youth-floor-page main { padding: 0; }
+    .youth-floor-page .floor-drawing { min-width: 0; }
+    .youth-floor-page { print-color-adjust: exact; }
+  }
+
   :root {
     --youth-gold: 41 100% 51%;
     --youth-gold-light: 46 100% 70%;

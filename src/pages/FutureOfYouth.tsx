@@ -421,6 +421,7 @@ const FutureOfYouth = () => {
                   <p className="mt-1 flex items-center gap-1.5 text-sm font-semibold text-foreground">
                     <Clock className="w-3.5 h-3.5 shrink-0" /> {stop.time}
                   </p>
+                  {i === 0 && <Button asChild variant="outline" size="sm" className="mt-3"><a href="/future-of-youth/guildford-floor-plan">View Guildford floor plan <ArrowRight className="h-4 w-4" /></a></Button>}
                   <p className="mt-5 border-t border-border pt-4 text-sm leading-relaxed text-muted-foreground">
                     <span className="font-semibold text-foreground">Focus: </span>{stop.focus}
                   </p>

@@ -1,4 +1,6 @@
 # Tasks
+- [x] Create and verify the Guildford draft floor-plan subpage with four courts, 40 unassigned 2 m tables, 150 chairs and festival-page link.
+- [x] Place the main entrance at the bottom-right corner as confirmed.
 - [x] Add Home-Start Guildford to Civic & Community and verify its Surrey-only support card (local logo loading remains unavailable).
 - [x] Add and verify the Future of Youth privacy page and event-page link.
 - [x] Add Future of Youth assistant with quick actions and browser-saved conversation.
