@@ -43,7 +43,7 @@ test("courts and tables use the same physical scale", () => {
 test("marketplace tables remain unassigned", () => assert.ok(youthFloorPlan.tables.every(table => table.assignedTo === null)));
 test("audience has 150 chairs", () => assert.equal(youthFloorPlan.chairCount, 150));
 test("four courts follow the requested bottom-to-top activities", () => {
-  assert.deepEqual([...youthFloorPlan.courts].reverse().map(court => court.id), ["badminton", "pickleball", "yoga", "basketball"]);
+  assert.deepEqual([...youthFloorPlan.courts].reverse().map(court => court.id), ["audience", "yoga", "pickleball", "badminton"]);
 });
 test("screen is mounted at the top centre of the hall", () => {
   assert.equal(youthFloorPlan.screen.x + youthFloorPlan.screen.width / 2, 570);
@@ -58,11 +58,15 @@ test("marketplace spans only the upper three court footprints", () => {
   assert.equal(youthFloorPlan.marketplace.y + youthFloorPlan.marketplace.height, (540 + youthFloorPlan.courtDimensions.height));
   assert.ok(youthFloorPlan.tables.every(table => table.y >= 152 && table.y + youthFloorPlan.tableDimensions.height <= (540 + youthFloorPlan.courtDimensions.height)));
 });
-test("audience is on the right aligned with court 01", () => {
-  assert.equal(youthFloorPlan.audience.y, 734);
-  assert.equal(youthFloorPlan.audience.x, 595);
+test("audience seating is court 01 on the left", () => {
+  const audience = youthFloorPlan.courts.find(court => court.id === "audience");
+  assert.equal(audience?.y, 734);
 });
-test("main entrance is at the bottom-right beside audience seating", () => {
+test("basketball shooting is on the right aligned with court 01", () => {
+  assert.equal(youthFloorPlan.basketball.y, 734);
+  assert.equal(youthFloorPlan.basketball.x, 595);
+});
+test("main entrance is at the bottom-right beside basketball shooting", () => {
   assert.equal(youthFloorPlan.entrance.x, 974);
   assert.equal(youthFloorPlan.entrance.y, 944);
 });

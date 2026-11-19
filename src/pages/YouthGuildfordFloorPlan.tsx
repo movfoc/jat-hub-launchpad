@@ -10,8 +10,8 @@ export default function YouthGuildfordFloorPlan() {
   const [logoAvailable, setLogoAvailable] = useState(true);
   const selectedTable = selected.startsWith("table-") ? Number(selected.slice(6)) : undefined;
   const court = plan.courts.find(item => item.id === selected);
-  const title = selectedTable ? `Marketplace · Table ${String(selectedTable).padStart(2, "0")}` : court?.name ?? (selected === "marketplace" ? "Marketplace" : selected === "audience" ? "Audience seating" : "Guildford station floor plan");
-  const detail = selectedTable ? "4 × 6 ft table · Unassigned. Exhibitor allocations will be added later." : court?.detail ?? (selected === "marketplace" ? "36 tables, each 4 × 6 ft: six in each of the six rows. Rows 2–3 (07–12 and 13–18) and rows 4–5 (19–24 and 25–30) are back-to-back with no passage between them. Aisles run around the paired rows. All tables are unassigned." : selected === "audience" ? "150 chairs on the bottom-right, next to the main entrance, facing the top-centre wall-mounted screen. Two presentation tables sit in front of the screen." : "Four active courts on the left; 36 marketplace tables above the audience seating on the right. The screen is mounted on the top-centre wall, with two presentation tables in front. Main entrance: bottom-right corner.");
+  const title = selectedTable ? `Marketplace · Table ${String(selectedTable).padStart(2, "0")}` : court?.name ?? (selected === "marketplace" ? "Marketplace" : selected === "basketball" ? "Basketball shooting" : "Guildford station floor plan");
+  const detail = selectedTable ? "4 × 6 ft table · Unassigned. Exhibitor allocations will be added later." : court?.detail ?? (selected === "marketplace" ? "36 tables, each 4 × 6 ft: six in each of the six rows. Rows 2–3 (07–12 and 13–18) and rows 4–5 (19–24 and 25–30) are back-to-back with no passage between them. Aisles run around the paired rows. All tables are unassigned." : selected === "basketball" ? "Basketball shooting activities on the bottom-right, next to the main entrance." : "Courts on the left from top to bottom: badminton, pickleball, yoga & interactive games, and 150-chair audience seating. 36 marketplace tables on the upper right; basketball shooting on the bottom-right. The screen is mounted on the top-centre wall, with two presentation tables in front. Main entrance: bottom-right corner.");
 
   useEffect(() => {
     const previous = document.title;
@@ -46,11 +46,11 @@ export default function YouthGuildfordFloorPlan() {
         <span className="text-muted-foreground">Draft · Courts and tables proportionally scaled</span>
       </div>
       <div className="mt-5 flex flex-wrap gap-2" aria-label="Floor plan areas">
-        {[{id:"overview", name:"All areas"}, ...plan.courts, {id:"marketplace",name:"Marketplace"}, {id:"audience",name:"Audience seating"}].map(area =>
+        {[{id:"overview", name:"All areas"}, ...plan.courts, {id:"marketplace",name:"Marketplace"}, {id:"basketball",name:"Basketball shooting"}].map(area =>
           <Button key={area.id} size="sm" variant={selected === area.id ? "default" : "outline"} aria-pressed={selected === area.id} onClick={() => setSelected(area.id)}>{area.name}</Button>)}
       </div>
       <div className="mt-5 overflow-x-auto rounded-lg border border-border bg-muted/30">
-        <svg viewBox="0 0 1140 1015" className="floor-drawing block w-full min-w-[720px]" role="img" aria-label="Draft hall floor plan: four active left-hand courts, 36 unassigned marketplace tables aligned with courts 02 to 04, 150 audience chairs on the bottom-right near the entrance, top-centre wall-mounted screen with two presentation tables">
+        <svg viewBox="0 0 1140 1015" className="floor-drawing block w-full min-w-[720px]" role="img" aria-label="Draft hall floor plan: left-hand courts with badminton, pickleball, yoga and 150-chair audience seating from top to bottom, 36 unassigned marketplace tables aligned with courts 02 to 04, basketball shooting on the bottom-right near the entrance, top-centre wall-mounted screen with two presentation tables">
           <defs><marker id="floor-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" className="floor-arrow" /></marker></defs>
           <rect x="40" y="38" width="1060" height="916" rx="3" className="floor-hall" />
           <text x="85" y="132" className="floor-section-label">ACTIVITY COURTS</text>
@@ -67,16 +67,17 @@ export default function YouthGuildfordFloorPlan() {
             <rect x="85" y={area.y} width={plan.courtDimensions.width} height={plan.courtDimensions.height} className="floor-court-lines" />
             <path d={`M 224.75 ${area.y} V ${area.y+plan.courtDimensions.height} M 335.25 ${area.y} V ${area.y+plan.courtDimensions.height} M 85 ${area.y+plan.courtDimensions.height/2} H 475`} className="floor-court-lines" />
             <rect x="130" y={area.y+18} width="300" height="52" rx="4" className="floor-label-back" />
-            <text x="280" y={area.y+38} textAnchor="middle" className="floor-title">{`0${4-index} · ${area.name.toUpperCase()}`}</text>
-            <text x="280" y={area.y+58} textAnchor="middle" className="floor-small">13.4 m × 6.1 m court</text>
-            {area.id === "basketball" && <g className="floor-equipment"><path d="M 245 248 H 315 M 280 248 V 270"/><ellipse cx="280" cy="272" rx="18" ry="5"/></g>}
+            <text x="280" y={area.y+38} textAnchor="middle" className="floor-title">{area.id === "audience" ? "01 · AUDIENCE SEATING · 150 CHAIRS" : `0${4-index} · ${area.name.toUpperCase()}`}</text>
+            <text x="280" y={area.y+58} textAnchor="middle" className="floor-small">{area.id === "audience" ? "Facing the top-centre wall-mounted screen" : "13.4 m × 6.1 m court"}</text>
             {(area.id === "pickleball" || area.id === "badminton") && <path d={`M 108 ${area.y+plan.courtDimensions.height/2} H 452`} className="floor-net" />}
-            {area.id === "yoga" && [0,1,2,3,4].map(n => <rect key={n} x={155+n*51} y="449" width="34" height="32" rx="5" className="floor-mat" />)}
+            {area.id === "yoga" && [0,1,2,3,4].map(n => <rect key={n} x={155+n*51} y={area.y+plan.courtDimensions.height/2-16} width="34" height="32" rx="5" className="floor-mat" />)}
+            {area.id === "audience" && Array.from({length:plan.chairCount}, (_,i) => <rect key={i} data-chair="true" x={100+(i%15)*24} y={area.y+72+Math.floor(i/15)*9} width="11" height="5" rx="1" className="floor-chair" />)}
           </g>)}
-          <rect {...plan.audience} rx="5" className={`floor-market ${selected === "audience" ? "floor-selected" : ""}`} />
-          <text x="790" y="757" textAnchor="middle" className="floor-title">AUDIENCE SEATING · 150 CHAIRS</text>
-          {Array.from({length:plan.chairCount}, (_,i) => <rect key={i} data-chair="true" x={625+(i%15)*21+(i%15>=8?18:0)} y={779+Math.floor(i/15)*8} width="11" height="5" rx="1" className="floor-chair" />)}
-          <text x="790" y="899" textAnchor="middle" className="floor-small">Facing top-centre screen ↑</text>
+          <rect {...plan.basketball} rx="5" className={`floor-court ${selected === "basketball" ? "floor-selected" : ""}`} />
+          <rect x={plan.basketball.x} y={plan.basketball.y} width={plan.basketball.width} height={plan.basketball.height} className="floor-court-lines" />
+          <text x="831" y="772" textAnchor="middle" className="floor-title">BASKETBALL SHOOTING</text>
+          <text x="831" y="792" textAnchor="middle" className="floor-small">Next to the main entrance</text>
+          <g className="floor-equipment"><path d="M 796 830 H 866 M 831 830 V 852"/><ellipse cx="831" cy="854" rx="18" ry="5"/></g>
           <path d="M 1024 928 V 762" className="floor-aisle" markerEnd="url(#floor-arrow)" />
           <rect {...plan.marketplace} rx="6" className={`floor-market ${selected === "marketplace" ? "floor-selected" : ""}`} />
           <text x="831" y="181" textAnchor="middle" className="floor-title">36 TABLES · 4 × 6 ft EACH · UNASSIGNED</text>
@@ -86,7 +87,7 @@ export default function YouthGuildfordFloorPlan() {
             <text x={table.x+plan.tableDimensions.width/2} y={table.y+23} textAnchor="middle" className="floor-table-number">{String(table.id).padStart(2,"0")}</text>
           </g>)}
           <text x="831" y="717" textAnchor="middle" className="floor-small">S-SHAPED AISLE · ALIGNED WITH COURTS 02–04</text>
-          <text x="790" y="928" textAnchor="middle" className="floor-small">Audience arrival · clear entrance aisle →</text>
+          <text x="790" y="928" textAnchor="middle" className="floor-small">Clear entrance aisle →</text>
           <rect x={plan.entrance.x} y={plan.entrance.y} width={plan.entrance.width} height="18" className="floor-door-gap" />
           <path d="M 974 953 V 906 M 1074 953 V 906 M 974 906 Q 1021 906 1021 953 M 1074 906 Q 1027 906 1027 953" className="floor-door" />
           <text x="1024" y="990" textAnchor="middle" className="floor-title">MAIN ENTRANCE</text>
