@@ -4,7 +4,19 @@ import assert from "node:assert/strict";
 import { youthFloorPlan } from "./youthFloorPlan";
 
 test("marketplace contains 35 tables", () => assert.equal(youthFloorPlan.tables.length, 35));
-test("each marketplace table is 2 metres long", () => assert.equal(youthFloorPlan.tableLengthMetres, 2));
+test("each table measures 4 by 6 feet", () => {
+  assert.equal(youthFloorPlan.tableDimensions.widthFeet, 4);
+  assert.equal(youthFloorPlan.tableDimensions.lengthFeet, 6);
+});
+test("courts use the standard 13.4 by 6.1 metre proportions", () => {
+  assert.equal(youthFloorPlan.courtDimensions.lengthMetres, 13.4);
+  assert.equal(youthFloorPlan.courtDimensions.widthMetres, 6.1);
+  assert.ok(Math.abs(youthFloorPlan.courtDimensions.width / youthFloorPlan.courtDimensions.height - 13.4 / 6.1) < 0.000001);
+});
+test("courts and tables use the same physical scale", () => {
+  assert.ok(Math.abs(youthFloorPlan.tableDimensions.width / youthFloorPlan.courtDimensions.width - (6 * 0.3048) / 13.4) < 0.000001);
+  assert.ok(Math.abs(youthFloorPlan.tableDimensions.height / youthFloorPlan.courtDimensions.height - (4 * 0.3048) / 6.1) < 0.000001);
+});
 test("marketplace tables remain unassigned", () => assert.ok(youthFloorPlan.tables.every(table => table.assignedTo === null)));
 test("audience has 150 chairs", () => assert.equal(youthFloorPlan.chairCount, 150));
 test("four courts follow the requested bottom-to-top activities", () => {
@@ -20,14 +32,14 @@ test("two presentation tables sit in front of the screen", () => {
 });
 test("marketplace spans only the upper three court footprints", () => {
   assert.equal(youthFloorPlan.marketplace.y, 152);
-  assert.equal(youthFloorPlan.marketplace.y + youthFloorPlan.marketplace.height, 628);
-  assert.ok(youthFloorPlan.tables.every(table => table.y >= 152 && table.y + 35 <= 628));
+  assert.equal(youthFloorPlan.marketplace.y + youthFloorPlan.marketplace.height, (540 + youthFloorPlan.courtDimensions.height));
+  assert.ok(youthFloorPlan.tables.every(table => table.y >= 152 && table.y + youthFloorPlan.tableDimensions.height <= (540 + youthFloorPlan.courtDimensions.height)));
 });
 test("audience is on the right aligned with court 01", () => {
-  assert.equal(youthFloorPlan.audience.y, 644);
+  assert.equal(youthFloorPlan.audience.y, 734);
   assert.equal(youthFloorPlan.audience.x, 595);
 });
 test("main entrance is at the bottom-right beside audience seating", () => {
   assert.equal(youthFloorPlan.entrance.x, 974);
-  assert.equal(youthFloorPlan.entrance.y, 840);
+  assert.equal(youthFloorPlan.entrance.y, 944);
 });

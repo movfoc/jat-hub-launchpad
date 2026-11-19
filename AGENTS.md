@@ -8,4 +8,4 @@
 - Keep the festival privacy notice at /future-of-youth/privacy-policy as a dedicated page in the scoped youth theme, linked from the festival page; do not change the site-wide footer for festival-only policies.
 - Use AI Elements and AI SDK UI-message streaming for the embedded attendee assistant; keep model calls and organiser JSON in its Cloud function, never accept client-supplied knowledge as authoritative.
 - Replace the assistant's server-side event-knowledge.json with organiser-supplied facts when available; an empty facts array must return the explicit unavailable-information response without calling AI.
-- Keep the draft Guildford floor plan in a dedicated festival subpage with an SVG drawing driven by client data; this preserves exact counts and supports later exhibitor allocations without changing assistant knowledge.
+- Keep the draft Guildford floor plan in a dedicated festival subpage with an SVG drawing driven by client data; use one shared units-per-metre scale for courts and tables so physical proportions remain consistent while preserving exact counts and later exhibitor allocations.
