@@ -63,6 +63,8 @@ import chessSurrey from "@/assets/fou/chess-surrey.jpeg.asset.json";
 import teranceBalloon from "@/assets/fou/terance-balloon.png.asset.json";
 import robloxSociety from "@/assets/fou/roblox-society-surrey.jpg.asset.json";
 import homeStartLogo from "@/assets/fou/home-start-guildford.png.asset.json";
+import sacredSounds from "@/assets/fou/sacred-sounds.jpeg.asset.json";
+import farrBetterClothing from "@/assets/fou/farr-better-clothing.jpeg.asset.json";
 
 const CONTACT_EMAIL = "jat@jathub.com";
 
@@ -195,6 +197,8 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Terance Balloon", logo: teranceBalloon.url, large: true, fill: true },
       { name: "Roblox Society", note: "University of Surrey", logo: robloxSociety.url, large: true, fill: true },
       { name: "Home-Start Guildford", logo: homeStartLogo.url, large: true, fill: true },
+      { name: "Sacred Sounds", note: "Sound Healing", logo: sacredSounds.url, large: true, fill: true },
+      { name: "Farr Better Clothing", logo: farrBetterClothing.url, large: true, fill: true },
     ],
   },
 ];
