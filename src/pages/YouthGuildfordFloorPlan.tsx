@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, CalendarDays, MapPin, Armchair, Store, Printer, LayoutGrid } from "lucide-react";
+import { ArrowLeft, CalendarDays, MapPin, Armchair, Store, Printer, LayoutGrid, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import youthLogo from "@/assets/fou/future-of-youth-logo.png.asset.json";
 import { youthFloorPlan as plan } from "@/data/youthFloorPlan";
@@ -37,7 +37,10 @@ export default function YouthGuildfordFloorPlan() {
             <span className="inline-flex items-center gap-2"><CalendarDays className="h-4 w-4" />12 December 2026 · 1:15–4:00 PM</span>
           </div>
         </div>
-        <Button variant="outline" onClick={() => window.print()}><Printer /> Print plan</Button>
+        <div className="flex flex-wrap gap-3">
+          <Button asChild><a href={`https://wa.me/?text=${encodeURIComponent("Future of Youth · Guildford Sport Park floor plan\nhttps://jathub.com/guildford-floor-plan-share.html")}`} target="_blank" rel="noopener noreferrer"><MessageCircle /> Share via WhatsApp</a></Button>
+          <Button variant="outline" onClick={() => window.print()}><Printer /> Print plan</Button>
+        </div>
       </div>
       <div className="mt-7 flex flex-wrap gap-x-8 gap-y-3 border-y border-border py-4 text-sm font-semibold">
         <span className="inline-flex items-center gap-2"><LayoutGrid className="h-5 w-5" />4 activity courts</span>
