@@ -11,7 +11,7 @@ export default function YouthGuildfordFloorPlan() {
   const selectedTable = selected.startsWith("table-") ? Number(selected.slice(6)) : undefined;
   const court = plan.courts.find(item => item.id === selected);
   const title = selectedTable ? `Marketplace · Table ${String(selectedTable).padStart(2, "0")}` : court?.name ?? (selected === "marketplace" ? "Marketplace" : selected === "audience" ? "Audience seating" : "Guildford station floor plan");
-  const detail = selectedTable ? "4 × 6 ft table · Unassigned. Exhibitor allocations will be added later." : court?.detail ?? (selected === "marketplace" ? "35 tables, each 4 × 6 ft, arranged along an S-shaped aisle on the right, aligned with courts 02–04. All tables are unassigned." : selected === "audience" ? "150 chairs on the bottom-right, next to the main entrance, facing the top-centre wall-mounted screen. Two presentation tables sit in front of the screen." : "Four active courts on the left; 35 marketplace tables above the audience seating on the right. The screen is mounted on the top-centre wall, with two presentation tables in front. Main entrance: bottom-right corner.");
+  const detail = selectedTable ? "4 × 6 ft table · Unassigned. Exhibitor allocations will be added later." : court?.detail ?? (selected === "marketplace" ? "35 tables, each 4 × 6 ft: six per row, with five in the final row. Rows 2–3 (07–12 and 13–18) and rows 4–5 (19–24 and 25–30) are back-to-back with no passage between them. Aisles run around the paired rows. All tables are unassigned." : selected === "audience" ? "150 chairs on the bottom-right, next to the main entrance, facing the top-centre wall-mounted screen. Two presentation tables sit in front of the screen." : "Four active courts on the left; 35 marketplace tables above the audience seating on the right. The screen is mounted on the top-centre wall, with two presentation tables in front. Main entrance: bottom-right corner.");
 
   useEffect(() => {
     const previous = document.title;
@@ -80,9 +80,9 @@ export default function YouthGuildfordFloorPlan() {
           <path d="M 1024 928 V 762" className="floor-aisle" markerEnd="url(#floor-arrow)" />
           <rect {...plan.marketplace} rx="6" className={`floor-market ${selected === "marketplace" ? "floor-selected" : ""}`} />
           <text x="831" y="181" textAnchor="middle" className="floor-title">35 TABLES · 4 × 6 ft EACH · UNASSIGNED</text>
-          <path d="M 615 270 H 1031 Q 1080 270 1080 323.5 Q 1080 377 1031 377 H 624 Q 580 377 580 430.5 Q 580 484 624 484 H 1031 Q 1080 484 1080 537.5 Q 1080 591 1031 591 H 624 Q 580 591 580 644.5 Q 580 698 624 698 H 1031" className="floor-aisle" markerEnd="url(#floor-arrow)" />
+          <path d="M 615 275 H 1031 Q 1080 275 1080 355 Q 1080 435 1031 435 H 624 Q 580 435 580 515 Q 580 595 624 595 H 1031 Q 1080 595 1080 647.5 Q 1080 700 1031 700 H 624" className="floor-aisle" markerEnd="url(#floor-arrow)" />
           {plan.tables.map(table => <g key={table.id} role="button" tabIndex={0} aria-label={`Table ${table.id}, 4 by 6 feet, unassigned`} onClick={() => setSelected(`table-${table.id}`)} onKeyDown={event => {if(event.key === "Enter" || event.key === " "){event.preventDefault();setSelected(`table-${table.id}`);}}} className="floor-table-control">
-            <rect data-table="true" x={table.x} y={table.y} width={plan.tableDimensions.width} height={plan.tableDimensions.height} rx="3" className={`floor-table ${selectedTable === table.id ? "floor-selected" : ""}`} />
+            <rect data-table="true" data-row={table.row} x={table.x} y={table.y} width={plan.tableDimensions.width} height={plan.tableDimensions.height} className={`floor-table ${selectedTable === table.id ? "floor-selected" : ""}`} />
             <text x={table.x+plan.tableDimensions.width/2} y={table.y+23} textAnchor="middle" className="floor-table-number">{String(table.id).padStart(2,"0")}</text>
           </g>)}
           <text x="831" y="717" textAnchor="middle" className="floor-small">S-SHAPED AISLE · ALIGNED WITH COURTS 02–04</text>

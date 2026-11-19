@@ -1,4 +1,6 @@
 const unitsPerMetre = 390 / 13.4;
+const tableHeight = 4 * 0.3048 * unitsPerMetre;
+const tableRowPositions = [198, 318, 318 + tableHeight, 480, 480 + tableHeight, 642];
 
 export const youthFloorPlan = {
   unitsPerMetre,
@@ -17,8 +19,8 @@ export const youthFloorPlan = {
     { id: "badminton", name: "Badminton", y: 734, detail: "Court 1 · Active badminton court. Audience seating is separate, on the right near the entrance." },
   ],
   tables: Array.from({ length: 35 }, (_, index) => {
-    const row = Math.floor(index / 7);
-    const column = row % 2 === 0 ? index % 7 : 6 - index % 7;
-    return { id: index + 1, x: 612 + column * 64, y: 198 + row * 107, assignedTo: null };
+    const row = Math.floor(index / 6);
+    const column = index % 6;
+    return { id: index + 1, row: row + 1, x: 630 + column * 64, y: tableRowPositions[row] ?? 642, assignedTo: null };
   }),
 };
