@@ -4,6 +4,26 @@ import assert from "node:assert/strict";
 import { youthFloorPlan } from "./youthFloorPlan";
 
 test("marketplace contains 44 tables as confirmed", () => assert.equal(youthFloorPlan.tables.length, 44));
+test("photo booth sits bottom-centre beside left audience seating", () => {
+  const booth = youthFloorPlan.photoBooth;
+  assert.ok(booth.x > 85 + youthFloorPlan.courtDimensions.width);
+  assert.ok(booth.x + booth.width < youthFloorPlan.basketball.x);
+  assert.ok(booth.y >= 734 && booth.y + booth.height <= 734 + youthFloorPlan.courtDimensions.height);
+});
+test("registration table is near the bottom-right entrance without blocking it", () => {
+  const table = youthFloorPlan.registration;
+  assert.ok(table.x >= 900 && table.y >= 800);
+  assert.ok(table.x + table.width < youthFloorPlan.entrance.x);
+  assert.ok(table.y + table.height < youthFloorPlan.entrance.y);
+  assert.equal(table.width, youthFloorPlan.tableDimensions.width);
+  assert.equal(table.height, youthFloorPlan.tableDimensions.height);
+});
+test("S-shaped flow starts at bottom and ends at top", () => {
+  const flow = youthFloorPlan.marketplaceFlow;
+  assert.ok(flow.start.y > flow.end.y);
+  assert.ok(flow.path.startsWith(`M ${flow.start.x} ${flow.start.y}`));
+  assert.ok(flow.path.endsWith(`720 ${flow.end.y} H ${flow.end.x}`));
+});
 test("perimeter has six top tables and seven on each side", () => {
   assert.deepEqual(["top", "left", "right"].map(zone => youthFloorPlan.tables.filter(table => table.zone === zone).length), [6,7,7]);
 });

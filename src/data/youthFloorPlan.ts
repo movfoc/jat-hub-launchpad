@@ -19,6 +19,12 @@ export const youthFloorPlan = {
   marketplace: { x: 595, y: 152, width: 472, height: 388 + 6.1 * unitsPerMetre },
   basketball: { x: 595, y: 734, width: 472, height: 6.1 * unitsPerMetre },
   entrance: { x: 974, y: 944, width: 100 },
+  photoBooth: { x: 492, y: 806, width: 85, height: 90 },
+  registration: { x: 905, y: 852, width: tableWidth, height: tableHeight },
+  marketplaceFlow: {
+    start: { x: 985, y: 715 }, end: { x: 985, y: 260 },
+    path: "M 985 715 H 720 Q 680 715 680 655 Q 680 595 720 595 H 945 Q 985 595 985 512.5 Q 985 430 945 430 H 720 Q 680 430 680 345 Q 680 260 720 260 H 985",
+  },
   courts: [
     { id: "badminton", name: "Badminton", y: 152, detail: "Court 4 · Active badminton court." },
     { id: "pickleball", name: "Pickleball", y: 346, detail: "Court 3 · Pickleball activities." },
