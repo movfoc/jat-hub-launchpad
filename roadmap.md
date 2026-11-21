@@ -1,4 +1,5 @@
 # Tasks
+- [x] Move registration against the bottom wall, add 15 yoga mats and verify volunteer waiting points outside courts 02–04.
 - [x] Add and verify photo booth beside audience seating, registration near entrance, and bottom-to-top marketplace flow.
 - [x] Update and verify marketplace positions against the uploaded sketch with the confirmed 44 tables.
 - [x] Amend and verify the Guildford plan: top-centre screen with two tables, 35 marketplace tables aligned with courts 02–04, separate bottom-right audience seating, active badminton court 01 and bottom-right entrance.

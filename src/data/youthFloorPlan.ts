@@ -20,7 +20,13 @@ export const youthFloorPlan = {
   basketball: { x: 595, y: 734, width: 472, height: 6.1 * unitsPerMetre },
   entrance: { x: 974, y: 944, width: 100 },
   photoBooth: { x: 492, y: 806, width: 85, height: 90 },
-  registration: { x: 905, y: 852, width: tableWidth, height: tableHeight },
+  registration: { x: 905, y: 954 - tableHeight, width: tableWidth, height: tableHeight },
+  yogaMats: Array.from({ length: 15 }, (_, index) => ({ x: 155 + (index % 5) * 51, y: 620 + Math.floor(index / 5) * 27, width: 34, height: 20 })),
+  waitingPoints: [
+    { courtId: "badminton", courtNumber: "04", x: 488, y: 274, width: 90, height: 50 },
+    { courtId: "pickleball", courtNumber: "03", x: 488, y: 468, width: 90, height: 50 },
+    { courtId: "yoga", courtNumber: "02", x: 488, y: 662, width: 90, height: 50 },
+  ],
   marketplaceFlow: {
     start: { x: 985, y: 715 }, end: { x: 985, y: 260 },
     path: "M 985 715 H 720 Q 680 715 680 655 Q 680 595 720 595 H 945 Q 985 595 985 512.5 Q 985 430 945 430 H 720 Q 680 430 680 345 Q 680 260 720 260 H 985",
@@ -28,7 +34,7 @@ export const youthFloorPlan = {
   courts: [
     { id: "badminton", name: "Badminton", y: 152, detail: "Court 4 · Active badminton court." },
     { id: "pickleball", name: "Pickleball", y: 346, detail: "Court 3 · Pickleball activities." },
-    { id: "yoga", name: "Yoga & interactive games", y: 540, detail: "Court 2 · Yoga and interactive games." },
+    { id: "yoga", name: "Yoga & interactive games", y: 540, detail: "Court 2 · Yoga and interactive games with 15 mats." },
     { id: "audience", name: "Audience seating", y: 734, detail: "Court 1 · 150 audience chairs facing the top-centre wall-mounted screen." },
   ],
   tables: tablePositions.map((position, index) => ({

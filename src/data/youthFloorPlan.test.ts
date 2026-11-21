@@ -14,9 +14,27 @@ test("registration table is near the bottom-right entrance without blocking it",
   const table = youthFloorPlan.registration;
   assert.ok(table.x >= 900 && table.y >= 800);
   assert.ok(table.x + table.width < youthFloorPlan.entrance.x);
-  assert.ok(table.y + table.height < youthFloorPlan.entrance.y);
+  assert.equal(table.y + table.height, 954);
   assert.equal(table.width, youthFloorPlan.tableDimensions.width);
   assert.equal(table.height, youthFloorPlan.tableDimensions.height);
+});
+test("yoga court 02 contains exactly 15 mats within its footprint", () => {
+  assert.equal(youthFloorPlan.yogaMats.length, 15);
+  youthFloorPlan.yogaMats.forEach(mat => {
+    assert.ok(mat.x >= 85 && mat.x + mat.width <= 475);
+    assert.ok(mat.y >= 540 && mat.y + mat.height <= 540 + youthFloorPlan.courtDimensions.height);
+  });
+});
+test("courts 02, 03 and 04 have waiting points outside their bottom-right corners", () => {
+  assert.deepEqual(youthFloorPlan.waitingPoints.map(point => point.courtNumber).sort(), ["02", "03", "04"]);
+  youthFloorPlan.waitingPoints.forEach(point => {
+    const court = youthFloorPlan.courts.find(item => item.id === point.courtId);
+    assert.ok(court);
+    if (!court) return;
+    assert.ok(point.x > 475 && point.x + point.width < youthFloorPlan.marketplace.x);
+    assert.ok(point.y >= court.y + youthFloorPlan.courtDimensions.height / 2);
+    assert.ok(point.y + point.height <= court.y + youthFloorPlan.courtDimensions.height);
+  });
 });
 test("S-shaped flow starts at bottom and ends at top", () => {
   const flow = youthFloorPlan.marketplaceFlow;

@@ -10,7 +10,7 @@ export default function YouthGuildfordFloorPlan() {
   const [logoAvailable, setLogoAvailable] = useState(true);
   const selectedTable = selected.startsWith("table-") ? Number(selected.slice(6)) : undefined;
   const court = plan.courts.find(item => item.id === selected);
-  const facility = selected === "photo-booth" ? { name: "Photo booth", detail: "Bottom-centre photo booth beside the audience seating." } : selected === "registration" ? { name: "Registration table", detail: "Registration near the bottom-right main entrance. Separate from the 44 marketplace tables." } : undefined;
+  const facility = selected === "photo-booth" ? { name: "Photo booth", detail: "Bottom-centre photo booth beside the audience seating." } : selected === "registration" ? { name: "Registration table", detail: "Registration against the bottom wall, to the left of the main entrance. Separate from the 44 marketplace tables." } : selected === "waiting-points" ? { name: "Player waiting points", detail: "Waiting points outside the bottom-right of courts 02, 03 and 04. Volunteers help players register here." } : undefined;
   const title = selectedTable ? `Marketplace · Table ${String(selectedTable).padStart(2, "0")}` : facility?.name ?? court?.name ?? (selected === "marketplace" ? "Marketplace" : selected === "basketball" ? "Basketball shooting" : "Guildford station floor plan");
   const detail = selectedTable ? "4 × 6 ft table · Unassigned. Exhibitor allocations will be added later." : facility?.detail ?? court?.detail ?? (selected === "marketplace" ? "44 tables, each 4 × 6 ft: six across the top, seven along each side, and three central back-to-back blocks of eight. The S-shaped aisle flows from bottom to top around the central blocks. Exhibitor allocations remain unassigned." : selected === "basketball" ? "Basketball shooting activities on the bottom-right, next to the main entrance." : "Courts on the left from top to bottom: badminton, pickleball, yoga & interactive games, and 150-chair audience seating. 44 marketplace tables on the upper right; basketball shooting on the bottom-right. Photo booth: bottom centre beside audience seating. Registration table: near the bottom-right entrance. Marketplace flow: bottom to top. The screen is mounted on the top-centre wall, with two presentation tables in front.");
 
@@ -50,7 +50,7 @@ export default function YouthGuildfordFloorPlan() {
         <span className="text-muted-foreground">Draft · Courts and tables proportionally scaled</span>
       </div>
       <div className="mt-5 flex flex-wrap gap-2" aria-label="Floor plan areas">
-        {[{id:"overview", name:"All areas"}, ...plan.courts, {id:"marketplace",name:"Marketplace"}, {id:"basketball",name:"Basketball shooting"}, {id:"photo-booth",name:"Photo booth"}, {id:"registration",name:"Registration table"}].map(area =>
+        {[{id:"overview", name:"All areas"}, ...plan.courts, {id:"marketplace",name:"Marketplace"}, {id:"basketball",name:"Basketball shooting"}, {id:"photo-booth",name:"Photo booth"}, {id:"registration",name:"Registration table"}, {id:"waiting-points",name:"Player waiting points"}].map(area =>
           <Button key={area.id} size="sm" variant={selected === area.id ? "default" : "outline"} aria-pressed={selected === area.id} onClick={() => setSelected(area.id)}>{area.name}</Button>)}
       </div>
       <div className="mt-5 overflow-x-auto rounded-lg border border-border bg-muted/30">
@@ -74,8 +74,14 @@ export default function YouthGuildfordFloorPlan() {
             <text x="280" y={area.y+38} textAnchor="middle" className="floor-title">{area.id === "audience" ? "01 · AUDIENCE SEATING · 150 CHAIRS" : `0${4-index} · ${area.name.toUpperCase()}`}</text>
             <text x="280" y={area.y+58} textAnchor="middle" className="floor-small">{area.id === "audience" ? "Facing the top-centre wall-mounted screen" : "13.4 m × 6.1 m court"}</text>
             {(area.id === "pickleball" || area.id === "badminton") && <path d={`M 108 ${area.y+plan.courtDimensions.height/2} H 452`} className="floor-net" />}
-            {area.id === "yoga" && [0,1,2,3,4].map(n => <rect key={n} x={155+n*51} y={area.y+plan.courtDimensions.height/2-16} width="34" height="32" rx="5" className="floor-mat" />)}
+            {area.id === "yoga" && plan.yogaMats.map((mat, index) => <rect key={index} data-yoga-mat="true" {...mat} rx="3" className="floor-mat" />)}
             {area.id === "audience" && Array.from({length:plan.chairCount}, (_,i) => <rect key={i} data-chair="true" x={100+(i%15)*24} y={area.y+72+Math.floor(i/15)*9} width="11" height="5" rx="1" className="floor-chair" />)}
+          </g>)}
+          {plan.waitingPoints.map(point => <g key={point.courtId}>
+            <rect data-waiting-point={point.courtId} x={point.x} y={point.y} width={point.width} height={point.height} rx="4" className={`floor-market ${selected === "waiting-points" ? "floor-selected" : ""}`} />
+            <text x={point.x + point.width / 2} y={point.y + 14} textAnchor="middle" className="floor-small">WAIT · {point.courtNumber}</text>
+            <text x={point.x + point.width / 2} y={point.y + 29} textAnchor="middle" className="floor-small">VOLUNTEER</text>
+            <text x={point.x + point.width / 2} y={point.y + 44} textAnchor="middle" className="floor-small">SIGN-UP</text>
           </g>)}
           <rect {...plan.basketball} rx="5" className={`floor-court ${selected === "basketball" ? "floor-selected" : ""}`} />
           <rect x={plan.basketball.x} y={plan.basketball.y} width={plan.basketball.width} height={plan.basketball.height} className="floor-court-lines" />
@@ -95,7 +101,7 @@ export default function YouthGuildfordFloorPlan() {
           <text x="534.5" y="846" textAnchor="middle" className="floor-small">PHOTO</text>
           <text x="534.5" y="865" textAnchor="middle" className="floor-small">BOOTH</text>
           <rect data-registration="true" {...plan.registration} rx="3" className={`floor-table ${selected === "registration" ? "floor-selected" : ""}`} />
-          <text x={plan.registration.x + plan.registration.width / 2} y="843" textAnchor="middle" className="floor-small">REGISTRATION</text>
+          <text x={plan.registration.x + plan.registration.width / 2} y={plan.registration.y - 8} textAnchor="middle" className="floor-small">REGISTRATION</text>
           <text x="790" y="928" textAnchor="middle" className="floor-small">Clear entrance aisle →</text>
           <rect x={plan.entrance.x} y={plan.entrance.y} width={plan.entrance.width} height="18" className="floor-door-gap" />
           <path d="M 974 953 V 906 M 1074 953 V 906 M 974 906 Q 1021 906 1021 953 M 1074 906 Q 1027 906 1027 953" className="floor-door" />
