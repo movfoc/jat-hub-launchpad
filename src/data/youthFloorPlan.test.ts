@@ -3,29 +3,33 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { youthFloorPlan } from "./youthFloorPlan";
 
-test("marketplace contains 36 tables", () => assert.equal(youthFloorPlan.tables.length, 36));
-test("all six rows have six tables", () => {
-  assert.deepEqual([1,2,3,4,5,6].map(row => youthFloorPlan.tables.filter(table => table.row === row).length), [6,6,6,6,6,6]);
+test("marketplace contains 44 tables as confirmed", () => assert.equal(youthFloorPlan.tables.length, 44));
+test("perimeter has six top tables and seven on each side", () => {
+  assert.deepEqual(["top", "left", "right"].map(zone => youthFloorPlan.tables.filter(table => table.zone === zone).length), [6,7,7]);
 });
-test("rows 07–12 and 13–18 touch without a passage", () => {
-  const upper = youthFloorPlan.tables.filter(table => table.row === 2);
-  const lower = youthFloorPlan.tables.filter(table => table.row === 3);
-  assert.deepEqual(upper.map(table => table.id), [7,8,9,10,11,12]);
-  assert.deepEqual(lower.map(table => table.id), [13,14,15,16,17,18]);
-  upper.forEach((table, index) => {
-    assert.equal(table.y + youthFloorPlan.tableDimensions.height, lower[index]?.y);
-    assert.equal(table.x, lower[index]?.x);
+test("centre contains three blocks with four tables per row", () => {
+  assert.deepEqual([1,2,3,4,5,6].map(row => youthFloorPlan.tables.filter(table => table.zone === "centre" && table.row === row).length), [4,4,4,4,4,4]);
+});
+test("each central block has touching back-to-back rows", () => {
+  [1,3,5].forEach(row => {
+    const upper = youthFloorPlan.tables.filter(table => table.zone === "centre" && table.row === row);
+    const lower = youthFloorPlan.tables.filter(table => table.zone === "centre" && table.row === row + 1);
+    upper.forEach((table, index) => {
+      assert.equal(table.y + table.height, lower[index]?.y);
+      assert.equal(table.x, lower[index]?.x);
+    });
   });
 });
-test("rows 19–24 and 25–30 touch without a passage", () => {
-  const upper = youthFloorPlan.tables.filter(table => table.row === 4);
-  const lower = youthFloorPlan.tables.filter(table => table.row === 5);
-  assert.deepEqual(upper.map(table => table.id), [19,20,21,22,23,24]);
-  assert.deepEqual(lower.map(table => table.id), [25,26,27,28,29,30]);
-  upper.forEach((table, index) => {
-    assert.equal(table.y + youthFloorPlan.tableDimensions.height, lower[index]?.y);
-    assert.equal(table.x, lower[index]?.x);
+test("side tables rotate the same 4 by 6 foot footprint", () => {
+  youthFloorPlan.tables.filter(table => table.zone === "left" || table.zone === "right").forEach(table => {
+    assert.equal(table.width, youthFloorPlan.tableDimensions.height);
+    assert.equal(table.height, youthFloorPlan.tableDimensions.width);
   });
+});
+test("table footprints do not overlap", () => {
+  youthFloorPlan.tables.forEach((a, index) => youthFloorPlan.tables.slice(index + 1).forEach(b => {
+    assert.ok(a.x + a.width <= b.x || b.x + b.width <= a.x || a.y + a.height <= b.y || b.y + b.height <= a.y, `Tables ${a.id} and ${b.id} overlap`);
+  }));
 });
 test("each table measures 4 by 6 feet", () => {
   assert.equal(youthFloorPlan.tableDimensions.widthFeet, 4);
@@ -56,7 +60,7 @@ test("two presentation tables sit in front of the screen", () => {
 test("marketplace spans only the upper three court footprints", () => {
   assert.equal(youthFloorPlan.marketplace.y, 152);
   assert.equal(youthFloorPlan.marketplace.y + youthFloorPlan.marketplace.height, (540 + youthFloorPlan.courtDimensions.height));
-  assert.ok(youthFloorPlan.tables.every(table => table.y >= 152 && table.y + youthFloorPlan.tableDimensions.height <= (540 + youthFloorPlan.courtDimensions.height)));
+  assert.ok(youthFloorPlan.tables.every(table => table.y >= 152 && table.y + table.height <= (540 + youthFloorPlan.courtDimensions.height)));
 });
 test("audience seating is court 01 on the left", () => {
   const audience = youthFloorPlan.courts.find(court => court.id === "audience");

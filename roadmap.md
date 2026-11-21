@@ -1,4 +1,5 @@
 # Tasks
+- [x] Update and verify marketplace positions against the uploaded sketch with the confirmed 44 tables.
 - [x] Amend and verify the Guildford plan: top-centre screen with two tables, 35 marketplace tables aligned with courts 02–04, separate bottom-right audience seating, active badminton court 01 and bottom-right entrance.
 - [x] Create and verify the Guildford draft floor-plan subpage with four courts, 40 unassigned 2 m tables, 150 chairs and festival-page link.
 - [x] Place the main entrance at the bottom-right corner as confirmed.

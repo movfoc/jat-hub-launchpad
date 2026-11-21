@@ -1,6 +1,13 @@
 const unitsPerMetre = 390 / 13.4;
 const tableHeight = 4 * 0.3048 * unitsPerMetre;
-const tableRowPositions = [198, 318, 318 + tableHeight, 480, 480 + tableHeight, 642];
+const tableWidth = 6 * 0.3048 * unitsPerMetre;
+const centralRowPositions = [310, 310 + tableHeight, 475, 475 + tableHeight, 640, 640 + tableHeight];
+const tablePositions = [
+  ...Array.from({ length: 6 }, (_, column) => ({ zone: "top", row: 0, x: 630 + column * 64, y: 198, rotated: false })),
+  ...Array.from({ length: 7 }, (_, row) => ({ zone: "left", row: row + 1, x: 610, y: 270 + row * 64, rotated: true })),
+  ...Array.from({ length: 24 }, (_, index) => ({ zone: "centre", row: Math.floor(index / 4) + 1, x: 707 + (index % 4) * 64, y: centralRowPositions[Math.floor(index / 4)] ?? 640, rotated: false })),
+  ...Array.from({ length: 7 }, (_, row) => ({ zone: "right", row: row + 1, x: 1017, y: 270 + row * 64, rotated: true })),
+];
 
 export const youthFloorPlan = {
   unitsPerMetre,
@@ -18,9 +25,10 @@ export const youthFloorPlan = {
     { id: "yoga", name: "Yoga & interactive games", y: 540, detail: "Court 2 · Yoga and interactive games." },
     { id: "audience", name: "Audience seating", y: 734, detail: "Court 1 · 150 audience chairs facing the top-centre wall-mounted screen." },
   ],
-  tables: Array.from({ length: 36 }, (_, index) => {
-    const row = Math.floor(index / 6);
-    const column = index % 6;
-    return { id: index + 1, row: row + 1, x: 630 + column * 64, y: tableRowPositions[row] ?? 642, assignedTo: null };
-  }),
+  tables: tablePositions.map((position, index) => ({
+    ...position, id: index + 1,
+    width: position.rotated ? tableHeight : tableWidth,
+    height: position.rotated ? tableWidth : tableHeight,
+    assignedTo: null,
+  })),
 };
