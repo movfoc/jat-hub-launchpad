@@ -58,6 +58,12 @@ import sportInMind from "@/assets/fou/sport-in-mind.png.asset.json";
 import gamesDesign from "@/assets/fou/games-design.jpg.asset.json";
 import surreyAngels from "@/assets/fou/surrey-angels.png.asset.json";
 import studioSlash from "@/assets/fou/studio-slash.png.asset.json";
+import chellie from "@/assets/fou/Chellie.jpeg.asset.json";
+import crochetByLibby from "@/assets/fou/Crochet_by_Libby.jpeg.asset.json";
+import beyondTheMap from "@/assets/fou/Beyond_the_Map.jpeg.asset.json";
+import myrnSilk from "@/assets/fou/MYRN_SILK.jpeg.asset.json";
+import herbalife from "@/assets/fou/Herbalife.jpeg.asset.json";
+import bwrtSurrey from "@/assets/fou/BWRT_Surrey.jpeg.asset.json";
 import compSoc from "@/assets/fou/compsoc-surrey.jpeg.asset.json";
 import chessSurrey from "@/assets/fou/chess-surrey.jpeg.asset.json";
 import teranceBalloon from "@/assets/fou/terance-balloon.png.asset.json";
@@ -199,6 +205,12 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "Home-Start Guildford", logo: homeStartLogo.url, large: true, fill: true },
       { name: "Sacred Sounds", note: "Sound Healing", logo: sacredSounds.url, large: true, fill: true },
       { name: "Farr Better Clothing", logo: farrBetterClothing.url, large: true, fill: true },
+      { name: "Chellie", logo: chellie.url, large: true, fill: true },
+      { name: "Crochet by Libby", logo: crochetByLibby.url, large: true, fill: true },
+      { name: "Beyond the Map", logo: beyondTheMap.url, large: true, fill: true },
+      { name: "MYRN SILK", logo: myrnSilk.url, large: true, fill: true },
+      { name: "Herbalife", logo: herbalife.url, large: true, fill: true },
+      { name: "BWRT Surrey", logo: bwrtSurrey.url, large: true, fill: true },
     ],
   },
 ];
