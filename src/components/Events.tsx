@@ -23,7 +23,7 @@ export const Events = () => {
       registrationUrl: "https://jatpoint.com/event/6atxefprl06d",
     },
     {
-      date: "JAN 29, 2027",
+      date: "JAN 29-31, 2027",
       title: "Surrey Global Game Jam 2027",
       description: "10:00 AM - 12:30 PM at IFH, University of Surrey. Free admission.",
       isPast: false,
