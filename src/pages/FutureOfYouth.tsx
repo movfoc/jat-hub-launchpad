@@ -44,6 +44,10 @@ import nhsBerkshire from "@/assets/fou/nhs-clean.png.asset.json";
 import berkshireCharity from "@/assets/fou/berkshire-charity.webp.asset.json";
 import nhsSabp from "@/assets/fou/nhs-sabp.svg.asset.json";
 import codeLifeAi from "@/assets/fou/code-life-ai.jpeg.asset.json";
+import hsLogo from "@/assets/fou/hs.jpeg.asset.json";
+import tongXing from "@/assets/fou/tongxing.jpeg.asset.json";
+import bakerEgg from "@/assets/fou/baker-egg.jpeg.asset.json";
+import eikon from "@/assets/fou/eikon.png.asset.json";
 import readingCouncil from "@/assets/fou/reading-council.png.asset.json";
 import vineCentre from "@/assets/fou/vine-centre.avif.asset.json";
 import jatpointLogo from "@/assets/fou/jatpoint.png.asset.json";
@@ -215,6 +219,10 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "MYRN SILK", logo: myrnSilk.url, large: true, fill: true },
       { name: "Herbalife", logo: herbalife.url, large: true, fill: true },
       { name: "BWRT Surrey", logo: bwrtSurrey.url, large: true, fill: true },
+      { name: "HS", logo: hsLogo.url, large: true, fill: true },
+      { name: "同行", note: "Tong Xing", logo: tongXing.url, large: true, fill: true },
+      { name: "BakerEgg", logo: bakerEgg.url, large: true, fill: true },
+      { name: "Eikon", logo: eikon.url, large: true, fill: true },
     ],
   },
 ];
