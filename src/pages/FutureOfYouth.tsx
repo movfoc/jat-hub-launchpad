@@ -222,7 +222,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "HS Group Global", logo: hsLogo.url, large: true, fill: true },
       { name: "TGT Logistics", note: "同行", logo: tongXing.url, large: true, fill: true },
       { name: "BakerEgg", logo: bakerEgg.url, large: true, fill: true },
-      { name: "Eikon", logo: eikon.url, large: true, fill: true },
+      { name: "The Eikon Charity", logo: eikon.url, large: true, fill: true },
     ],
   },
 ];
