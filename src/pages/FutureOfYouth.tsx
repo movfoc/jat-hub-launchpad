@@ -43,6 +43,7 @@ import oxfordNorth from "@/assets/fou/oxford-north.png.asset.json";
 import nhsBerkshire from "@/assets/fou/nhs-clean.png.asset.json";
 import berkshireCharity from "@/assets/fou/berkshire-charity.webp.asset.json";
 import nhsSabp from "@/assets/fou/nhs-sabp.svg.asset.json";
+import codeLifeAi from "@/assets/fou/code-life-ai.jpeg.asset.json";
 import readingCouncil from "@/assets/fou/reading-council.png.asset.json";
 import vineCentre from "@/assets/fou/vine-centre.avif.asset.json";
 import jatpointLogo from "@/assets/fou/jatpoint.png.asset.json";
@@ -170,6 +171,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "JatPoint", logo: jatpointLogo.url },
       { name: "Artac Academy", note: "CodeLife.AI", logo: artacLogo.url },
       { name: "Porky Kong", logo: porkyKong.url, fill: true },
+      { name: "Code Life AI", logo: codeLifeAi.url, large: true, fill: true },
     ],
   },
   {
