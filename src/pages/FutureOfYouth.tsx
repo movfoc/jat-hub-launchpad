@@ -48,6 +48,7 @@ import hsLogo from "@/assets/fou/hs.jpeg.asset.json";
 import tongXing from "@/assets/fou/tongxing.jpeg.asset.json";
 import bakerEgg from "@/assets/fou/baker-egg.jpeg.asset.json";
 import eikon from "@/assets/fou/eikon.png.asset.json";
+import xandersSoap from "@/assets/fou/xanders-soap.jpeg.asset.json";
 import readingCouncil from "@/assets/fou/reading-council.png.asset.json";
 import vineCentre from "@/assets/fou/vine-centre.avif.asset.json";
 import jatpointLogo from "@/assets/fou/jatpoint.png.asset.json";
@@ -223,6 +224,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "TGT Logistics", note: "同行", logo: tongXing.url, large: true, fill: true },
       { name: "BakerEgg", logo: bakerEgg.url, large: true, fill: true },
       { name: "The Eikon Charity", logo: eikon.url, large: true, fill: true },
+      { name: "Xander's Soap", logo: xandersSoap.url, large: true, fill: true },
     ],
   },
 ];
