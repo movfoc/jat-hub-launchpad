@@ -20,7 +20,14 @@ export const Events = () => {
       title: "Future of Youth — Reading",
       description: "University of Reading, London Road Campus.",
       isPast: false,
-      registrationUrl: "/future-of-youth",
+      registrationUrl: "https://jatpoint.com/event/6atxefprl06d",
+    },
+    {
+      date: "JAN 29, 2027",
+      title: "Surrey Global Game Jam 2027",
+      description: "10:00 AM - 12:30 PM at IFH, University of Surrey. Free admission.",
+      isPast: false,
+      registrationUrl: "https://jatpoint.com/event/hynisci5q4nf",
     },
     {
       date: "DEC 12, 2026",
