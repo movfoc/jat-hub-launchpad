@@ -42,6 +42,7 @@ import surreySportsPark from "@/assets/fou/surrey-sports-park.jpg.asset.json";
 import oxfordNorth from "@/assets/fou/oxford-north.png.asset.json";
 import nhsBerkshire from "@/assets/fou/nhs-clean.png.asset.json";
 import berkshireCharity from "@/assets/fou/berkshire-charity.webp.asset.json";
+import nhsSabp from "@/assets/fou/nhs-sabp.svg.asset.json";
 import readingCouncil from "@/assets/fou/reading-council.png.asset.json";
 import vineCentre from "@/assets/fou/vine-centre.avif.asset.json";
 import jatpointLogo from "@/assets/fou/jatpoint.png.asset.json";
@@ -178,6 +179,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
     items: [
       { name: "Berkshire Healthcare NHS", note: "NHS Foundation Trust", logo: nhsBerkshire.url },
       { name: "Berkshire Healthcare Charity", note: "NHS Health Bus", logo: berkshireCharity.url },
+      { name: "SABP", note: "Surrey and Borders Partnership NHS Foundation Trust", logo: nhsSabp.url, large: true },
       { name: "Oxford Health Charity", logo: oxfordHealthCharity.url },
       { name: "NIHR", note: "Be Part of Research", logo: nihrBpor.url },
     ],
