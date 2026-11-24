@@ -49,6 +49,7 @@ import tongXing from "@/assets/fou/tongxing.jpeg.asset.json";
 import bakerEgg from "@/assets/fou/baker-egg.jpeg.asset.json";
 import eikon from "@/assets/fou/eikon.png.asset.json";
 import xandersSoap from "@/assets/fou/xanders-soap.jpeg.asset.json";
+import cottonpuffCharms from "@/assets/fou/cottonpuff-charms.jpeg.asset.json";
 import readingCouncil from "@/assets/fou/reading-council.png.asset.json";
 import vineCentre from "@/assets/fou/vine-centre.avif.asset.json";
 import jatpointLogo from "@/assets/fou/jatpoint.png.asset.json";
@@ -225,6 +226,7 @@ const partnerGroups: { id: string; icon: typeof GraduationCap; title: string; it
       { name: "BakerEgg", logo: bakerEgg.url, large: true, fill: true },
       { name: "The Eikon Charity", logo: eikon.url, large: true, fill: true },
       { name: "Xander's Soap", logo: xandersSoap.url, large: true, fill: true },
+      { name: "CottonPuff Charms", logo: cottonpuffCharms.url, large: true, fill: true },
     ],
   },
 ];
